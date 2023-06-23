@@ -1,0 +1,75 @@
+.cakes {
+	.container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas:
+		'title button'
+		'cards cards';
+		gap: 30px;
+	}
+
+	h2 {
+		grid-area: title;
+	}
+
+	.btn {
+		grid-area: button;
+		max-width: fit-content;
+		justify-self: flex-end;
+	}
+
+	&__list {
+		grid-area: cards;
+		display: flex;
+		gap: 20px;
+		flex-wrap: wrap;
+	}
+
+	&__item {
+		display: grid;
+		grid-template-columns: repeat(2, 50%);
+		border-radius: 50px;
+		max-width: 810px;
+
+		img {
+			max-width: 409px;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__description {
+		padding: 30px;
+		
+		h3 {
+			margin-bottom: 15px;
+		}
+
+		p {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__tech {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 5px;
+
+		span {
+			@include regular-18;
+			color: $grayB9;
+			
+			&:last-child {
+				@include bold-26;
+				color: $gray25;
+			}
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		gap: 20px;
+		margin-top: 30px;
+	}
+}

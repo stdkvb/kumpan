@@ -247,6 +247,56 @@
 					</div>
 			</div>
 		</section>
+		<section class="cakes">
+			<div class="container">
+				<h3>Торты на заказ</h3>
+				@@include('components/ui/_button-link.html', {children: 'Посмотреть все', class: 'btn_green-border', href: '#'})
+				<div class="cakes__list">
+					<div class="cakes__item">
+						<img src="@images/cake-1.png">
+						<div class="cakes__description">
+							<h3>Нежность</h3>
+							<p>Обтяжка торта выполнена из чиз-крема. Можно добавить надпись на торте 3-4 слова.</p>
+							<div class="cakes__tech">
+								<span>Вес</span>
+								<span>от 2 кг</span>
+							</div>
+							<div class="cakes__tech">
+								<span>Цена</span>
+								<span>от 6 000 ₽</span>
+							</div>
+							<div class="cakes__buttons">
+								@@include('components/ui/_button-link.html', {children: 'В корзину', class: 'btn_green', href: '#'})
+								<a href="#">
+									<img src="@icons/heart.svg">
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="cakes__item">
+						<img src="@images/cake-2.png">
+						<div class="cakes__description">
+							<h3>Цветочная вышивка</h3>
+							<p>Обтяжка торта выполнена из чиз-крема. Можно добавить надпись на торте 3-4 слова.</p>
+							<div class="cakes__tech">
+								<span>Вес</span>
+								<span>от 2 кг</span>
+							</div>
+							<div class="cakes__tech">
+								<span>Цена</span>
+								<span>от 6 000 ₽</span>
+							</div>
+							<div class="cakes__buttons">
+								@@include('components/ui/_button-link.html', {children: 'В корзину', class: 'btn_green', href: '#'})
+								<a href="#">
+									<img src="@icons/heart.svg">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 	</main>
 	@@include('components/business/_footer.html')
 	<!-- @@include('components/business/_cookie.html') -->
