@@ -1,5 +1,5 @@
 * {
-	@include FontFamilyMontserratRegular;
+	@include FontFamilyCorbelRegular;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -13,6 +13,13 @@ html {
 body {
 	overflow-x: hidden;
 	position: relative;
+	display: flex;
+	flex-direction: column;
+  height: 100%;
+}
+
+main {
+	flex: 1 0 auto;
 }
 
 h1 {
@@ -38,5 +45,40 @@ button {
 
 	:disabled {
 		cursor: default;
+	}
+}
+
+// scrollbar
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $green22 transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $green22;
+  border-radius: 20px;
+  border: none;
+}
+
+.swiper-scrollbar-drag {
+	background-color: $green22;
+}
+
+.container {
+	padding-left: 160px;
+	padding-right: 160px;
+	overflow-x: hidden;
+
+	@include desktop {
+		padding-left: 80px;
+		padding-right: 80px;
 	}
 }

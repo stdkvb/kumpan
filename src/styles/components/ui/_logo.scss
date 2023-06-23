@@ -1,21 +1,13 @@
 .logo {
-	&::before {
-		content: url("@icons/logo.svg");
-	}
-	@include mobile {
-		&::before {
-			content: url("@icons/logo-mini.svg");
-		}
-	}
-	&_dark {
-		&::before {
-			content: url("@icons/logo-dark.svg");
-		}
+	img {
+		max-width: 226px;
+		max-height: 76px;
 	}
 
-	&_secondary {
-		&::before {
-			content: url("@icons/logo-secondary.svg");
+	&_small {
+		img {
+			max-width: 107px;
+			max-height: 36px;
 		}
 	}
 }

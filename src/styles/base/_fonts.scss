@@ -1,0 +1,52 @@
+@font-face {
+	font-family: corbel;
+	font-display: swap;
+	src: url("@fonts/corbel-bold.woff2") format("woff2"), url("@fonts/corbel-bold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+}
+@mixin FontFamilyCorbelBold {
+	font-family: corbel, sans-serif;
+	font-weight: 700;
+	line-height: 140%;
+}
+
+@font-face {
+	font-family: corbel;
+	font-display: swap;
+	src: url("@fonts/corbel-regular.woff2") format("woff2"), url("@fonts/corbel-regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+@mixin FontFamilyCorbelRegular {
+	font-family: corbel, sans-serif;
+	font-weight: 400;
+	line-height: 140%;
+}
+
+@font-face {
+	font-family: zurich;
+	font-display: swap;
+	src: url("@fonts/zurich-bold.woff2") format("woff2"), url("@fonts/zurich-bold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+}
+@mixin FontFamilyZurichBold {
+	font-family: zurich, sans-serif;
+	font-weight: 700;
+	line-height: 140%;
+}
+
+@font-face {
+	font-family: zurich;
+	font-display: swap;
+	src: url("@fonts/zurich-regular.woff2") format("woff2"), url("@fonts/zurich-regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+@mixin FontFamilyZurichRegular {
+	font-family: zurich, sans-serif;
+	font-weight: 400;
+	line-height: 140%;
+}
+
