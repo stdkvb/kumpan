@@ -17,6 +17,7 @@ body {
 	display: flex;
 	flex-direction: column;
   height: 100%;
+	color: $gray25;
 }
 
 main {
@@ -29,8 +30,7 @@ h1 {
 }
 
 h2 {
-	@include FontFamilyZurichBold;
-	@include bold-70;
+	@include bold-50;
 }
 
 h3 {
@@ -95,7 +95,6 @@ section {
 .container {
 	margin: 140px;
 	margin: 140px;
-	overflow-x: hidden;
 
 	@include desktop {
 		margin: 50px;

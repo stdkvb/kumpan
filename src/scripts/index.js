@@ -1,6 +1,10 @@
-import takeControlSelect from "./ElementsControllers/SelectController";
+import takeControlDropdown from "./ElementsControllers/DropdownController";
+import takeControlCustomSelect from "./ElementsControllers/CustomSelectController";
+import takeControlNumberInput from "./ElementsControllers/NumberInputController";
 
-takeControlSelect();
+takeControlDropdown();
+takeControlCustomSelect('custom-select');
+takeControlNumberInput();
 
 //swipers init
 const firstScreenSwiper = new Swiper ('.first-screen', {

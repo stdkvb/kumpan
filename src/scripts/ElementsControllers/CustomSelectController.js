@@ -1,5 +1,5 @@
 // custom select
-function takeControlcustomSelect(id) {
+function takeControlCustomSelect(id) {
 	let x
 	let i
 	let j
@@ -106,4 +106,4 @@ then close all select boxes: */
 	document.addEventListener('click', closeAllSelect)
 }
 
-export default takeControlcustomSelect
+export default takeControlCustomSelect;

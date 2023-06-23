@@ -26,12 +26,9 @@
 		padding: 40px 120px 40px 180px;
 		gap: 40px;
 
-		// h2 {
-		// 	max-width: 518px;
-		// }
-
-		// p {
-		// 	max-width: 518px;
-		// }
+		h2 {
+			@include FontFamilyZurichBold;
+			@include bold-70;
+		}
 	}
 }

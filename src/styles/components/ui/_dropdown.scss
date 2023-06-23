@@ -1,0 +1,82 @@
+.dropdown {
+	position: relative;
+	width: fit-content;
+
+	&__button {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+
+		span {
+			min-width: fit-content;
+			@include regular-16;
+			color: $gray25;
+			@include transition;
+		}
+
+		svg {
+			@include transition;
+			path {
+				@include transition;
+			}
+		}
+
+		&:hover {
+			cursor: pointer;
+			svg {
+				path {
+					fill: $green40;
+				}
+			}
+			span {
+				color: $green40;
+			}
+		}
+	}
+
+	&__options {
+		position: absolute;
+		margin-top: 6px;
+		height: 0;
+		overflow: hidden;
+		@include transition;
+		opacity: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+		width: 100%;
+		background-color: $white;
+		border-radius: 10px;
+		border: solid 1px $grayB9;
+	}
+
+	&__option {
+		padding: 4px 12px;
+
+		a {
+			@include regular-16;
+			color: $gray25;
+		}
+
+		&:hover {
+			cursor: pointer;
+			background-color: $green22;
+
+			a {
+				color: $white;
+			}
+		}
+	}
+
+	&.active {
+		.dropdown__button {		
+			svg {
+				transform: rotate(180deg);
+			}
+		}
+		.dropdown__options {
+			height: auto;
+			opacity: 1;
+		}
+	}
+}

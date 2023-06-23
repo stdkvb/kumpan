@@ -11,6 +11,8 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	background: transparent;
+	min-width: fit-content;
 
 	.children {
 		position: relative;
@@ -31,7 +33,6 @@
 
 		&:hover {
 			background-color: $white;
-			border-color: $white;
 			color: $green40;
 		}
 	}

@@ -1,0 +1,110 @@
+.delivery {
+	.container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas:
+		'title button'
+		'cards cards';
+	}
+
+	h2 {
+		grid-area: title;
+	}
+
+	.btn {
+		grid-area: button;
+		max-width: fit-content;
+		justify-self: flex-end;
+	}
+
+	&__list {
+		grid-area: cards;
+		display: flex;
+		gap: 20px;
+		margin-top: 20px;
+		flex-wrap: wrap;
+	}
+
+	&__item {
+		padding: 50px;
+		max-width: 533px;
+		display: grid;
+		grid-template-columns: 250px 1fr;
+		gap: 10px;
+		grid-template-areas:
+		'img specs'
+		'img quantity'
+		'img price'
+		'title title'
+		'description description'
+		'buttons buttons';
+
+		picture {
+			grid-area: img;
+			img {
+				width: 100%;
+			}
+			
+		}
+
+		h3 {
+			grid-area: title;
+			margin-top: 30px;
+			margin-bottom: 15px;
+		}
+
+		p {
+			grid-area: description;
+		}
+	}
+
+	&__specs {
+		grid-area: specs;
+		display: flex;
+		flex-direction: column;
+
+		span {
+			@include regular-16;
+			color: $gray25;
+			margin-bottom: 8px;
+		}
+
+		img {
+			max-width: 170px;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__quantity {
+		grid-area: quantity;
+		display: flex;
+		gap: 20px;
+	}
+
+	&__price {
+		grid-area: price;
+		@include regular-16;
+		color: $gray25;
+
+		span {
+			margin-left: 22px;
+			@include bold-26;
+		}
+	}
+
+	&__buttons {
+		grid-area: buttons;
+		margin-top: 30px;
+		display: flex;
+		gap: 20px;
+		align-items: center;
+
+		a:last-of-type {
+			margin: 0 0 0 auto;
+		}
+
+		img {
+			width: 45px;
+		}
+	}
+}
