@@ -8,6 +8,7 @@
 
 html {
 	scroll-behavior: smooth;
+	height: 100%;
 }
 
 body {
@@ -29,11 +30,13 @@ h2 {
 }
 
 h3 {
+	@include bold-30;
 }
 
 a {
 	cursor: pointer;
 	text-decoration: none;
+	width: fit-content;
 }
 
 ul {

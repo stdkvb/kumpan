@@ -8,59 +8,65 @@
 
 @mixin bold-72 {
 	font-size: 72px;
-	font-weight: 600;	
+	font-weight: 700;	
 	line-height: 100%;
 }
 
 @mixin bold-72-uppercase {
 	font-size: 72px;
-	font-weight: 600;	
+	font-weight: 700;	
 	line-height: 100%;
 	text-transform: uppercase;
 }
 
 @mixin bold-60-uppercase {
 	font-size: 60px;
-	font-weight: 600;	
+	font-weight: 700;	
 	line-height: 100%;
 	text-transform: uppercase;
 }
 
 @mixin bold-50 {
 	font-size: 50px;
-	font-weight: 600;	
+	font-weight: 700;	
 	line-height: 100%;
 }
 
 @mixin bold-50-uppercase {
 	font-size: 50px;
-	font-weight: 600;	
+	font-weight: 700;	
 	line-height: 100%;
 	text-transform: uppercase;
 }
 
 @mixin bold-36 {
 	font-size: 36px;
-	font-weight: 600;	
+	font-weight: 700;	
 	line-height: 100%;
 }
 
 @mixin bold-36-uppercase {
 	font-size: 36px;
-	font-weight: 600;	
+	font-weight: 700;	
 	line-height: 100%;
 	text-transform: uppercase;
 }
 
+@mixin bold-30 {
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 140%;
+}
+
 @mixin bold-20 {
 	font-size: 20px;
-	font-weight: 600;
+	font-weight: 700;
 	line-height: 140%;
 }
 
 @mixin bold-20-uppercase {
 	font-size: 20px;
-	font-weight: 600;
+	font-weight: 700;
 	line-height: 140%;
 	text-transform: uppercase;
 }

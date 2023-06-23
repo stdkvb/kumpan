@@ -8,4 +8,17 @@
 	&:hover {
 		color: $green22;
 	}
+
+	&_white {
+		color: $white;
+
+		span {
+			@include bold-20;
+		}
+
+		&:hover {
+			color: $white;
+			text-decoration: underline;
+		}
+	}
 }

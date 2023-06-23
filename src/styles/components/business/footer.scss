@@ -1,3 +1,114 @@
 .footer {
 	flex: 0 0 auto;
+	background-color: $green40;
+	padding: 120px 140px 50px 140px;
+
+	@include desktop {
+		padding: 50px 70px 50px 50px;
+	}
+
+	@include mobile {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	&__top {
+		padding-bottom: 120px;
+		display: flex;
+		gap: 100px;
+		flex-wrap: wrap;
+
+		@include desktop {
+			gap: 50px;
+			padding-bottom: 50px;
+		}
+
+		@include tablet {
+			flex-direction: column;
+		}
+	}
+
+	&__column {
+		display: flex;
+		flex-direction: column;
+		gap: 50px;
+		flex: 0 0 auto;
+
+		&:first-child {
+			flex: 1 0 auto;
+
+			@include desktop_huge {
+				flex-direction: column-reverse;
+				justify-content: flex-end;
+			}
+		}
+
+		&:nth-child(2) {
+			@include desktop_extra_small {
+				flex-direction: row;
+				flex: 1 0 auto;
+			}
+		}
+
+		@include mobile {
+			gap: 30px;
+		}
+	}
+
+	&__links {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+
+		h3 {
+			color: $white;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__social {
+		display: flex;
+		gap: 30px;
+
+		@include mobile {
+			gap: 10px;
+		}
+
+		img {
+			max-width: 50px;
+			max-height: 50px;
+
+			@include mobile {
+				max-width: 40px;
+				max-height: 40px;
+			}
+		}
+	}
+
+	&__apps {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+
+		@include tablet {
+			flex-direction: row;
+		}
+	}
+
+	&__bottom {
+		border-top: solid 1px $white;
+		padding-top: 30px;
+		display: flex;
+		justify-content: space-between;
+
+		@include mobile {
+			flex-direction: column;
+			gap: 10px;
+		}
+
+		span {
+			@include regular-18;
+			color: $white;
+		}
+	}
 }
