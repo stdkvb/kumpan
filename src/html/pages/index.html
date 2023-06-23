@@ -5,6 +5,42 @@
 <body>
 	@@include('components/business/_header.html')
 	<main>
+		<section class="first-screen swiper">
+			<div class="swiper-wrapper">
+				<div class="first-screen__slide swiper-slide">
+					<img src="@images/slide-1.png">
+					<h1>Зерновой кофе свежей обжарки</h1>
+					<h4>Обжариваем и доставляем по всей России</h4>
+					@@include('components/ui/_button-link.html', {children: 'Перейти в каталог', class: 'btn_green', href: '#'})
+					@@include('components/ui/_button-link.html', {children: 'Для оптовиков', href: '#'})
+				</div>
+				<div class="first-screen__slide swiper-slide">
+					<img src="@images/slide-2.png">
+					<h1>Доставка готовой еды прямо к двери</h1>
+					<h4>Доставка готовых блюд из ресторанов и кафе прямо к двери клиентов!</h4>
+					@@include('components/ui/_button-link.html', {children: 'Перейти в каталог', class: 'btn_green', href: '#'})
+					@@include('components/ui/_button-link.html', {children: 'Для оптовиков', href: '#'})
+				</div>
+				<div class="first-screen__slide first-screen__slide_inverse swiper-slide">
+					<img src="@images/slide-3.png">
+					<h1>Закажи торт своей мечты</h1>
+					<h4>Мы предлагаем заказ тортов на любой вкус</h4>
+					@@include('components/ui/_button-link.html', {children: 'Перейти в каталог', class: 'btn_green', href: '#'})
+					@@include('components/ui/_button-link.html', {children: 'Для оптовиков', class: 'btn_green-border', href: '#'})
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</section>
+		<section class="plantation">
+			<div class="container">
+				<img src="@images/plantation.png">
+				<div class="plantation__text">
+					<h2>Кофе с нашей плантации</h2>
+					<p>Мы заботимся о каждом растении и уделяем много внимания процессу обработки кофейных зерен, чтобы обеспечить нашим клиентам самый вкусный и качественный кофе.</p>
+					@@include('components/ui/_button-link.html', {children: 'Подробнее', class: 'btn_white', href: '#'})
+				</div>
+			</div>
+		</section>
 	</main>
 	@@include('components/business/_footer.html')
 	<!-- @@include('components/business/_cookie.html') -->

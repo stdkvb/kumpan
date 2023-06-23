@@ -19,6 +19,12 @@
 	text-transform: uppercase;
 }
 
+@mixin bold-70 {
+	font-size: 70px;
+	font-weight: 700;	
+	line-height: 110%;
+}
+
 @mixin bold-60-uppercase {
 	font-size: 60px;
 	font-weight: 700;	
@@ -54,6 +60,12 @@
 
 @mixin bold-30 {
 	font-size: 30px;
+	font-weight: 700;
+	line-height: 140%;
+}
+
+@mixin bold-24 {
+	font-size: 20px;
 	font-weight: 700;
 	line-height: 140%;
 }

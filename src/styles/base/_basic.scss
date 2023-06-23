@@ -24,13 +24,26 @@ main {
 }
 
 h1 {
+	@include FontFamilyZurichBold;
+	@include bold-70;
 }
 
 h2 {
+	@include FontFamilyZurichBold;
+	@include bold-70;
 }
 
 h3 {
 	@include bold-30;
+}
+
+h4 {
+	@include FontFamilyZurichBold;
+	@include bold-24;
+}
+
+p {
+	@include regular-18;
 }
 
 a {
@@ -75,13 +88,17 @@ button {
 	background-color: $green22;
 }
 
+section {
+	margin-bottom: 130px;
+}
+
 .container {
-	padding-left: 160px;
-	padding-right: 160px;
+	margin: 140px;
+	margin: 140px;
 	overflow-x: hidden;
 
 	@include desktop {
-		padding-left: 80px;
-		padding-right: 80px;
+		margin: 50px;
+		margin: 50px;
 	}
 }
