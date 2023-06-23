@@ -297,6 +297,39 @@
 				</div>
 			</div>
 		</section>
+		<section class="news">
+			<div class="container">
+				<h3>Новости и акции</h3>
+				@@include('components/ui/_button-link.html', {children: 'Посмотреть все', class: 'btn_green-border', href: '#'})
+				<div class="news__list">
+					<div class="news__item">
+						<img src="@images/news-1.png">
+						<div class="news__description">
+							<h3>Открытие новой точки</h3>
+							<span>01.01.2023</span>
+							@@include('components/ui/_button-link.html', {children: 'Подробнее', class: 'btn_green-border', href: '#'})
+						</div>
+					</div>
+					<div class="news__item">
+						<img src="@images/news-2.png">
+						<div class="news__description">
+							<h3>Дарим 200 бонусов</h3>
+							<span>01.01.2023</span>
+							@@include('components/ui/_button-link.html', {children: 'Подробнее', class: 'btn_green-border', href: '#'})
+						</div>
+					</div>
+					<div class="news__item">
+						<img src="@images/news-3.png">
+						<div class="news__description">
+							<h3>Скидка на первый онлайн заказ</h3>
+							<span>01.01.2023</span>
+							@@include('components/ui/_button-link.html', {children: 'Подробнее', class: 'btn_green-border', href: '#'})
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</section>
 	</main>
 	@@include('components/business/_footer.html')
 	<!-- @@include('components/business/_cookie.html') -->

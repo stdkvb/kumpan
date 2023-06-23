@@ -4,7 +4,7 @@
 	padding: 10px 25px;
 	border: solid 1px $white;
 	border-radius: 50px;
-	color: $white;
+	color: $white !important;
 	position: relative;
 	cursor: pointer;
 	transition: all $transitionDuration;
@@ -24,7 +24,7 @@
 	&:hover {
 		background-color: $green40;
 		border-color: $green40;
-		color: $white;
+		color: $white !important;
 	}
 
 	&_green {
@@ -33,29 +33,29 @@
 
 		&:hover {
 			background-color: $white;
-			color: $green40;
+			color: $green40 !important;
 		}
 	}
 
 	&_green-border {
 		border-color: $green40;
-		color: $green40;
+		color: $green40 !important;
 
 		&:hover {
 			background-color: $green40;
-			color: $white;
+			color: $white !important;
 		}
 	}
 
 	&_white {
 		background-color: $white;
 		border-color: $white;
-		color: $green40;
+		color: $green40 !important;
 
 		&:hover {
 			border-color: $green40;
 			background-color: $green40;
-			color: $white;
+			color: $white !important;
 		}
 	}
 }
