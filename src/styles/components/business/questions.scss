@@ -1,0 +1,17 @@
+.questions {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: $green22;
+	margin: 0;
+
+	.container {
+		margin-top: 0;
+		margin-bottom: 0;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	h3 {
+		color: $white;
+	}
+}
