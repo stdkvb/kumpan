@@ -1,0 +1,70 @@
+.first-screen {
+	&__slide {
+		position: relative;
+		color: $black25;
+		padding: 143px 80px;
+		height: 100%;
+
+		@include desktop_extra_small {
+			padding: 60px 20px;
+		}
+
+
+
+		img {
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			margin: auto;
+			width: 100vw;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		h1 {
+			max-width: 710px;
+			margin-bottom: 30px;
+
+			@include desktop_extra_small {
+				max-width: 100%;
+			}
+
+			@include tablet_small {
+				@include bold-30;
+				margin-bottom: 20px;
+			}
+		}
+
+		h4 {
+			@include FontFamilyZurichRegular;
+			@include regular-24;
+			margin-bottom: 50px;
+
+			@include tablet_small {
+				@include regular-18;
+				margin-bottom: 30px;
+			}
+		}
+
+		.btn {
+			display: inline-block;
+			margin-right: 20px;
+
+			@include tablet_small {
+				display: block;
+				margin-right: 0;
+
+				&:not(:last-child) {
+					margin-bottom: 15px;
+				}
+			}
+		}
+
+		&_inverse {
+			color: $black;
+		}
+	}
+}

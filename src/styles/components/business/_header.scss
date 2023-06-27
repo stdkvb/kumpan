@@ -2,9 +2,9 @@
 	flex: 0 0 auto;
 	
 	&__row {
-		padding: 14px 140px;
+		padding: 14px 130px;
 		display: grid;
-		grid-template-columns: 0.5fr 1fr 0.4fr;
+		grid-template-columns: 0.5fr 1.5fr 0.4fr;
 		gap: 20px;
 		align-items: center;
 		justify-content: space-between;
@@ -53,22 +53,21 @@
 
 	&__personal {
 		display: flex;
-		gap: 10px;
+		gap: 20px;
 		justify-self: flex-end;
 	}
 
 	&__icon {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+
 		img {
-			max-width: 40px;
-			max-height: 40px;
+			max-width: 20px;
+			max-height:20px;
 		}
 
 		
-	}
-
-	&__total {
-		display: flex;
-		flex-direction: column;
 	}
 
 	&__mobile {

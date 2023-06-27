@@ -23,9 +23,9 @@
 			<a class="link" href="#">О компании</a>
 			<a class="link" href="#">Новости и акции</a>
 			<a class="link" href="#">Работа в Kumpan</a>
-			<a class="link" href="#">Наши заведения</a>
+			
 		</nav>
-		<a class="link">Личный кабинет</a>
+		<a class="link" href="#">Наши заведения</a>
 	</div>
 	<div class="header__row header__row_bottom">
 		@@include('components/ui/_logo.html')
@@ -35,16 +35,18 @@
 			<a class="link" href="#">Торты на заказ</a>
 		</nav>
 		<div class="header__personal">
-			<a class="header__icon" href="#">
+			<a class="header__icon link" href="#">
+				<img src="@icons/personal.svg">
+				Войти
+			</a>
+			<a class="header__icon link" href="#">
 				<img src="@icons/heart.svg">
+				Избранное
 			</a>
-			<a class="header__icon" href="#">
-				<img src="@icons/cart.svg">
+			<a class="header__icon link" href="#">
+				<img src="@icons/basket.svg">
+				Корзина
 			</a>
-			<div class="header__total">
-				<span class="header__summ">23 859 руб</span>
-				<span class="header__quantity">11 товаров</span>
-			</div>
 		</div>
 	</div>
 
@@ -52,13 +54,7 @@
 	<div class="header__mobile">
 		@@include('components/ui/_logo.html', {class: 'logo_small'})
 		<div class="header__personal">
-			<a class="header__icon" href="#">
-				<img src="@icons/cart.svg">
-			</a>
-			<div class="header__total">
-				<span class="header__summ">23 859 руб</span>
-				<span class="header__quantity">11 товаров</span>
-			</div>
+			
 		</div>
 		<div class="header__burger">
 			<svg width="30" height="10" viewBox="0 0 30 10" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -25,11 +25,11 @@
 			cursor: pointer;
 			svg {
 				path {
-					fill: $green40;
+					fill: $black25;
 				}
 			}
 			span {
-				color: $green40;
+				color: $black25;
 			}
 		}
 	}
@@ -46,7 +46,6 @@
 		gap: 2px;
 		width: 100%;
 		background-color: $white;
-		border-radius: 10px;
 		border: solid 1px $grayB9;
 	}
 
@@ -60,7 +59,7 @@
 
 		&:hover {
 			cursor: pointer;
-			background-color: $green22;
+			background-color: $black25;
 
 			a {
 				color: $white;

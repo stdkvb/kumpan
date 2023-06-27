@@ -1,7 +1,9 @@
 import takeControlDropdown from "./ElementsControllers/DropdownController";
 import takeControlCustomSelect from "./ElementsControllers/CustomSelectController";
 import takeControlNumberInput from "./ElementsControllers/NumberInputController";
+import takeControlPhoneMask from './ElementsControllers/PhoneMask'
 
+takeControlPhoneMask()
 takeControlDropdown();
 takeControlCustomSelect('custom-select');
 takeControlNumberInput();
@@ -13,14 +15,14 @@ const firstScreenSwiper = new Swiper ('.first-screen', {
 		type: 'bullets',
 		clickable: true
 	},
-	loop: true,
+	loop: false,
 	slidesPerView: 1,
 	watchOverflow: true,
 	slidesPerGroup: 1,
 	autoplay: {
 		delay: 5000,
-		stopOnLastSlide: false,
+		stopOnLastSlide: true,
 		disableOnInteraction: false
 	},
-	grabCursor: true,
+	autoHeight: true
 })

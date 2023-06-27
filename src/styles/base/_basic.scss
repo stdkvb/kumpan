@@ -68,7 +68,7 @@ button {
 // scrollbar
 * {
   scrollbar-width: thin;
-  scrollbar-color: $green22 transparent;
+  scrollbar-color: $black25 transparent;
 }
 
 *::-webkit-scrollbar {
@@ -80,13 +80,12 @@ button {
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: $green22;
-  border-radius: 20px;
+  background-color: $black25;
   border: none;
 }
 
 .swiper-scrollbar-drag {
-	background-color: $green22;
+	background-color: $black25;
 }
 
 .swiper-pagination-bullet {
@@ -99,14 +98,23 @@ button {
 
 section {
 	margin-bottom: 130px;
+
+	@include desktop_extra_small {
+		margin-bottom: 60px;
+	}
 }
 
 .container {
-	margin: 140px;
-	margin: 140px;
+	margin-left: 130px;
+	margin-right: 130px;
 
 	@include desktop {
-		margin: 50px;
-		margin: 50px;
+		margin-left: 50px;
+		margin-right: 50px;
+	}
+
+	@include tablet_small {
+		margin-left: 20px;
+		margin-right: 20px;
 	}
 }

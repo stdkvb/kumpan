@@ -19,7 +19,7 @@ function takeControlCustomSelect(id) {
 		/* for each element, create a new DIV that will act as the selected item: */
 		a = document.createElement('DIV')
 		a.setAttribute('class', 'select-selected')
-		a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML
+		a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML + '<div class="arrow"></div>'
 		x[i].appendChild(a)
 
 		/* for each element, create a new DIV that will contain the option list: */
@@ -48,7 +48,7 @@ function takeControlCustomSelect(id) {
 				for (i = 0; i < sl; i++) {
 					if (s.options[i].innerHTML == this.innerHTML) {
 						s.selectedIndex = i
-						h.innerHTML = this.innerHTML
+						h.innerHTML = this.innerHTML + '<div class="arrow"></div>'
 						y = this.parentNode.getElementsByClassName('selected-item')
 						yl = y.length
 

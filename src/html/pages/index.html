@@ -8,172 +8,39 @@
 		<section class="first-screen swiper">
 			<div class="swiper-wrapper">
 				<div class="first-screen__slide swiper-slide">
-					<img src="@images/slide-1.png">
+					<img src="@images/slide-4.webp">
 					<h1>Зерновой кофе свежей обжарки</h1>
 					<h4>Обжариваем и доставляем по всей России</h4>
-					@@include('components/ui/_button-link.html', {children: 'Перейти в каталог', class: 'btn_green', href: '#'})
+					@@include('components/ui/_button-link.html', {children: 'Перейти в каталог', class: 'btn_black', href: '#'})
 					@@include('components/ui/_button-link.html', {children: 'Для оптовиков', href: '#'})
-				</div>
-				<div class="first-screen__slide swiper-slide">
-					<img src="@images/slide-2.png">
-					<h1>Доставка готовой еды прямо к двери</h1>
-					<h4>Доставка готовых блюд из ресторанов и кафе прямо к двери клиентов!</h4>
-					@@include('components/ui/_button-link.html', {children: 'Перейти в каталог', class: 'btn_green', href: '#'})
-					@@include('components/ui/_button-link.html', {children: 'Для оптовиков', href: '#'})
-				</div>
-				<div class="first-screen__slide first-screen__slide_inverse swiper-slide">
-					<img src="@images/slide-3.png">
-					<h1>Закажи торт своей мечты</h1>
-					<h4>Мы предлагаем заказ тортов на любой вкус</h4>
-					@@include('components/ui/_button-link.html', {children: 'Перейти в каталог', class: 'btn_green', href: '#'})
-					@@include('components/ui/_button-link.html', {children: 'Для оптовиков', class: 'btn_green-border', href: '#'})
 				</div>
 			</div>
 			<div class="swiper-pagination"></div>
 		</section>
 		<section class="coffee">
 			<div class="container">
-				<h2>Доставляем кофе</h3>
-				@@include('components/ui/_button-link.html', {children: 'Посмотреть все', class: 'btn_green-border', href: '#'})
+				<h2>Доставляем кофе</h2>
+				@@include('components/ui/_button-link.html', {children: 'Посмотреть все', class: 'btn_more', href: '#'})
 				<div class="coffee__list">
-					<div class="coffee__item">
-						<img src="@images/pack-1.png">
-						<div class="coffee__specs">
-							<span>Насыщенность</span>
-							<img src="@icons/3.svg">
-							<span>Кислотность</span>
-							<img src="@icons/3.svg">
-							<span>Горчинка</span>
-							<img src="@icons/2.svg">
-							<span>Сладость</span>
-							<img src="@icons/1.svg">
-						</div>
-						<div class="coffee__quantity">
-							@@include('components/ui/_select.html', {
-								placeholder: 'Вес',
-								selectItems: [
-									{	text: '250 гр',
-										value: '250 гр'
-									},
-									{	text: '500 гр',
-										value: '500 гр'
-									},
-									{	text: '1000 гр',
-									value: '1000 гр'
-									},
-								]
-							})
-							<span class="input-wrapper">
-								<button class="decrement" onclick="event.preventDefault()">-</button>
-								<input class="quantity" type="number" value="1" min="0"/>
-								<button class="increment" onclick="event.preventDefault()">+</button>
-							</span>
-						</div>
-						<div class="coffee__price">
-							Цена за 1 уп. <span>500 ₽</span>
-						</div>
-						<h3>Kumpan Китай</h3>
-						<p>Насыщенный, с теплым шоколадным профилем, сладостью карамели, арахиса, кукурузных хлопьев и глубокой пряностью черного перца и мускатного ореха.</p>
-						<div class="coffee__buttons">
-							@@include('components/ui/_button-link.html', {children: 'В корзину', class: 'btn_green', href: '#'})
-							@@include('components/ui/_button-link.html', {children: 'Подробнее', class: 'btn_green-border', href: '#'})
-							<a href="#">
-								<img src="@icons/heart.svg">
-							</a>
-						</div>
-					</div>
-					<div class="coffee__item">
-						<img src="@images/pack-2.png">
-						<div class="coffee__specs">
-							<span>Насыщенность</span>
-							<img src="@icons/3.svg">
-							<span>Кислотность</span>
-							<img src="@icons/3.svg">
-							<span>Горчинка</span>
-							<img src="@icons/2.svg">
-							<span>Сладость</span>
-							<img src="@icons/1.svg">
-						</div>
-						<div class="coffee__quantity">
-							@@include('components/ui/_select.html', {
-								placeholder: 'Вес',
-								selectItems: [
-									{	text: '250 гр',
-										value: '250 гр'
-									},
-									{	text: '500 гр',
-										value: '500 гр'
-									},
-									{	text: '1000 гр',
-									value: '1000 гр'
-									},
-								]
-							})
-							<span class="input-wrapper">
-								<button class="decrement" onclick="event.preventDefault()">-</button>
-								<input class="quantity" type="number" value="1" min="0"/>
-								<button class="increment" onclick="event.preventDefault()">+</button>
-							</span>
-						</div>
-						<div class="coffee__price">
-							Цена за 1 уп. <span>500 ₽</span>
-						</div>
-						<h3>Kumpan Бразилия</h3>
-						<p>Насыщенный, с теплым шоколадным профилем, сладостью карамели, арахиса, кукурузных хлопьев и глубокой пряностью черного перца и мускатного ореха.</p>
-						<div class="coffee__buttons">
-							@@include('components/ui/_button-link.html', {children: 'В корзину', class: 'btn_green', href: '#'})
-							@@include('components/ui/_button-link.html', {children: 'Подробнее', class: 'btn_green-border', href: '#'})
-							<a href="#">
-								<img src="@icons/heart.svg">
-							</a>
-						</div>
-					</div>
-					<div class="coffee__item">
-						<img src="@images/pack-3.png">
-						<div class="coffee__specs">
-							<span>Насыщенность</span>
-							<img src="@icons/3.svg">
-							<span>Кислотность</span>
-							<img src="@icons/3.svg">
-							<span>Горчинка</span>
-							<img src="@icons/2.svg">
-							<span>Сладость</span>
-							<img src="@icons/1.svg">
-						</div>
-						<div class="coffee__quantity">
-							@@include('components/ui/_select.html', {
-								placeholder: 'Вес',
-								selectItems: [
-									{	text: '250 гр',
-										value: '250 гр'
-									},
-									{	text: '500 гр',
-										value: '500 гр'
-									},
-									{	text: '1000 гр',
-									value: '1000 гр'
-									},
-								]
-							})
-							<span class="input-wrapper">
-								<button class="decrement" onclick="event.preventDefault()">-</button>
-								<input class="quantity" type="number" value="1" min="0"/>
-								<button class="increment" onclick="event.preventDefault()">+</button>
-							</span>
-						</div>
-						<div class="coffee__price">
-							Цена за 1 уп. <span>500 ₽</span>
-						</div>
-						<h3>Kumpan Перу</h3>
-						<p>Насыщенный, с теплым шоколадным профилем, сладостью карамели, арахиса, кукурузных хлопьев и глубокой пряностью черного перца и мускатного ореха.</p>
-						<div class="coffee__buttons">
-							@@include('components/ui/_button-link.html', {children: 'В корзину', class: 'btn_green', href: '#'})
-							@@include('components/ui/_button-link.html', {children: 'Подробнее', class: 'btn_green-border', href: '#'})
-							<a href="#">
-								<img src="@icons/heart.svg">
-							</a>
-						</div>
-					</div>
+					@@include('components/business/_coffee__item.html', {
+						coffeeItems: [
+							{
+								image: '@images/pack-1.webp',
+								title: 'Kumpan Китай',
+								description: 'Насыщенный, с теплым шоколадным профилем, сладостью карамели, арахиса, кукурузных хлопьев и глубокой пряностью черного перца и мускатного ореха.'
+							},
+							{
+								image: '@images/pack-2.webp',
+								title: 'Kumpan Бразилия',
+								description: 'Отлично сбалансированный кофе, благодаря низкой кислотности и высокой сладости. Тело округлое, плотное. Букет: молочный шоколад, какао, лесной орех, желтая слива.'
+							},
+							{
+								image: '@images/pack-3.webp',
+								title: 'Kumpan Перу',
+								description: 'Мягкий, хорошо сбалансированный кофе с низкой кислотностью и средней сладостью. Тело средней плотности, гладкое. Букет: лесной орех, молочный шоколад, сухофрукты.'
+							},
+						]
+					})									
 				</div>
 			</div>
 		</section>
@@ -189,7 +56,7 @@
 		</section>
 		<section class="food">
 			<div class="container">
-				<h2>Доставка еды</h3>
+				<h2>Доставка еды</h2>
 					@@include('components/ui/_button-link.html', {children: 'Посмотреть все', class: 'btn_green-border', href: '#'})
 					<div class="food__list">
 						<div class="food__item">
@@ -261,7 +128,7 @@
 		</section>
 		<section class="cakes">
 			<div class="container">
-				<h3>Торты на заказ</h3>
+				<h2>Торты на заказ</h2>
 				@@include('components/ui/_button-link.html', {children: 'Посмотреть все', class: 'btn_green-border', href: '#'})
 				<div class="cakes__list">
 					<div class="cakes__item">
@@ -309,7 +176,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="about">
+		<section class="about" style="background-image: url('@images/cafe.webp');">
 			<img class="about__photo" src="@images/kumpan.png">
 			<div class="about__text">
 				<div class="about__logo">
@@ -356,12 +223,16 @@
 				</div>
 			</div>
 		</section>
-		<section class="questions">
+		<!-- <section class="feedback">
+			<div class="container" style="background-image: url('@images/feedback-bg.webp');"></div>
+
+		</section> -->
+		<!-- <section class="questions">
 			<div class="container">
 				<h3>У Вас есть вопросы о кофе или доставке? Задайте их нашей команде!</h3>
 				@@include('components/ui/_button-link.html', {children: 'Связаться', class: 'btn_white', href: '#'})
 			</div>
-		</section>
+		</section> -->
 	</main>
 	@@include('components/business/_footer.html')
 	<!-- @@include('components/business/_cookie.html') -->

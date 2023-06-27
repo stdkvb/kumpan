@@ -1,0 +1,76 @@
+@@for(let i = 0; i < coffeeItems.length; i++) {
+	<div class="coffee__item">
+		<img src="`+coffeeItems[i].image+`">
+		<div class="coffee__specs">
+			<span>Насыщенность</span>
+			<div class="coffee__specs_raiting coffee__specs_raiting_3">
+				<div class="coffee__specs_raiting__item"></div>
+				<div class="coffee__specs_raiting__item"></div>
+				<div class="coffee__specs_raiting__item"></div>
+				<div class="coffee__specs_raiting__item"></div>
+				<div class="coffee__specs_raiting__item"></div>
+			</div>
+			<span>Кислотность</span>
+			<div class="coffee__specs_raiting coffee__specs_raiting_3">
+				<div class="coffee__specs_raiting__item"></div>
+				<div class="coffee__specs_raiting__item"></div>
+				<div class="coffee__specs_raiting__item"></div>
+				<div class="coffee__specs_raiting__item"></div>
+				<div class="coffee__specs_raiting__item"></div>
+			</div>
+			<span>Горчинка</span>
+			<div class="coffee__specs_raiting coffee__specs_raiting_2">
+				<div class="coffee__specs_raiting__item"></div>
+				<div class="coffee__specs_raiting__item"></div>
+				<div class="coffee__specs_raiting__item"></div>
+				<div class="coffee__specs_raiting__item"></div>
+				<div class="coffee__specs_raiting__item"></div>
+			</div>
+			<span>Сладость</span>
+			<div class="coffee__specs_raiting coffee__specs_raiting_1">
+				<div class="coffee__specs_raiting__item"></div>
+				<div class="coffee__specs_raiting__item"></div>
+				<div class="coffee__specs_raiting__item"></div>
+				<div class="coffee__specs_raiting__item"></div>
+				<div class="coffee__specs_raiting__item"></div>
+			</div>
+		</div>
+		<div class="coffee__body">
+			<div class="coffee__quantity">
+				@@include('components/ui/_select.html', {
+					placeholder: 'Вес',
+					selectItems: [
+						{	text: '250 гр',
+							value: '250 гр'
+						},
+						{	text: '500 гр',
+							value: '500 гр'
+						},
+						{	text: '1000 гр',
+						value: '1000 гр'
+						},
+					]
+				})
+				<span class="input-wrapper">
+					<button class="decrement" onclick="event.preventDefault()">-</button>
+					<input class="quantity" type="number" value="1" min="0"/>
+					<button class="increment" onclick="event.preventDefault()">+</button>
+				</span>
+			</div>
+			<div class="coffee__price">
+				Цена за 1 уп. <span>500 ₽</span>
+			</div>
+			<h3>`+coffeeItems[i].title+`</h3>
+			<div class="coffee__description">
+				<p>`+coffeeItems[i].description+`</p>
+			</div>	
+			<div class="coffee__buttons">
+				@@include('components/ui/_button-link.html', {children: 'В корзину', class: 'btn_green', href: '#'})
+				@@include('components/ui/_button-link.html', {children: 'Подробнее', class: 'btn_green-border', href: '#'})
+				<a href="#">
+					<img src="@icons/heart.svg">
+				</a>
+			</div>
+		</div>
+	</div>
+}

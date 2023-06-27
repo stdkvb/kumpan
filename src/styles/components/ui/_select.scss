@@ -14,21 +14,11 @@
   }
 
 	.arrow {
-		display: flex;
-		position: absolute;
-		height: 8px;
+		height: 12px;
 		width: 12px;
-		right: 2rem;
 		transition: all 0.2s ease-in-out;
-		z-index: 1;
-		top: 0;
-		bottom: 0;
-		margin: auto 0;
 		background-image: url(@icons/chevron-down.svg);
-
-		@include tablet {
-			right: 0;
-		}
+		background-position: center;
 	}
 
 	.select-items div,
@@ -39,6 +29,9 @@
 		cursor: pointer;
 		user-select: none;
 		position: relative;
+		display: flex;
+		gap: 15px;
+		align-items: center;
 	}
 
 	.select-items {

@@ -16,3 +16,10 @@
 .swiper-slide {
 	height: unset !important;
 }
+
+.swiper-pagination {
+	&-bullet {
+		width: 10px;
+		height: 10px;
+	}
+}
