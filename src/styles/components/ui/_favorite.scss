@@ -1,0 +1,17 @@
+.favorite {
+	width: 45px;
+	height: 45px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	line-height: 0;
+
+	&:hover {
+
+	}
+
+	img {
+		width: 17px;
+	}
+}

@@ -1,8 +1,10 @@
+import takeControlMenu from './ElementsControllers/MenuController'
 import takeControlDropdown from "./ElementsControllers/DropdownController";
 import takeControlCustomSelect from "./ElementsControllers/CustomSelectController";
 import takeControlNumberInput from "./ElementsControllers/NumberInputController";
 import takeControlPhoneMask from './ElementsControllers/PhoneMask'
 
+takeControlMenu()
 takeControlPhoneMask()
 takeControlDropdown();
 takeControlCustomSelect('custom-select');

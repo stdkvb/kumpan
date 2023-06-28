@@ -1,38 +1,95 @@
 .plantation {
 	.container {
-		min-height: 470px;
-		border-radius: 50px;
+		min-height: 398px;
+		height: auto;
 		position: relative;
-		overflow: hidden;
-		background-repeat: no-repeat;
-		background-position: left;
-		background-size: 60%;
+		
+		@include tablet {
+			min-height: 1048px;
+		}
 
-		// img {
-		// 	width: 57%;
-		// 	height: auto;
-		// }
+		@include tablet_small {
+			min-height: 873px;
+		}
+
+		@include mobile {
+			min-height: 524px;
+		}
+	}
+
+	&__image {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+
+		&_desktop {
+			@include min_tablet {
+				background-repeat: no-repeat;
+				background-position: right;
+				background-size: cover;
+			}
+
+			@include tablet {
+				display: none;
+			}
+		}
+
+		&_mobile {
+			@include min_tablet {
+				display: none;
+			}
+
+			@include tablet {
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: top;
+			}
+
+			@include mobile_middle {
+				background-position: bottom;
+			}
+		}
 	}
 
 	&__text {
 		position: absolute;
 		right: 0;
 		top: 0;
-		width: 50%;
+		width: 60%;
 		height: 100%;
-		background-image: url(@icons/plantation-bg.svg);
-		background-repeat: no-repeat;
-		background-size: cover;
 		color: $white;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		padding: 40px 120px 40px 180px;
 		gap: 40px;
+		margin: auto 170px auto auto;
+		max-width: 580px;
+
+		@include tablet {
+			max-width: 100%;
+			width: 100%;
+			margin: auto 0 0;
+			padding: 0 50px 50px;
+			justify-content: flex-end;
+			
+		}
+
+		@include tablet_small {
+			padding: 0 15px 30px;
+			gap: 0;
+		}
 
 		h2 {
 			@include FontFamilyZurichBold;
 			@include bold-70;
+
+			@include tablet_small {
+				@include bold-30;
+				line-height: 110%;
+				margin-bottom: 15px;
+			}
 		}
 	}
 }

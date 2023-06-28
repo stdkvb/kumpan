@@ -1,4 +1,10 @@
 .first-screen {
+	.swiper-wrapper {
+		@include tablet_small {
+			height: 100% !important;
+		}
+	}
+
 	&__slide {
 		position: relative;
 		color: $black25;
@@ -9,7 +15,10 @@
 			padding: 60px 20px;
 		}
 
-
+		@include tablet_small {
+			min-height: 550px;
+			height: 100%;
+		}
 
 		img {
 			position: absolute;
@@ -24,12 +33,32 @@
 			object-fit: cover;
 		}
 
+		&_desktop {
+			@include min_tablet_small {
+				display: block;
+			}
+
+			@include tablet_small {
+				display: none;
+			}
+		}
+
+		&_mobile {
+			@include min_tablet_small {
+				display: none;
+			}
+
+			@include tablet_small {
+				display: block;
+			}
+		}
+
 		h1 {
 			max-width: 710px;
 			margin-bottom: 30px;
 
 			@include desktop_extra_small {
-				max-width: 100%;
+				max-width: 80%;
 			}
 
 			@include tablet_small {
@@ -42,6 +71,10 @@
 			@include FontFamilyZurichRegular;
 			@include regular-24;
 			margin-bottom: 50px;
+
+			@include desktop_extra_small {
+				max-width: 80%;
+			}
 
 			@include tablet_small {
 				@include regular-18;

@@ -8,7 +8,8 @@
 		<section class="first-screen swiper">
 			<div class="swiper-wrapper">
 				<div class="first-screen__slide swiper-slide">
-					<img src="@images/slide-4.webp">
+					<img class="first-screen__slide_desktop" src="@images/slide-4.webp">
+					<img class="first-screen__slide_mobile" src="@images/slide-4_mobile.webp">
 					<h1>Зерновой кофе свежей обжарки</h1>
 					<h4>Обжариваем и доставляем по всей России</h4>
 					@@include('components/ui/_button-link.html', {children: 'Перейти в каталог', class: 'btn_black', href: '#'})
@@ -45,72 +46,44 @@
 			</div>
 		</section>
 		<section class="plantation">
-			<div class="container" style="background-image: url(@images/plantation.png);">
-				<!-- <img src="@images/plantation.png"> -->
+			<div class="container">
+				<div class="plantation__image plantation__image_desktop" style="background-image: url('@images/plantation.webp');"></div>
+					<div class="plantation__image plantation__image_mobile" style="background-image: url('@images/plantation_mobile.webp');"></div>
 				<div class="plantation__text">
 					<h2>Кофе с нашей плантации</h2>
 					<p>Мы заботимся о каждом растении и уделяем много внимания процессу обработки кофейных зерен, чтобы обеспечить нашим клиентам самый вкусный и качественный кофе.</p>
-					@@include('components/ui/_button-link.html', {children: 'Подробнее', class: 'btn_white', href: '#'})
 				</div>
 			</div>
 		</section>
 		<section class="food">
 			<div class="container">
 				<h2>Доставка еды</h2>
-					@@include('components/ui/_button-link.html', {children: 'Посмотреть все', class: 'btn_green-border', href: '#'})
+					@@include('components/ui/_button-link.html', {children: 'Посмотреть все', class: 'btn_more', href: '#'})
 					<div class="food__list">
-						<div class="food__item">
-							<img src="@images/food-1.png">
-							<h3>Тартар из конины</h3>
-							<p>Насыщенный, с теплым шоколадным профилем, сладостью карамели, арахиса, кукурузных хлопьев и глубокой пряностью</p>
-							<div class="food__tech">
-								<span class="food__price">550 ₽</span>
-								<span class="food__weight">250 гр</span>
-								@@include('components/ui/_button-link.html', {children: 'В корзину', class: 'btn_green', href: '#'})
-							</div>
-							<a class="food__favorite" href="#">
-								<img src="@icons/heart_no-circle.svg">
-							</a>
-						</div>
-						<div class="food__item">
-							<img src="@images/food-2.png">
-							<h3>Тартар из конины</h3>
-							<p>Насыщенный, с теплым шоколадным профилем, сладостью карамели, арахиса, кукурузных хлопьев и глубокой пряностью</p>
-							<div class="food__tech">
-								<span class="food__price">550 ₽</span>
-								<span class="food__weight">250 гр</span>
-								@@include('components/ui/_button-link.html', {children: 'В корзину', class: 'btn_green', href: '#'})
-							</div>
-							<a class="food__favorite" href="#">
-								<img src="@icons/heart_no-circle.svg">
-							</a>
-						</div>
-						<div class="food__item">
-							<img src="@images/food-3.png">
-							<h3>Тартар из конины</h3>
-							<p>Насыщенный, с теплым шоколадным профилем, сладостью карамели, арахиса, кукурузных хлопьев и глубокой пряностью</p>
-							<div class="food__tech">
-								<span class="food__price">550 ₽</span>
-								<span class="food__weight">250 гр</span>
-								@@include('components/ui/_button-link.html', {children: 'В корзину', class: 'btn_green', href: '#'})
-							</div>
-							<a class="food__favorite" href="#">
-								<img src="@icons/heart_no-circle.svg">
-							</a>
-						</div>
-						<div class="food__item">
-							<img src="@images/food-4.png">
-							<h3>Тартар из конины</h3>
-							<p>Насыщенный, с теплым шоколадным профилем, сладостью карамели, арахиса, кукурузных хлопьев и глубокой пряностью</p>
-							<div class="food__tech">
-								<span class="food__price">550 ₽</span>
-								<span class="food__weight">250 гр</span>
-								@@include('components/ui/_button-link.html', {children: 'В корзину', class: 'btn_green', href: '#'})
-							</div>
-							<a class="food__favorite" href="#">
-								<img src="@icons/heart_no-circle.svg">
-							</a>
-						</div>
+						@@include('components/business/_food__item.html', {
+							foodItems: [
+								{
+									image: '@images/food-1.webp',
+									title: 'Тартар из конины',
+									description: 'Насыщенный, с теплым шоколадным профилем, сладостью карамели, арахиса, кукурузных хлопьев и глубокой пряностью'
+								},
+								{
+									image: '@images/food-2.webp',
+									title: 'Кыстыбый с креветками',
+									description: 'Насыщенный, с теплым шоколадным профилем, сладостью карамели, арахиса, кукурузных хлопьев и глубокой пряностью'
+								},
+								{
+									image: '@images/food-3.webp',
+									title: 'Кыстыбый с уткой',
+									description: 'Насыщенный, с теплым шоколадным профилем, сладостью карамели, арахиса, кукурузных хлопьев и глубокой пряностью'
+								},
+								{
+									image: '@images/food-4.webp',
+									title: 'Утка конфи',
+									description: 'Насыщенный, с теплым шоколадным профилем, сладостью карамели, арахиса, кукурузных хлопьев и глубокой пряностью'
+								}								
+							]
+						})	
 					</div>
 			</div>
 		</section>

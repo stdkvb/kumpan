@@ -1,5 +1,6 @@
 .header {
 	flex: 0 0 auto;
+	position: relative;
 	
 	&__row {
 		padding: 14px 130px;
@@ -14,7 +15,7 @@
 			padding-right: 50px;
 		}
 
-		@include desktop_small {
+		@include desktop_base {
 			display: none;
 		}
 
@@ -54,7 +55,14 @@
 	&__personal {
 		display: flex;
 		gap: 20px;
+		align-items: center;
 		justify-self: flex-end;
+
+		&_menu {
+			& > *:first-child {
+				margin-bottom: 15px;
+			}
+		}
 	}
 
 	&__icon {
@@ -77,7 +85,7 @@
 		align-items: center;
 		gap: 25px;
 
-		@include min_desktop_small {
+		@include min_desktop_base {
 			display: none;
 		}
 
@@ -89,5 +97,63 @@
 		.logo {
 			flex: 0 1 auto;
 		}
+	}
+
+	&__menu {
+		@include min_desktop_base {
+			display: none;
+		}
+
+		@include desktop_base {
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 1000;
+			width: 100vw;
+			height: 100vh;
+			background-color: $white;
+			padding: 20px;
+			display: flex;
+			flex-direction: column;
+			gap: 30px;
+			transition: all $transitionDuration;
+			transform: translateY(-100vh);
+
+			&._active {
+				transform: translateY(0);
+				overflow-y: auto;
+			}
+
+			.header__row {
+				display: flex;
+				padding: 0;
+
+				nav {
+					flex-direction: column;
+					gap: 15px;
+
+					.link {
+						@include tablet_small {
+							@include regular-14;
+						}
+					}
+				}
+
+				&_bottom {
+					nav {
+						.link {
+							@include tablet_small {
+								@include bold-18;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		
+
+
+
 	}
 }

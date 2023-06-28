@@ -5,6 +5,14 @@
 		grid-template-areas:
 		'title button'
 		'cards cards';
+
+		@include tablet_small {
+			grid-template-columns: auto;
+			grid-template-areas:
+			'title'
+			'cards'
+			'button';
+		}
 	}
 
 	h2 {
@@ -22,24 +30,40 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(533px, auto));
 		gap: 20px;
+
+		@include tablet_small {
+			gap: 30px;
+		}
 	}
 
 	&__item {
 		display: grid;
-		grid-template-columns: 250px auto;
+		grid-template-columns: 230px auto;
 		grid-template-areas:
 			'img specs'
 			'body body';
 		column-gap: 20px;
 
+		@include tablet_small {
+			background-color: $grayFA;
+			grid-template-columns: 1fr 2fr;
+		}
+
 		picture {
 			grid-area: img;
 			position: relative;
-			left: 20%;
-			top: 20%;
+			left: 10%;
+			top: 25%;
 			z-index: 1;
 			user-select: none;
-			pointer-events: none;			
+			pointer-events: none;
+			
+			@include tablet_small {
+				left: 0;
+				top: 0;
+				padding-left: 40px;
+				padding-top: 30px;
+			}
 			
 			img {
 				width: 100%;
@@ -61,7 +85,7 @@
 		flex-direction: column;
 		justify-content: flex-end;
    		margin-bottom: 40px;
-		padding: 0 50px 0;
+		padding: 0 50px 0 30px;
 
 		span {
 			@include regular-16;
@@ -76,7 +100,11 @@
 
 		&_raiting {
 			display: flex;
-			gap: 1px;
+			gap: 2px;
+
+			@include tablet_small {
+				gap: 1px;
+			}
 
 			&:not(:last-child) {
 				margin-bottom: 20px;
@@ -86,6 +114,10 @@
 				background-color: $grayEF;
 				width: 100%;
 				height: 5px;
+
+				@include tablet_small {
+					height: 8px;
+				}
 				
 				&:first-child {
 					border-radius: 50px 0 0 50px;
@@ -131,7 +163,7 @@
 		grid-area: body;
 		background-color: $grayFA;
 		display: grid;
-		grid-template-columns: 250px auto;
+		grid-template-columns: 210px auto;
 		grid-template-areas: 
 			'. quantity'
 			'. price'
@@ -140,29 +172,64 @@
 			'buttons buttons';
 		column-gap: 20px;
 		padding: 30px 50px 50px;
+
+		@include tablet_small {
+			grid-template-columns: auto;
+			grid-template-areas:
+			'title'
+			'description'
+			'quantity'
+			'price'
+			'buttons';
+			padding: 20px 15px 30px;
+		}
 	}
 
 	&__quantity {
 		grid-area: quantity;
 		display: flex;
+		margin-bottom: 20px;
+
+		@include tablet_small {
+			width: 70%;
+		}
 	}
 
 	&__price {
 		grid-area: price;
 		@include regular-16;
 		color: $gray25;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@include tablet_small {
+			width: 70%;
+		}
 
 		span {
 			margin-left: 22px;
 			@include bold-26;
+
+			@include tablet_small {
+				@include bold-20;
+			}
 		}
 	}
 
 	&__description {
 		grid-area: description;
 
+		@include tablet_small {
+			margin-bottom: 20px;
+		}
+
 		p {
 			@include regular-16;
+
+			@include tablet_small {
+				@include regular-14;
+			}
 		}
 	}
 
@@ -176,8 +243,17 @@
 			margin: 0 0 0 auto;
 		}
 
-		img {
-			width: 45px;
+		&__list {
+			display: flex;
+			gap: 20px;
+		}
+	}
+
+	&__favorite {
+		border: 1px solid $black;
+
+		&:hover {
+			
 		}
 	}
 }

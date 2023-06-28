@@ -25,6 +25,10 @@
 		align-items: center;
 		justify-content: center;
 		@include regular-18;
+
+		@include tablet_small {
+			@include regular-14;
+		}
 	}
 
 	&_black {
@@ -38,14 +42,21 @@
 	}
 
 	&_more {
-		height: unset;
-		align-self: center;
-		padding: 0;
-		border: none;
-		border-bottom: 1px dashed $grayB9;
+		@include min_tablet_small {
+			height: unset;
+			align-self: center;
+			padding: 0;
+			border: none;
+			border-bottom: 1px dashed $grayB9;
 
-		&:hover {
+			&:hover {
 
+			}
+		}		
+
+		@include tablet_small {
+			margin: 40px auto 0;
+			padding: 10px 25px;
 		}
 	}
 

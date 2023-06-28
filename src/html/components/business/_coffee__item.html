@@ -65,11 +65,11 @@
 				<p>`+coffeeItems[i].description+`</p>
 			</div>	
 			<div class="coffee__buttons">
-				@@include('components/ui/_button-link.html', {children: 'В корзину', class: 'btn_green', href: '#'})
-				@@include('components/ui/_button-link.html', {children: 'Подробнее', class: 'btn_green-border', href: '#'})
-				<a href="#">
-					<img src="@icons/heart.svg">
-				</a>
+				<div class="coffee__buttons__list">
+					@@include('components/ui/_button-link.html', {children: 'В корзину', class: 'btn_black', href: '#'})
+					@@include('components/ui/_button-link.html', {children: 'Подробнее', href: '#'})
+				</div>
+				@@include('components/ui/_favorite.html', {class: 'coffee__favorite'})				
 			</div>
 		</div>
 	</div>
