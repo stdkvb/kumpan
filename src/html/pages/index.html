@@ -8,12 +8,14 @@
 		<section class="first-screen swiper">
 			<div class="swiper-wrapper">
 				<div class="first-screen__slide swiper-slide">
-					<img class="first-screen__slide_desktop" src="@images/slide-4.webp">
-					<img class="first-screen__slide_mobile" src="@images/slide-4_mobile.webp">
+					<img class="first-screen__slide_desktop" src="@images/slide-4.png">
+					<img class="first-screen__slide_mobile" src="@images/slide-4_mobile.png">
 					<h1>Зерновой кофе свежей обжарки</h1>
 					<h4>Обжариваем и доставляем по всей России</h4>
-					@@include('components/ui/_button-link.html', {children: 'Перейти в каталог', class: 'btn_black', href: '#'})
-					@@include('components/ui/_button-link.html', {children: 'Для оптовиков', href: '#'})
+					<div class="first-screen__btns">
+						@@include('components/ui/_button-link.html', {children: 'Перейти в каталог', class: 'btn_black', href: '#'})
+						@@include('components/ui/_button-link.html', {children: 'Для оптовиков', href: '#'})
+					</div>					
 				</div>
 			</div>
 			<div class="swiper-pagination"></div>
@@ -87,17 +89,21 @@
 					</div>
 			</div>
 		</section>
-		<section class="banner" style="background-image: url(@images/banner.png);">
-			<div class="banner__text">
-				<div>Дарим 200 бонусных баллов</div>
-				<div>за установку карты</div>
-				<p>Приветственные бонусы от Kumpan Cafe для всех владельцев бонусных карт.Даже если у вас уже есть наша карта!</p>
-				<div class="banner__links">
-					@@include('components/ui/_button-link.html', {children: 'Получить карту', class: 'btn_white', href: '#'})
-					<a class="link" href="#">Политика конфиденциальности</a>
+		<section class="banner">
+			<div class="container">
+				<div class="banner__image banner__image_desktop" style="background-image: url(@images/banner.webp);"></div>
+				<div class="banner__image banner__image_mobile" style="background-image: url(@images/banner_mobile.webp);"></div>
+				<div class="banner__text">
+					<div>Дарим 200 бонусных баллов</div>
+					<div>за установку карты</div>
+					<p>Приветственные бонусы от Kumpan Cafe для всех владельцев бонусных карт. Даже если у вас уже есть наша карта!</p>
+					<div class="banner__links">
+						@@include('components/ui/_button-link.html', {children: 'Получить карту', class: 'btn_white', href: '#'})
+						<a class="link" href="#">Политика конфиденциальности</a>
+					</div>
 				</div>
+				<img class="banner__photo" src="@images/phone.png">
 			</div>
-			<img class="banner__image" src="@images/phone.png">
 		</section>
 		<section class="cakes">
 			<div class="container">

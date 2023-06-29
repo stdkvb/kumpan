@@ -25,9 +25,11 @@
 		align-items: center;
 		justify-content: center;
 		@include regular-18;
+		line-height: 0;
 
 		@include tablet_small {
 			@include regular-14;
+			line-height: 0;
 		}
 	}
 
@@ -61,10 +63,11 @@
 	}
 
 	&_white {
-		
+		background-color: $white;
+		border-color: $white;
 
 		&:hover {
-			
+			border-color: $black25;
 		}
 	}
 }
