@@ -108,50 +108,25 @@
 		<section class="cakes">
 			<div class="container">
 				<h2>Торты на заказ</h2>
-				@@include('components/ui/_button-link.html', {children: 'Посмотреть все', class: 'btn_green-border', href: '#'})
+				@@include('components/ui/_button-link.html', {children: 'Посмотреть все', class: 'btn_more', href: '#'})
 				<div class="cakes__list">
-					<div class="cakes__item">
-						<img src="@images/cake-1.png">
-						<div class="cakes__description">
-							<h3>Нежность</h3>
-							<p>Обтяжка торта выполнена из чиз-крема. Можно добавить надпись на торте 3-4 слова.</p>
-							<div class="cakes__tech">
-								<span>Вес</span>
-								<span>от 2 кг</span>
-							</div>
-							<div class="cakes__tech">
-								<span>Цена</span>
-								<span>от 6 000 ₽</span>
-							</div>
-							<div class="cakes__buttons">
-								@@include('components/ui/_button-link.html', {children: 'В корзину', class: 'btn_green', href: '#'})
-								<a href="#">
-									<img src="@icons/heart.svg">
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="cakes__item">
-						<img src="@images/cake-2.png">
-						<div class="cakes__description">
-							<h3>Цветочная вышивка</h3>
-							<p>Обтяжка торта выполнена из чиз-крема. Можно добавить надпись на торте 3-4 слова.</p>
-							<div class="cakes__tech">
-								<span>Вес</span>
-								<span>от 2 кг</span>
-							</div>
-							<div class="cakes__tech">
-								<span>Цена</span>
-								<span>от 6 000 ₽</span>
-							</div>
-							<div class="cakes__buttons">
-								@@include('components/ui/_button-link.html', {children: 'В корзину', class: 'btn_green', href: '#'})
-								<a href="#">
-									<img src="@icons/heart.svg">
-								</a>
-							</div>
-						</div>
-					</div>
+					@@include('components/business/_cakes__item.html', {
+						cakesItems: [
+							{
+								image_desktop: '@images/cake-1.webp',
+								image_mobile: '@images/cake-1_mobile.webp',
+								title: 'Нежность',
+								text: 'Обтяжка торта выполнена из чиз-крема. Можно добавить надпись на торте 3-4 слова.'
+							},
+							{
+								image_desktop: '@images/cake-2.webp',
+								image_mobile: '@images/cake-2_mobile.webp',
+								title: 'Цветочная вышивка',
+								text: 'Обтяжка торта выполнена из чиз-крема. Можно добавить надпись на торте 3-4 слова.'
+							},
+															
+						]
+					})					
 				</div>
 			</div>
 		</section>

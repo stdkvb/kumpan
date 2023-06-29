@@ -54,6 +54,10 @@
 			&:hover {
 
 			}
+
+			.children {
+				line-height: 120%;
+			}
 		}		
 
 		@include tablet_small {
