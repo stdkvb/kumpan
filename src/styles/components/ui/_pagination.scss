@@ -1,0 +1,36 @@
+.pagination {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+
+	a {
+		&,
+		&:focus,
+		&:visited {
+			color: $black25;
+			background-color: $white;
+			width: 29px;
+			height: 29px;
+			padding: 13px;
+			@include regular-18;
+			line-height: 0;
+			border: 1px solid $black25;
+			transition: all $transitionDuration ease-in-out;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}		
+
+		&:hover,
+		&.active {
+			color: $white;
+			background-color: $black25;
+		}
+
+		&.active,
+		&.disabled {
+			pointer-events: none;
+			user-select: none;
+		}
+	}
+}

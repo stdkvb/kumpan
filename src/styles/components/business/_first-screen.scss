@@ -56,6 +56,7 @@
 		h1 {
 			max-width: 710px;
 			margin-bottom: 30px;
+			@include bold-70;
 
 			@include desktop_extra_small {
 				max-width: 80%;
@@ -64,6 +65,7 @@
 			@include tablet_small {
 				@include bold-30;
 				margin-bottom: 20px;
+				max-width: 100%;
 			}
 		}
 

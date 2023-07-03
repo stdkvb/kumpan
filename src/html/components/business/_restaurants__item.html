@@ -1,0 +1,16 @@
+@@for(let i = 0; i < restaurantsItems.length; i++) {
+	<div class="restaurants__item">
+		<img class="restaurants__image" src="`+restaurantsItems[i].image+`">
+		<div class="restaurants__description">
+			<div class="restaurants__wrapper">
+				<h3>`+restaurantsItems[i].title+`</h3>
+				<span class="restaurants__phone">Телефон: `+restaurantsItems[i].phone+`</span>
+				<span class="restaurants__work">Режим работы: `+restaurantsItems[i].work+`</span>
+			</div>			
+			<div class="restaurants__btns">
+				@@include('components/ui/_button-link.html', {children: 'Меню', class: 'btn_black', href: '#'})
+				@@include('components/ui/_button-link.html', {children: 'Подробнее', class: '', href: '#'})
+			</div>
+		</div>
+	</div>
+}

@@ -17,6 +17,26 @@
 						@@include('components/ui/_button-link.html', {children: 'Для оптовиков', href: '#'})
 					</div>					
 				</div>
+				<div class="first-screen__slide swiper-slide">
+					<img class="first-screen__slide_desktop" src="@images/slide-5.png">
+					<img class="first-screen__slide_mobile" src="@images/slide-5_mobile.png">
+					<h1>Доставка готовой еды прямо к двери</h1>
+					<h4>Доставка готовых блюд из ресторанов и кафе прямо к двери клиентов!</h4>
+					<div class="first-screen__btns">
+						@@include('components/ui/_button-link.html', {children: 'Перейти в каталог', class: 'btn_black', href: '#'})
+						@@include('components/ui/_button-link.html', {children: 'Для оптовиков', href: '#'})
+					</div>					
+				</div>
+				<div class="first-screen__slide swiper-slide">
+					<img class="first-screen__slide_desktop" src="@images/slide-6.png">
+					<img class="first-screen__slide_mobile" src="@images/slide-6_mobile.png">
+					<h1>Закажи торт своей мечты</h1>
+					<h4>Мы предлагаем заказ тортов на любой вкус</h4>
+					<div class="first-screen__btns">
+						@@include('components/ui/_button-link.html', {children: 'Перейти в каталог', class: 'btn_black', href: '#'})
+						@@include('components/ui/_button-link.html', {children: 'Для оптовиков', href: '#'})
+					</div>					
+				</div>
 			</div>
 			<div class="swiper-pagination"></div>
 		</section>
@@ -153,39 +173,29 @@
 				<h2>Новости и акции</h2>
 				@@include('components/ui/_button-link.html', {children: 'Посмотреть все', class: 'btn_more', href: '#'})
 				<div class="news__list">
-					<div class="news__item">
-						<img src="@images/news-1.png">
-						<div class="news__description">
-							<h3>Открытие новой точки</h3>
-							<span class="news__date">01.01.2023</span>
-							<p>
-								Это место, где мастерски приготовленные кофейные напитки встречаются с великолепными десертами и вкуснейшей едой.
-							</p>
-							@@include('components/ui/_button-link.html', {children: 'Подробнее', class: 'btn_green-border', href: '#'})
-						</div>
-					</div>
-					<div class="news__item">
-						<img src="@images/news-2.png">
-						<div class="news__description">
-							<h3>Дарим 200 бонусов</h3>
-							<span class="news__date">01.01.2023</span>
-							<p>
-								Это место, где мастерски приготовленные кофейные напитки встречаются с великолепными десертами и вкуснейшей едой.
-							</p>
-							@@include('components/ui/_button-link.html', {children: 'Подробнее', class: 'btn_green-border', href: '#'})
-						</div>
-					</div>
-					<div class="news__item">
-						<img src="@images/news-3.png">
-						<div class="news__description">
-							<h3>Скидка на первый онлайн заказ</h3>
-							<span class="news__date">01.01.2023</span>
-							<p>
-								Это место, где мастерски приготовленные кофейные напитки встречаются с великолепными десертами и вкуснейшей едой.
-							</p>
-							@@include('components/ui/_button-link.html', {children: 'Подробнее', class: 'btn_green-border', href: '#'})
-						</div>
-					</div>
+					@@include('components/business/_news__item.html', {
+						newsItems: [
+							{
+								image: '@images/news-1.webp',
+								title: 'Открытие новой точки',
+								date: '01.01.2023',
+								text: 'Это место, где мастерски приготовленные кофейные напитки встречаются с великолепными десертами и вкуснейшей едой.'
+							},
+							{
+								image: '@images/news-2.webp',
+								title: 'Дарим 200 бонусов',
+								date: '01.01.2023',
+								text: 'Это место, где мастерски приготовленные кофейные напитки встречаются с великолепными десертами и вкуснейшей едой.'
+							},
+							{
+								image: '@images/news-3.webp',
+								title: 'Скидка на первый онлайн заказ',
+								date: '01.01.2023',
+								text: 'Это место, где мастерски приготовленные кофейные напитки встречаются с великолепными десертами и вкуснейшей едой.'
+							}
+															
+						]
+					})
 				</div>
 			</div>
 		</section>

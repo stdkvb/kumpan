@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Наши заведения'})
+
+<body>
+	@@include('components/business/_header.html')
+	<main class="section_offset">
+		<section class="restaurants">
+			<div class="container">
+				<h1>Наши заведения</h1>
+				<div class="restaurants__list">
+					@@include('components/business/_restaurants__item.html', {
+						restaurantsItems: [
+							{
+								image: '@images/restaurants-1.webp',
+								title: 'Проспект Октября, д.5',
+								phone: '272-72-07',
+								work: 'с 8:00 до 23:00'
+							},
+							{
+								image: '@images/restaurants-2.webp',
+								title: 'Ленина, д.60',
+								phone: '272-72-07',
+								work: 'с 8:00 до 23:00'
+							},
+							{
+								image: '@images/restaurants-3.webp',
+								title: 'Коммунистическая, д.49',
+								phone: '272-72-07',
+								work: 'с 8:00 до 23:00'
+							},
+							{
+								image: '@images/restaurants-4.webp',
+								title: 'Ленина, д.84',
+								phone: '272-72-07',
+								work: 'с 8:00 до 23:00'
+							},
+							{
+								image: '@images/restaurants-5.webp',
+								title: 'Проспект Октября, д.88',
+								phone: '272-72-07',
+								work: 'с 8:00 до 23:00'
+							},
+							{
+								image: '@images/restaurants-6.webp',
+								title: 'Верхнеторговая, д.1',
+								phone: '272-72-07',
+								work: 'с 8:00 до 23:00'
+							},
+							{
+								image: '@images/restaurants-7.webp',
+								title: 'Цурюпы, д.87',
+								phone: '272-72-07',
+								work: 'с 8:00 до 23:00'
+							},
+							{
+								image: '@images/restaurants-8.webp',
+								title: 'Рубежная, д.174',
+								phone: '272-72-07',
+								work: 'с 8:00 до 23:00'
+							}
+															
+						]
+					})
+				</div>
+				@@include('components/ui/_pagination.html')
+				@@include('components/ui/_button-link.html', {children: 'Показать еще', class: '', href: '#'})
+			</div>
+		</section>
+		
+	</main>
+	@@include('components/business/_footer.html')
+
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>

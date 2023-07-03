@@ -1,0 +1,13 @@
+@@for(let i = 0; i < newsItems.length; i++) {
+	<div class="news__item">
+		<img src="`+newsItems[i].image+`">
+		<div class="news__description">
+			<h3>`+newsItems[i].title+`</h3>
+			<span class="news__date">`+newsItems[i].date+`</span>
+			<p>
+				`+newsItems[i].text+`
+			</p>
+			@@include('components/ui/_button-link.html', {children: 'Подробнее', class: '', href: '#'})
+		</div>
+	</div>
+}

@@ -35,9 +35,10 @@ main {
 
 h1 {
 	@include FontFamilyZurichBold;
-	@include bold-70;
+	@include bold-50;
 
 	@include tablet_small {
+		@include bold-26;
 		line-height: 110% !important;
 	}
 }
@@ -123,6 +124,16 @@ section {
 
 	@include desktop_extra_small {
 		margin-bottom: 80px;
+	}
+}
+
+.section {
+	&_offset {
+		margin-top: 70px;
+
+		@include tablet_small {
+			margin-top: 30px;
+		}
 	}
 }
 
