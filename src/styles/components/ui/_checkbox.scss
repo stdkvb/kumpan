@@ -1,10 +1,10 @@
 .checkbox {
 	@include regular-14;
-	color: $gray60;
 
 	display: flex;
 	flex-direction: row-reverse;
 	justify-content: flex-end;
+	align-items: center;
 	gap: 0.85em;
 	position: relative;
 
@@ -14,8 +14,11 @@
 	}
 
 	.label {
-		@include mobile_middle {
-			width: 90%;
+		color: $white;
+		@include regular-16;
+
+		@include tablet_small {
+			@include regular-14;
 		}
 	}
 
@@ -29,7 +32,7 @@
 		max-width: 16px;
 		max-height: 16px;
 
-		border: 1px solid $gray70;
+		border: 1px solid $grayB9;
 
 		background-color: transparent;
 
@@ -53,42 +56,31 @@
 	}
 
 	input[type=checkbox]:checked ~ .custom-checkbox {
-		border-color: $blue50;
+		// border-color: $blue50;
 
 		&::before {
-			content: url(@icons/checbox-content-blue.svg);
+			// content: url(@icons/checbox-content-blue.svg);
 		}
 	}
 
-	.error-message {
-		@include errorMessageStyles;
-		position: absolute;
-		bottom: -20px;
-		left: 0;
-	}
 
-	&_invalid {
-		.error-message {
-			display: block;
-		}
-	}
 
-	&_white {
-		color: $white;
-		a {
-			color: $white;
-			text-decoration: underline;
-		}
-		.custom-checkbox {
-			border: solid 1px $white;
-		}
-		input[type=checkbox]:checked ~ .custom-checkbox {
-			border-color: $white;
-			&::before {
-				content: url(@icons/checbox-content-white.svg);
-			}
-		}
-	}
+	// &_white {
+	// 	color: $white;
+	// 	a {
+	// 		color: $white;
+	// 		text-decoration: underline;
+	// 	}
+	// 	.custom-checkbox {
+	// 		border: solid 1px $white;
+	// 	}
+	// 	input[type=checkbox]:checked ~ .custom-checkbox {
+	// 		border-color: $white;
+	// 		&::before {
+	// 			content: url(@icons/checbox-content-white.svg);
+	// 		}
+	// 	}
+	// }
 
 
 }

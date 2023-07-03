@@ -223,6 +223,12 @@
 	text-transform: uppercase;
 }
 
+@mixin regular-12 {
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 120%;
+}
+
 @mixin light-20 {
 	font-size: 20px;
 	font-weight: 300;

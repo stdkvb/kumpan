@@ -3,12 +3,14 @@ import takeControlDropdown from "./ElementsControllers/DropdownController";
 import takeControlCustomSelect from "./ElementsControllers/CustomSelectController";
 import takeControlNumberInput from "./ElementsControllers/NumberInputController";
 import takeControlPhoneMask from './ElementsControllers/PhoneMask'
+import takeControlForms from './ElementsControllers/FormController'
 
 takeControlMenu()
 takeControlPhoneMask()
-takeControlDropdown();
-takeControlCustomSelect('custom-select');
-takeControlNumberInput();
+takeControlForms()
+takeControlDropdown()
+takeControlCustomSelect('custom-select')
+takeControlNumberInput()
 
 //swipers init
 const firstScreenSwiper = new Swiper ('.first-screen', {

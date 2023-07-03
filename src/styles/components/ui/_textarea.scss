@@ -10,6 +10,10 @@ textarea {
 	color: $white;
 	background-color: transparent;
 
+	@include tablet_small {
+		@include regular-14;
+	}
+
 	&:focus {
 
 	}
@@ -21,10 +25,10 @@ textarea {
 	}
 
 	&::-webkit-scrollbar {
-		width: 20px;
+		width: 8px;
 	}
 	&::-webkit-scrollbar-track {
-		background: transparent;
+		background: white;
 	}
 	&::-webkit-scrollbar-thumb {
 		background-color: $grayFA;
@@ -47,7 +51,11 @@ textarea {
 
 	.textarea__label {
 		@include regular-20;
-		color: $white;		
+		color: $white;
+		
+		@include tablet_small {
+			@include regular-14;
+		}
 	}
 
 	&_valid {

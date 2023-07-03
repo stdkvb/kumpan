@@ -7,6 +7,10 @@ input {
 	color: $white;
 	background-color: transparent;
 
+	@include tablet_small {
+		@include regular-14;
+	}
+
 	&:focus, &[type^=hidden]:focus + input {
 
 	}
@@ -28,6 +32,10 @@ input {
 	.input__label {
 		color: $white;
 		@include regular-20;
+
+		@include tablet_small {
+			@include regular-14;
+		}
 	}	
 
 	// &_password {
