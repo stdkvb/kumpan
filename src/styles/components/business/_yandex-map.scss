@@ -1,4 +1,12 @@
 #yandex-map {
 	width: 100%;
 	height: 630px;
+
+	.ymaps-2-1-79-inner-panes {
+		filter: invert(100%) hue-rotate(180deg) contrast(90%);
+	}
+
+	.ymaps-2-1-79-places-pane {
+		filter: invert(100%) hue-rotate(-180deg);
+	}
 }
