@@ -57,6 +57,11 @@
 		position: relative;
 		overflow: hidden;
 		background-color: $grayFA;
+		display: none;
+
+		&._active {
+			display: block;
+		}
 	}
 
 	&__image {

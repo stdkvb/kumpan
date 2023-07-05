@@ -58,13 +58,18 @@
 								title: 'Рубежная, д.174',
 								phone: '272-72-07',
 								work: 'с 8:00 до 23:00'
-							}
-															
+							},
+							{
+								image: '@images/restaurants-5.webp',
+								title: '50-летия Октября, д. 20',
+								phone: '272-72-07',
+								work: 'с 8:00 до 23:00'
+							}															
 						]
 					})
 				</div>
 				@@include('components/ui/_pagination.html')
-				@@include('components/ui/_button-link.html', {children: 'Показать еще', class: '', href: '#'})
+				@@include('components/ui/_button-link.html', {children: 'Показать еще', id: 'load-more', href: '#'})
 			</div>
 		</section>
 		<div id="yandex-map"></div>
@@ -73,7 +78,7 @@
 	@@include('components/business/_footer.html')
 
 	@@include('meta/_includeScripts.html')
-	@@include('components/business/_yandex-maps.html')
+	@@include('meta/_restaurants-map.html')
 </body>
 
 </html>
