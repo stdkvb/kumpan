@@ -5,12 +5,21 @@
 	flex-direction: row-reverse;
 	justify-content: flex-end;
 	align-items: center;
-	gap: 0.85em;
+	gap: 20px;
 	position: relative;
+	transition: all $transitionDuration ease-in-out;
+
+	@include tablet_small {
+		gap: 10px;
+	}
 
 	input[type=checkbox] {
 		position: absolute;
 		left: -10000px;
+	}
+
+	& ~ .pristine-error {
+		display: none;
 	}
 
 	.label {
@@ -27,23 +36,29 @@
 
 		position: relative;
 
-		padding: .5em;
-		height: 100%;
-		max-width: 16px;
-		max-height: 16px;
+		padding: 9px;
+		width: 20px;
+		height: 20px;
 
 		border: 1px solid $grayB9;
 
 		background-color: transparent;
 
 		cursor: pointer;
+	}
+
+	input[type=checkbox]:checked ~ .custom-checkbox {
+		border-color: transparent;
+		background-color: $green22;
+
 
 		&::before {
+			content: url(@icons/check.svg);
 			box-sizing: border-box;
 
 			position: absolute;
-			top: 30%;
-			left: 70%;
+			top: 50%;
+			left: 50%;
 			transform: translate(-50%, -50%);
 
 			width: 100%;
@@ -52,16 +67,14 @@
 			background-color: transparent;
 
 			z-index: 9;
+
 		}
 	}
 
-	input[type=checkbox]:checked ~ .custom-checkbox {
-		// border-color: $blue50;
-
-		&::before {
-			// content: url(@icons/checbox-content-blue.svg);
-		}
+	input[aria-invalid=true]~.custom-checkbox {
+		border: 1px solid $redDB;
 	}
+
 
 
 

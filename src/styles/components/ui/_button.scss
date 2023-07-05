@@ -15,8 +15,9 @@
 	min-width: fit-content;
 
 	&:hover {
-		background-color: $black25;
+		background-color: $green22;
 		color: $white;
+		border-color: $green22;
 	}
 
 	.children {
@@ -38,8 +39,9 @@
 		color: $white;
 
 		&:hover {
-			background-color: transparent;
-			color: $black25;
+			background-color: $green22;
+			color: $white;
+			border-color: $green22;
 		}
 	}
 
@@ -52,7 +54,15 @@
 			border-bottom: 1px dashed $grayB9;
 
 			&:hover {
+				background-color: transparent;
+				color: $green22;
+			}
 
+			&._disabled {
+				pointer-events: none;
+				user-select: none;
+				background-color: transparent;
+				color: $grayB9;
 			}
 
 			.children {
@@ -73,5 +83,13 @@
 		&:hover {
 			border-color: $black25;
 		}
+	}
+
+	&._disabled {
+		pointer-events: none;
+		user-select: none;
+		background-color: $grayB9;
+		border-color: $grayB9;
+		color: $white;
 	}
 }

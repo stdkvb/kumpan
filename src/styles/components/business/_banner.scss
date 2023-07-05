@@ -122,6 +122,9 @@
 		right: 0;
 		bottom: 0;
 		width: 45%;
+		height: auto;
+		max-height: 405px;
+		object-fit: contain;
 
 		@include desktop_small {
 			width: 35%;

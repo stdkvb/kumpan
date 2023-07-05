@@ -134,6 +134,26 @@
 		}
 	}
 
+	.btn {
+		background-color: transparent;
+		color: $white;
+		border-color: $white;
+		transition: all $transitionDuration ease-in-out;
+
+		&:hover {
+			background-color: $white;
+			color: $red3D;
+		}
+
+		&._disabled {
+			pointer-events: none;
+			user-select: none;
+			background-color: transparent;
+			color: $grayB9;
+			border-color: $grayB9;
+		}
+	}
+
 	&__name {
 		@include FontFamilyGogolRegular;
 		color: $white;

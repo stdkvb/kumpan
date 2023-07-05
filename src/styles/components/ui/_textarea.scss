@@ -39,6 +39,23 @@ textarea {
 	&:disabled::-webkit-scrollbar-thumb {
 		background-color: $grayB9;
 	}
+
+	&~.pristine-error {
+		display: none;
+	}
+
+	&[aria-invalid=true] {
+		&:not(:focus) {
+			border: 1px solid $redDB;
+		}	
+	}
+
+	.has-success & {
+		&:not(:focus) {
+			border: 1px solid $green22;
+		}
+	}
+
 }
 
 .textarea__container {

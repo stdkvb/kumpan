@@ -6,16 +6,44 @@
 	align-items: center;
 	border-radius: 50%;
 	line-height: 0;
+	user-select: none;
 
-	&:hover {
+	@include tablet_small {
+		width: 40px;
+		height: 40px;
+	}
 
+	svg {
+		width: 17px;
+		height: 17px;
+		stroke: $black25;
+		transition: fill $transitionDuration ease-in-out;
+		user-select: none;
+	}
+
+	@include min_tablet_small {
+		&:hover {
+			svg {
+				stroke: $green22;
+				fill: $green22;
+			}
+		}
 	}
 
 	&_border {
 		border: 1px solid $black;
+
+		@include min_tablet_small {
+			&:hover {
+				border-color: $green22;
+			}
+		}		
 	}
 
-	img {
-		width: 17px;
+	&._active {
+		svg {
+			stroke: $black25;
+			fill: $black25;
+		}
 	}
 }

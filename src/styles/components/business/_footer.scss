@@ -76,19 +76,28 @@
 
 	&__social {
 		display: flex;
-		gap: 30px;
+		align-items: center;
+		gap: 10px;
 
-		@include mobile {
-			gap: 10px;
-		}
+		svg {
+			width: 30px;
+			height: 30px;
 
-		img {
-			max-width: 50px;
-			max-height: 50px;
 
-			@include mobile {
-				max-width: 40px;
-				max-height: 40px;
+			@include tablet_small {
+				width: 40px;
+				height: 40px;
+			}
+
+			circle {
+				fill: $black25;
+				transition: fill $transitionDuration ease-in-out;
+			}
+
+			&:hover {
+				circle {
+					fill: $green22;
+				}
 			}
 		}
 	}

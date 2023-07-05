@@ -6,4 +6,13 @@ form {
 	& > .btn {
 		margin-top: 30px;
 	}
+
+	.link {
+		color: $white;
+		border-bottom: 1px solid $white;
+
+		&:hover {
+			border-color: $green22;
+		}
+	}
 }

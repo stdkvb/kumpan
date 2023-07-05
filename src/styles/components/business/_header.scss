@@ -70,10 +70,46 @@
 		align-items: center;
 		gap: 10px;
 
-		img {
-			max-width: 20px;
-			max-height:20px;
+		svg {
+			width: 20px;
+			height: 20px;
+			fill: $black25;			
+			transition: fill $transitionDuration ease-in-out;
+
+			@include desktop_base {
+				width: 16px;
+				height: 16px;
+			}
 		}
+
+		&:hover {
+			svg {
+				fill: $green22;
+			}
+		}
+
+		&_stroke {
+			svg {
+				fill: $white;
+				stroke: $black25;
+			}
+
+			&:hover {
+				svg {
+					fill: $white;
+					stroke: $green22;
+				}
+			}
+		}
+
+		
+
+		
+
+		// img {
+		// 	max-width: 20px;
+		// 	max-height:20px;
+		// }
 
 		
 	}
@@ -150,10 +186,11 @@
 				}
 			}
 		}
+	}
 
-		
-
-
-
+	.link {
+		&._active {
+			color: $green22;
+		}
 	}
 }

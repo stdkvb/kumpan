@@ -33,6 +33,7 @@
 
 		@include tablet_small {
 			gap: 30px;
+			grid-template-columns: repeat(auto-fit, minmax(320px, auto));
 		}
 	}
 
@@ -47,6 +48,11 @@
 		@include tablet_small {
 			background-color: $grayFA;
 			grid-template-columns: 1fr 2fr;
+			gap: 0;
+		}
+
+		@include mobile_middle {
+			grid-template-columns: 2fr 1fr;
 		}
 
 		picture {
@@ -72,7 +78,7 @@
 			
 		}
 
-		h3 {
+		.link {
 			grid-area: title;
 			margin-top: 30px;
 			margin-bottom: 15px;
@@ -87,9 +93,14 @@
    		margin-bottom: 40px;
 		padding: 0 50px 0 30px;
 
+		@include tablet_small {
+			padding: 0 30px;
+			margin-bottom: 0;
+		}
+
 		span {
 			@include regular-16;
-			color: $gray25;
+			color: $black25;
 			margin-bottom: 8px;
 		}
 
@@ -193,12 +204,18 @@
 		@include tablet_small {
 			width: 70%;
 		}
+
+		.select-selected {
+			&__value {
+				border-bottom: 1px dashed $grayB9;
+			}
+		}
 	}
 
 	&__price {
 		grid-area: price;
 		@include regular-16;
-		color: $gray25;
+		color: $black25;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -246,6 +263,10 @@
 		&__list {
 			display: flex;
 			gap: 20px;
+
+			@include tablet_small {
+				gap: 10px;
+			}
 		}
 	}
 }

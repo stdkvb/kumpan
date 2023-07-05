@@ -18,7 +18,7 @@ body {
 	display: flex;
 	flex-direction: column;
   	height: 100%;
-	color: $gray25;
+	color: $black25;
 	overflow-y: overlay;
 	overflow-x: hidden;
 
@@ -31,6 +31,14 @@ body {
 
 main {
 	flex: 1 0 auto;
+
+	&._offset {
+		margin-top: 70px;
+
+		@include tablet_small {
+			margin-top: 30px;
+		}
+	}
 }
 
 h1 {
@@ -127,16 +135,6 @@ section {
 	}
 }
 
-.section {
-	&_offset {
-		margin-top: 70px;
-
-		@include tablet_small {
-			margin-top: 30px;
-		}
-	}
-}
-
 .container {
 	margin-left: 130px;
 	margin-right: 130px;
@@ -146,7 +144,7 @@ section {
 		margin-right: 50px;
 	}
 
-	@include tablet_small {
+	@include desktop_base {
 		margin-left: 20px;
 		margin-right: 20px;
 	}

@@ -1,6 +1,6 @@
 input {
 	transition: all $transitionDuration;
-	padding: 10px 20px;
+	padding: 15px 20px;
 	border: 1px solid $grayB9;
 	outline: none;
 	@include regular-16;
@@ -11,15 +11,33 @@ input {
 		@include regular-14;
 	}
 
-	&:focus, &[type^=hidden]:focus + input {
-
-	}
 	&:disabled {
-
+		color: $white;
+		background-color: $grayB9;
+		pointer-events: none;
+		user-select: none;
 	}
 	&::placeholder {
 		color: $grayB9;
 	}
+
+	&~.pristine-error {
+		display: none;
+	}
+
+	&[aria-invalid=true] {
+		&:not(:focus) {
+			border: 1px solid $redDB;
+		}	
+	}
+
+	.has-success & {
+		&:not(:focus) {
+			border: 1px solid $green22;
+		}
+	}
+
+
 }
 
 .input__container {
@@ -115,7 +133,7 @@ input {
 
 	input[type="number"] {
 		-moz-appearance: textfield;
-		color: $gray25;
+		color: $black25;
 		text-align: center;
 		@include regular-16;
 		padding: 0;
@@ -126,9 +144,20 @@ input {
 		@include regular-26;
 		max-width: 10px;
 		cursor: pointer;
-		color: $gray25;
+		color: $black25;
 		background: transparent;
 		border: none;
+		transition: color $transitionDuration ease-in-out;
+		user-select: none;
+
+		&:hover {
+			color: $green22;
+		}
+
+		&._disabled {
+			pointer-events: none;
+			color: $grayB9;
+		}
 	}
 }
 

@@ -4,6 +4,7 @@ import takeControlCustomSelect from "./ElementsControllers/CustomSelectControlle
 import takeControlNumberInput from "./ElementsControllers/NumberInputController";
 import takeControlPhoneMask from './ElementsControllers/PhoneMask'
 import takeControlForms from './ElementsControllers/FormController'
+import takeControlFavorite from './ElementsControllers/FavoriteController'
 
 takeControlMenu()
 takeControlPhoneMask()
@@ -11,6 +12,7 @@ takeControlForms()
 takeControlDropdown()
 takeControlCustomSelect('custom-select')
 takeControlNumberInput()
+takeControlFavorite()
 
 //swipers init
 const firstScreenSwiper = new Swiper ('.first-screen', {

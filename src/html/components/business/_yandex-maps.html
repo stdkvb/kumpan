@@ -1,0 +1,82 @@
+<script type="text/javascript">
+
+	if (document.getElementById('yandex-map') !== null) {
+		function init() {
+			let map = new ymaps.Map('yandex-map', {
+				center: [54.738435, 55.983600],
+				zoom: 14,
+				type: 'yandex#map',
+				controls: []
+			});
+
+			let placemarkOktober5 = new ymaps.Placemark([54.741301, 55.985946], {}, {
+				iconLayout: 'default#image',
+				iconImageHref: '@icons/placemark.svg',
+				iconImageSize: [43, 63],
+				iconImageOffset: [-25, -55]
+			});
+			map.geoObjects.add(placemarkOktober5);
+
+			let placemarkLenin60 = new ymaps.Placemark([54.732033, 55.950642], {}, {
+				iconLayout: 'default#image',
+				iconImageHref: '@icons/placemark.svg',
+				iconImageSize: [43, 63],
+				iconImageOffset: [-25, -55]
+			});
+			map.geoObjects.add(placemarkLenin60);
+
+			let placemarkCommunistic49 = new ymaps.Placemark([54.726725, 55.944911], {}, {
+				iconLayout: 'default#image',
+				iconImageHref: '@icons/placemark.svg',
+				iconImageSize: [43, 63],
+				iconImageOffset: [-25, -55]
+			});
+			map.geoObjects.add(placemarkCommunistic49);
+
+			let placemarkLenin84 = new ymaps.Placemark([54.736150, 55.952933], {}, {
+				iconLayout: 'default#image',
+				iconImageHref: '@icons/placemark.svg',
+				iconImageSize: [43, 63],
+				iconImageOffset: [-25, -55]
+			});
+			map.geoObjects.add(placemarkLenin84);
+
+			let placemarkOktober88 = new ymaps.Placemark([54.766080, 56.018968], {}, {
+				iconLayout: 'default#image',
+				iconImageHref: '@icons/placemark.svg',
+				iconImageSize: [43, 63],
+				iconImageOffset: [-25, -55]
+			});
+			map.geoObjects.add(placemarkOktober88);
+
+			let placemarkVerhnetorg1 = new ymaps.Placemark([54.724833, 55.944174], {}, {
+				iconLayout: 'default#image',
+				iconImageHref: '@icons/placemark.svg',
+				iconImageSize: [43, 63],
+				iconImageOffset: [-25, -55]
+			});
+			map.geoObjects.add(placemarkVerhnetorg1);
+
+			let placemarkCurupi97 = new ymaps.Placemark([54.736982, 55.957802], {}, {
+				iconLayout: 'default#image',
+				iconImageHref: '@icons/placemark.svg',
+				iconImageSize: [43, 63],
+				iconImageOffset: [-25, -55]
+			});
+			map.geoObjects.add(placemarkCurupi97);
+
+			let placemarkRubezh174 = new ymaps.Placemark([54.674918, 55.929056], {}, {
+				iconLayout: 'default#image',
+				iconImageHref: '@icons/placemark.svg',
+				iconImageSize: [43, 63],
+				iconImageOffset: [-25, -55]
+			});
+			map.geoObjects.add(placemarkRubezh174);
+
+
+
+		}
+		ymaps.ready(init);
+	};
+	
+</script>

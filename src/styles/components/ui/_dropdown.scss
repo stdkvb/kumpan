@@ -2,6 +2,10 @@
 	position: relative;
 	width: fit-content;
 
+	&._disabled {
+		pointer-events: none;
+	}
+
 	&__button {
 		display: flex;
 		align-items: center;
@@ -10,8 +14,9 @@
 		span {
 			min-width: fit-content;
 			@include regular-18;
-			color: $gray25;
+			color: $black25;
 			@include transition;
+			user-select: none;
 		}
 
 		svg {
@@ -23,14 +28,14 @@
 
 		&:hover {
 			cursor: pointer;
-			svg {
-				path {
-					fill: $black25;
-				}
-			}
-			span {
-				color: $black25;
-			}
+			// svg {
+			// 	path {
+			// 		fill: $green22;
+			// 	}
+			// }
+			// span {
+			// 	color: $black25;
+			// }
 		}
 	}
 
@@ -54,12 +59,12 @@
 
 		a {
 			@include regular-16;
-			color: $gray25;
+			color: $black25;
 		}
 
 		&:hover {
 			cursor: pointer;
-			background-color: $black25;
+			background-color: $green22;
 
 			a {
 				color: $white;
