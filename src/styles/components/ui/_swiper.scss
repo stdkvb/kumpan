@@ -36,3 +36,54 @@
 		}
 	}
 }
+
+.swiper-navigation {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+
+	& > * {
+		width: 50px;
+		height: 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: $white;
+		border: 1px solid $black25;
+		transition: background-color $transitionDuration ease-in-out;
+
+		&:hover {
+			cursor: pointer;
+			background-color: $black25;
+
+			&:after {
+				content: url('@icons/chevron_white.svg');
+			}
+		}
+
+		&::after {
+			content: url('@icons/chevron.svg');
+			width: 24px;
+			height: 24px;
+		}
+
+		&.swiper-button-disabled {
+			border-color: $grayB9;
+
+			&:hover {
+				cursor: auto;
+				background-color: transparent;
+			}
+
+			&::after {
+				content: url('@icons/chevron_disabled.svg');
+			}
+		}
+	}
+
+	&-prev {
+		&::after {
+			transform: rotate(180deg);
+		}
+	}
+}

@@ -44,7 +44,94 @@
 
 	&__row_bottom {
 		nav {
-			gap: 40px;
+
+			._with_menu {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				line-height: 120%;				
+
+				svg {
+					@include bold-20;
+					width: 12px;
+					height: 14px;
+					transition: transform $transitionDuration ease-in-out;
+					display: flex;
+					align-items: center;
+					padding-top: 4px;
+
+					path {
+						fill: $black25;
+					}
+				}
+			}
+			
+			& > ul {
+				display: flex;
+				justify-content: flex-start;
+				gap: 40px;
+				position: relative;
+
+				& > li {
+					& > ul {
+						position: absolute;
+						left: 0;
+						top: 20px;						
+						opacity: 0;
+						height: 0;
+						visibility: hidden;
+						transition: all $transitionDuration ease-in-out;
+						padding-top: 20px;
+						min-width: 250px;
+						
+						li {
+							padding: 15px;
+							background-color: $white;
+							border: 1px solid $grayB9;
+							border-bottom-width: 0px;
+						
+
+							&:not(:first-of-type) {
+								border-top-width: 0px;
+							}
+
+							&:last-of-type {
+								border-bottom: 1px solid $grayB9;
+							}
+
+							.link {
+								@include regular-18;
+								display: inline-block;
+							}
+						}
+					}
+
+					&:hover,
+					& > ul:hover {
+						& > .link {
+							color: $green22;
+						}
+
+						& > ul {
+							opacity: 1;
+							height: auto;
+							visibility: visible;
+						}
+
+						._with_menu {
+							svg {
+								transform: rotate(180deg) translateY(-4px);
+
+								path {
+									fill: $green22;
+								}
+							}
+						}
+					}
+				}
+			}
+			
+			
 
 			.link {
 				@include bold-20;

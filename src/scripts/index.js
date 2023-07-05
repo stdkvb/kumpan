@@ -17,8 +17,6 @@ takeControlFavorite()
 takeControlLoadMore()
 
 
-// Restaurant's cards
-
 
 //swipers init
 const firstScreenSwiper = new Swiper ('.first-screen', {
@@ -37,4 +35,29 @@ const firstScreenSwiper = new Swiper ('.first-screen', {
 		disableOnInteraction: false
 	},
 	autoHeight: true
+})
+
+const RestaurantGallerySwiper = new Swiper ('.restaurant-gallery__slider', {
+	loop: false,
+	watchOverflow: true,
+	slidesPerGroup: 1,
+	navigation: {
+		nextEl: '.swiper-navigation-next',
+		prevEl: '.swiper-navigation-prev'
+	},
+	breakpoints: {
+		360: {
+			spaceBetween: 0,
+		},
+		576: {
+			spaceBetween: 10,
+			slidesPerView: 1.5
+		},
+		992: {
+			spaceBetween: 20,
+			slidesPerView: 2.5
+		}
+	}
+
+	
 })

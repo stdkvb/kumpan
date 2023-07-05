@@ -5,18 +5,101 @@
 <body>
 	@@include('components/business/_header.html')
 	<main class="_offset">
-		<section class="restaurant__photo">
+		<section class="restaurant-photo">
 			<div class="container">
 				<img src="@images/restaurant__photo.png" alt="#">
 			</div>
 		</section>
 
-		<div id="yandex-map"></div>
+		<section class="restaurant-preview">
+			<div class="container">
+				<div class="restaurant-preview__wrapper">
+					<h1>Kumpan кафе</h1>
+					<div class="restaurant-preview__description">
+						<div class="restaurant-preview__text">
+							<p>
+								Предлагаем широкое разнообразие десертов с доставкой по Уфе. Шоколадный маффин, тирамису, чизкейк – с нашей удобной службой доставки и умеренными ценами вы можете каждый день пробовать что-то новое. 
+							</p>
+							<p>
+								Предлагаем широкое разнообразие десертов с доставкой по Уфе. Шоколадный маффин, тирамису, чизкейк – с нашей удобной службой доставки и умеренными ценами вы можете каждый день пробовать что-то новое. Порадуйте угощениями друзей в свой день рождения, подготовьте сладкий стол для детского праздника, просто поднимите настроение себе в выходной или добавьте вкусных эмоций в напряженный рабочий график. Курьерская служба доставки десертов в Уфе доступна в будние и выходные дни.
+							</p>
+						</div>
+						<div class="restaurant-preview__advantages">
+							<ul>
+								<li>Бизнес ланч</li>
+								<li>Летняя веранда</li>
+								<li>Парковка</li>
+								<li>Бесплатный WiFi</li>						
+							</ul>
+						</div>
+						<div class="restaurant-preview__bts">
+							@@include('components/ui/_button-link.html', {children: 'Открыть меню', class: 'btn_black', href: '#'})
+							@@include('components/ui/_button-link.html', {children: 'Скачать меню', href: '#'})
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="restaurant-gallery">
+			<h2>Галерея</h2>
+			<div class="restaurant-gallery__slider">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="@images/restaurant-gallery__slider-1.webp" alt="#">
+					</div>
+					<div class="swiper-slide">
+						<img src="@images/restaurant-gallery__slider-2.webp" alt="#">
+					</div>
+					<div class="swiper-slide">
+						<img src="@images/restaurant-gallery__slider-1.webp" alt="#">
+					</div>
+					<div class="swiper-slide">
+						<img src="@images/restaurant-gallery__slider-2.webp" alt="#">
+					</div>
+				</div>
+				<div class="container">
+					<div class="swiper-navigation">
+						<div class="swiper-navigation-prev"></div>
+						<div class="swiper-navigation-next"></div>
+					</div>	
+				</div>							
+			</div>
+		</section>
+
+		<div class="restaurant-contacts">
+			<div class="restaurant-contacts__info">
+				<h2>Контакты</h2>
+				<div class="restaurant-contacts__list">
+					<div class="restaurant-contacts__item">
+						<img src="@icons/phone.svg" alt="#">
+						<span>Телефон:</span>
+						<a href="tel:" class="link">+7 (3472) 72-72-07</a>
+					</div>
+					<div class="restaurant-contacts__item">
+						<img src="@icons/map-pin.svg" alt="#">
+						<span>Адрес:</span>
+						<span>Мустая Карима, д.2</span>
+					</div>
+					<div class="restaurant-contacts__item">
+						<img src="@icons/clock.svg" alt="#">
+						<span>График работы:</span>
+						<span>Пн-Пт 08:00 - 23:00<br>Сб-Вс 10:00 - 23:00</span>
+					</div>
+				</div>
+			</div>
+			<div id="yandex-map"></div>
+		</div>
+
+		
+
+		
 		
 	</main>
 	@@include('components/business/_footer.html')
 
 	@@include('meta/_includeScripts.html')
+	@@include('meta/_restaurant-map.html')
 </body>
 
 </html>
