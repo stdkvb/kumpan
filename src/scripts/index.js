@@ -25,13 +25,13 @@ const firstScreenSwiper = new Swiper ('.first-screen', {
 		type: 'bullets',
 		clickable: true
 	},
-	loop: false,
+	loop: true,
 	slidesPerView: 1,
 	watchOverflow: true,
 	slidesPerGroup: 1,
 	autoplay: {
 		delay: 5000,
-		stopOnLastSlide: true,
+		stopOnLastSlide: false,
 		disableOnInteraction: false
 	},
 	autoHeight: true
