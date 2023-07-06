@@ -45,7 +45,7 @@
 	&__list {
 		grid-area: cards;
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(395px, auto));
+		grid-template-columns: repeat(auto-fit, minmax(533px, auto));
 		gap: 20px;
 
 		@include tablet_small {

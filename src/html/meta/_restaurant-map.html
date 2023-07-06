@@ -9,13 +9,13 @@
 				controls: []
 			});
 
-			let placemarkOktober5 = new ymaps.Placemark([54.741301, 55.985946], {}, {
+			let placemark = new ymaps.Placemark([54.741301, 55.985946], {}, {
 				iconLayout: 'default#image',
 				iconImageHref: '@icons/placemark.svg',
 				iconImageSize: [43, 63],
 				iconImageOffset: [-25, -55]
 			});
-			map.geoObjects.add(placemarkOktober5);
+			map.geoObjects.add(placemark);
 		}
 		ymaps.ready(init);
 	};

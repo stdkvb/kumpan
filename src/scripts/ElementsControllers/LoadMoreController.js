@@ -2,7 +2,7 @@ const takeControlLoadMore = () => {
 	const loadMoreButton = document.querySelector("#load-more");
 
 	const cardLimit = 9;
-	const cardIncrease = 3;
+	const cardIncrease = 6;
 
 	const pageCount = Math.ceil(cardLimit / cardIncrease);
 
