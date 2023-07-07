@@ -1,0 +1,58 @@
+.preloader {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 100000;
+	background-color: $white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all $transitionDuration;
+	opacity: 1;
+	
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 10px;
+		pointer-events: none;
+		user-select: none;
+	}
+
+	&__images {
+		position: relative;
+		width: 125px;
+		height: 159px;
+
+		img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		&_loaded {
+			clip-path: inset(100% 0 0 0);
+			transition: clip-path ease-in-out;
+
+			&._active {
+				clip-path: inset(0 0 0 0);
+			}
+		}
+	}
+
+	&__percent {
+		@include FontFamilyZurichRegular;
+		@include regular-40;
+	}
+
+	
+
+	// ._loaded & {
+	// 	opacity: 0;
+	// 	visibility: hidden;
+	// }
+}

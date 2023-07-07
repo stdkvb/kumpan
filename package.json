@@ -72,6 +72,7 @@
     "webp-converter": "2.2.3"
   },
   "dependencies": {
+    "clip-path": "^1.2.0",
     "gulp": "^4.0.2",
     "pristinejs": "^1.1.0",
     "swiper": "^8.4.7",

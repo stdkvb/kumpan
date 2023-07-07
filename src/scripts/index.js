@@ -1,3 +1,4 @@
+import takePreloaderOnload from './ElementsControllers/PreloaderController'
 import takeControlMenu from './ElementsControllers/MenuController'
 import takeControlDropdown from "./ElementsControllers/DropdownController";
 import takeControlCustomSelect from "./ElementsControllers/CustomSelectController";
@@ -6,6 +7,8 @@ import takeControlPhoneMask from './ElementsControllers/PhoneMask'
 import takeControlForms from './ElementsControllers/FormController'
 import takeControlFavorite from './ElementsControllers/FavoriteController'
 import takeControlLoadMore from './ElementsControllers/LoadMoreController'
+import CookieController from './ElementsControllers/CookieController'
+
 
 takeControlMenu()
 takeControlPhoneMask()
@@ -15,8 +18,12 @@ takeControlCustomSelect('custom-select')
 takeControlNumberInput()
 takeControlFavorite()
 takeControlLoadMore()
+CookieController('.cookie-container', '.cookie-accept')
 
 
+window.onload = () => {
+	takePreloaderOnload()
+}   
 
 //swipers init
 const firstScreenSwiper = new Swiper ('.first-screen', {
