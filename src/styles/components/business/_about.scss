@@ -125,6 +125,12 @@
 			margin-bottom: 30px;
 		}
 
+		picture:first-of-type {
+			@include tablet_small {
+				align-self: flex-start;
+			}
+		}
+
 		&_sticker {
 			@include tablet {
 				position: absolute;

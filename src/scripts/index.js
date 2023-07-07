@@ -21,9 +21,29 @@ takeControlLoadMore()
 CookieController('.cookie-container', '.cookie-accept')
 
 
-window.onload = () => {
-	takePreloaderOnload()
-}   
+// window.onload = () => {
+// 	takePreloaderOnload()
+// }  
+
+/* Код ниже для возвращения исходной высоты мобильному меню (100vh) 
+после ресайза экрана */
+
+// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+// We listen to the resize event
+window.addEventListener('resize', () => {
+	// We execute the same script as before
+	let vh = window.innerHeight * 0.01;
+	document.documentElement.style.setProperty('--vh', `${vh}px`);
+	// if (document.body.classList.contains('_lock')) {
+	// 	document.body.classList.remove('_lock')
+	// } else {
+	// 	document.body.classList.add('_lock')
+	// }
+});
+
 
 //swipers init
 const firstScreenSwiper = new Swiper ('.first-screen', {
