@@ -1,0 +1,10 @@
+.successfully {
+	&__title {
+		@include bold-50;
+		margin-bottom: 20px;
+
+		@include tablet_small {
+			@include bold-26;
+		}
+	}
+}

@@ -10,9 +10,14 @@ form {
 	.link {
 		color: $white;
 		border-bottom: 1px solid $white;
+		@include regular-16;
 
 		&:hover {
 			border-color: $green22;
+		}
+
+		@include tablet_small {
+			@include regular-14;
 		}
 	}
 }

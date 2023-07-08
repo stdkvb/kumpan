@@ -1,4 +1,4 @@
-import takePreloaderOnload from './ElementsControllers/PreloaderController'
+// import takePreloaderOnload from './ElementsControllers/PreloaderController'
 import takeControlMenu from './ElementsControllers/MenuController'
 import takeControlDropdown from "./ElementsControllers/DropdownController";
 import takeControlCustomSelect from "./ElementsControllers/CustomSelectController";
@@ -8,6 +8,7 @@ import takeControlForms from './ElementsControllers/FormController'
 import takeControlFavorite from './ElementsControllers/FavoriteController'
 import takeControlLoadMore from './ElementsControllers/LoadMoreController'
 import CookieController from './ElementsControllers/CookieController'
+import takeControlModal from './ElementsControllers/ModalController'
 
 
 takeControlMenu()
@@ -19,7 +20,7 @@ takeControlNumberInput()
 takeControlFavorite()
 takeControlLoadMore()
 CookieController('.cookie-container', '.cookie-accept')
-
+takeControlModal()
 
 // window.onload = () => {
 // 	takePreloaderOnload()
@@ -31,17 +32,12 @@ CookieController('.cookie-container', '.cookie-accept')
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document
-document.documentElement.style.setProperty('--vh', `${vh}px`);
+// document.documentElement.style.setProperty('--vh', `${vh}px`);
 // We listen to the resize event
 window.addEventListener('resize', () => {
 	// We execute the same script as before
 	let vh = window.innerHeight * 0.01;
-	document.documentElement.style.setProperty('--vh', `${vh}px`);
-	// if (document.body.classList.contains('_lock')) {
-	// 	document.body.classList.remove('_lock')
-	// } else {
-	// 	document.body.classList.add('_lock')
-	// }
+	// document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
 
 
@@ -84,7 +80,5 @@ const RestaurantGallerySwiper = new Swiper ('.restaurant-gallery__slider', {
 			spaceBetween: 20,
 			slidesPerView: 2.5
 		}
-	}
-
-	
+	}	
 })

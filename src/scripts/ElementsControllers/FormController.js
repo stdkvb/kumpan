@@ -1,22 +1,17 @@
 import Pristine from './Pristine'
 
-// const successfully = document.getElementById('successfully')
-
 const takeControlForms = () => {
 
-	const callRequestForm = document.getElementById("call-request");	
+	const callRequestForm = document.querySelector(".call-request__form form");	
 	if (callRequestForm !== null) {
 		const callRequestValidator = new Pristine(callRequestForm);
 		callRequestForm.addEventListener('submit', function (e) {
+			e.preventDefault();
+
 			if (callRequestValidator.validate() == true) {
-				e.preventDefault();
-				console.log('validate')
-				// setTimeout(function () {
-				// 	successfully.classList.add('_open');
-				// }, 1000)
-			} else {
-				e.preventDefault();
-				console.log('novalidate')
+				setTimeout(function () {
+					// popupOpen(document.querySelector('.successfully'));
+				}, 500)
 			}
 		});
 	}
