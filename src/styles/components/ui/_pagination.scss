@@ -3,6 +3,12 @@
 	align-items: center;
 	gap: 10px;
 
+	grid-area: pagination;
+
+	@include tablet_small {
+		display: none;
+	}
+
 	a {
 		&,
 		&:focus,

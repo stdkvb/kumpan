@@ -11,17 +11,7 @@
 			grid-template-areas:
 			'title'
 			'cards'
-			'more'
-			'pagination';
-		}
-
-
-		.pagination {
-			grid-area: pagination;
-
-			@include tablet_small {
-				justify-self: center;
-			}
+			'more';
 		}
 
 		.btn {

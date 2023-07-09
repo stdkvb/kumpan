@@ -11,11 +11,18 @@ const takeControlLoadMore = () => {
 	const createCard = (index, endRange) => {
 		handleButtonStatus();
 
-		const cards = document.querySelectorAll(".restaurants__item");
+		const restaurantsCards = document.querySelectorAll(".restaurants__item");
+		const coffeeCards = document.querySelectorAll(".coffee__item");
+		console.log(restaurantsCards);
 
-		if (cards !== null) {
+		if (restaurantsCards.length > 0) {
 			for (let i = index - 1; i < endRange; i++) {
-				cards[i].classList.add('_active');
+				restaurantsCards[i].classList.add('_active');
+			}
+		}
+		if (coffeeCards.length > 0) {
+			for (let i = index - 1; i < endRange; i++) {
+				coffeeCards[i].classList.add('_active');
 			}
 		}		
 

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Кофе в зернах'})
+
+<body>
+	@@include('components/business/_header.html')
+	<main class="_offset coffee-beans">
+		<section class="coffee-beans-banner">
+			<div class="container">
+				<div class="coffee-beans-banner__images">
+					<img class="coffee-beans-banner__images_desktop" src="@images/coffee-beans__photo.webp" alt="#">
+					<img class="coffee-beans-banner__images_mobile" src="@images/coffee-beans__photo_mobile.webp" alt="#">
+				</div>
+
+				<div class="coffee-beans-banner__description">
+					<h1>Кофе с нашей плантации</h1>
+					@@include('components/ui/_button-link.html', {children: 'Подробнее', class: 'btn_white', href: '#'})
+				</div>			
+			</div>
+		</section>
+
+		<section class="coffee coffee-beans-coffee">
+			<div class="container">
+				<h2>Кофе в зернах</h2>
+				<div class="coffee__list">
+					@@include('components/business/_coffee__item.html', {
+						coffeeItems: [
+							{
+								image: '@images/pack-1.webp',
+								title: 'Kumpan Китай',
+								description: 'Насыщенный, с теплым шоколадным профилем, сладостью карамели, арахиса, кукурузных хлопьев и глубокой пряностью черного перца и мускатного ореха.'
+							},
+							{
+								image: '@images/pack-2.webp',
+								title: 'Kumpan Бразилия',
+								description: 'Отлично сбалансированный кофе, благодаря низкой кислотности и высокой сладости. Тело округлое, плотное. Букет: молочный шоколад, какао, лесной орех, желтая слива.'
+							},
+							{
+								image: '@images/pack-3.webp',
+								title: 'Kumpan Перу',
+								description: 'Мягкий, хорошо сбалансированный кофе с низкой кислотностью и средней сладостью. Тело средней плотности, гладкое. Букет: лесной орех, молочный шоколад, сухофрукты.'
+							},
+							{
+								image: '@images/pack-1.webp',
+								title: 'Kumpan Китай',
+								description: 'Насыщенный, с теплым шоколадным профилем, сладостью карамели, арахиса, кукурузных хлопьев и глубокой пряностью черного перца и мускатного ореха.'
+							},
+							{
+								image: '@images/pack-2.webp',
+								title: 'Kumpan Бразилия',
+								description: 'Отлично сбалансированный кофе, благодаря низкой кислотности и высокой сладости. Тело округлое, плотное. Букет: молочный шоколад, какао, лесной орех, желтая слива.'
+							},
+							{
+								image: '@images/pack-3.webp',
+								title: 'Kumpan Перу',
+								description: 'Мягкий, хорошо сбалансированный кофе с низкой кислотностью и средней сладостью. Тело средней плотности, гладкое. Букет: лесной орех, молочный шоколад, сухофрукты.'
+							},
+							{
+								image: '@images/pack-1.webp',
+								title: 'Kumpan Китай',
+								description: 'Насыщенный, с теплым шоколадным профилем, сладостью карамели, арахиса, кукурузных хлопьев и глубокой пряностью черного перца и мускатного ореха.'
+							},
+							{
+								image: '@images/pack-2.webp',
+								title: 'Kumpan Бразилия',
+								description: 'Отлично сбалансированный кофе, благодаря низкой кислотности и высокой сладости. Тело округлое, плотное. Букет: молочный шоколад, какао, лесной орех, желтая слива.'
+							},
+							{
+								image: '@images/pack-3.webp',
+								title: 'Kumpan Перу',
+								description: 'Мягкий, хорошо сбалансированный кофе с низкой кислотностью и средней сладостью. Тело средней плотности, гладкое. Букет: лесной орех, молочный шоколад, сухофрукты.'
+							}
+						]
+					})									
+				</div>
+				@@include('components/ui/_pagination.html')
+				@@include('components/ui/_button-link.html', {children: 'Показать еще', class: 'load-more', id: 'load-more', href: '#'})
+			</div>
+		</section>
+
+		<section class="coffee-beans-wholesale">
+			<div class="container">
+				<div class="coffee-beans-wholesale__image coffee-beans-wholesale__image_desktop" style="background-image: url('@images/coffee-beans-wholesale.webp');"></div>
+				<div class="coffee-beans-wholesale__image coffee-beans-wholesale__image_mobile" style="background-image: url('@images/coffee-beans-wholesale_mobile.webp');"></div>
+				<div class="coffee-beans-wholesale__text">
+					<h2>Оптовая продажа кофе Kumpan</h2>
+					<p>
+						Свежеобжаренный кофе Kumpan можно приобрести как мелким, так и крупным оптом, по выгодной цене. Чем выше объем закупок кофе, тем ниже его конечная стоимость. К каждому клиенту у нас индивидуальный подход.
+					</p>
+					<p>
+						Преимущество нашего кофе заключается в том, что готовые зерна не хранятся у нас на складе, а отправляются на следующий день после обжарки, чтобы потребитель мог насладиться восхитительным ароматом.
+					</p>
+				</div>
+			</div>
+		</section>
+
+
+		
+
+		
+		
+	</main>
+	@@include('components/business/_footer.html')
+
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>
