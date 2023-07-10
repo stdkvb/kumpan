@@ -214,4 +214,48 @@
 			}
 		}
 	}
+
+	&-advantages {
+		h2 {
+			margin-bottom: 30px;
+		}
+
+		&__list {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(533px, auto));
+			gap: 20px;
+
+			@include tablet_small {
+				grid-template-columns: repeat(auto-fit, minmax(320px, auto));
+				gap: 30px;
+			}
+		}
+
+		&__item {
+			background-color: $grayFA;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			padding: 30px;
+
+			@include tablet_small {
+				padding: 20px;
+			}
+
+			h3 {
+				@include bold-20;
+				margin-bottom: 20px;				
+
+				@include tablet_small {
+					@include bold-18;
+				}
+			}
+
+			p {
+				&:not(:last-child) {
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
 }

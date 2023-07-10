@@ -27,7 +27,12 @@
 			align-items: center;
 		}		
 
-		&:hover,
+		&:hover {
+			color: $white;
+			background-color: $green22;
+			border-color: $green22;
+		}
+		
 		&.active {
 			color: $white;
 			background-color: $black25;

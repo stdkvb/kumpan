@@ -13,7 +13,6 @@ const takeControlLoadMore = () => {
 
 		const restaurantsCards = document.querySelectorAll(".restaurants__item");
 		const coffeeCards = document.querySelectorAll(".coffee__item");
-		console.log(restaurantsCards);
 
 		if (restaurantsCards.length > 0) {
 			for (let i = index - 1; i < endRange; i++) {
