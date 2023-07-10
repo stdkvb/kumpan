@@ -1,0 +1,50 @@
+.coffee-description {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+
+	@include tablet_small {
+		flex-direction: column;
+	}
+
+	&__text {
+		max-width: 810px;
+
+		& > * {
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	&__cards {
+		display: flex;
+		gap: 20px;
+
+		@include tablet {
+			display: block;
+		}
+	}
+
+	&__card {
+		align-self: flex-start;
+		min-width: 395px;
+		background-color: $grayFA;
+		padding: 30px;
+
+		@include tablet {
+			min-width: auto;
+			padding: 20px;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}		
+
+		h4 {
+			@include tablet_small {
+				@include bold-18;
+			}
+		}
+	}
+}

@@ -1,0 +1,27 @@
+.directory {
+	display: flex;
+	margin-bottom: 40px;
+	color: $black25;
+	opacity: 0.7;
+	white-space: nowrap;
+    overflow: hidden;
+
+	.link,
+	span {
+		@include regular-16;
+
+		@include tablet_small {
+			@include regular-14;
+		}
+	}
+
+	.link {
+		margin-right: 5px;
+
+		&::after {
+			content: '/';
+			display: inline-block;
+			margin-left: 5px;
+		}
+	}
+}

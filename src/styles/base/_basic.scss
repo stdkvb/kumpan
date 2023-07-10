@@ -35,7 +35,7 @@ main {
 	&._offset {
 		margin-top: 70px;
 
-		@include tablet_small {
+		@include tablet {
 			margin-top: 30px;
 		}
 	}

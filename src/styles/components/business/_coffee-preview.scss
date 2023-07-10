@@ -1,0 +1,236 @@
+.coffee-preview {
+	.container {
+		display: grid;
+		grid-template-columns: minmax(405px, 810px) 5% auto;
+		column-gap: 50px;
+		align-items: start;
+		grid-template-areas: 
+		'slider title title'
+		'slider article article'
+		'slider description description'
+		'slider specs specs'
+		'slider select select'
+		'slider price price'
+		'slider quantity buttons'
+		'slider . .';
+
+		@include tablet {
+			grid-template-columns: 80px auto;
+			column-gap: 0;
+			grid-template-areas: 
+			'title title'
+			'article article'
+			'slider slider'
+			'description description'
+			'specs specs'
+			'select quantity'
+			'price price'
+			'buttons buttons';
+		}
+	}
+
+	&__slider {
+		grid-area: slider;
+
+		display: flex;
+		gap: 20px;
+
+		@include tablet {
+			display: block;
+			margin-bottom: 30px;
+		}
+
+		&_secondary {
+
+			@include desktop_base {
+				display: none;
+			}
+
+			.swiper-slide {
+				width: 118px !important;
+				height: 118px !important;
+
+				&:hover {
+					cursor: pointer;
+				}
+
+				&-thumb-active {
+					border: 1px solid $green22;
+				}
+			}
+		}
+
+		&_main {
+			position: relative;
+			width: 672px;
+			overflow: hidden;
+
+			@include tablet {
+				width: calc(100vw - 40px);
+			}
+
+			.swiper-slide {
+				max-width: 672px !important;
+				max-height: 672px !important;
+				
+				@include tablet {
+					max-width: 100% !important;
+					max-height: 100% !important;
+				}
+			}
+
+			.swiper-navigation {
+				position: absolute;
+				right: 25px;
+				bottom: 25px;
+				z-index: 99;
+			}
+		}
+
+		img {
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__title {
+		grid-area: title;
+		display: flex;
+		align-items: baseline;
+		gap: 30px;
+		margin-bottom: 30px;
+
+		@include tablet_small {
+			margin-bottom: 20px;
+		}
+
+		span {
+			@include FontFamilyZurichRegular;
+			@include regular-24;
+			white-space: nowrap;
+
+			@include tablet_small {
+				@include regular-18;
+			}
+		}
+	}
+
+	&__article {
+		grid-area: article;
+		@include regular-18;
+		margin-bottom: 40px;
+
+		@include tablet_small {
+			@include regular-14;
+			margin-bottom: 30px;
+		}
+	}
+
+	.coffee__description {
+		grid-area: description;
+		max-width: 533px;
+		margin-bottom: 20px;
+
+		@include tablet {
+			max-width: 100%;
+			margin-bottom: 30px;
+		}
+
+		p {
+			@include regular-18;
+
+			@include tablet_small {
+				@include regular-14;	
+			}
+		}
+	}
+
+	.coffee__specs {
+		grid-area: specs;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		max-width: 360px;
+		padding: 0;
+		margin: 0;
+		margin-bottom: 40px;
+
+		@include tablet_small {
+			max-width: 240px;
+		}
+
+		&__item {
+			width: 170px;
+
+			@include tablet_small {
+				width: 104px;
+			}
+		}
+	}
+
+	.custom-select {
+		grid-area: select;
+		height: auto;
+		margin-bottom: 40px;
+
+		@include tablet_small {
+			margin-bottom: 30px;
+		}
+
+		.select-items {
+			width: fit-content;
+		}
+	}
+
+	.coffee__price {
+		grid-area: price;
+		justify-content: flex-start;
+		@include bold-16;
+
+		@include tablet_small {
+			@include regular-14;
+		}
+
+		span {
+			@include tablet {
+				margin-left: 42px;
+			}
+		}		
+	}
+
+	.input-wrapper {
+		grid-area: quantity;
+		justify-self: start;
+		margin-top: 50px;
+
+		@include tablet {
+			margin-top: 0;
+			margin-left: 42px;
+		}
+
+		.quantity {
+			@include regular-26;
+		}
+
+		.decrement,
+		.increment {
+			@include bold-26;
+		}
+	}
+
+	.coffee__buttons__list {
+		grid-area: buttons;
+		align-items: center;
+		margin-top: 50px;
+
+		@include tablet_small {
+			margin-top: 30px;
+		}
+
+		.btn {
+			@include tablet_small {
+				width: 90%;
+			}
+		}
+	}	
+}

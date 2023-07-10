@@ -1,0 +1,10 @@
+<div class="directory">
+	<a href="#" class="link">Главная</a>
+	@@if (context.link) {
+	<a href="#" class="link">@@link</a>
+	}
+	@@if (context.nextlink) {
+	<a href="#" class="link">@@nextlink</a>
+	}
+	<span>@@disabled</span>
+</div>

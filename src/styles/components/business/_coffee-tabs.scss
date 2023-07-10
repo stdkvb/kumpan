@@ -1,0 +1,51 @@
+.coffee-tabs {
+	&__tabs {
+		overflow: hidden;
+		margin-bottom: 30px;
+	}
+
+	&__tab {
+		white-space: nowrap;
+		width: fit-content !important;
+		transition: color $transitionDuration ease-in-out;		
+
+		&:hover {
+			cursor: pointer;
+			color: $green22;
+		}
+
+		h3 {
+			@include FontFamilyZurichRegular;
+			@include regular-24;
+			opacity: 0.7;
+
+			@include tablet_small {
+				@include regular-18;
+			}
+		}		
+
+		&._active,
+		&._active:hover {
+			color: $black25;
+
+			&::after {
+				content: '';
+				display: block;
+				height: 3px;
+				background-color: $black25;
+			}
+
+			h3 {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__content {
+		display: none;
+
+		&._active {
+			display: block;
+		}
+	}
+}

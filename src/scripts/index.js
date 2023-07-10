@@ -9,7 +9,7 @@ import takeControlFavorite from './ElementsControllers/FavoriteController'
 import takeControlLoadMore from './ElementsControllers/LoadMoreController'
 import CookieController from './ElementsControllers/CookieController'
 import takeControlModal from './ElementsControllers/ModalController'
-
+import takeControlCoffeeTabs from './ElementsControllers/CoffeeTabsController';
 
 takeControlMenu()
 takeControlPhoneMask()
@@ -21,6 +21,7 @@ takeControlFavorite()
 takeControlLoadMore()
 CookieController('.cookie-container', '.cookie-accept')
 takeControlModal()
+takeControlCoffeeTabs()
 
 // window.onload = () => {
 // 	takePreloaderOnload()
@@ -82,3 +83,38 @@ const RestaurantGallerySwiper = new Swiper ('.restaurant-gallery__slider', {
 		}
 	}	
 })
+
+// Coffee slider
+const CoffeeMainSwiper = new Swiper('.coffee-preview__slider_main', {
+	effect: 'fade',
+	navigation: {
+		nextEl: '.swiper-navigation-next',
+		prevEl: '.swiper-navigation-prev'
+	},
+	slidesPerView: 1,
+	slidesPerGroup: 1,
+	simulateTouch: false,
+	grabCursor: false,
+	autoHeight: false,
+	thumbs: {
+		// Свайпер с миниатюрами
+		// и его настройки
+		swiper: {
+			el: '.coffee-preview__slider_secondary',
+			slidesPerView: 5,
+			slideToClickedSlide: true,
+			touchRatio: 1,
+			direction: 'vertical',
+			spaceBetween: 20
+		}
+	}
+});
+
+
+// coffee-tab's Slider
+const CoffeeTabsSwiper = new Swiper ('.coffee-tabs__tabs', {
+	slidesPerView: 'auto',	
+	watchOverflow: true,
+	spaceBetween: 30
+})
+

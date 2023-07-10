@@ -65,4 +65,10 @@
 			}
 		}
 	}
+
+	.select-selected {
+		&__value {
+			border-bottom: 1px dashed $grayB9;
+		}
+	}
 }
