@@ -1,0 +1,28 @@
+.review {
+	.popup__content {
+		background-color: $black25;
+		color: $white;
+		max-width: 750px;
+		padding: 50px;
+
+		@include tablet_small {
+			padding: 20px;
+		}
+	}
+
+	.popup__close {
+		background-image: url('@icons/close-icon_white.svg');
+	}
+
+	h2 {
+		margin-bottom: 30px;
+	}
+
+	&__form {
+		.btn {
+			@include tablet_small {
+				width: 100%;
+			}
+		}
+	}
+}

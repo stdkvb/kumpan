@@ -1,0 +1,7 @@
+.coffee-reviews {
+	&_empty {
+		& > *:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+}

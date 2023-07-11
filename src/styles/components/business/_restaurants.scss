@@ -38,7 +38,7 @@
 		grid-template-columns: repeat(auto-fit, minmax(533px, auto));
 		gap: 20px;
 
-		@include tablet_small {
+		@include desktop_small {
 			grid-template-columns: repeat(auto-fit, minmax(320px, auto));
 		}
 	}

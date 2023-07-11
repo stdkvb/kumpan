@@ -21,12 +21,8 @@
 	&__list {
 		grid-area: cards;
 		display: grid;
-		grid-template-columns: repeat(auto-fit,minmax(533px,auto));
+		grid-template-columns: repeat(auto-fit,minmax(320px,auto));
 		gap: 20px;
-
-		@include desktop_base {
-			grid-template-columns: repeat(auto-fit,minmax(320px,auto));
-		}
 	}
 
 	&__item {

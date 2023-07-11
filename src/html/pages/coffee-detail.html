@@ -124,15 +124,30 @@
 					</div>					
 				</div>
 				<div id="coffee-tab-content-2" class="coffee-tabs__content">
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora modi ipsam, libero dolor rerum officiis, voluptas inventore, amet quia quos aspernatur recusandae. Assumenda, fugit. Eveniet nemo ipsum mollitia sequi. Iusto?
-					Sed blanditiis, dolorum asperiores optio natus labore porro quas. Suscipit nam hic provident ullam est. Quae cumque quibusdam temporibus, dolor nobis eligendi corporis eum inventore alias sequi, facilis distinctio porro.
-					Cupiditate, praesentium ex! Laborum harum consequatur maiores aut vel quam dolores et! Ratione molestias pariatur autem dignissimos perferendis sint suscipit nobis cupiditate veritatis? Velit doloribus, voluptatibus voluptas ullam ipsam accusamus.
-					Recusandae ipsam, voluptatem ad commodi adipisci fuga alias aut velit rerum sunt magnam blanditiis tenetur natus culpa molestiae! Excepturi, molestiae? Labore repudiandae, delectus explicabo inventore hic eos quas accusantium molestias?
-					Nulla nostrum tempore eveniet laudantium, facilis asperiores repellendus maiores eos modi totam reprehenderit autem iusto voluptas accusantium placeat animi enim numquam dolore perferendis? Consectetur optio porro eos vero sed dicta.
+					<div class="coffee-cooking">
+						<div class="coffee-cooking__item">
+							<img src="@icons/coffee-machine.svg" alt="#">
+							<h4>Кофемашина</h4>
+						</div>
+						<div class="coffee-cooking__item">
+							<img src="@icons/turk.svg" alt="#">
+							<h4>Турка</h4>
+						</div>
+						<div class="coffee-cooking__item">
+							<img src="@icons/espresso.svg" alt="#">
+							<h4>Эспрессо</h4>
+						</div>
+					</div>
 				</div>
 				<div id="coffee-tab-content-3" class="coffee-tabs__content">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis nihil reprehenderit explicabo consectetur. Vel cum quo natus dolor labore saepe aspernatur, ex, architecto expedita voluptatem fugit quidem mollitia dolorum. Voluptatum!
-					Necessitatibus at quasi expedita porro laboriosam, quia sed provident unde ex repudiandae repellendus veniam. Voluptate, atque amet dolores quas quae possimus assumenda, quasi dignissimos qui deleniti fugiat, voluptatibus rem maiores!
+					<div class="coffee-reviews">
+						<div class="coffee-reviews_empty">
+							<p>
+								Здесь пока нет отзывов
+							</p>
+							@@include('components/ui/_button-link.html', {children: 'Оставить отзыв', class: 'popup-link', href: '#review'})
+						</div>
+					</div>
 				</div>
 			</div>
 
@@ -144,6 +159,7 @@
 		
 	</main>
 	@@include('components/business/_footer.html')
+	@@include('components/business/_review.html')
 
 	@@include('meta/_includeScripts.html')
 </body>
