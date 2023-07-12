@@ -3,7 +3,6 @@ import takeControlMenu from './ElementsControllers/MenuController'
 import takeControlDropdown from "./ElementsControllers/DropdownController"
 import takeControlCustomSelect from "./ElementsControllers/CustomSelectController"
 import takeControlNumberInput from "./ElementsControllers/NumberInputController"
-import takeControlPhoneMask from './ElementsControllers/PhoneMask'
 import takeControlForms from './ElementsControllers/FormController'
 import takeControlFavorite from './ElementsControllers/FavoriteController'
 import takeControlLoadMore from './ElementsControllers/LoadMoreController'
@@ -11,9 +10,10 @@ import CookieController from './ElementsControllers/CookieController'
 import takeControlModal from './ElementsControllers/ModalController'
 import takeControlCoffeeTabs from './ElementsControllers/CoffeeTabsController'
 import takeControlRaiting from './ElementsControllers/RaitingController'
+import addPhoneMaskListeners from './listeners/addPhoneMaskListeners'
 
+addPhoneMaskListeners()
 takeControlMenu()
-takeControlPhoneMask()
 takeControlForms()
 takeControlDropdown()
 takeControlCustomSelect('custom-select')
