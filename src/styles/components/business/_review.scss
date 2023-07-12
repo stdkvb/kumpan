@@ -1,5 +1,6 @@
 .review {
-	.popup__content {
+	.popup__content,
+	&_block {
 		background-color: $black25;
 		color: $white;
 		max-width: 750px;
@@ -8,15 +9,17 @@
 		@include tablet_small {
 			padding: 20px;
 		}
+
+		h2 {
+			margin-bottom: 30px;
+		}
 	}
 
 	.popup__close {
 		background-image: url('@icons/close-icon_white.svg');
 	}
 
-	h2 {
-		margin-bottom: 30px;
-	}
+	
 
 	&__form {
 		.btn {

@@ -13,8 +13,26 @@ const takeControlForms = () => {
 					// popupOpen(document.querySelector('.successfully'));
 				}, 500)
 			}
-		});
+		})
 	}
+
+	const reviewForms = document.querySelectorAll(".review__form form");	
+	if (reviewForms.length > 0) {
+		reviewForms.forEach((elem) => {
+			const reviewValidator = new Pristine(elem);
+			elem.addEventListener('submit', function (e) {
+				e.preventDefault();
+
+				if (reviewValidator.validate() == true) {
+					setTimeout(function () {
+						// popupOpen(document.querySelector('.successfully'));
+					}, 500)
+				}
+			})
+		})
+	}
+
+	
 }
 
 export default takeControlForms

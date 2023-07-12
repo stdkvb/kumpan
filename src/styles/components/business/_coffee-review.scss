@@ -1,0 +1,52 @@
+.coffee-review {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+
+	& > * {
+		width: 100%;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	&__item {
+		background-color: $grayFA;
+		padding: 40px;
+		display: grid;
+		grid-template-columns: repeat(2, auto);
+		grid-template-areas: 
+		'name rating'
+		'date rating'
+		'text text'
+		'answer .';
+		gap: 30px;
+
+		@include tablet_small {
+			padding: 20px;
+		}
+	}
+
+	&__name {
+		grid-area: name;
+	}
+
+	&__date {
+		grid-area: date;
+	}
+
+	.rating {
+		grid-area: rating;
+	}
+
+	&__text {
+		grid-area: text;
+	}
+
+	.btn {
+		grid-area: answer;
+	}
+}

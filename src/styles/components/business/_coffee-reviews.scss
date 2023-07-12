@@ -1,7 +1,17 @@
 .coffee-reviews {
+	& > *._disabled {
+		display: none;
+	}
+
 	&_empty {
 		& > *:not(:last-child) {
 			margin-bottom: 20px;
 		}
+	}
+
+	&_filled {
+		display: grid;
+		grid-template-columns: auto minmax(320px, 750px);
+		column-gap: 80px;
 	}
 }

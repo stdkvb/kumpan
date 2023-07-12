@@ -141,11 +141,43 @@
 				</div>
 				<div id="coffee-tab-content-3" class="coffee-tabs__content">
 					<div class="coffee-reviews">
-						<div class="coffee-reviews_empty">
+						<div class="coffee-reviews_empty _disabled">
 							<p>
 								Здесь пока нет отзывов
 							</p>
 							@@include('components/ui/_button-link.html', {children: 'Оставить отзыв', class: 'popup-link', href: '#review'})
+						</div>
+						<div class="coffee-reviews_filled">
+							<div class="coffee-reviews_filled__item coffee-review">
+								<div class="coffee-review__list">
+									<div class="coffee-review__item">
+										<h4 class="coffee-review__name">Юрий</h4>
+										<span class="coffee-review__date">01.01.2023</span>
+										@@include('components/ui/_rating.html', {class: '_static'})
+										<div class="coffee-review__text">
+											<p>
+												Очень хороший кофе, доставка быстрая. Огорчает только, что заказываешь молотый кофе, а приходит зерновой. И оказывается дело в форме заказа, где поумолчанию выбран зерновой кофе и это не очень заметно. Было бы здорово, если бы этот вариант вообще не был заполнен и при попытке отправить такую форму выводилась ошибка, чтобы пользователь обязательно не пропустил этот шаг или не заказал что-то, что выбрано по-умолчанию.
+											</p>
+										</div>
+										@@include('components/ui/_button-link.html', {children: 'Ответить', class: 'btn_more', href: '#'})
+									</div>
+									<div class="coffee-review__item">
+										<h4 class="coffee-review__name">Юрий</h4>
+										<span class="coffee-review__date">01.01.2023</span>
+										@@include('components/ui/_rating.html', {class: '_static'})
+										<div class="coffee-review__text">
+											<p>
+												Очень хороший кофе, доставка быстрая. Огорчает только, что заказываешь молотый кофе, а приходит зерновой. И оказывается дело в форме заказа, где поумолчанию выбран зерновой кофе и это не очень заметно. Было бы здорово, если бы этот вариант вообще не был заполнен и при попытке отправить такую форму выводилась ошибка, чтобы пользователь обязательно не пропустил этот шаг или не заказал что-то, что выбрано по-умолчанию.
+											</p>
+										</div>
+										@@include('components/ui/_button-link.html', {children: 'Ответить', class: 'btn_more', href: '#'})
+									</div>									
+								</div>
+								@@include('components/ui/_button-link.html', {children: 'Показать еще', id: 'load-more', href: '#'})
+							</div>
+							<div class="coffee-reviews_filled__item review_block">
+								@@include('components/ui/_review__form.html')
+							</div>
 						</div>
 					</div>
 				</div>
@@ -159,7 +191,7 @@
 		
 	</main>
 	@@include('components/business/_footer.html')
-	@@include('components/business/_review.html')
+	@@include('components/business/_review-popup.html')
 
 	@@include('meta/_includeScripts.html')
 </body>

@@ -4,7 +4,7 @@
 		У вас есть вопросы о кофе или доставке? Задайте их нашей команде
 	</p>
 	<div class="call-request__form">
-		<form id="call-request" novalidate>
+		<form novalidate>
 			@@include('components/ui/_input-text.html', {label: 'Ваше имя', placeholder: 'Введите имя', errorMessage: 'Введите ваше имя', name: 'name', required: true})
 			@@include('components/ui/_input-phone.html', {label: 'Номер телефона', placeholder: '+7 (000) 000-00-00', name: 'phone', required: true})
 			@@include('components/ui/_textarea.html', {label: 'Вопрос', placeholder: 'Задайте свой вопрос', errorMessage: 'Введите ваше сообщение', name: 'message', required: true})

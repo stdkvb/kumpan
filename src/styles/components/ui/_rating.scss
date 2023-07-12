@@ -1,6 +1,8 @@
 .rating {
 	display: flex;
-	font-size: 40px;	
+	font-size: 40px;
+	
+	
 
 	&__body {
 		position: relative;	
@@ -8,6 +10,16 @@
 		&::before {
 			content: "☆☆☆☆☆";
     		display: block;			
+		}
+
+		&._static {
+			pointer-events: none;
+
+			.rating__active {
+				&::before {
+					color: $black25;
+				}
+			}				
 		}
 	}
 

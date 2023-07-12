@@ -2,7 +2,7 @@
 	<span class="rating__label">@@label@@if (context.required) {*}</span>
 }
 <div class="rating rating_set">
-	<div class="rating__body">
+	<div class="rating__body @@if (context.class) {@@class}">
 		<div class="rating__active"></div>
 		<div class="rating__items">
 			<input type="radio" class="rating__item" value="1" name="rating">
