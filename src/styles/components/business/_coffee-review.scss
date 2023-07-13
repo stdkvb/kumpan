@@ -16,14 +16,18 @@
 	&__item {
 		background-color: $grayFA;
 		padding: 40px;
-		display: grid;
+		// display: grid;
 		grid-template-columns: repeat(2, auto);
 		grid-template-areas: 
 		'name rating'
 		'date rating'
 		'text text'
 		'answer .';
-		gap: 30px;
+		display: none;
+
+		&._active {
+			display: grid;
+		}
 
 		@include tablet_small {
 			padding: 20px;
@@ -32,21 +36,27 @@
 
 	&__name {
 		grid-area: name;
+		@include FontFamilyZurichRegular;
+		@include regular-24;
 	}
 
 	&__date {
 		grid-area: date;
+		margin-top: 5px;
 	}
 
 	.rating {
 		grid-area: rating;
+		justify-self: end;
 	}
 
 	&__text {
 		grid-area: text;
+		margin-top: 30px;
 	}
 
 	.btn {
 		grid-area: answer;
+		margin-top: 30px;
 	}
 }

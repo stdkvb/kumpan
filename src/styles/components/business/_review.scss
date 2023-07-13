@@ -1,6 +1,7 @@
 .review {
 	.popup__content,
 	&_block {
+		align-self: start;
 		background-color: $black25;
 		color: $white;
 		max-width: 750px;

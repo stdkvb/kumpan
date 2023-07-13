@@ -150,7 +150,7 @@
 						<div class="coffee-reviews_filled">
 							<div class="coffee-reviews_filled__item coffee-review">
 								<div class="coffee-review__list">
-									<div class="coffee-review__item">
+									<div class="coffee-review__item _load-more__card">
 										<h4 class="coffee-review__name">Юрий</h4>
 										<span class="coffee-review__date">01.01.2023</span>
 										@@include('components/ui/_rating.html', {class: '_static'})
@@ -161,7 +161,7 @@
 										</div>
 										@@include('components/ui/_button-link.html', {children: 'Ответить', class: 'btn_more', href: '#'})
 									</div>
-									<div class="coffee-review__item">
+									<div class="coffee-review__item _load-more__card">
 										<h4 class="coffee-review__name">Юрий</h4>
 										<span class="coffee-review__date">01.01.2023</span>
 										@@include('components/ui/_rating.html', {class: '_static'})
@@ -171,7 +171,8 @@
 											</p>
 										</div>
 										@@include('components/ui/_button-link.html', {children: 'Ответить', class: 'btn_more', href: '#'})
-									</div>									
+									</div>
+																		
 								</div>
 								@@include('components/ui/_button-link.html', {children: 'Показать еще', id: 'load-more', href: '#'})
 							</div>

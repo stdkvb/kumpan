@@ -8,22 +8,21 @@ const takeControlLoadMore = () => {
 
 	let currentPage = 1;
 
+	const loadMoreCards = document.querySelectorAll("._load-more__card");
+
 	const createCard = (index, endRange) => {
 		handleButtonStatus();
 
-		const restaurantsCards = document.querySelectorAll(".restaurants__item");
-		const coffeeCards = document.querySelectorAll(".coffee__item");
+		// const restaurantsCards = document.querySelectorAll(".restaurants__item");
+		// const coffeeCards = document.querySelectorAll(".coffee__item");
+		// const coffeeReviewCards = document.querySelectorAll(".coffee-review__item");		
 
-		if (restaurantsCards.length > 0) {
+
+		if (loadMoreCards.length > 0) {
 			for (let i = index - 1; i < endRange; i++) {
-				restaurantsCards[i].classList.add('_active');
+				loadMoreCards[i].classList.add('_active');
 			}
 		}
-		if (coffeeCards.length > 0) {
-			for (let i = index - 1; i < endRange; i++) {
-				coffeeCards[i].classList.add('_active');
-			}
-		}		
 
 	  };
 
@@ -41,7 +40,7 @@ const takeControlLoadMore = () => {
 	};
 
 	const handleButtonStatus = () => {
-		if (pageCount === currentPage) {
+		if (pageCount === currentPage || pageCount <= loadMoreCards.length) {
 		  loadMoreButton.classList.add("_disabled");
 		}
 	};
