@@ -118,3 +118,14 @@ const CoffeeTabsSwiper = new Swiper ('.coffee-tabs__tabs', {
 	spaceBetween: 30
 })
 
+// coffee-viewed's Slider
+const CoffeeViewedSwiper = new Swiper ('.coffee-viewed__slider', {
+	slidesPerView: 'auto',	
+	watchOverflow: true,
+	spaceBetween: 20,
+	navigation: {
+		nextEl: '.coffee-viewed__slider .swiper-navigation-next',
+		prevEl: '.coffee-viewed__slider .swiper-navigation-prev'
+	},
+})
+

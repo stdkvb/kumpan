@@ -157,9 +157,6 @@
 									@@include('components/business/_coffee-review__item.html')	
 									@@include('components/business/_coffee-review__item.html')
 									@@include('components/business/_coffee-review__item.html')
-											
-									
-																		
 								</div>
 								@@include('components/ui/_button-link.html', {children: 'Показать еще', id: 'load-more', href: '#'})
 							</div>
@@ -170,7 +167,75 @@
 					</div>
 				</div>
 			</div>
+		</section>
 
+		<section class="coffee-viewed">
+			<div class="container">
+				<h2>Недавно просматривали</h2>
+				<div class="coffee-viewed__slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							@@include('components/business/_coffee__item.html', {
+								coffeeItems: [
+									{
+										image: '@images/pack-1.webp',
+										title: 'Kumpan Китай',
+										description: 'Насыщенный, с теплым шоколадным профилем, сладостью карамели, арахиса, кукурузных хлопьев и глубокой пряностью черного перца и мускатного ореха.'
+									}
+								]
+							})
+						</div>
+						<div class="swiper-slide">
+							@@include('components/business/_coffee__item.html', {
+								coffeeItems: [
+									{
+										image: '@images/pack-2.webp',
+										title: 'Kumpan Бразилия',
+										description: 'Отлично сбалансированный кофе, благодаря низкой кислотности и высокой сладости. Тело округлое, плотное. Букет: молочный шоколад, какао, лесной орех, желтая слива.'
+									}
+								]
+							})
+						</div>
+						<div class="swiper-slide">
+							@@include('components/business/_coffee__item.html', {
+								coffeeItems: [
+									{
+										image: '@images/pack-3.webp',
+										title: 'Kumpan Перу',
+										description: 'Мягкий, хорошо сбалансированный кофе с низкой кислотностью и средней сладостью. Тело средней плотности, гладкое. Букет: лесной орех, молочный шоколад, сухофрукты.'
+									}
+								]
+							})
+						</div>
+						<div class="swiper-slide">
+							@@include('components/business/_coffee__item.html', {
+								coffeeItems: [
+									{
+										image: '@images/pack-1.webp',
+										title: 'Kumpan Китай',
+										description: 'Насыщенный, с теплым шоколадным профилем, сладостью карамели, арахиса, кукурузных хлопьев и глубокой пряностью черного перца и мускатного ореха.'
+									}
+								]
+							})
+						</div>
+						<div class="swiper-slide">
+							@@include('components/business/_coffee__item.html', {
+								coffeeItems: [
+									{
+										image: '@images/pack-2.webp',
+										title: 'Kumpan Бразилия',
+										description: 'Отлично сбалансированный кофе, благодаря низкой кислотности и высокой сладости. Тело округлое, плотное. Букет: молочный шоколад, какао, лесной орех, желтая слива.'
+									}
+								]
+							})
+						</div>
+					</div>
+					<div class="swiper-navigation">
+						<div class="swiper-navigation-prev"></div>
+						<div class="swiper-navigation-next"></div>
+					</div>
+				</div>
+			</div>
 		</section>
 		
 		
