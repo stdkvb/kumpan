@@ -36,7 +36,6 @@
 		grid-area: cards;
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(320px, 533px));
-		justify-content: space-between;
 		gap: 20px;
 
 		@include desktop_small {

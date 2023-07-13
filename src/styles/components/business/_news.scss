@@ -3,17 +3,25 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-areas:
-		'title button'
+		'title button-more'
 		'cards cards';
 		gap: 30px;
+
+		@include tablet_small {
+			grid-template-columns: auto;
+			grid-template-areas:
+			'title'
+			'cards'
+			'button-more';
+		}
 	}
 
 	h2 {
 		grid-area: title;
 	}
 
-	.btn {
-		grid-area: button;
+	.btn_more {
+		grid-area: button-more;
 		max-width: fit-content;
 		justify-self: flex-end;
 	}
@@ -40,6 +48,13 @@
 	&__description {
 		background-color: $grayFA;
 		padding: 30px;
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-areas: 
+		'title'
+		'date'
+		'text'
+		'button-article';
 
 		@include tablet_small {
 			padding: 20px;
@@ -47,9 +62,11 @@
 
 		h3 {
 			margin-bottom: 5px;
+			grid-area: title;
 		}
 
 		p {
+			grid-area: text;
 			@include regular-18;
 			color: $black25;
 			opacity: 0.7;
@@ -60,11 +77,14 @@
 		}
 
 		.btn {
+			grid-area: button-article;
+			align-self: end;
 			margin-top: 30px;
 		}
 	}
 
 	&__date {
+		grid-area: date;
 		@include regular-18;
 		display: inline-block;
 		color: $black25;

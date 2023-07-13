@@ -13,7 +13,6 @@
 			'title'
 			'cards'
 			'button';
-			gap: 0;
 		}
 	}
 
@@ -44,6 +43,8 @@
 	&__item {
 		position: relative;
 		overflow: hidden;
+		display: grid;
+		align-items: start;
 
 		h3 {
 			margin-bottom: 10px;
@@ -64,6 +65,7 @@
 	}
 
 	&__tech {
+		align-self: end;
 		display: flex;
 		align-items: center;
 		gap: 20px;

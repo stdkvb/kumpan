@@ -1,0 +1,12 @@
+.coffee-news {
+	.news__date,
+	p {
+		display: none;
+	}
+
+	.btn_more {
+		@include tablet_small {
+			display: none;
+		}
+	}
+}
