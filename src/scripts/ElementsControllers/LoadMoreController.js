@@ -1,14 +1,16 @@
 const takeControlLoadMore = () => {
 	const loadMoreButton = document.querySelector("#load-more");
 
-	const cardLimit = 9;
+	const loadMoreCards = document.querySelectorAll("._load-more__card");
+
+	const cardLimit = loadMoreCards.length;
 	const cardIncrease = 6;
 
 	const pageCount = Math.ceil(cardLimit / cardIncrease);
 
 	let currentPage = 1;
 
-	const loadMoreCards = document.querySelectorAll("._load-more__card");
+	
 
 	const createCard = (index, endRange) => {
 		handleButtonStatus();
@@ -40,7 +42,7 @@ const takeControlLoadMore = () => {
 	};
 
 	const handleButtonStatus = () => {
-		if (pageCount === currentPage || pageCount <= loadMoreCards.length) {
+		if (pageCount === currentPage || loadMoreCards.length <= cardIncrease) {
 		  loadMoreButton.classList.add("_disabled");
 		}
 	};

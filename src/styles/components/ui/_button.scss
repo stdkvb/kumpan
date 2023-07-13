@@ -74,6 +74,28 @@
 			margin: 40px auto 0;
 			padding: 10px 25px;
 		}
+
+		.coffee-review__item  & {
+			@include tablet_small {
+				height: unset;
+				align-self: center;
+				padding: 0;
+				border: none;
+				border-bottom: 1px dashed $grayB9;
+				margin: 30px 0 0;
+
+				&:hover {
+					background-color: transparent;
+					color: $green22;
+				}
+			}		
+
+			.children {
+				@include tablet_small {
+					@include regular-14;
+				}		
+			}			
+		}
 	}
 
 	&_white {

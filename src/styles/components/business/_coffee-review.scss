@@ -17,7 +17,7 @@
 		background-color: $grayFA;
 		padding: 40px;
 		// display: grid;
-		grid-template-columns: repeat(2, auto);
+		grid-template-columns: repeat(2, 1fr);
 		grid-template-areas: 
 		'name rating'
 		'date rating'
@@ -32,22 +32,46 @@
 		@include tablet_small {
 			padding: 20px;
 		}
+
+		@include mobile {
+			grid-template-areas:
+			'name date'
+			'rating .'
+			'text text'
+			'answer .';
+		}
 	}
 
 	&__name {
 		grid-area: name;
 		@include FontFamilyZurichRegular;
 		@include regular-24;
+
+		@include tablet_small {
+			@include regular-18;
+		}
 	}
 
 	&__date {
 		grid-area: date;
 		margin-top: 5px;
+
+		@include tablet_small {
+			@include regular-14;
+		}
+
+		@include mobile {
+			justify-self: end;
+		}
 	}
 
 	.rating {
 		grid-area: rating;
 		justify-self: end;
+
+		@include mobile {
+			justify-self: start;
+		}
 	}
 
 	&__text {
@@ -55,7 +79,7 @@
 		margin-top: 30px;
 	}
 
-	.btn {
+	.btn_more {
 		grid-area: answer;
 		margin-top: 30px;
 	}

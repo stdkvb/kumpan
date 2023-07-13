@@ -154,6 +154,10 @@
 			@include tablet_small {
 				@include regular-14;
 			}
+
+			&:hover {
+				color: $green22;
+			}
 		}
 	}
 }

@@ -1,0 +1,11 @@
+<div class="coffee-review__item _load-more__card">
+	<h4 class="coffee-review__name">Юрий</h4>
+	<span class="coffee-review__date">01.01.2023</span>
+	@@include('components/ui/_rating.html', {class: '_static'})
+	<div class="coffee-review__text">
+		<p>
+			Очень хороший кофе, доставка быстрая. Огорчает только, что заказываешь молотый кофе, а приходит зерновой. И оказывается дело в форме заказа, где поумолчанию выбран зерновой кофе и это не очень заметно. Было бы здорово, если бы этот вариант вообще не был заполнен и при попытке отправить такую форму выводилась ошибка, чтобы пользователь обязательно не пропустил этот шаг или не заказал что-то, что выбрано по-умолчанию.
+		</p>
+	</div>
+	@@include('components/ui/_button-link.html', {children: 'Ответить', class: 'btn_more', href: '#'})
+</div>

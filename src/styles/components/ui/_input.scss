@@ -159,6 +159,10 @@ input {
 			color: $grayB9;
 		}
 	}
+
+	.quantity {
+		pointer-events: none;
+	}
 }
 
 .input-wrapper * {

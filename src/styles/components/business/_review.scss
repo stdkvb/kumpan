@@ -16,6 +16,12 @@
 		}
 	}
 
+	&_block {
+		@include tablet {
+			max-width: 100%;
+		}
+	}
+
 	.popup__close {
 		background-image: url('@icons/close-icon_white.svg');
 	}
