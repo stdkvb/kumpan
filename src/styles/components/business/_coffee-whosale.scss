@@ -1,0 +1,260 @@
+.coffee-whosale {
+	&-banner {
+		.container {
+			position: relative;
+			overflow: hidden;
+			min-height: 400px;
+			padding: 80px 100px;
+
+			@include tablet_small {
+				min-height: 212px;
+				padding: 40px 30px 40px;
+			}			
+		}
+
+		&__images {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;			
+
+			&_desktop {
+				@include min_tablet_small {
+					display: block;
+				}
+	
+				@include tablet_small {
+					display: none;
+				}
+			}
+	
+			&_mobile {
+				@include min_tablet_small {
+					display: none;
+				}
+	
+				@include tablet_small {
+					display: block;
+				}
+			}
+			
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+
+				
+			}
+		}
+
+		&__description {
+			max-width: 710px;
+
+			h1 {
+				@include FontFamilyZurichBold;
+				@include bold-70;
+				color: $white;
+
+				@include tablet_small {
+					@include bold-30;
+				}
+			}
+
+			.btn {
+				margin-top: 40px;
+
+				@include tablet_small {
+					margin-top: 30px;
+					width: 100%;
+				}
+
+				.children {
+					@include bold-18;
+
+					@include tablet_small {
+						@include bold-14;
+					}
+				}
+			}
+		}
+	}
+
+	&-advantages {
+		h2 {
+			margin-bottom: 30px;
+		}
+
+		&__text {
+			max-width: 810px;
+			margin-bottom: 50px;
+
+			@include tablet_small {
+				max-width: 100%;
+				margin-bottom: 40px;
+			}
+
+			& * {
+				@include FontFamilyZurichRegular;
+				@include regular-24;
+
+				@include tablet_small {
+					@include regular-18;
+				}
+			}
+		}
+
+		&__list {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(320px, auto));
+			gap: 20px;
+
+			@include tablet_small {
+				gap: 40px;
+			}
+		}
+
+		&__item {
+			display: grid;
+			grid-template-rows: auto 0.5fr 1fr;
+
+			h3 {
+				@include bold-20;
+				margin-bottom: 20px;
+
+				@include tablet_small {
+					@include bold-18;
+					margin-bottom: 10px;
+				}
+			}
+		}
+
+		&__image {
+			margin-bottom: 30px;
+
+			@include tablet_small {
+				margin-bottom: 15px;
+			}
+
+			img {
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+
+	&-partners {
+		h2 {
+			margin-bottom: 50px;
+
+			@include tablet_small {
+				margin-bottom: 30px;
+			}
+		}
+
+		&__slider {
+			overflow: hidden;
+
+			.swiper-slide {
+				max-width: 256px;
+
+				@include mobile {
+					max-width: 100%;
+				}
+
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	&-start {
+		h2 {
+			margin-bottom: 30px;
+		}
+
+		&__list {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(320px, auto));
+			gap: 20px;
+		}
+
+		&__item {
+			border: 1px solid $black25;
+			padding: 30px 70px 30px 30px;
+			display: grid;
+
+			@include tablet_small {
+				padding: 20px 60px 20px 20px;
+			}
+
+			h3 {
+				@include bold-20;
+				margin-bottom: 20px;
+
+				@include tablet_small {
+					@include bold-18;
+				}
+			}
+		}
+	}
+
+	&-price {
+		min-height: 405px;
+		height: auto;
+		position: relative;
+		padding: 130px 0 130px 140px;
+
+		@include tablet_small {
+			min-height: 942px;
+			padding: 600px 20px 50px;
+		}
+
+		@include mobile {
+			min-height: 471px;
+			padding: 300px 20px 50px;
+		}
+
+		&__image {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+
+			&_desktop {
+				@include min_tablet {
+					background-repeat: no-repeat;
+					background-position: left;
+					background-size: cover;
+				}
+	
+				@include tablet_small {
+					display: none;
+				}
+			}
+	
+			&_mobile {				
+				@include min_tablet_small {
+					display: none;
+				}
+	
+				@include tablet {
+					background-repeat: no-repeat;
+					background-size: cover;
+					background-position: top;
+				}
+			}
+		}
+
+		h2 {
+			color: $white;
+			margin-bottom: 30px;
+		}
+	}
+}

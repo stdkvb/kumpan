@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Кофе оптом'})
+
+<body>
+	@@include('components/business/_header.html')
+	<main class="_offset coffee-whosale">
+		<section class="coffee-whosale-banner">
+			<div class="container">
+				<div class="coffee-whosale-banner__images">
+					<img class="coffee-whosale-banner__images_desktop" src="@images/coffee-whosale__photo.webp" alt="#">
+					<img class="coffee-whosale-banner__images_mobile" src="@images/coffee-whosale__photo_mobile.webp" alt="#">
+				</div>
+
+				<div class="coffee-whosale-banner__description">
+					<h1>Кофе Kumpan оптом для вашего бизнеса</h1>
+					@@include('components/ui/_button-link.html', {children: 'Получить оптовый прайс', class: 'btn_white', href: '#'})
+				</div>			
+			</div>
+		</section>
+
+		<section class="coffee-whosale-advantages">
+			<div class="container">
+				<h2>Кофе Kumpan</h2>
+				<div class="coffee-whosale-advantages__text">
+					<p>
+						Каждый кофейный бленд Kumpan создается международными экспертами и производится в Австрии и Италии. Компания поддерживает высокие стандарты качества на протяжении 160 лет, обеспечивая стабильный вкус кофе.
+					</p>
+				</div>
+				<div class="coffee-whosale-advantages__list">
+					<div class="coffee-whosale-advantages__item">
+						<div class="coffee-whosale-advantages__image">
+							<img src="@images/coffee-whosale-advantages-1.webp" alt="#">
+						</div>
+						<h3>Экономия денег</h3>
+						<p>
+							Покупка кофе оптом обычно обходится дешевле, чем покупка отдельных упаковок в розницу
+						</p>
+					</div>
+					<div class="coffee-whosale-advantages__item">
+						<div class="coffee-whosale-advantages__image">
+							<img src="@images/coffee-whosale-advantages-3.webp" alt="#">
+						</div>
+						<h3>Качество</h3>
+						<p>
+							Кофе оптом обычно закупается напрямую у производителей или крупных поставщиков, что гарантирует высокое качество продукта
+						</p>				
+					</div>
+					<div class="coffee-whosale-advantages__item">
+						<div class="coffee-whosale-advantages__image">
+							<img src="@images/coffee-whosale-advantages-3.webp" alt="#">
+						</div>
+						<h3>Широкий выбор</h3>
+						<p>
+							При покупке оптом у нас есть возможность выбрать из большого ассортимента различных сортов и марок кофе
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="coffee-whosale-partners">
+			<div class="container">
+				<h2>Нам доверяют ведущие отели и рестораны</h2>
+				<div class="coffee-whosale-partners__slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src="@icons/coffee-whosale-partners.svg" alt="#">
+						</div>
+						<div class="swiper-slide">
+							<img src="@icons/coffee-whosale-partners.svg" alt="#">
+						</div>
+						<div class="swiper-slide">
+							<img src="@icons/coffee-whosale-partners.svg" alt="#">
+						</div>
+						<div class="swiper-slide">
+							<img src="@icons/coffee-whosale-partners.svg" alt="#">
+						</div>
+						<div class="swiper-slide">
+							<img src="@icons/coffee-whosale-partners.svg" alt="#">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="coffee-whosale-start">
+			<div class="container">
+				<h2>С нами легко начать работать</h2>
+				<div class="coffee-whosale-start__list">
+					<div class="coffee-whosale-start__item">
+						<h3>Оставьте заявку</h3>
+						<p>
+							Оставляете заявку на сайте и мы отправим предложение
+						</p>
+					</div>
+					<div class="coffee-whosale-start__item">
+						<h3>Подтвердите заказ</h3>
+						<p>
+							Проверьте все введенные данные и убедитесь, что они верны
+						</p>
+					</div>
+					<div class="coffee-whosale-start__item">
+						<h3>Оплатите заказ</h3>
+						<p>
+							Выберите удобный для вас способ оплаты и следуйте инструкциям
+						</p>				
+					</div>
+					<div class="coffee-whosale-start__item">
+						<h3>Доставляем заказ</h3>
+						<p>
+							Ожидайте доставку на указанный вами адрес	
+						</p>				
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="coffee-whosale-price">
+			<div class="coffee-whosale-price__image coffee-whosale-price__image_desktop" style="background-image: url('@images/coffee-whosale-price.webp');"></div>
+			<div class="coffee-whosale-price__image coffee-whosale-price__image_mobile" style="background-image: url('@images/coffee-whosale-price_mobile.webp');"></div>
+				<div class="coffee-whosale-price__text">
+					<h2>Получите прайс-лист продукции</h2>
+					@@include('components/ui/_button-link.html', {children: 'Получить оптовый прайс', class: 'btn_brown', href: '#'})
+				</div>
+		</section>		
+		
+	</main>
+	@@include('components/business/_footer.html')
+
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>
