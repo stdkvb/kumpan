@@ -13,6 +13,13 @@
 			'title'
 			'cards'
 			'button';
+			gap: 0;
+		}
+
+		.btn_more {
+			@include tablet_small {
+				margin-top: 30px;
+			}
 		}
 	}
 

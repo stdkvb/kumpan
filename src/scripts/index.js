@@ -25,6 +25,8 @@ takeControlModal()
 takeControlCoffeeTabs()
 takeControlRaiting()
 
+
+// Preloader
 // window.onload = () => {
 // 	takePreloaderOnload()
 // }  
@@ -40,7 +42,6 @@ window.addEventListener('resize', () => {
 	// We execute the same script as before
 	let vh = window.innerHeight * 0.01;
 });
-
 
 //swipers init
 const firstScreenSwiper = new Swiper ('.first-screen', {

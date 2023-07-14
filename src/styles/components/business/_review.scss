@@ -1,7 +1,6 @@
 .review {
 	.popup__content,
-	&_block {
-		align-self: start;
+	&_block {		
 		background-color: $black25;
 		color: $white;
 		max-width: 750px;
@@ -17,6 +16,8 @@
 	}
 
 	&_block {
+		align-self: start;
+
 		@include tablet {
 			max-width: 100%;
 		}

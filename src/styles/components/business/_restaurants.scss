@@ -12,6 +12,7 @@
 			'title'
 			'cards'
 			'more';
+			gap: 0;
 		}
 
 		.btn {
@@ -20,6 +21,7 @@
 
 			@include tablet_small {
 				justify-self: center;
+				margin-top: 30px;
 			}
 		}
 	}
@@ -91,9 +93,5 @@
 		align-self: end;
 		display: flex;
 		gap: 20px;
-
-		@include tablet_small {
-			margin-top: 20px;
-		}
 	}
 }

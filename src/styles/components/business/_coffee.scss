@@ -13,6 +13,12 @@
 			'cards'
 			'button';
 		}
+
+		.btn_more {
+			@include tablet_small {
+				margin-top: 30px;
+			}
+		}
 	}
 
 	h2 {

@@ -4,7 +4,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	line-height: 130%;
-
+	viewport-fit: auto;
 	scroll-behavior: smooth;
 }
 
@@ -21,6 +21,7 @@ body {
 	color: $black25;
 	overflow-y: overlay;
 	overflow-x: hidden;
+	touch-action: pan-x pan-y; // отключение зумирования
 
 
 	&._lock {
