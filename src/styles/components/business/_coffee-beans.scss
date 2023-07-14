@@ -96,14 +96,6 @@
 				'title'
 				'cards'
 				'more';
-			}
-
-			.coffee__item {
-				display: none;
-
-				&._active {
-					display: grid;
-				}
 			}			
 
 			.pagination {
