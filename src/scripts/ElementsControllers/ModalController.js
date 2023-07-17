@@ -35,9 +35,8 @@ const takeControlModal = () => {
 			const popupActive = document.querySelector('.popup._open');
 			if (popupActive) {
 				popupClose(popupActive, false);
-			} else {
-				bodyLock();
-			}
+			} 
+			bodyLock();
 
 			if (currentPopup != null) {
 				currentPopup.classList.add('_open');

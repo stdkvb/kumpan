@@ -1,4 +1,5 @@
 import Pristine from './Pristine'
+// import takeControlModal from './ModalController';
 
 const takeControlForms = () => {
 
