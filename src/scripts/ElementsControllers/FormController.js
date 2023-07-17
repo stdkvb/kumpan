@@ -33,6 +33,24 @@ const takeControlForms = () => {
 		})
 	}
 
+	const CommentReviewForms = document.querySelectorAll(".coffee-review__comment form");	
+	if (CommentReviewForms.length > 0) {
+		CommentReviewForms.forEach((elem) => {
+			const reviewValidator = new Pristine(elem);
+			elem.addEventListener('submit', function (e) {
+				e.preventDefault();
+
+				if (reviewValidator.validate() == true) {
+					setTimeout(function () {
+						// popupOpen(document.querySelector('.successfully'));
+					}, 500)
+				}
+			})
+		})
+	}
+
+	
+
 	
 }
 

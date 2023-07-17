@@ -22,7 +22,8 @@
 		'name rating'
 		'date rating'
 		'text text'
-		'answer .';
+		'answer .'
+		'comment comment';
 		display: none;
 
 		&._active {
@@ -38,7 +39,8 @@
 			'name date'
 			'rating .'
 			'text text'
-			'answer .';
+			'answer .'
+			'comment comment';
 		}
 	}
 
@@ -82,5 +84,29 @@
 	.btn_more {
 		grid-area: answer;
 		margin-top: 30px;
+	}
+
+	&__comment {
+		grid-area: comment;
+
+		.coffee-review__item {
+			display: block;
+
+			.btn {
+				display: inline-block;
+
+				&:not(:last-child) {
+					margin-right: 30px;
+				}
+			}
+		}
+
+		.textarea__label {
+			color: $black25;
+		}
+
+		textarea {
+			color: $black25;
+		}
 	}
 }

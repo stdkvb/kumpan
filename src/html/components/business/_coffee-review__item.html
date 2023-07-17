@@ -8,4 +8,27 @@
 		</p>
 	</div>
 	@@include('components/ui/_button-link.html', {children: 'Ответить', class: 'btn_more', href: '#'})
+	@@if (context.comment) {
+		<div class="coffee-review__comment">
+			<div class="coffee-review__item">
+				<h4 class="coffee-review__name">Сергей</h4>
+				<span class="coffee-review__date">01.01.2023</span>
+				<div class="coffee-review__text">
+					<p>
+						Очень хороший кофе, доставка быстрая. Огорчает только, что заказываешь молотый кофе, а приходит зерновой. И оказывается дело в форме заказа, где поумолчанию выбран зерновой кофе и это не очень заметно. Было бы здорово, если бы этот вариант вообще не был заполнен и при попытке отправить такую форму выводилась ошибка, чтобы пользователь обязательно не пропустил этот шаг или не заказал что-то, что выбрано по-умолчанию.
+					</p>
+				</div>
+				@@include('components/ui/_button-link.html', {children: 'Ответить', class: 'btn_more', href: '#'})
+				@@include('components/ui/_button-link.html', {children: 'Удалить', class: 'btn_more', href: '#'})
+			</div>
+		</div>
+	}	
 </div>
+@@if (context.answer) {
+	<div class="coffee-review__comment">
+		<form novalidate>
+			@@include('components/ui/_textarea.html', {label: 'Ваш комментарий', placeholder: 'Оставьте ваш комментарий', errorMessage: 'Введите ваш комментарий', name: 'comment', required: false})
+			@@include('components/ui/_button.html', {children: 'Отправить', class: 'btn_black', type: 'submit'})
+		</form>
+	</div>
+}

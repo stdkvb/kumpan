@@ -26,10 +26,23 @@ takeControlCoffeeTabs()
 takeControlRaiting()
 
 
-// Preloader
-// window.onload = () => {
-// 	takePreloaderOnload()
-// }  
+
+window.onload = () => {
+	// takePreloaderOnload()
+	const lockPaddingOnloadValue = window.innerWidth - document.body.offsetWidth + 'px';
+	const lockPaddingOnload = document.querySelectorAll('.lock-padding');
+	const popupActiveOnload = document.querySelector('.popup._open');
+
+
+		if (lockPaddingOnload.length > 0 && popupActiveOnload) {
+			lockPaddingOnload.forEach((elem) => {
+				elem.style.paddingRight = lockPaddingOnloadValue;
+			})
+			document.body.style.paddingRight = lockPaddingOnloadValue;
+			document.body.classList.add('_lock');
+		}
+		
+}  
 
 /* Код ниже для возвращения исходной высоты мобильному меню (100vh) 
 после ресайза экрана */
@@ -137,7 +150,7 @@ const CoffeeWhosaleSwiper = new Swiper ('.coffee-whosale-partners__slider', {
 	loop: true,
 	spaceBetween: 90,
 	autoplay: {
-		delay: 5000,
+		delay: 3000,
 		stopOnLastSlide: false,
 		disableOnInteraction: false
 	},

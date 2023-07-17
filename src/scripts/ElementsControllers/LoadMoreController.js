@@ -20,7 +20,7 @@ const takeControlLoadMore = () => {
 		// const coffeeReviewCards = document.querySelectorAll(".coffee-review__item");		
 
 
-		if (loadMoreCards.length > 0) {
+		if (cardLimit > 0) {
 			for (let i = index - 1; i < endRange; i++) {
 				loadMoreCards[i].classList.add('_active');
 			}
@@ -42,20 +42,22 @@ const takeControlLoadMore = () => {
 	};
 
 	const handleButtonStatus = () => {
-		if (pageCount === currentPage || loadMoreCards.length <= cardIncrease) {
+		if (pageCount === currentPage || cardLimit <= cardIncrease) {
 		  loadMoreButton.classList.add("_disabled");
 		}
 	};
 
-	window.onload = function () {
+	window.onload = () => {
 
-		if (loadMoreButton !== null) {
-			addCards(currentPage);
-			loadMoreButton.addEventListener("click", (e) => {
-				e.preventDefault();
-				addCards(currentPage + 1);
-			});
-		}		
+				
+	}
+
+	if (loadMoreButton !== null) {
+		addCards(currentPage);
+		loadMoreButton.addEventListener("click", (e) => {
+			e.preventDefault();
+			addCards(currentPage + 1);
+		});
 	}
 }
 
