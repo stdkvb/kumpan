@@ -3,6 +3,8 @@ const takeControlModal = () => {
 
 	const body = document.querySelector('body');
 	const lockPadding = document.querySelectorAll('.lock-padding');
+	const popupActive = document.querySelector('.popup._open');
+	const lockPaddingValue = window.innerWidth - body.offsetWidth + 'px';
 
 	let unlock = true;
 	const timeout = 400; // Равна времени в transition
@@ -18,6 +20,14 @@ const takeControlModal = () => {
 				e.preventDefault();
 			});
 		})
+	}
+
+	if (lockPadding.length > 0 && popupActive) {
+		lockPadding.forEach((elem) => {
+			elem.style.paddingRight = lockPaddingValue;
+		})
+		body.style.paddingRight = lockPaddingValue;
+		body.classList.add('_lock');
 	}
 
 	const popupCloseIcon = document.querySelectorAll('.close-popup');
@@ -90,7 +100,11 @@ const takeControlModal = () => {
 		setTimeout(function () {
 			unlock = true;
 		}, timeout);
-	}	
+	}
+
+	
+	
+	
 }
 
 export default takeControlModal

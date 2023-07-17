@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Регистрация'})
+
+<body>
+	@@include('components/business/_header.html')
+	<main class="_offset">
+		<section class="personal-forms registration">
+			<div class="container">
+				<h1>Регистрация</h1>
+				<div class="registration__form">
+					<form novalidate>
+						@@include('components/ui/_input-text.html', {label: 'Ваше имя', placeholder: 'Введите имя', errorMessage: 'Введите ваше имя', name: 'name', required: true})
+						@@include('components/ui/_input-phone.html', {label: 'Ваш телефон', placeholder: '+7 (000) 000-00-00', name: 'phone', required: true})
+						@@include('components/ui/_input-password.html', {label: 'Ваш пароль', name: 'password', errorMessage: 'Придумайте пароль', id: 'password', required: true})
+						@@include('components/ui/_input-password.html', {label: 'Повторите ваш пароль', name: 'repeatpassword', placeholder: 'Повторите пароль', errorMessage: 'Введенные пароли не совпадают', id: 'repeat-password', required: true, passwordRepeat: 'password'})
+						@@include('components/ui/_checkbox.html', {class: 'checkbox_white', label: 'Согласен с <a href="#" target="_blank" class="link">условиями обработки персональных данных</a>, <a href="#" target="_blank" class="link">Пользовательского соглашения</a> и <a href="#" target="_blank" class="link">Публичной оферты</a>', id: 'agreement', name: 'agreement', required: true})
+						@@include('components/ui/_button.html', {children: 'Продолжить', class: 'btn_black', type: 'submit'})
+					</form>
+				</div>
+				<div class="personal-forms__links">
+					Уже есть аккаунт? <a href="#" class="link btn_border">Войти</a>
+				</div>
+			</div>
+		</section>		
+	</main>
+	@@include('components/business/_footer.html')
+
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>

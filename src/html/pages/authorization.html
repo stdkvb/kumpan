@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Авторизация'})
+
+<body>
+	@@include('components/business/_header.html')
+	<main class="_offset">
+		<section class="personal-forms authorization">
+			<div class="container">
+				<h1>Авторизация</h1>
+				<div class="authorization__form">
+					<form novalidate>
+						@@include('components/ui/_input-text.html', {label: 'Введите логин', placeholder: 'Введите логин', errorMessage: 'Введите ваше имя', name: 'name', required: true})
+						@@include('components/ui/_input-password.html', {label: 'Ваш пароль', name: 'password', errorMessage: 'Введите пароль', id: 'password', required: true})
+
+						@@include('components/ui/_button.html', {children: 'Войти', class: 'btn_black', type: 'submit'})
+					</form>
+				</div>
+				<div class="personal-forms__links">
+					Еще нет аккаунта? <a href="#" class="link btn_border">Зарегистрируйтесь</a>
+				</div>				 
+			</div>
+		</section>		
+	</main>
+	@@include('components/business/_footer.html')
+
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>

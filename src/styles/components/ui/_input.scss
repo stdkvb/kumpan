@@ -56,39 +56,39 @@ input {
 		}
 	}	
 
-	// &_password {
-	// 	input[type="password"] {
-	// 		padding-right: calc(.75rem + 26px);
-	// 	}
+	&_password {
+		input[type="password"] {
+			padding-right: calc(.75rem + 26px);
+		}
 
-	// 	.toggle-show-password-btn {
-	// 		position: absolute;
-	// 		display: flex;
-	// 		align-items: center;
-	// 		justify-content: center;
-	// 		width: 20px;
-	// 		height: 20px;
-	// 		top: 1.5rem;
-	// 		right: 1.5rem;
-	// 		cursor: pointer;
-	// 	}
+		.toggle-show-password-btn {
+			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 18px;
+			height: 18px;
+			bottom: 15px;
+			right: 20px;
+			cursor: pointer;
+		}
 
-	// 	input[type="password"] + .toggle-show-password-btn {
-	// 		&::before {
-	// 			width: 20px;
-	// 			height: 20px;
-	// 			content: url("@icons/closeLock.svg");
-	// 		}
-	// 	}
+		input[type="password"] + .toggle-show-password-btn {
+			&::before {
+				width: 18px;
+				height: 18px;
+				content: url("@icons/closeLock.svg");
+			}
+		}
 
-	// 	input[type="text"] + .toggle-show-password-btn {
-	// 		&::before {
-	// 			width: 20px;
-	// 			height: 20px;
-	// 			content: url("@icons/openLock.svg");
-	// 		}
-	// 	}
-	// }
+		input[type="text"] + .toggle-show-password-btn {
+			&::before {
+				width: 18px;
+				height: 18px;
+				content: url("@icons/openLock.svg");
+			}
+		}
+	}
 
 	&_valid {
 		input:not(:focus) {

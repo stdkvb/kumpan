@@ -28,20 +28,7 @@ takeControlRaiting()
 
 
 window.onload = () => {
-	// takePreloaderOnload()
-	const lockPaddingOnloadValue = window.innerWidth - document.body.offsetWidth + 'px';
-	const lockPaddingOnload = document.querySelectorAll('.lock-padding');
-	const popupActiveOnload = document.querySelector('.popup._open');
-
-
-		if (lockPaddingOnload.length > 0 && popupActiveOnload) {
-			lockPaddingOnload.forEach((elem) => {
-				elem.style.paddingRight = lockPaddingOnloadValue;
-			})
-			document.body.style.paddingRight = lockPaddingOnloadValue;
-			document.body.classList.add('_lock');
-		}
-		
+	// takePreloaderOnload()		
 }  
 
 /* Код ниже для возвращения исходной высоты мобильному меню (100vh) 
