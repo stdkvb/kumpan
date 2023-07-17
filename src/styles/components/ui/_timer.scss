@@ -1,0 +1,12 @@
+.timer {
+	&_link {
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity $transitionDuration ease-in-out;
+
+		&._active {
+			opacity: 1;
+			pointer-events: auto;
+		}
+	}
+}

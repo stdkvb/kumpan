@@ -11,6 +11,7 @@ import takeControlModal from './ElementsControllers/ModalController'
 import takeControlCoffeeTabs from './ElementsControllers/CoffeeTabsController'
 import takeControlRaiting from './ElementsControllers/RaitingController'
 import addPhoneMaskListeners from './listeners/addPhoneMaskListeners'
+import takeControlTimer from './ElementsControllers/TimerController'
 
 addPhoneMaskListeners()
 takeControlMenu()
@@ -24,6 +25,7 @@ CookieController('.cookie-container', '.cookie-accept')
 takeControlModal()
 takeControlCoffeeTabs()
 takeControlRaiting()
+takeControlTimer()
 
 
 

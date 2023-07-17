@@ -47,6 +47,7 @@
 
 	&__links {
 		margin-top: 50px;
+		@include regular-18;
 
 		.link {
 			&:hover {
@@ -56,6 +57,7 @@
 
 		@include tablet_small {
 			margin-top: 30px;
+			@include regular-14;
 		}
 	}
 
