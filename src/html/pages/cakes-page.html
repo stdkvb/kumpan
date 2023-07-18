@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Торты на заказ'})
+
+<body>
+	@@include('components/business/_header.html')
+	<main class="_offset cakes-page">
+		<section class="cakes-page-banner">
+			<div class="container">
+				<div class="cakes-page-banner__images">
+					<img class="cakes-page-banner__images_desktop" src="@images/cakes-page.webp" alt="#">
+					<img class="cakes-page-banner__images_mobile" src="@images/cakes-page_mobile.webp" alt="#">
+				</div>
+				<div class="cakes-page-banner__description">
+					<h1>Закажите торт с индивидуальным дизайном!</h1>
+				</div>			
+			</div>
+		</section>
+
+		<section class="cakes-page-cakes">
+			<div class="container">
+				<h2>Торты на заказ</h2>
+				<div class="cakes-page-cakes__list">
+					@@include('components/business/_cakes__item.html', {
+						cakesItems: [
+							{
+								image_desktop: '@images/cake-1.webp',
+								image_mobile: '@images/cake-1_mobile.webp',
+								title: 'Нежность',
+								text: 'Обтяжка торта выполнена из чиз-крема. Можно добавить надпись на торте 3-4 слова.'
+							},
+							{
+								image_desktop: '@images/cake-2.webp',
+								image_mobile: '@images/cake-2_mobile.webp',
+								title: 'Цветочная вышивка',
+								text: 'Обтяжка торта выполнена из чиз-крема. Можно добавить надпись на торте 3-4 слова.'
+							},
+							{
+								image_desktop: '@images/cake-4.webp',
+								image_mobile: '@images/cake-4_mobile.webp',
+								title: 'Праздничный',
+								text: 'Обтяжка торта выполнена из чиз-крема. Можно добавить надпись на торте 3-4 слова.'
+							},
+							{
+								image_desktop: '@images/cake-4.webp',
+								image_mobile: '@images/cake-4_mobile.webp',
+								title: 'Цветочная вышивка',
+								text: 'Обтяжка торта выполнена из чиз-крема. Можно добавить надпись на торте 3-4 слова.'
+							},
+							{
+								image_desktop: '@images/cake-5.webp',
+								image_mobile: '@images/cake-1_mobile.webp',
+								title: 'Нежность',
+								text: 'Обтяжка торта выполнена из чиз-крема. Можно добавить надпись на торте 3-4 слова.'
+							},
+							{
+								image_desktop: '@images/cake-2.webp',
+								image_mobile: '@images/cake-2_mobile.webp',
+								title: 'Цветочная вышивка',
+								text: 'Обтяжка торта выполнена из чиз-крема. Можно добавить надпись на торте 3-4 слова.'
+							},
+							{
+								image_desktop: '@images/cake-1.webp',
+								image_mobile: '@images/cake-1_mobile.webp',
+								title: 'Нежность',
+								text: 'Обтяжка торта выполнена из чиз-крема. Можно добавить надпись на торте 3-4 слова.'
+							},
+							{
+								image_desktop: '@images/cake-2.webp',
+								image_mobile: '@images/cake-2_mobile.webp',
+								title: 'Цветочная вышивка',
+								text: 'Обтяжка торта выполнена из чиз-крема. Можно добавить надпись на торте 3-4 слова.'
+							}															
+						]
+					})
+				</div>
+				@@include('components/ui/_pagination.html')
+				@@include('components/ui/_button-link.html', {children: 'Показать еще', class: 'load-more', href: '#'})
+			</div>
+		</section>
+		@@include('components/business/_wholesale.html')
+		@@include('components/business/_advantages.html')
+	</main>
+	@@include('components/business/_footer.html')
+	@@include('components/business/_cake-popup.html')
+
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>

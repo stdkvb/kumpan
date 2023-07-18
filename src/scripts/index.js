@@ -8,10 +8,10 @@ import takeControlFavorite from './ElementsControllers/FavoriteController'
 import takeControlLoadMore from './ElementsControllers/LoadMoreController'
 import CookieController from './ElementsControllers/CookieController'
 import takeControlModal from './ElementsControllers/ModalController'
-import takeControlCoffeeTabs from './ElementsControllers/CoffeeTabsController'
+import takeControlTabs from './ElementsControllers/TabsController'
 import takeControlRaiting from './ElementsControllers/RaitingController'
 import addPhoneMaskListeners from './listeners/addPhoneMaskListeners'
-import takeControlTimer from './ElementsControllers/TimerController'
+// import takeControlTimer from './ElementsControllers/TimerController'
 
 addPhoneMaskListeners()
 takeControlMenu()
@@ -23,9 +23,9 @@ takeControlFavorite()
 takeControlLoadMore()
 CookieController('.cookie-container', '.cookie-accept')
 takeControlModal()
-takeControlCoffeeTabs()
+takeControlTabs()
 takeControlRaiting()
-takeControlTimer()
+// takeControlTimer()
 
 
 

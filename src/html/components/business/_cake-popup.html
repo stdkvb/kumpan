@@ -1,0 +1,64 @@
+<div id="cake-detail" class="popup cake-detail">
+	<div class="popup__body">
+		<div class="popup__content">
+			<span class="popup__close close-popup"></span>
+			<div class="popup__wrapper cake-detail__wprapper">
+				<div class="cake-detail__image">
+					<img src="@images/cake-detail.webp" alt="#">
+				</div>
+				<div class="cake-detail__preview">
+					<h2>Шато</h2>
+					<span class="cake-detail__article">Арт: 24568</span>
+					<p>
+						Шоколадный бисквит с прослойкой сливочно-молочного шоколадного крема с малиной.  Покрыт глазурью из тёмного шоколада и украшен ягодами свежей малины. Шоколадный бисквит с прослойкой сливочно-молочного шоколадного крема с малиной. Покрыт глазурью из тёмного шоколада и украшен ягодами свежей малины.
+					</p>
+				</div>
+				<div class="cake-detail__management">
+					<div class="cake-detail__price">
+						<span>500 ₽</span>
+						@@include('components/ui/_quantity.html')
+					</div>
+					
+					<div class="cake-detail__btns">
+						@@include('components/ui/_button-link.html', {children: 'В корзину', class: 'btn_black', href: '#'})
+						@@include('components/ui/_favorite.html', {class: 'favorite_border'})
+					</div>
+				</div>
+				<div class="cake-detail__info">
+					<div class="cake-detail__tabs">
+						<div id="cake-tab-1" class="cake-detail__tab _active">
+							<h3>Состав и аллергены</h3>
+						</div>
+						<div id="cake-tab-2" class="cake-detail__tab">
+							<h3>Пищевая ценность</h3>
+						</div>					
+					</div>
+					<div class="cake-detail__contents">
+						<div id="cake-tab-content-1" class="cake-detail__content _active">
+							<p>
+								<b>Бисквит шоколадный:</b> яйца, какао-порошок, сахар.
+							</p>
+							<p>
+								<b>Шоколадный крем:</b> сметана 20%, темный шоколад 53%, сыр творожный, масло сливочное 82,5%, сахарная пудра, какао-порошок, сливки 36%, желатин, морож. малина.
+							</p>
+							<p>
+								<b>Шоколадное покрытие:</b> желейная масса (вода, сахар, глюкоза сироп, пектин, лимонная кислота), шоколад 53%, сливки 36%, глюкоза сироп, желатин.
+							</p>
+							<p>
+								<b>Декор:</b> свежая малина, рускус.
+							</p>
+							<p>
+								<b>Аллергены:</b> яйцо, молочный продукт, желатин животный, шоколад
+							</p>
+						</div>
+						<div id="cake-tab-content-2" class="cake-detail__content">
+							<p>
+								На 100 гр: белки: 14.2 гр./ жиры: 14.3 гр./ углеводы: 11 гр./ 230 кКал
+							</p>
+						</div>
+					</div>					
+				</div>
+			</div>					
+		</div>
+	</div>
+</div>

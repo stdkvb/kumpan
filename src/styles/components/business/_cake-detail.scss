@@ -1,0 +1,217 @@
+.cake-detail {
+	.popup__content {
+		max-width: 1364px;
+
+		@include tablet_small {
+			padding: 0;
+		}
+	}
+	
+	.popup__close {
+		@include tablet_small {
+			border-radius: 50%;
+			background-color: $white;
+			padding: 25px;
+		}
+	}
+	
+	&__wprapper {
+		display: grid;
+		grid-template-columns: minmax(210px, 420px) auto;
+		gap: 50px 30px;
+		grid-template-areas:
+			'cake_image cake_preview'
+			'cake_image cake_management'
+			'cake_info cake_info';
+
+		@include tablet {
+			grid-template-columns: auto auto;
+			grid-template-areas:
+				'cake_image cake_preview'
+				'cake_management cake_management'
+				'cake_info cake_info';
+		}
+
+		@include tablet_small {
+			grid-template-columns: auto;
+			grid-template-areas:
+				'cake_image'
+				'cake_preview'
+				'cake_info'
+				'cake_management';
+			gap: 20px;
+		}
+	}
+
+	&__image {
+		grid-area: cake_image;
+
+		img {
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__preview {
+		grid-area: cake_preview;
+
+		@include tablet_small {
+			margin: 0 20px;
+		}
+
+		h2 {
+			margin-bottom: 20px;
+
+			@include tablet_small {
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	&__article {
+		display: inline-block;
+		@include regular-18;
+		margin-bottom: 30px;
+
+		@include tablet_small {
+			@include regular-14;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__management {
+		grid-area: cake_management;
+		margin-top: 20px;
+		display: flex;
+		align-items: center;
+		gap: 60px;
+
+		@include tablet_small {
+			margin: 10px 20px 20px;
+			display: block;
+		}
+
+		input[type=number] {
+			@include regular-26;
+
+			@include tablet_small {
+				@include regular-16;
+			}
+		}
+	}
+
+	&__price {
+		display: flex;
+		align-items: baseline;
+		gap: 60px;
+
+		@include tablet_small {
+			margin-bottom: 20px;
+		}
+
+		span {
+			@include bold-26;
+
+			@include tablet_small {
+				@include bold-20;
+			}
+		}		
+	}
+
+	&__btns {
+		display: flex;
+		align-items: center;
+		gap: 25px;
+
+		@include tablet_small {
+			gap: 15px;
+			justify-content: space-between;
+		}
+
+		.btn {
+			@include tablet_small {
+				width: 80%;
+			}
+		}
+	}
+
+	&__info {
+		grid-area: cake_info;
+
+		@include tablet_small {
+			margin: 0 20px;
+		}
+	}
+
+	&__tabs {
+		display: flex;
+		align-items: baseline;
+		gap: 20px;
+		margin-bottom: 30px;
+
+		@include tablet_small {
+			display: none;
+		}
+	}
+
+	&__tab {
+		white-space: nowrap;
+		width: fit-content !important;
+		transition: color $transitionDuration ease-in-out;		
+
+		&:hover {
+			cursor: pointer;
+			color: $green22;
+		}
+
+		h3 {
+			@include FontFamilyZurichRegular;
+			@include regular-24;
+			opacity: 0.7;
+
+			@include tablet_small {
+				@include regular-18;
+			}
+		}		
+
+		&._active,
+		&._active:hover {
+			color: $black25;
+
+			&::after {
+				content: '';
+				display: block;
+				height: 3px;
+				background-color: $black25;
+			}
+
+			h3 {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__content {
+		@include min_tablet_small {
+			display: none;
+		}		
+
+		&._active {
+			display: block;
+		}
+
+		b {
+			font-weight: 700;
+		}
+
+		& > *:not(:last-child) {
+			margin-bottom: 20px;
+		}
+
+		&:not(:first-child) {
+			@include tablet_small {
+				margin-top: 20px;
+			}
+		}
+	}
+}

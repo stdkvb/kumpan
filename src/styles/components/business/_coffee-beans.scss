@@ -121,8 +121,7 @@
 	}
 
 	&-wholesale {
-		.container {
-			min-height: 502px;
+		min-height: 502px;
 			height: auto;
 			position: relative;
 			padding: 130px 0 130px 130px;
@@ -142,7 +141,6 @@
 			@include mobile {
 				min-height: 616px;
 			}
-		}
 
 		&__image {
 			position: absolute;

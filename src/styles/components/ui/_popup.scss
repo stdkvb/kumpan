@@ -51,7 +51,7 @@
 		background-color: #fff;
 		max-width: 800px;
 		width: 100%;
-		padding: 40px 30px 40px 50px;
+		padding: 40px;
 		position: relative;
 		transition: all $transitionDuration ease-in-out;
 		opacity: 0;
@@ -117,8 +117,8 @@
 	}
 	&__close {
 		position: absolute;
-		top: 30px;
-		right: 30px;
+		top: 20px;
+		right: 20px;
 		z-index: 100;
 		width: 24px;
 		height: 24px;
