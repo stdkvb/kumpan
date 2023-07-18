@@ -11,7 +11,7 @@ import takeControlModal from './ElementsControllers/ModalController'
 import takeControlTabs from './ElementsControllers/TabsController'
 import takeControlRaiting from './ElementsControllers/RaitingController'
 import addPhoneMaskListeners from './listeners/addPhoneMaskListeners'
-// import takeControlTimer from './ElementsControllers/TimerController'
+import takeControlTimer from './ElementsControllers/TimerController'
 
 addPhoneMaskListeners()
 takeControlMenu()
@@ -25,7 +25,7 @@ CookieController('.cookie-container', '.cookie-accept')
 takeControlModal()
 takeControlTabs()
 takeControlRaiting()
-// takeControlTimer()
+takeControlTimer()
 
 
 
@@ -148,5 +148,12 @@ const CoffeeWhosaleSwiper = new Swiper ('.coffee-whosale-partners__slider', {
 			slidesPerView: 'auto'
 		}
 	}
+})
+
+// catalog tab's Slider
+const CatalogTabsSwiper = new Swiper ('.catalog__tabs', {
+	slidesPerView: 'auto',
+	watchOverflow: true,
+	spaceBetween: 20
 })
 

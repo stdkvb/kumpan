@@ -65,6 +65,7 @@
 	&__image {
 		width: 100%;
 		margin-bottom: 30px;
+		object-fit: cover;
 
 		@include tablet_small {
 			margin-bottom: 15px;

@@ -19,16 +19,73 @@
 		<section class="catalog__menu">
 			<div class="container">
 				<h2>Горячие блюда с доставкой в Уфе</h2>
-				<div class="catalog__tabs">
-					@@include('components/ui/_button-link.html', {children: 'Все', class: 'btn_black', href: '#'})
-					@@include('components/ui/_button-link.html', {children: 'Супы', href: '#'})
-					@@include('components/ui/_button-link.html', {children: 'Салаты', href: '#'})
-					@@include('components/ui/_button-link.html', {children: 'Горячее', href: '#'})
-					@@include('components/ui/_button-link.html', {children: 'Закуски', href: '#'})
-					@@include('components/ui/_button-link.html', {children: 'Выпечка', href: '#'})
+				<div class="catalog__tabs swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							@@include('components/ui/_button-link.html', {children: 'Все', class: 'btn_black', href: '#'})
+						</div>
+						<div class="swiper-slide">
+							@@include('components/ui/_button-link.html', {children: 'Супы', href: '#'})
+						</div>
+						<div class="swiper-slide">
+							@@include('components/ui/_button-link.html', {children: 'Салаты', href: '#'})
+						</div>
+						<div class="swiper-slide">
+							@@include('components/ui/_button-link.html', {children: 'Горячее', href: '#'})
+						</div>
+						<div class="swiper-slide">
+							@@include('components/ui/_button-link.html', {children: 'Закуски', href: '#'})
+						</div>
+						<div class="swiper-slide">
+							@@include('components/ui/_button-link.html', {children: 'Выпечка', href: '#'})
+						</div>
+					</div>
 				</div>
 				<div class="catalog__list">
-					
+					@@include('components/business/_food__item.html', {
+						foodItems: [
+							{
+								image: '@images/food-1.webp',
+								title: 'Тартар из конины',
+								description: 'Насыщенный, с теплым шоколадным профилем, сладостью карамели, арахиса, кукурузных хлопьев и глубокой пряностью'
+							},
+							{
+								image: '@images/food-2.webp',
+								title: 'Кыстыбый с креветками',
+								description: 'Насыщенный, с теплым шоколадным профилем, сладостью карамели, арахиса, кукурузных хлопьев и глубокой пряностью'
+							},
+							{
+								image: '@images/food-3.webp',
+								title: 'Кыстыбый с уткой',
+								description: 'Насыщенный, с теплым шоколадным профилем, сладостью карамели, арахиса, кукурузных хлопьев и глубокой пряностью'
+							},
+							{
+								image: '@images/food-4.webp',
+								title: 'Утка конфи',
+								description: 'Насыщенный, с теплым шоколадным профилем, сладостью карамели, арахиса, кукурузных хлопьев и глубокой пряностью'
+							},
+							{
+								image: '@images/food-1.webp',
+								title: 'Тартар из конины',
+								description: 'Насыщенный, с теплым шоколадным профилем, сладостью карамели, арахиса, кукурузных хлопьев и глубокой пряностью'
+							},
+							{
+								image: '@images/food-2.webp',
+								title: 'Кыстыбый с креветками',
+								description: 'Насыщенный, с теплым шоколадным профилем, сладостью карамели, арахиса, кукурузных хлопьев и глубокой пряностью'
+							},
+							{
+								image: '@images/food-3.webp',
+								title: 'Кыстыбый с уткой',
+								description: 'Насыщенный, с теплым шоколадным профилем, сладостью карамели, арахиса, кукурузных хлопьев и глубокой пряностью'
+							},
+							{
+								image: '@images/food-4.webp',
+								title: 'Утка конфи',
+								description: 'Насыщенный, с теплым шоколадным профилем, сладостью карамели, арахиса, кукурузных хлопьев и глубокой пряностью'
+							}
+						]
+					})
 				</div>
 				@@include('components/ui/_pagination.html')
 				@@include('components/ui/_button-link.html', {children: 'Показать еще', class: 'load-more', href: '#'})
@@ -38,6 +95,7 @@
 		@@include('components/business/_advantages.html')
 	</main>
 	@@include('components/business/_footer.html')
+	@@include('components/business/_food-popup.html')
 
 	@@include('meta/_includeScripts.html')
 </body>

@@ -19,9 +19,29 @@
 
 			.catalog__tabs {
 				grid-area: tabs;
-				display: flex;
-				gap: 20px;
 				margin-top: 30px;
+				width: 100%;
+
+				.swiper-slide {
+					width: fit-content;
+				}
+			}
+
+			.catalog__list {
+				margin-top: 80px;
+				grid-area: cards;
+				display: grid;
+				grid-template-columns: repeat(auto-fit,minmax(520px,auto));
+				gap: 40px;
+
+				.food__image {
+					max-height: 286px;
+				}
+
+				@include mobile {
+					margin-top: 30px;
+					grid-template-columns: repeat(auto-fit,minmax(320px,auto));
+				}
 			}
 
 			.pagination {
