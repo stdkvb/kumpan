@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Доставка'})
+
+<body>
+	@@include('components/business/_header.html')
+	<main class="_offset delivery">
+		<section class="coffee-beans-banner">
+			<div class="container">
+				<div class="coffee-beans-banner__images">
+					<img class="coffee-beans-banner__images_desktop" src="@images/chicken.webp" alt="#">
+					<img class="coffee-beans-banner__images_mobile" src="@images/chicken-mobile.webp" alt="#">
+				</div>
+				<div class="coffee-beans-banner__description coffee-beans-banner__description_black">
+					<h1>Доставка готовой еды прямо к двери</h1>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="container">
+				<h2>Доставка еды в Уфе</h2>
+				<div class="delivery__catalog">
+					<a class="delivery__catalog-item link" href="#">
+						<img src="@images/soup.webp" alt="#">
+						<h3>Горячие блюда</h3>
+					</a>
+					<a class="delivery__catalog-item link" href="#">
+						<img src="@images/salad.webp" alt="#">
+						<h3>Салаты</h3>
+					</a>
+					<a class="delivery__catalog-item link" href="#">
+						<img src="@images/drinks.webp" alt="#">
+						<h3>Напитки</h3>
+					</a>
+					<a class="delivery__catalog-item link" href="#">
+						<img src="@images/breakfast.webp" alt="#">
+						<h3>Завтраки</h3>
+					</a>
+					<a class="delivery__catalog-item link" href="#">
+						<img src="@images/waffle.webp" alt="#">
+						<h3>Десерты</h3>
+					</a>
+				</div>
+			</div>
+		</section>
+		@@include('components/business/_wholesale.html')
+		@@include('components/business/_advantages.html')
+	</main>
+	@@include('components/business/_footer.html')
+
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>

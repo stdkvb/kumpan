@@ -1,0 +1,70 @@
+.delivery {
+	.coffee-beans-banner {
+		&__description {
+			max-width: 764px;
+
+			@include tablet {
+				max-width: 400px;
+			}
+
+			@include mobile {
+				max-width: 244px;
+			}
+		}
+	}
+
+	&__catalog {
+		margin-top: 30px;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+		flex-wrap: wrap;
+		
+		@include min_desktop_large {
+			display: flex;
+		}
+
+		@include tablet {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include mobile {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__catalog-item {
+		background-color: $grayFA;
+		padding-bottom: 20px;
+		width: 533px;
+		color: $black;
+		overflow: hidden;
+
+		@include desktop_large {
+			width: unset;
+		}
+
+		&:hover {
+			img {
+				scale: 1.05;
+			}
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			max-width: 533px;
+			height: 239px;
+			object-fit: cover;
+			@include transition;
+
+				@include mobile {
+					max-height: 170px;
+				}
+			}
+
+			h3 {
+				margin: 20px 20px 0 20px;
+			}
+	}
+}
