@@ -1,0 +1,42 @@
+.catalog {
+	&__menu {
+		.container {
+			display: grid;
+			grid-template-areas: 
+			'title .'
+			'tabs tabs'
+			'cards cards'
+			'pagination more';
+			gap: 0px;
+
+			@include tablet_small {
+				grid-template-areas:
+				'title'
+				'tabs'
+				'cards'
+				'more';
+			}
+
+			.catalog__tabs {
+				grid-area: tabs;
+				display: flex;
+				gap: 20px;
+				margin-top: 30px;
+			}
+
+			.pagination {
+				margin-top: 40px;
+			}
+
+			.load-more {
+				grid-area: more;
+				justify-self: end;
+				margin-top: 40px;
+	
+				@include tablet_small {
+					justify-self: center;
+				}
+			}
+		}
+	}
+}

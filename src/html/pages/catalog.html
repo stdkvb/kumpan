@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Доставка еды - раздел'})
+
+<body>
+	@@include('components/business/_header.html')
+	<main class="_offset catalog">
+		<section class="coffee-beans-banner">
+			<div class="container">
+				<div class="coffee-beans-banner__images">
+					<img class="coffee-beans-banner__images_desktop" src="@images/chicken.webp" alt="#">
+					<img class="coffee-beans-banner__images_mobile" src="@images/chicken-mobile.webp" alt="#">
+				</div>
+				<div class="coffee-beans-banner__description coffee-beans-banner__description_black">
+					<h1>Доставка готовой еды прямо к двери</h1>
+				</div>
+			</div>
+		</section>
+		<section class="catalog__menu">
+			<div class="container">
+				<h2>Горячие блюда с доставкой в Уфе</h2>
+				<div class="catalog__tabs">
+					@@include('components/ui/_button-link.html', {children: 'Все', class: 'btn_black', href: '#'})
+					@@include('components/ui/_button-link.html', {children: 'Супы', href: '#'})
+					@@include('components/ui/_button-link.html', {children: 'Салаты', href: '#'})
+					@@include('components/ui/_button-link.html', {children: 'Горячее', href: '#'})
+					@@include('components/ui/_button-link.html', {children: 'Закуски', href: '#'})
+					@@include('components/ui/_button-link.html', {children: 'Выпечка', href: '#'})
+				</div>
+				<div class="catalog__list">
+					
+				</div>
+				@@include('components/ui/_pagination.html')
+				@@include('components/ui/_button-link.html', {children: 'Показать еще', class: 'load-more', href: '#'})
+			</div>
+		</section>
+		@@include('components/business/_wholesale.html')
+		@@include('components/business/_advantages.html')
+	</main>
+	@@include('components/business/_footer.html')
+
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>
