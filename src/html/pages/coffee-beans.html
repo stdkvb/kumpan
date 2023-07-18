@@ -77,22 +77,7 @@
 				@@include('components/ui/_button-link.html', {children: 'Показать еще', class: 'load-more', href: '#'})
 			</div>
 		</section>
-
-		<section class="coffee-beans-wholesale">
-			<div class="container">
-				<div class="coffee-beans-wholesale__image coffee-beans-wholesale__image_desktop" style="background-image: url('@images/coffee-beans-wholesale.webp');"></div>
-				<div class="coffee-beans-wholesale__image coffee-beans-wholesale__image_mobile" style="background-image: url('@images/coffee-beans-wholesale_mobile.webp');"></div>
-				<div class="coffee-beans-wholesale__text">
-					<h2>Оптовая продажа кофе Kumpan</h2>
-					<p>
-						Свежеобжаренный кофе Kumpan можно приобрести как мелким, так и крупным оптом, по выгодной цене. Чем выше объем закупок кофе, тем ниже его конечная стоимость. К каждому клиенту у нас индивидуальный подход.
-					</p>
-					<p>
-						Преимущество нашего кофе заключается в том, что готовые зерна не хранятся у нас на складе, а отправляются на следующий день после обжарки, чтобы потребитель мог насладиться восхитительным ароматом.
-					</p>
-				</div>
-			</div>
-		</section>
+		@@include('components/business/_wholesale.html')
 		@@include('components/business/_advantages.html')
 	</main>
 	@@include('components/business/_footer.html')
