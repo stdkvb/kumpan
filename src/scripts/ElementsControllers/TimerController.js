@@ -4,7 +4,7 @@ const takeControlTimer = () => {
 	const timer = document.querySelector('#timer')
 	let time
 
-	if (timer !== undefined) {
+	if (timer !== null) {
 		const outTimer = () => {
 			timerLink.classList.add('_disabled')
 			timerLink.classList.remove('_active')
