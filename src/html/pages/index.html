@@ -161,52 +161,17 @@
 				</div>
 			</div>
 		</section>
-		<section class="news">
-			<div class="container">
-				<h2>Новости и акции</h2>
-				@@include('components/ui/_button-link.html', {children: 'Посмотреть все', class: 'btn_more', href: '#'})
-				<div class="news__list">
-					@@include('components/business/_news__item.html', {
-						newsItems: [
-							{
-								image: '@images/news-1.webp',
-								title: 'Открытие новой точки',
-								date: '01.01.2023',
-								text: 'Это место, где мастерски приготовленные кофейные напитки встречаются с великолепными десертами и вкуснейшей едой.'
-							},
-							{
-								image: '@images/news-2.webp',
-								title: 'Дарим 200 бонусов',
-								date: '01.01.2023',
-								text: 'Это место, где мастерски приготовленные кофейные напитки встречаются с великолепными десертами и вкуснейшей едой.'
-							},
-							{
-								image: '@images/news-3.webp',
-								title: 'Скидка на первый онлайн заказ',
-								date: '01.01.2023',
-								text: 'Это место, где мастерски приготовленные кофейные напитки встречаются с великолепными десертами и вкуснейшей едой.'
-							}
-															
-						]
-					})
-				</div>
-			</div>
-		</section>
+
+		@@include('components/business/_news.html', {title: 'Новости и акции'})
+		
 		<section class="questions">
 			<div class="container" style="background-image: url('@images/feedback-bg.webp');">
 				@@include('components/business/_call-request.html')
 			</div>
 			
 		</section>
-		<!-- <section class="questions">
-			<div class="container">
-				<h3>У Вас есть вопросы о кофе или доставке? Задайте их нашей команде!</h3>
-				@@include('components/ui/_button-link.html', {children: 'Связаться', class: 'btn_white', href: '#'})
-			</div>
-		</section> -->
 	</main>
 	@@include('components/business/_footer.html')
-	<!-- @@include('components/business/_cookie.html') -->
 
 	@@include('meta/_includeScripts.html')
 </body>

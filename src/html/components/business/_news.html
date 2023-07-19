@@ -1,0 +1,29 @@
+<section class="news">
+	<div class="container">
+		<h2>@@title</h2>
+		@@include('components/ui/_button-link.html', {children: 'Посмотреть все', class: 'btn_more', href: '#'})
+		<div class="news__list">
+			@@include('components/business/_news__item.html', {
+				image: '@images/news-1.webp',
+				title: 'Открытие новой точки',
+				date: '01.01.2023',
+				text: 'Это место, где мастерски приготовленные кофейные напитки встречаются с великолепными десертами и вкуснейшей едой.',
+				button: 'true'
+			})
+			@@include('components/business/_news__item.html', {
+				image: '@images/news-2.webp',
+				title: 'Дарим 200 бонусов',
+				date: '01.01.2023',
+				text: 'Это место, где мастерски приготовленные кофейные напитки встречаются с великолепными десертами и вкуснейшей едой.',
+				button: 'true'
+			})
+			@@include('components/business/_news__item.html', {
+				image: '@images/news-3.webp',
+				title: 'Скидка на первый онлайн заказ',
+				date: '01.01.2023',
+				text: 'Это место, где мастерски приготовленные кофейные напитки встречаются с великолепными десертами и вкуснейшей едой.',
+				button: 'true'
+			})
+		</div>
+	</div>
+</section>

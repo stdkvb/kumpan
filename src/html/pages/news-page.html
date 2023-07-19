@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Новости и акции'})
+
+<body>
+	@@include('components/business/_header.html')
+	<main class="_offset">
+		<section class="news-page">
+			<div class="container">
+				<h1>Новости и акции</h1>
+				<div class="news__list">
+					@@include('components/business/_news__item.html', {
+						image: '@images/news-1.webp',
+						title: 'Открытие новой точки',
+						date: '01.01.2023',
+						text: 'Это место, где мастерски приготовленные кофейные напитки встречаются с великолепными десертами и вкуснейшей едой.',
+						button: 'true'
+					})
+					@@include('components/business/_news__item.html', {
+						image: '@images/news-2.webp',
+						title: 'Дарим 200 бонусов',
+						date: '01.01.2023',
+						text: 'Это место, где мастерски приготовленные кофейные напитки встречаются с великолепными десертами и вкуснейшей едой.',
+						button: 'true'
+					})
+					@@include('components/business/_news__item.html', {
+						image: '@images/news-3.webp',
+						title: 'Скидка на первый онлайн заказ',
+						date: '01.01.2023',
+						text: 'Это место, где мастерски приготовленные кофейные напитки встречаются с великолепными десертами и вкуснейшей едой.',
+						button: 'true'
+					})
+					@@include('components/business/_news__item.html', {
+						image: '@images/news-1.webp',
+						title: 'Открытие новой точки',
+						date: '01.01.2023',
+						text: 'Это место, где мастерски приготовленные кофейные напитки встречаются с великолепными десертами и вкуснейшей едой.',
+						button: 'true'
+					})
+					@@include('components/business/_news__item.html', {
+						image: '@images/news-2.webp',
+						title: 'Дарим 200 бонусов',
+						date: '01.01.2023',
+						text: 'Это место, где мастерски приготовленные кофейные напитки встречаются с великолепными десертами и вкуснейшей едой.',
+						button: 'true'
+					})
+					@@include('components/business/_news__item.html', {
+						image: '@images/news-3.webp',
+						title: 'Скидка на первый онлайн заказ',
+						date: '01.01.2023',
+						text: 'Это место, где мастерски приготовленные кофейные напитки встречаются с великолепными десертами и вкуснейшей едой.',
+						button: 'true'
+					})
+				</div>
+				@@include('components/ui/_pagination.html')
+				@@include('components/ui/_button-link.html', {children: 'Показать еще', class: '', href: '#'})
+			</div>
+		</section>
+	</main>
+	@@include('components/business/_footer.html')
+
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>

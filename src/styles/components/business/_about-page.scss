@@ -100,17 +100,29 @@
 			justify-content: space-between;
 			gap: 20px;
 
+			&:nth-child(even) {
+				flex-direction: row-reverse;
+
+				@include tablet {
+					flex-direction: column-reverse;
+				}
+
+				.about-page-features__item_text {
+					padding-left: 50px;
+
+					@include tablet {
+						padding-left: 0;
+					}
+				}
+			}
+
 			&:not(:last-child) {
 				margin-bottom: 50px;
 			}
 
 			@include tablet {
 				display: flex;
-				flex-direction: column;
-
-				&:nth-child(odd) {
-					flex-direction: column-reverse;
-				}
+				flex-direction: column-reverse;
 			}
 		}
 
@@ -119,14 +131,6 @@
 			&_text {
 				margin: 70px 0;
 				width: 50%;
-
-				&:nth-child(even) {
-					padding-left: 50px;
-
-					@include tablet {
-						padding-left: 0;
-					}
-				}
 
 				@include tablet {
 					margin: 0;

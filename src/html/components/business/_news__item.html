@@ -1,15 +1,19 @@
-@@for(let i = 0; i < newsItems.length; i++) {
-	<div class="news__item">
-		<img src="`+newsItems[i].image+`">
-		<div class="news__description">
-			<a href="#" class="link">
-				<h3>`+newsItems[i].title+`</h3>
-			</a>
-			<span class="news__date">`+newsItems[i].date+`</span>
+<div class="news__item">
+	<img src="@@image">
+	<div class="news__description">
+		<a href="#" class="link">
+			<h3>@@title</h3>
+		</a>
+		@@if (context.date) {
+			<span class="news__date">@@date</span>
+		}		
+		@@if (context.text) {
 			<p>
-				`+newsItems[i].text+`
+				@@text
 			</p>
+		}
+		@@if (context.button) {
 			@@include('components/ui/_button-link.html', {children: 'Подробнее', class: '', href: '#'})
-		</div>
+		}		
 	</div>
-}
+</div>

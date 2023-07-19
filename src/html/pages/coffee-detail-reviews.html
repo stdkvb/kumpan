@@ -244,21 +244,19 @@
 				@@include('components/ui/_button-link.html', {children: 'Посмотреть все', class: 'btn_more', href: '#'})
 				<div class="news__list">
 					@@include('components/business/_news__item.html', {
-						newsItems: [
-							{
-								image: '@images/states-1.webp',
-								title: 'Как выбрать кофе?'
-							},
-							{
-								image: '@images/states-2.webp',
-								title: 'Разновидности кофе'
-							},
-							{
-								image: '@images/states-3.webp',
-								title: 'Эспрессо и его вариации: чем отличаются рисстрето и лунго'
-							}
-															
-						]
+						image: '@images/states-1.webp',
+						title: 'Как выбрать кофе?',
+						button: 'true'
+					})
+					@@include('components/business/_news__item.html', {
+						image: '@images/states-2.webp',
+						title: 'Разновидности кофе',
+						button: 'true'
+					})
+					@@include('components/business/_news__item.html', {
+						image: '@images/states-3.webp',
+						title: 'Эспрессо и его вариации: чем отличаются рисстрето и лунго',
+						button: 'true'
 					})
 				</div>
 			</div>

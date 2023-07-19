@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Новости - детальная'})
+
+<body>
+	@@include('components/business/_header.html')
+	<main class="_offset news-detail">
+		<section class="news-detail-banner">
+			<div class="container" style="background-image: url(@images/news-detail.webp);"></div>
+		</section>
+
+		<section class="news-detail-description">
+			<div class="container">
+				@@include('components/ui/_return.html')
+				<h1>У вас день рождения? Давайте отметим его вместе!</h1>
+				<div class="news-detail-description__text">
+					<p>
+						Отпразднуйте это прекрасное событие в мягком ресторане “Своя Компания” или закажите праздничный стол с доставкой на дом. А мы подарим вам кусочек торта и скидку 10%, которая действует в сам день рождения, а также за 7 дней до праздника и в течение 7 дней после.
+					</p>
+					<p>
+						Не забудьте, что
+					</p>
+					<ul>
+						<li>скидка 10% действует и в ресторане, и при заказе доставки любимых блюд,</li>
+						<li>нужно предупредить нас о важной дате, например, в комментарии к заказу или по телефону,</li>
+						<li>мы попросим вас показать нам паспорт.</li>
+					</ul>
+					<p>
+						<b>Рекомендуем забронировать столик заранее, за 4-5 дней до назначенной даты.</b>
+					</p>
+				</div>
+			</div>
+		</section>
+
+		@@include('components/business/_news.html', {title: 'Больше новостей'})
+	</main>
+	@@include('components/business/_footer.html')
+
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Статьи'})
+
+<body>
+	@@include('components/business/_header.html')
+	<main class="_offset">
+		<section class="news-page coffee-news">
+			<div class="container">
+				<h1>Статьи</h1>
+				<div class="news__list">
+					@@include('components/business/_news__item.html', {
+						image: '@images/states-1.webp',
+						title: 'Как выбрать кофе?',
+						button: 'true'
+					})
+					@@include('components/business/_news__item.html', {
+						image: '@images/states-2.webp',
+						title: 'Разновидности кофе',
+						button: 'true'
+					})
+					@@include('components/business/_news__item.html', {
+						image: '@images/states-3.webp',
+						title: 'Эспрессо и его вариации: чем отличаются рисстрето и лунго',
+						button: 'true'
+					})
+					@@include('components/business/_news__item.html', {
+						image: '@images/states-3.webp',
+						title: 'Эспрессо и его вариации: чем отличаются рисстрето и лунго',
+						button: 'true'
+					})
+					@@include('components/business/_news__item.html', {
+						image: '@images/states-1.webp',
+						title: 'Как выбрать кофе?',
+						button: 'true'
+					})
+					@@include('components/business/_news__item.html', {
+						image: '@images/states-2.webp',
+						title: 'Разновидности кофе',
+						button: 'true'
+					})
+				</div>
+				@@include('components/ui/_pagination.html')
+				@@include('components/ui/_button-link.html', {children: 'Показать еще', class: '', href: '#'})
+			</div>
+		</section>
+	</main>
+	@@include('components/business/_footer.html')
+
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>
