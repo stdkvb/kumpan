@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'О компании'})
+
+<body>
+	@@include('components/business/_header.html')
+	<main class="_offset about-page">
+		<section class="about-page-preview">
+			<div class="container">
+				<h1>Kumpan</h1>
+				<div class="about-page-preview__description">
+					<p>
+						Предлагаем широкое разнообразие десертов с доставкой по Уфе. Шоколадный маффин, тирамису, чизкейк – с нашей удобной службой доставки и умеренными ценами вы можете каждый день пробовать что-то новое. 
+					</p>
+					<p>
+						Порадуйте угощениями друзей в свой день рождения, подготовьте сладкий стол для детского праздника, просто поднимите настроение себе в выходной или добавьте вкусных эмоций в напряженный рабочий график. Курьерская служба доставки десертов в Уфе доступна в будние и выходные дни.
+					</p>
+					<p>
+						Предлагаем широкое разнообразие десертов с доставкой по Уфе. Шоколадный маффин, тирамису, чизкейк – с нашей удобной службой доставки и умеренными ценами вы можете каждый день пробовать что-то новое. Порадуйте угощениями друзей в свой день рождения, подготовьте сладкий стол для детского праздника, просто поднимите настроение себе в выходной или добавьте вкусных эмоций в напряженный рабочий график. Курьерская служба доставки десертов в Уфе доступна в будние и выходные дни.
+					</p>
+				</div>
+			</div>
+		</section>
+		
+		<section class="about-page-team">
+			<div class="about-page-team__image about-page-team__image_desktop" style="background-image: url(@images/about-page-team.webp);"></div>
+			<div class="about-page-team__image about-page-team__image_mobile" style="background-image: url(@images/about-page-team_mobile.webp);"></div>
+			<div class="about-page-team__text">
+				<h3>Команда мечты</h3>
+				<p>
+					Предлагаем широкое разнообразие десертов с доставкой по Уфе. Шоколадный маффин, тирамису, чизкейк – с нашей удобной службой доставки и умеренными ценами вы можете каждый день пробовать что-то новое. Порадуйте угощениями друзей в свой день рождения, подготовьте сладкий стол для детского праздника.
+				</p>
+			</div>
+		</section>
+
+		<section class="about-page-advantages">
+			<div class="container">
+				<h2>Почему выбирают нас</h2>
+				<div class="coffee-beans-advantages__list">
+					<div class="coffee-beans-advantages__item">
+						<h3>Уютная атмосфера</h3>
+						<p>
+							Мы предлагаем свежеобжаренный кофе высокого качества, который обладает идеальным балансом аромата и вкуса. Мы тщательно выбираем зерна кофе, чтобы гарантировать, что каждая чашка будет богата и насыщена.
+						</p>			
+					</div>
+					<div class="coffee-beans-advantages__item">
+						<h3>Широкий выбор напитков</h3>
+						<p>
+							У нас есть широкий ассортимент различных сортов кофе, включая арабику, робусту и смеси различной степени обжарки. Вы можете выбрать оптимальный сорт под свои вкусовые предпочтения.
+						</p>
+					</div>
+					<div class="coffee-beans-advantages__item">
+						<h3>Вкусная выпечка и закуски</h3>
+						<p>
+							Мы стремимся к устойчивому производству и ценим природные ресурсы. Наш кофе производится с использованием экологически чистых методов и упакован в биоразлагаемую упаковку.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="about-page-features">
+			<div class="container">
+				<div class="about-page-features__list">
+					<div class="about-page-features__item about-page-features__item_text">
+						<h2>Производим кофе</h2>
+						<p>
+							Следим за качеством кофе от фермы до чашки: сами ищем кофе в странах произрастания, обжариваем на лучших ростерах в мире, проводим каппинги с участием Q-грейдеров, проверяем каждую партию по 7 контрольным точкам.
+						</p>
+						@@include('components/ui/_button-link.html', {children: 'Подробнее', class: 'btn_black', href: '#'})
+					</div>
+					<div class="about-page-features__item about-page-features__item_image" style="background-image: url(@images/about-page-features-1.webp);"></div>										
+				</div>
+				<div class="about-page-features__list">
+					<div class="about-page-features__item about-page-features__item_image" style="background-image: url(@images/about-page-features-2.webp);"></div>
+					<div class="about-page-features__item about-page-features__item_text">
+						<h2>Рассказываем о кофе</h2>
+						<p>
+							Следим за качеством кофе от фермы до чашки: сами ищем кофе в странах произрастания, обжариваем на лучших ростерах в мире, проводим каппинги с участием Q-грейдеров, проверяем каждую партию по 7 контрольным точкам.
+						</p>
+						@@include('components/ui/_button-link.html', {children: 'Перейти к статьям', class: 'btn_black', href: '#'})
+					</div>
+				</div>
+				<div class="about-page-features__list">
+					<div class="about-page-features__item about-page-features__item_text">
+						<h2>Обучаем новому</h2>
+						<p>
+							Следим за качеством кофе от фермы до чашки: сами ищем кофе в странах произрастания, обжариваем на лучших ростерах в мире, проводим каппинги с участием Q-грейдеров, проверяем каждую партию по 7 контрольным точкам.
+						</p>
+						@@include('components/ui/_button-link.html', {children: 'Академия Kumpan', class: 'btn_black', href: '#'})
+					</div>
+					<div class="about-page-features__item about-page-features__item_image" style="background-image: url(@images/about-page-features-3.webp);"></div>
+				</div>
+			</div>
+		</section>
+
+		@@include('components/business/_plantation.html')
+	</main>
+	@@include('components/business/_footer.html')
+
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>

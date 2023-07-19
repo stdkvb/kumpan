@@ -1,0 +1,181 @@
+.about-page {
+	&-preview {
+		h1 {
+			@include bold-70;
+			margin-bottom: 40px;
+
+			@include tablet_small {
+				@include bold-30;
+				margin-bottom: 20px;
+			}
+		}
+
+		&__description {
+			max-width: 948px;
+
+			& > * {
+				opacity: 0.7;
+			}
+
+			& > *:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	&-team {
+		position: relative;
+
+		&__image {
+			min-height: 700px;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+
+			@include mobile {
+				background-size: 100%;
+			}
+
+			&_desktop {
+				@include mobile {
+					display: none;
+				}
+			}
+
+			&_mobile {
+				@include min_mobile {
+					display: none;
+				}
+
+				@include mobile {					
+					min-height: 240px;
+				}
+			}
+		}
+
+		&__text {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			background-color: $white;
+			max-width: 970px;
+			padding: 30px 30px 0 140px;
+
+			@include desktop {
+				padding: 30px 30px 0 50px;
+			}
+
+			@include tablet_small {
+				position: static;
+				padding: 20px 20px 0;
+			}
+
+			h3 {
+				margin-bottom: 16px;
+
+				@include tablet_small {
+					margin-bottom: 10px;
+				}
+			}
+
+			p {
+				opacity: 0.7;
+			}
+		}
+	}
+
+	&-advantages {
+		h2 {
+			margin-bottom: 30px;
+		}
+
+		p {
+			opacity: 0.7;
+		}
+	}
+
+	&-features {
+		&__list {
+			display: flex;
+			justify-content: space-between;
+			gap: 20px;
+
+			&:not(:last-child) {
+				margin-bottom: 50px;
+			}
+
+			@include tablet {
+				display: flex;
+				flex-direction: column;
+
+				&:nth-child(odd) {
+					flex-direction: column-reverse;
+				}
+			}
+		}
+
+		&__item {	
+
+			&_text {
+				margin: 70px 0;
+				width: 50%;
+
+				&:nth-child(even) {
+					padding-left: 50px;
+
+					@include tablet {
+						padding-left: 0;
+					}
+				}
+
+				@include tablet {
+					margin: 0;
+					width: 100%;
+				}
+
+				& > * {
+					max-width: 673px;
+
+					@include tablet {
+						max-width: 100%;
+					}
+				}
+
+
+				h2 {
+					margin-bottom: 30px;
+
+					@include tablet {
+						margin-bottom: 20px;
+					}
+				}
+
+				.btn {
+					margin-top: 50px;
+					min-width: 355px;
+
+					@include tablet {
+						margin: 30px auto 0;
+						min-width: 100%;
+					}
+				}
+			}
+
+			&_image {
+				background-size: cover;
+				background-repeat: no-repeat;
+				width: 100%;
+				width: 50%;
+				min-height: 400px;
+
+				@include tablet {
+					width: 100%;
+				}
+
+				@include mobile {
+					min-height: 200px;
+				}
+			}
+		}
+	}
+}

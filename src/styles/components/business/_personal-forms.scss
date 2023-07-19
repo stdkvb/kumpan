@@ -46,6 +46,7 @@
 	}	
 
 	&__links {
+		min-height: 24px;
 		margin-top: 50px;
 		@include regular-18;
 
@@ -66,6 +67,12 @@
 
 		@include tablet_small {
 			margin: 0 0 30px 0;
+		}
+
+		br {
+			@include min_mobile {
+				display: none;
+			}
 		}
 	}
 }
