@@ -15,7 +15,7 @@
 			gap: 0;
 		}
 
-		.btn {
+		& > .btn {
 			grid-area: more;
 			justify-self: end;
 
@@ -37,9 +37,9 @@
 	&__list {
 		grid-area: cards;
 		display: grid;
-		grid-template-columns: repeat(3, minmax(320px, 533px));
+		grid-template-columns: repeat(3, minmax(320px, auto));
 		gap: 20px;
-		grid-auto-columns: minmax(320px, 533px);
+		grid-auto-columns: minmax(320px, auto);
 
 		@include desktop_small {
 			grid-template-columns: repeat(auto-fit, minmax(320px, auto));
