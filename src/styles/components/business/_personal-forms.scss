@@ -79,4 +79,27 @@
 			}
 		}
 	}
+
+	&__buttons {
+		display: flex;
+		justify-content: space-between;
+		gap: 20px;
+
+		.btn {
+			width: 40%;
+
+			&_black {
+				width: 60%;
+			}
+
+			@include mobile {
+				width: unset;
+			}
+		}
+
+		@include mobile {
+			flex-direction: column;
+			gap: 15px;
+		}
+	}
 }
