@@ -174,4 +174,33 @@
 			background-position: 50% 50%;
 		}
 	}
+
+	.dropdown__button {
+		span {
+			@include regular-24;
+		}
+	}
+
+	.dropdown__option {
+		a {
+			@include regular-24;
+		}
+	}
+
+	&__food-list {
+		margin-top: 30px;
+		grid-area: cards;
+		display: grid;
+		grid-template-columns: repeat(auto-fit,minmax(520px,auto));
+		gap: 40px;
+
+		.food__image {
+			max-height: 286px;
+		}
+
+		@include mobile {
+			margin-top: 30px;
+			grid-template-columns: repeat(auto-fit,minmax(320px,auto));
+		}
+	}
 }
