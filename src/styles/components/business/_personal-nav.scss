@@ -4,8 +4,7 @@
 	margin-bottom: 50px;
 
 	@include tablet_small {
-		flex-wrap: wrap;
-		gap: 15px;
+		display: none;
 	}
 
 	.link {

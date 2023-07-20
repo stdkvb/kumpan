@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Избранное-пустая'})
+
+<body>
+	@@include('components/business/_header.html')
+	<main class="_offset">
+		<section class="personal-forms">
+			<div class="container">
+				<h1>Профиль</h1>
+				<nav class="personal-nav">
+					<a class="link" href="#">Профиль</a>
+					<a class="link" href="#">Адреса</a>
+					<a class="link" href="#">Корзина</a>
+					<a class="link active" href="#">Избранное</a>
+					<a class="link" href="#">История заказов</a>
+					<a class="link" href="#">Бонусы</a>
+				</nav>
+				<h3>У вас нет избранных товаров</h4>
+				<h5>Перейдите на главную страницу</h5>
+				@@include('components/ui/_button-link.html', {children: 'Вернуться на главную', class: 'btn_black', href: '#'})
+			</div>
+		</section>
+	</main>
+	@@include('components/business/_footer.html')
+
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>
