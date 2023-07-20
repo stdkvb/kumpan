@@ -157,3 +157,19 @@ const CatalogTabsSwiper = new Swiper ('.catalog__tabs', {
 	spaceBetween: 20
 })
 
+// food ingredients Slider
+const IngredientsSwiper = new Swiper ('.cake-detail__ingredients-swiper', {
+	slidesPerView: 'auto',
+	spaceBetween: 10,
+	navigation: {
+		nextEl: '.swiper-navigation-next',
+		prevEl: '.swiper-navigation-prev'
+	},
+	breakpoints: {
+		576: {
+			spaceBetween: 20,
+		}
+	}
+})
+
+
