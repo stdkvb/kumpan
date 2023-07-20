@@ -12,7 +12,6 @@
 					<form novalidate>
 						@@include('components/ui/_input-text.html', {label: 'Введите логин', placeholder: 'Введите логин', errorMessage: 'Введите ваше имя', name: 'name', required: true})
 						@@include('components/ui/_input-password.html', {label: 'Ваш пароль', name: 'password', errorMessage: 'Введите пароль', id: 'password', required: true})
-
 						@@include('components/ui/_button.html', {children: 'Войти', class: 'btn_black', type: 'submit'})
 					</form>
 				</div>

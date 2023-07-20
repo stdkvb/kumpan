@@ -1,0 +1,29 @@
+.personal-nav {
+	display: flex;
+	gap: 40px;
+	margin-bottom: 50px;
+
+	@include tablet_small {
+		flex-wrap: wrap;
+		gap: 15px;
+	}
+
+	.link {
+		@include regular-20;
+		width: fit-content;
+
+		&.active:after {
+			content: "";
+			display: block;
+			height: 3px;
+			background-color: #252525;
+		}
+
+		&.active:hover {
+			cursor: unset;
+			color: $black25;
+		}
+	}
+
+	
+}

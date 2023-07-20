@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Профиль'})
+
+<body>
+	@@include('components/business/_header.html')
+	<main class="_offset">
+		<section class="personal-forms profile">
+			<div class="container">
+				<h1>Профиль</h1>
+				<nav class="personal-nav">
+					<a class="link active" href="#">Профиль</a>
+					<a class="link" href="#">Адреса</a>
+					<a class="link" href="#">Корзина</a>
+					<a class="link" href="#">Избранное</a>
+					<a class="link" href="#">История заказов</a>
+					<a class="link" href="#">Бонусы</a>
+				</nav>
+				<div class="profile__form">
+					<h4>Редактировать данные</h4>
+					<form novalidate>
+						@@include('components/ui/_input-text.html', {label: 'Имя', placeholder: 'Ваше имя', errorMessage: 'Введите ваше имя', name: 'name'})
+						@@include('components/ui/_input-text.html', {label: 'Фамилия', placeholder: 'Ваша фамилия', errorMessage: 'Введите вашу фамилию', name: 'surname'})
+						@@include('components/ui/_input-email.html', {label: 'Электронная почта', value: 'mail@email.com', placeholder: 'Введите электронную почту', name: 'email'})
+						@@include('components/ui/_input-phone.html', {label: 'Телефон', placeholder: '+7 (000) 000-00-00', name: 'phone'})
+						@@include('components/ui/_button.html', {children: 'Сохранить изменения', class: 'btn_black', type: 'submit'})
+					</form>
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include('components/business/_footer.html')
+
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>

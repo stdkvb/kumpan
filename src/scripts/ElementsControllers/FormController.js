@@ -121,16 +121,19 @@ const takeControlForms = () => {
 			}
 		})
 	}
+
+	const profileForm = document.querySelector(".profile__form form");
+	if (profileForm !== null) {
+		const profileValidator = new Pristine(profileForm);
+		profileForm.addEventListener('submit', function (e) {
+			e.preventDefault();
+
+			if (profileValidator.validate() == true) {
+				
+			}
+		})
+	}
 	
-
-	
-
-	
-
-
-
-
-
 
 	// password toggle
 	const passwordToggle = document.querySelectorAll('.toggle-show-password-btn')
