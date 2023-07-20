@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Адреса-пустая'})
+
+<body>
+	@@include('components/business/_header.html')
+	<main class="_offset">
+		<section class="personal-forms">
+			<div class="container">
+				<h1>Адреса</h1>
+				<nav class="personal-nav">
+					<a class="link" href="#">Профиль</a>
+					<a class="link active" href="#">Адреса</a>
+					<a class="link" href="#">Корзина</a>
+					<a class="link" href="#">Избранное</a>
+					<a class="link" href="#">История заказов</a>
+					<a class="link" href="#">Бонусы</a>
+				</nav>
+				@@include('components/ui/_button-link.html', {children: 'Добавить адрес', class: 'btn_black', href: '#'})
+			</div>
+		</section>
+	</main>
+	@@include('components/business/_footer.html')
+
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>
