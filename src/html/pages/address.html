@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Адреса'})
+
+<body>
+	@@include('components/business/_header.html')
+	<main class="_offset">
+		<section class="personal-forms">
+			<div class="container container_wide">
+				<h1>Профиль</h1>
+				<nav class="personal-nav">
+					<a class="link" href="#">Профиль</a>
+					<a class="link active" href="#">Адреса</a>
+					<a class="link" href="#">Корзина</a>
+					<a class="link" href="#">Избранное</a>
+					<a class="link" href="#">История заказов</a>
+					<a class="link" href="#">Бонусы</a>
+				</nav>
+				<div class="personal-forms__adress-cards">
+					<div class="personal-forms__adress-card">
+						<a class="close-btn" href="#"></a>
+						<span>Домашний</span>
+						<p>Основной адрес</p>
+						<span>Адрес</span>
+						<p>г. Уфа, ул. Проспект окрября, д. 64, кв 40, 457458</p>
+						<a class="link btn_border" href="#">Редактировать адрес</a>
+					</div>
+					<div class="personal-forms__adress-card">
+						<a class="close-btn" href="#"></a>
+						<span>Домашний</span>
+						<p>Основной адрес</p>
+						<span>Адрес</span>
+						<p>г. Уфа, ул. Проспект окрября, д. 64, кв 40, 457458</p>
+						<a class="link btn_border" href="#">Редактировать адрес</a>
+					</div>
+					<div class="personal-forms__adress-card">
+						<a class="close-btn" href="#"></a>
+						<span>Домашний</span>
+						<p>Основной адрес</p>
+						<span>Адрес</span>
+						<p>г. Уфа, ул. Проспект окрября, д. 64, кв 40, 457458</p>
+						<a class="link btn_border" href="#">Редактировать адрес</a>
+					</div>
+					<div class="personal-forms__adress-card">
+						<a class="close-btn" href="#"></a>
+						<span>Домашний</span>
+						<p>Основной адрес</p>
+						<span>Адрес</span>
+						<p>г. Уфа, ул. Проспект окрября, д. 64, кв 40, 457458</p>
+						<a class="link btn_border" href="#">Редактировать адрес</a>
+					</div>
+				</div>
+				@@include('components/ui/_button-link.html', {children: 'Добавить адрес', class: 'btn_black', href: '#'})
+			</div>
+		</section>
+	</main>
+	@@include('components/business/_footer.html')
+
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>
