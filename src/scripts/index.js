@@ -12,6 +12,7 @@ import takeControlTabs from './ElementsControllers/TabsController'
 import takeControlRaiting from './ElementsControllers/RaitingController'
 import addPhoneMaskListeners from './listeners/addPhoneMaskListeners'
 import takeControlTimer from './ElementsControllers/TimerController'
+import takeControlAccordion from './ElementsControllers/AccordionController'
 
 addPhoneMaskListeners()
 takeControlMenu()
@@ -170,6 +171,29 @@ const IngredientsSwiper = new Swiper ('.cake-detail__ingredients-swiper', {
 			spaceBetween: 20,
 		}
 	}
+})
+
+// order history Slider
+const HistorySwiper = new Swiper ('.history__order', {
+	slidesPerView: 'auto',
+	spaceBetween: 10,
+	navigation: {
+		nextEl: '.swiper-navigation-next',
+		prevEl: '.swiper-navigation-prev'
+	},
+	breakpoints: {
+		768: {
+			spaceBetween: 20,
+		}
+	}
+})
+
+// accordions init
+takeControlAccordion('.history__accordion', '.accordion__list', {
+	accordionItemSelector: '.accordion__item',
+	accordionItemTogglerSelector: '.accordion__toggle',
+	accordionItemContentSelector: '.accordion__content',
+	accordionItemActiveClass: 'accordion__item_active'
 })
 
 

@@ -81,6 +81,10 @@
 		}
 	}
 
+	&_transparent > * {
+		background-color: transparent;
+	}
+
 	&-prev {
 		&::after {
 			transform: rotate(180deg);

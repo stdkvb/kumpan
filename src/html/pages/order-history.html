@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'История заказов'})
+
+<body>
+	@@include('components/business/_header.html')
+	<main class="_offset">
+		<section class="history">
+			<div class="container">
+				<div class="history__accordion accordion">
+					<div class="accordion__list">
+						<div class="accordion__item">
+							<div class="accordion__toggle">
+								<div class="history__title">
+									<h4>Заказ от 4 мая</h4>
+									<span>324-458-252</span>
+								</div>
+								<div class="history__status history__status_green">
+									<h4>Получено</h4>
+									<button class="accordion-icon"></button>
+								</div>
+							</div>
+							<div class="accordion__content">
+								<div class="history__address">
+									<h5>Доставка на адрес:</h5>
+									<span>г. Уфа, ул. Проспект окрября, 64. кв 40, 457458</span>
+								</div>
+								<div class="history__amount">
+									<h5>Оплачено:&nbsp;</h5>
+									<span>1 045 руб</span>
+								</div>
+								<div class="history__order">
+									<div class="history__order swiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<img src="@images/coffee-preview-1.png">
+												<h5>Kumpan Китай</h5>
+												<span>250 гр</span>
+											</div>
+											<div class="swiper-slide">
+												<img src="@images/coffee-preview-1.png">
+												<h5>Kumpan Китай</h5>
+												<span>250 гр</span>
+											</div>
+											<div class="swiper-slide">
+												<img src="@images/coffee-preview-1.png">
+												<h5>Kumpan Китай</h5>
+												<span>250 гр</span>
+											</div>
+											<div class="swiper-slide">
+												<img src="@images/coffee-preview-1.png">
+												<h5>Kumpan Китай</h5>
+												<span>250 гр</span>
+											</div>
+											<div class="swiper-slide">
+												<img src="@images/coffee-preview-1.png">
+												<h5>Kumpan Китай</h5>
+												<span>250 гр</span>
+											</div>
+											<div class="swiper-slide">
+												<img src="@images/coffee-preview-1.png">
+												<h5>Kumpan Китай</h5>
+												<span>250 гр</span>
+											</div>
+											<div class="swiper-slide">
+												<img src="@images/coffee-preview-1.png">
+												<h5>Kumpan Китай</h5>
+												<span>250 гр</span>
+											</div>
+											<div class="swiper-slide">
+												<img src="@images/coffee-preview-1.png">
+												<h5>Kumpan Китай</h5>
+												<span>250 гр</span>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-navigation swiper-navigation_transparent">
+										<div class="swiper-navigation-prev"></div>
+										<div class="swiper-navigation-next"></div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div class="accordion__item">
+							<div class="accordion__toggle">
+								<div class="history__title">
+									<h4>Заказ от 4 мая</h4>
+									<span>324-458-252</span>
+								</div>
+								<div class="history__status history__status_red">
+									<h4>Ожидает оплаты</h4>
+									<button class="accordion-icon"></button>
+								</div>
+							</div>
+							<div class="accordion__content">
+								<div class="history__address">
+									<h5>Доставка на адрес:</h5>
+									<span>г. Уфа, ул. Проспект окрября, 64. кв 40, 457458</span>
+								</div>
+								<div class="history__amount">
+									<h5>Оплачено:&nbsp;</h5>
+									<span>1 045 руб</span>
+								</div>
+								<div class="history__order">
+									<div class="history__order swiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<img src="@images/coffee-preview-1.png">
+												<h5>Kumpan Китай</h5>
+												<span>250 гр</span>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-navigation swiper-navigation_transparent">
+										<div class="swiper-navigation-prev"></div>
+										<div class="swiper-navigation-next"></div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include('components/business/_footer.html')
+
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>
