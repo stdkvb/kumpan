@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Оформление заказа'})
+
+<body>
+	@@include('components/business/_header.html')
+	<main class="_offset">
+		<section class="personal-forms">
+			<div class="container container_wide">
+				@@include('components/ui/_return.html')
+				<h1>Оформление заказа</h1>
+				<div class="order">
+					<div class="order__content">
+						<div class="order__items">
+							<h4>Доставим сегодня до 16:30</h4>
+							<div class="order__items-container">
+								<div class="order__swiper swiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<img src="@images/coffee-preview-1.png">
+											<h5>Kumpan Китай</h5>
+											<span>250 гр</span>
+										</div>
+										<div class="swiper-slide">
+											<img src="@images/coffee-preview-1.png">
+											<h5>Kumpan Китай</h5>
+											<span>250 гр</span>
+										</div>
+										<div class="swiper-slide">
+											<img src="@images/coffee-preview-1.png">
+											<h5>Kumpan Китай</h5>
+											<span>250 гр</span>
+										</div>
+										<div class="swiper-slide">
+											<img src="@images/coffee-preview-1.png">
+											<h5>Kumpan Китай</h5>
+											<span>250 гр</span>
+										</div>
+										<div class="swiper-slide">
+											<img src="@images/coffee-preview-1.png">
+											<h5>Kumpan Китай</h5>
+											<span>250 гр</span>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-navigation swiper-navigation_transparent">
+									<div class="swiper-navigation-prev"></div>
+									<div class="swiper-navigation-next"></div>
+								</div>
+							</div>
+						</div>
+						<div class="order__delivery">
+							<h4>Способ получения</h4>
+							<div class="order__tabs">
+								<div id="order-tab-1" class="order__tab _active">
+									<h3>Доставка</h3>
+								</div>
+								<div id="order-tab-2" class="order__tab">
+									<h3>Самовывоз</h3>
+								</div>
+							</div>
+							<div class="order__contents">
+								<div id="order-tab-content-1" class="order__tab-content _active">
+									<div class="order__address">
+										<h3>Домашний</h3>
+										<span>г. Уфа, ул. Проспект окрября, д. 64, кв 40, 457458</span>
+									</div>
+									<a class="order__new-address" href="#">
+										<span class="link">+ Новый адрес</span>
+									</a>
+								</div>
+								<div id="order-tab-content-2" class="order__tab-content">
+									<div class="order__address">
+										<h3>ТК Центральный</h3>
+										<span>ул. Цурюпы, 97</span>
+									</div>
+									<div class="order__pickup popup-link" href="#pickup">
+										<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+											<g clip-path="url(#clip0_489_8098)">
+											<path d="M19.25 9.16666C19.25 15.5833 11 21.0833 11 21.0833C11 21.0833 2.75 15.5833 2.75 9.16666C2.75 6.97862 3.61919 4.8802 5.16637 3.33303C6.71354 1.78585 8.81196 0.916656 11 0.916656C13.188 0.916656 15.2865 1.78585 16.8336 3.33303C18.3808 4.8802 19.25 6.97862 19.25 9.16666Z" stroke="#252525" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M11 11.9167C12.5188 11.9167 13.75 10.6854 13.75 9.16666C13.75 7.64787 12.5188 6.41666 11 6.41666C9.48122 6.41666 8.25 7.64787 8.25 9.16666C8.25 10.6854 9.48122 11.9167 11 11.9167Z" stroke="#252525" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+											</g>
+											<defs>
+											<clipPath id="clip0_489_8098">
+											<rect width="22" height="22" fill="white"/>
+											</clipPath>
+											</defs>
+										</svg>
+										<span class="link">Показать ближайшие кофейни</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="total">
+						<h3>Ваш заказ</h3>
+						<div>
+							<span>Сумма:</span>
+							<h3>108 098 ₽</h3>
+						</div>
+						<div>
+							<span>Скидка:</span>
+							<h3>-12 098 ₽</h3>
+						</div>
+						<div>
+							<span>Будет<br>начислено баллов:</span>
+							<h3>20</h3>
+						</div>
+						<div>
+							<h5>Итого</h5>
+							<h5>95 880 ₽</h5>
+						</div>
+						<div class="dropdown">
+							<div class="dropdown__button">
+								<span class=" btn_border">Списать бонусные баллы</span>
+								<svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1.334 0.628048C1.28535 0.582987 1.22822 0.548053 1.16594 0.52528C1.10366 0.502508 1.03747 0.492352 0.971227 0.495403C0.904985 0.498454 0.840011 0.514651 0.780088 0.543052C0.720165 0.571453 0.66649 0.61149 0.622188 0.660833C0.577885 0.710176 0.543841 0.767838 0.522036 0.830463C0.500231 0.893089 0.491101 0.959426 0.495178 1.02561C0.499255 1.0918 0.516457 1.15652 0.545783 1.21599C0.575109 1.27547 0.615973 1.32852 0.665996 1.37205L1.334 0.628048ZM11.35 1.36205C11.3975 1.31674 11.4357 1.26252 11.4623 1.20247C11.4888 1.14242 11.5033 1.07772 11.5049 1.01207C11.5065 0.946418 11.4951 0.881099 11.4715 0.819841C11.4478 0.758583 11.4123 0.702587 11.367 0.655048C11.3217 0.607509 11.2675 0.56936 11.2074 0.542778C11.1474 0.516196 11.0827 0.501702 11.017 0.500123C10.9514 0.498545 10.886 0.509913 10.8248 0.533578C10.7635 0.557243 10.7075 0.592742 10.66 0.638048L11.35 1.36205ZM0.665996 1.37205L5.011 5.28205L5.68 4.53905L1.334 0.630048L0.665996 1.37205ZM6.993 5.30005C7.993 4.42705 9.925 2.72305 11.35 1.36205L10.66 0.638048C9.252 1.98305 7.333 3.67405 6.334 4.54705L6.993 5.30005ZM5.011 5.28205C5.571 5.78705 6.421 5.79905 6.993 5.30005L6.334 4.54705C6.24278 4.62615 6.12571 4.66903 6.00497 4.66756C5.88424 4.66609 5.76925 4.62036 5.68 4.53905L5.009 5.28205H5.011Z" fill="#4D4D4D"/>
+								</svg>
+							</div>
+							<div class="dropdown__content">
+								@@include('components/ui/_input-text.html', {placeholder: 'Количество баллов'})
+								<div class="total__bonus">
+									<span>Вам доступно:&nbsp;</span>
+									<span>200 баллов</span>
+									<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6.30664 11.5V10.3574H7.42578V11.5H6.30664ZM9.52344 5.35352C9.52344 5.58789 9.48633 5.79883 9.41211 5.98633C9.3418 6.16992 9.24609 6.33594 9.125 6.48438C9.00781 6.62891 8.875 6.76172 8.72656 6.88281C8.58203 7 8.43555 7.11719 8.28711 7.23438C8.1582 7.33594 8.03125 7.44141 7.90625 7.55078C7.78516 7.66016 7.67773 7.7793 7.58398 7.9082C7.49023 8.03711 7.41406 8.18359 7.35547 8.34766C7.30078 8.50781 7.27344 8.68555 7.27344 8.88086V8.97461H6.4707C6.46289 8.86133 6.45898 8.77539 6.45898 8.7168C6.45898 8.45117 6.49805 8.21094 6.57617 7.99609C6.6543 7.78125 6.75977 7.5918 6.89258 7.42773C7.0293 7.26367 7.17578 7.11914 7.33203 6.99414C7.49219 6.86914 7.64844 6.74805 7.80078 6.63086C7.90625 6.54883 8.00586 6.46484 8.09961 6.37891C8.19336 6.29297 8.27539 6.20117 8.3457 6.10352C8.41992 6.00586 8.47656 5.90039 8.51562 5.78711C8.55859 5.66992 8.58008 5.53906 8.58008 5.39453C8.58008 5.22266 8.54297 5.06836 8.46875 4.93164C8.39844 4.79492 8.29688 4.67969 8.16406 4.58594C8.03516 4.49219 7.87891 4.41992 7.69531 4.36914C7.51562 4.31836 7.31445 4.29297 7.0918 4.29297C6.79883 4.29297 6.50977 4.33008 6.22461 4.4043C5.94336 4.47852 5.69141 4.56641 5.46875 4.66797V3.89453C5.67969 3.78125 5.93359 3.68945 6.23047 3.61914C6.53125 3.54883 6.83203 3.51367 7.13281 3.51367C7.50391 3.51367 7.83594 3.55859 8.12891 3.64844C8.42578 3.73438 8.67578 3.85938 8.87891 4.02344C9.08594 4.18359 9.24414 4.37695 9.35352 4.60352C9.4668 4.82617 9.52344 5.07617 9.52344 5.35352Z" fill="#252525"/>
+										<rect x="0.5" y="0.5" width="14" height="14" rx="7" stroke="#252525"/>
+									</svg>
+									<div class="total__info">
+										<span>За каждые 1 000 рублей в заказе вы получаете +1% к накопительной скидке на следующие заказы</span>
+										<span>Максимальная скидка - 15%</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						@@include('components/ui/_button-link.html', {children: 'Перейти к оформлению', class: 'btn_black', href: '#'})
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include('components/business/_footer.html')
+	@@include('components/business/_pickup-popup.html')
+
+	@@include('meta/_includeScripts.html')
+	@@include('meta/_restaurants-map.html')
+</body>
+
+</html>

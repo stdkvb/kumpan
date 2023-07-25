@@ -64,6 +64,22 @@
 		&_image {
 			padding: 0;
 		}
+
+		&_wide {
+			max-width: 1086px;
+		}
+
+		&_no-padding {
+			padding-left: 0;
+			padding-right: 0;
+			padding-bottom: 0;
+
+			@include tablet_small {
+				padding-left: 0;
+				padding-right: 0;
+				padding-bottom: 0;
+			}
+		}
 	}
 
 	// #popup-feedback &__content {

@@ -73,6 +73,12 @@
 		}
 	}
 
+	&__content {
+		height: 0;
+		@include transition;
+		opacity: 0;
+	}
+
 	&.active {
 		.dropdown__button {		
 			svg {
@@ -80,6 +86,10 @@
 			}
 		}
 		.dropdown__options {
+			height: auto;
+			opacity: 1;
+		}
+		.dropdown__content {
 			height: auto;
 			opacity: 1;
 		}

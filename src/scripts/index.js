@@ -188,6 +188,21 @@ const HistorySwiper = new Swiper ('.history__order', {
 	}
 })
 
+// order Slider
+const OrderSwiper = new Swiper ('.order__swiper', {
+	slidesPerView: 'auto',
+	spaceBetween: 10,
+	navigation: {
+		nextEl: '.swiper-navigation-next',
+		prevEl: '.swiper-navigation-prev'
+	},
+	breakpoints: {
+		768: {
+			spaceBetween: 20,
+		}
+	}
+})
+
 // accordions init
 takeControlAccordion('.history__accordion', '.accordion__list', {
 	accordionItemSelector: '.accordion__item',
@@ -196,4 +211,13 @@ takeControlAccordion('.history__accordion', '.accordion__list', {
 	accordionItemActiveClass: 'accordion__item_active'
 })
 
-
+// total bonus info
+if (document.querySelector('.total__bonus') !== null) {
+	document.querySelector('.total__bonus svg').addEventListener('click', () => {	
+		document.querySelector('.total__info').classList.toggle('active')	
+	})
+	
+	document.querySelector('.total__info').addEventListener('click', () => {
+		document.querySelector('.total__info').classList.remove('active')
+	})
+}

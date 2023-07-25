@@ -15,6 +15,20 @@ const takeControlTabs = () => {
 	const firstCakeTabContent = document.getElementById('cake-tab-content-1')
 	const secondCakeTabContent = document.getElementById('cake-tab-content-2')
 
+	const orderTabs = document.querySelectorAll('.order__tab')
+	const firstOrderTab = document.getElementById('order-tab-1')
+	const secondOrderTab = document.getElementById('order-tab-2')
+	const orderTabContents = document.querySelectorAll('.order__tab-content')
+	const firstOrderTabContent = document.getElementById('order-tab-content-1')
+	const secondOrderTabContent = document.getElementById('order-tab-content-2')
+
+	const pickupTabs = document.querySelectorAll('.pickup__tab')
+	const firstPickupTab = document.getElementById('pickup-tab-1')
+	const secondPickupTab = document.getElementById('pickup-tab-2')
+	const pickupTabContents = document.querySelectorAll('.pickup__tab-content')
+	const firstPickupTabContent = document.getElementById('pickup-tab-content-1')
+	const secondPickupTabContent = document.getElementById('pickup-tab-content-2')
+
 	if (firstCoffeeTab !== null) {
 		function resetCooffeeActiveTabs () {
 			coffeeTabs.forEach((elem) => {
@@ -65,6 +79,56 @@ const takeControlTabs = () => {
 		})
 		secondCakeTab.addEventListener('click', () => {
 			secondCakeTabContent.classList.add('_active')
+		})
+	}
+
+	if (firstOrderTab !== null) {
+		function resetOrderActiveTabs () {
+			orderTabs.forEach((elem) => {
+				elem.classList.remove('_active')
+			})
+			orderTabContents.forEach((elem) => {
+				elem.classList.remove('_active')
+			})
+		}
+
+		orderTabs.forEach((elem) => {
+			elem.addEventListener('click', () => {
+				resetOrderActiveTabs()
+				elem.classList.add('_active')
+			})
+		})
+
+		firstOrderTab.addEventListener('click', () => {
+			firstOrderTabContent.classList.add('_active')
+		})
+		secondOrderTab.addEventListener('click', () => {
+			secondOrderTabContent.classList.add('_active')
+		})
+	}
+
+	if (firstPickupTab !== null) {
+		function resetPickupActiveTabs () {
+			pickupTabs.forEach((elem) => {
+				elem.classList.remove('_active')
+			})
+			pickupTabContents.forEach((elem) => {
+				elem.classList.remove('_active')
+			})
+		}
+
+		pickupTabs.forEach((elem) => {
+			elem.addEventListener('click', () => {
+				resetPickupActiveTabs()
+				elem.classList.add('_active')
+			})
+		})
+
+		firstPickupTab.addEventListener('click', () => {
+			firstPickupTabContent.classList.add('_active')
+		})
+		secondPickupTab.addEventListener('click', () => {
+			secondPickupTabContent.classList.add('_active')
 		})
 	}
 }

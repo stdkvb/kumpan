@@ -1,0 +1,146 @@
+.total {
+	width: 100%;
+	max-width: 395px;
+	background-color: $grayFA;
+	height: fit-content;
+	padding: 20px;
+
+	@include tablet_small {
+		padding: 10px;
+	}
+
+	h3 {
+		@include bold-30;
+		margin-bottom: 15px;
+
+		@include mobile {
+			@include bold-26;
+		}
+	}
+
+	div {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 10px;
+
+		span {
+			@include regular-18;
+
+			@include mobile {
+				@include regular-14;
+			}
+		}
+
+		h3 {
+			@include bold-26;
+			margin: 0;
+
+			@include mobile {
+				@include bold-20;
+			}
+		}
+
+		h5 {
+			@include bold-30;
+			margin: 0;
+
+			@include mobile {
+				@include bold-26;
+			}
+		}
+
+		&:last-of-type {
+			margin-top: 35px;
+		}
+	}
+
+	.dropdown {
+		margin-top: 20px !important;
+		align-items: unset;
+		display: flex;
+		flex-direction: column;
+
+		&__button {
+			justify-content: flex-start !important;
+			span {
+				@include regular-14;
+			}
+		}
+	}
+
+	.dropdown__content {
+		margin: 10px 0 0 0 !important;
+		align-items: flex-start;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+
+		.form-group {
+			margin: 0;
+
+			input {
+				width: 100%;
+				color: $black;
+			}
+		}
+	}
+
+	&__bonus {
+		margin: 0 0 25px 0 !important;
+		justify-content: flex-start !important;
+		display: flex;
+		position: relative;
+		width: 100%;
+
+		svg {
+			margin-left: 5px;
+			@include transition;
+			cursor: pointer;
+
+			&:hover {
+				path {
+					fill: $green40;
+				}
+				rect {
+					stroke: $green40;
+				}	
+			}
+		}
+	}
+
+	&__info {
+		margin: 0 !important;
+		align-items: flex-start !important;
+		position: absolute;
+		z-index: 1;
+		top: -130px;
+		width: 100%;
+		background-color: $white;
+		border: solid 1px #CCC;
+		padding: 10px 10px 20px 10px;
+		display: none !important;
+		flex-direction: column;
+		gap: 10px;
+
+		@include mobile {
+			top: -100px;
+		}
+
+		span {
+			color: rgba(37, 37, 37, 0.70);
+		}
+
+		span:nth-child(2) {
+			color: $black25;
+		}
+
+		&.active {
+			display: flex !important;
+		}
+	}
+
+	.btn {
+		width: 100%;
+	}
+}
