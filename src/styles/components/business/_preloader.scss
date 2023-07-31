@@ -9,7 +9,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	transition: all $transitionDuration;
+	transition: all 0.1s;
 	opacity: 1;
 	
 
@@ -35,11 +35,11 @@
 		}
 
 		&_loaded {
-			clip-path: inset(100% 0 0 0);
-			transition: clip-path ease-in-out;
+			clip-path: inset(0 0 0 0);
+			transition: clip-path ease-in-out 1s;
 
 			&._active {
-				clip-path: inset(0 0 0 0);
+				clip-path: inset(100% 0 0 0);
 			}
 		}
 	}
@@ -51,8 +51,8 @@
 
 	
 
-	// ._loaded & {
-	// 	opacity: 0;
-	// 	visibility: hidden;
-	// }
+	 &._loaded {
+		opacity: 0;
+		visibility: hidden;
+	}
 }

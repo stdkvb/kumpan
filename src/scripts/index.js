@@ -1,4 +1,5 @@
 // import takePreloaderOnload from './ElementsControllers/PreloaderController'
+import preloader from './ElementsControllers/Preloader'
 import takeControlMenu from './ElementsControllers/MenuController'
 import takeControlDropdown from "./ElementsControllers/DropdownController"
 import takeControlCustomSelect from "./ElementsControllers/CustomSelectController"
@@ -14,6 +15,8 @@ import addPhoneMaskListeners from './listeners/addPhoneMaskListeners'
 import takeControlTimer from './ElementsControllers/TimerController'
 import takeControlAccordion from './ElementsControllers/AccordionController'
 
+
+preloader();
 addPhoneMaskListeners()
 takeControlMenu()
 takeControlForms()
@@ -27,12 +30,6 @@ takeControlModal()
 takeControlTabs()
 takeControlRaiting()
 takeControlTimer()
-
-
-
-window.onload = () => {
-	// takePreloaderOnload()		
-}  
 
 /* Код ниже для возвращения исходной высоты мобильному меню (100vh) 
 после ресайза экрана */
@@ -221,3 +218,4 @@ if (document.querySelector('.total__bonus') !== null) {
 		document.querySelector('.total__info').classList.remove('active')
 	})
 }
+
