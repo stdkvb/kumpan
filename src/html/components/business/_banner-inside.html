@@ -1,0 +1,15 @@
+<section class="banner-inside">
+	<div class="container">
+		<div class="banner-inside__images">
+			<img class="banner-inside__images_desktop" src="@@image_desktop" alt="#">
+			<img class="banner-inside__images_mobile" src="@@image_mobile" alt="#">
+		</div>
+
+		<div class="banner-inside__description" style="max-width: @@width">
+			<h1 style="color: @@h1_color">@@h1</h1>
+			@@if(context.button_text) {
+				@@include('components/ui/_button-link.html', {children: '@@button_text', class: '@@btn_class', href: '#'})
+			}
+		</div>			
+	</div>
+</section>

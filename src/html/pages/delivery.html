@@ -5,17 +5,14 @@
 <body>
 	@@include('components/business/_header.html')
 	<main class="_offset delivery">
-		<section class="coffee-beans-banner">
-			<div class="container">
-				<div class="coffee-beans-banner__images">
-					<img class="coffee-beans-banner__images_desktop" src="@images/chicken.webp" alt="#">
-					<img class="coffee-beans-banner__images_mobile" src="@images/chicken-mobile.webp" alt="#">
-				</div>
-				<div class="coffee-beans-banner__description coffee-beans-banner__description_black">
-					<h1>Доставка готовой еды прямо к двери</h1>
-				</div>
-			</div>
-		</section>
+		@@include('components/business/_banner-inside.html', {
+			image_desktop: '@images/chicken.webp',
+			image_mobile: '@images/chicken-mobile.webp',
+			width: '764px',
+			h1: 'Доставка готовой еды прямо к двери',
+			h1_color: '#252525'
+		})
+
 		<section>
 			<div class="container">
 				<h2>Доставка еды в Уфе</h2>

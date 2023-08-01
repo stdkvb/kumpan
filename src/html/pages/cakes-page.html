@@ -5,17 +5,13 @@
 <body>
 	@@include('components/business/_header.html')
 	<main class="_offset cakes-page">
-		<section class="cakes-page-banner">
-			<div class="container">
-				<div class="cakes-page-banner__images">
-					<img class="cakes-page-banner__images_desktop" src="@images/cakes-page.webp" alt="#">
-					<img class="cakes-page-banner__images_mobile" src="@images/cakes-page_mobile.webp" alt="#">
-				</div>
-				<div class="cakes-page-banner__description">
-					<h1>Закажите торт с индивидуальным дизайном!</h1>
-				</div>			
-			</div>
-		</section>
+		@@include('components/business/_banner-inside.html', {
+			image_desktop: '@images/cakes-page.webp',
+			image_mobile: '@images/cakes-page_mobile.webp',
+			width: '1040px',
+			h1: 'Закажите торт с индивидуальным дизайном!',
+			h1_color: '#252525'
+		})
 
 		<section class="cakes-page-cakes">
 			<div class="container">

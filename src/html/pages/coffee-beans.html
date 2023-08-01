@@ -5,19 +5,15 @@
 <body>
 	@@include('components/business/_header.html')
 	<main class="_offset coffee-beans">
-		<section class="coffee-beans-banner">
-			<div class="container">
-				<div class="coffee-beans-banner__images">
-					<img class="coffee-beans-banner__images_desktop" src="@images/coffee-beans__photo.webp" alt="#">
-					<img class="coffee-beans-banner__images_mobile" src="@images/coffee-beans__photo_mobile.webp" alt="#">
-				</div>
-
-				<div class="coffee-beans-banner__description">
-					<h1>Кофе с нашей плантации</h1>
-					@@include('components/ui/_button-link.html', {children: 'Подробнее', class: 'btn_white', href: '#'})
-				</div>			
-			</div>
-		</section>
+		@@include('components/business/_banner-inside.html', {
+			image_desktop: '@images/coffee-beans__photo.webp',
+			image_mobile: '@images/coffee-beans__photo_mobile.webp',
+			width: '610px',
+			h1: 'Кофе с нашей плантации',
+			h1_color: '#ffffff',
+			button_text: 'Подробнее',
+			btn_class: 'btn_white'
+		})
 
 		<section class="coffee coffee-beans-coffee">
 			<div class="container">

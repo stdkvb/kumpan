@@ -5,19 +5,15 @@
 <body>
 	@@include('components/business/_header.html')
 	<main class="_offset coffee-whosale">
-		<section class="coffee-whosale-banner">
-			<div class="container">
-				<div class="coffee-whosale-banner__images">
-					<img class="coffee-whosale-banner__images_desktop" src="@images/coffee-whosale__photo.webp" alt="#">
-					<img class="coffee-whosale-banner__images_mobile" src="@images/coffee-whosale__photo_mobile.webp" alt="#">
-				</div>
-
-				<div class="coffee-whosale-banner__description">
-					<h1>Кофе Kumpan оптом для вашего бизнеса</h1>
-					@@include('components/ui/_button-link.html', {children: 'Получить оптовый прайс', class: 'btn_white', href: '#'})
-				</div>			
-			</div>
-		</section>
+		@@include('components/business/_banner-inside.html', {
+			image_desktop: '@images/coffee-whosale__photo.webp',
+			image_mobile: '@images/coffee-whosale__photo_mobile.webp',
+			width: '710px',
+			h1: 'Кофе Kumpan оптом для вашего бизнеса',
+			h1_color: '#ffffff',
+			button_text: 'Получить оптовый прайс',
+			btn_class: 'btn_white'
+		})
 
 		<section class="coffee-whosale-advantages">
 			<div class="container">
