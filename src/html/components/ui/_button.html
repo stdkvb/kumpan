@@ -1,8 +1,4 @@
-<button
-	class="btn@@if (context.class) { @@class}"
-	@@if (context.id) {id="@@id"}
-	@@if (context.type) {type="@@type"}
->
+<button class="btn@@if (context.class) { @@class}" @@if (context.id) {id="@@id"} @@if (context.type) {type="@@type"}>
 	@@if (context.children) {
 		<span class="children">@@children</span>
 	}

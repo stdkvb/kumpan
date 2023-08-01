@@ -7,15 +7,5 @@
 			<span class="textarea__label">@@label@@if (context.required) {*}</span>
 		}
 	}
-	<textarea
-		class="form-control"
-		@@if (context.placeholder) {placeholder="@@placeholder"}
-		@@if (!context.placeholder) {placeholder="Введите текст"}
-		@@if (context.required) {required}
-		@@if (context.id) {id="@@id"}
-		@@if (context.name) {name="@@name"}
-		data-type="textarea"
-		@@if (context.errorMessage) {data-pristine-required-message="@@errorMessage"}
-		@@if (!context.errorMessage) {data-pristine-required-message="Введите текст"}
-	></textarea>
+	<textarea class="form-control" @@if (context.placeholder) {placeholder="@@placeholder"} @@if (!context.placeholder) {placeholder="Введите текст"} @@if (context.required) {required} @@if (context.id) {id="@@id"} @@if (context.name) {name="@@name"} data-type="textarea" @@if (context.errorMessage) {data-pristine-required-message="@@errorMessage"} @@if (!context.errorMessage) {data-pristine-required-message="Введите текст"}></textarea>
 </div>

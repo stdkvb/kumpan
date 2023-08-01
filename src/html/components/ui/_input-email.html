@@ -7,18 +7,5 @@
 			<span class="input__label">@@label@@if (context.required) {*}</span>
 		}
 	}
-	<input
-		class="form-control"
-		@@if (context.placeholder) {placeholder="@@placeholder@@if (context.required) {*}"}
-		@@if (!context.placeholder) {placeholder="Электронная почта@@if (context.required) {*}"}
-		@@if (context.required) {required}
-		@@if (context.id) {id="@@id"}
-		@@if (context.name) {name="@@name"}
-		@@if (context.value) {value="@@value"}
-		data-type="email"
-		type="email"
-		@@if (context.errorMessage) {data-pristine-required-message="@@errorMessage"}
-		@@if (!context.errorMessage) {data-pristine-required-message="Введите email"}
-	>
-
+	<input class="form-control" @@if (context.placeholder) {placeholder="@@placeholder@@if (context.required) {*}"} @@if (!context.placeholder) {placeholder="Электронная почта@@if (context.required) {*}"} @@if (context.required) {required} @@if (context.id) {id="@@id"} @@if (context.name) {name="@@name"} @@if (context.value) {value="@@value"} data-type="email" type="email" @@if (context.errorMessage) {data-pristine-required-message="@@errorMessage"} @@if (!context.errorMessage) {data-pristine-required-message="Введите email"}>
 </div>
