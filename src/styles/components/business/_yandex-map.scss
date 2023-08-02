@@ -6,11 +6,7 @@
 		height: 400px;
 	}
 
-	.ymaps-2-1-79-inner-panes {
-		filter: invert(100%) hue-rotate(180deg) contrast(90%);
-	}
-
-	.ymaps-2-1-79-places-pane {
-		filter: invert(100%) hue-rotate(-180deg);
+	.ymaps-2-1-79-inner-panes canvas {
+		filter: invert(100%) hue-rotate(180deg) brightness(120%);
 	}
 }
