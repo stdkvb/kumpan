@@ -19,7 +19,7 @@ function takeControlCustomSelect(id) {
 		/* for each element, create a new DIV that will act as the selected item: */
 		a = document.createElement('DIV')
 		a.setAttribute('class', 'select-selected')
-		a.innerHTML = '<div class="select-selected__value">' + selElmnt.options[selElmnt.selectedIndex].innerHTML + '</div>' + '<div class="arrow"></div>'
+		a.innerHTML = '<div class="select-selected__value select-selected__placeholder ">' + selElmnt.options[selElmnt.selectedIndex].innerHTML + '</div>' + '<div class="arrow"></div>'
 		x[i].appendChild(a)
 
 		/* for each element, create a new DIV that will contain the option list: */

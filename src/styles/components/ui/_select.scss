@@ -71,4 +71,74 @@
 			border-bottom: 1px dashed $grayB9;
 		}
 	}
+
+	&_input {
+		.select-items div,
+		.select-selected {
+			padding: 10px 20px;
+			@include regular-16;
+			color: $black25;
+			cursor: pointer;
+			user-select: none;
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+			gap: 15px;
+			align-items: center;			
+			margin-top: 10px;
+		}
+
+		.select-items {
+			position: absolute;
+			background-color: $white;
+			top: 100%;
+			left: 0;
+			right: 0;
+			z-index: 99;
+			overflow: hidden;
+			opacity: 1;
+			height: auto;
+			visibility: visible;
+			border: solid 1px $grayB9;
+
+			&.select-hide {
+				opacity: 0;
+				visibility: hidden;
+				height: 0;
+			}
+
+			div {
+				padding: 4px 15px;
+				&:hover {
+					background-color: $green22;
+					color: $white;
+				}
+
+				&:nth-child(1) {
+					display: none;
+				}
+			}
+		}
+
+		.select-selected {
+			border: 1px solid #b9b9b9;
+
+			&__placeholder {
+				color: $grayB9 !important;
+			}
+
+			&__value {
+				border-bottom: none;
+				color: $black25;
+			}
+		}
+
+		label {
+			@include regular-20;
+
+			@include tablet_small {
+				@include regular-14;
+			}
+		}
+	}
 }

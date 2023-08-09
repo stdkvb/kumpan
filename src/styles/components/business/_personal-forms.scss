@@ -53,7 +53,7 @@
 		.link {
 			color: $black25;
 			border-bottom: 1px solid $black25;
-	
+
 			&:hover {
 				color: $green22;
 				border-color: $green22;
@@ -65,7 +65,7 @@
 				width: 100%;
 			}
 		}
-	}	
+	}
 
 	&__links {
 		min-height: 24px;
@@ -76,7 +76,7 @@
 			&:hover {
 				border-color: $green22;
 			}
-		}	
+		}
 
 		@include tablet_small {
 			margin-top: 30px;
@@ -95,6 +95,16 @@
 			@include min_mobile {
 				display: none;
 			}
+		}
+	}
+
+	&__input-group {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 23px;
+
+		@include tablet_small {
+			grid-template-columns: repeat(2, 1fr);
 		}
 	}
 
@@ -143,10 +153,11 @@
 		}
 
 		p {
+			@include FontFamilyZurichRegular;
 			margin-bottom: 20px;
 
 			&:first-of-type {
-				color: rgba(37, 37, 37, 0.70);
+				color: rgba(37, 37, 37, 0.7);
 			}
 			@include mobile {
 				@include regular-14;
@@ -191,7 +202,7 @@
 		margin-top: 30px;
 		grid-area: cards;
 		display: grid;
-		grid-template-columns: repeat(auto-fit,minmax(520px,auto));
+		grid-template-columns: repeat(auto-fit, minmax(520px, auto));
 		gap: 40px;
 
 		.food__image {
@@ -200,39 +211,38 @@
 
 		@include mobile {
 			margin-top: 30px;
-			grid-template-columns: repeat(auto-fit,minmax(320px,auto));
+			grid-template-columns: repeat(auto-fit, minmax(320px, auto));
 		}
 	}
 
 	&__notification {
-			display: flex;
-			justify-content: space-between;
-			padding: 20px;
-			align-items: center;
-			gap: 50px;
-			max-width: 1640px;
+		display: flex;
+		justify-content: space-between;
+		padding: 20px;
+		align-items: center;
+		gap: 50px;
+		max-width: 1640px;
 
-			@include mobile {
-				padding: 10px;
-			}
+		@include mobile {
+			padding: 10px;
+		}
 
-			p {
-				max-width: 533px;
-				@include regular-18;
+		p {
+			max-width: 533px;
+			@include regular-18;
 
-				span {
-					@include bold-20;
-
-					@include mobile {
-						@include bold-14;
-					}	
-				}
+			span {
+				@include bold-20;
 
 				@include mobile {
-					@include regular-14;
+					@include bold-14;
 				}
 			}
-			
+
+			@include mobile {
+				@include regular-14;
+			}
+		}
 	}
 
 	&__notification-close {
@@ -251,12 +261,12 @@
 
 	&__bonus {
 		display: grid;
-		grid-template-columns: minmax(320px,533px) auto;
-		column-gap:70px;
+		grid-template-columns: minmax(320px, 533px) auto;
+		column-gap: 70px;
 		grid-template-areas:
-		'card discount'
-		'card text'
-		'price text';
+			'card discount'
+			'card text'
+			'price text';
 
 		@include tablet {
 			display: flex;
@@ -338,7 +348,7 @@
 				}
 			}
 		}
-	}	
+	}
 
 	&__bonus-price {
 		grid-area: price;
@@ -373,7 +383,7 @@
 
 			span {
 				@include regular-16;
-				color: rgba(37, 37, 37, 0.70);
+				color: rgba(37, 37, 37, 0.7);
 				margin-top: 10px;
 				border-top: solid 2px $grayEF;
 				padding-top: 10px;

@@ -54,6 +54,7 @@
 		}
 
 		span {
+			@include FontFamilyZurichRegular;
 			@include regular-16;
 			color: rgba(37, 37, 37, 0.70);
 		}
@@ -103,6 +104,7 @@
 		}
 
 		span {
+			@include FontFamilyZurichRegular;
 			@include regular-18;
 			color: $black25;
 		}
@@ -128,6 +130,7 @@
 		}
 
 		span {
+			@include FontFamilyZurichRegular;
 			@include regular-18;
 			color: $black25;
 		}
@@ -192,6 +195,7 @@
 		}
 
 		span {
+			@include FontFamilyZurichRegular;
 			@include regular-18;
 		}
 
