@@ -1,86 +1,136 @@
-<!doctype html>
-<html lang='ru'>
-@@include('meta/_head.html', {title: 'Корзина'})
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('meta/_head.html', {title: 'Корзина'})
 
-<body>
-	@@include('components/business/_header.html')
-	<main class="_offset">
-		<section class="personal-forms">
-			<div class="container container_wide">
-				<h1>Корзина</h1>
-				<nav class="personal-nav">
-					<a class="link" href="#">Профиль</a>
-					<a class="link" href="#">Адреса</a>
-					<a class="link active" href="#">Корзина</a>
-					<a class="link" href="#">Избранное</a>
-					<a class="link" href="#">История заказов</a>
-					<a class="link" href="#">Бонусы</a>
-				</nav>
-				<div class="cart">
-					<div class="cart__list">
-						<div class="cart__item">
-							<img src="@images/coffee-preview-1.png">
-							<div class="cart__item-body">
-								<div class="cart__item-text">
-									<h3>Kumpan Китай</h3>
-									<h4>250 гр</h4>
-									<span>Арт: 45865</span>
-									<h5>500 ₽</h5>
+	<body>
+		@@include('components/business/_header.html')
+		<main class="_offset">
+			<section class="personal-forms">
+				<div class="container container_wide">
+					<h1>Корзина</h1>
+					<nav class="personal-nav">
+						<a class="link" href="#">Профиль</a>
+						<a class="link" href="#">Адреса</a>
+						<a class="link active" href="#">Корзина</a>
+						<a class="link" href="#">Избранное</a>
+						<a class="link" href="#">История заказов</a>
+						<a class="link" href="#">Бонусы</a>
+					</nav>
+					<div class="cart">
+						<div class="cart__list">
+							<!-- карточка кофе с артикулом -->
+							<div class="cart__item">
+								<img src="@images/coffee-preview-1.png" />
+								<div class="cart__item-body">
+									<div class="cart__item-text">
+										<h3>Kumpan Китай</h3>
+										<h4>250 гр</h4>
+										<span>Арт: 45865</span>
+										<h5>500 ₽</h5>
+									</div>
+									@@include('components/ui/_quantity.html')
+									<h5>500&nbsp;₽</h5>
+									<div class="cart__item-buttons">
+										@@include('components/ui/_favorite.html', {class: 'favorite_border'})
+										@@include('components/ui/_delete.html', {class: 'favorite_border'})
+									</div>
 								</div>
-								@@include('components/ui/_quantity.html')
-								<h5>500&nbsp;₽</h5>
-								<div class="cart__item-buttons">
-									@@include('components/ui/_favorite.html', {class: 'favorite_border'})
-									@@include('components/ui/_delete.html', {class: 'favorite_border'})
+							</div>
+							<div class="cart__item">
+								<img src="@images/coffee-preview-1.png" />
+								<div class="cart__item-body">
+									<div class="cart__item-text">
+										<h3>Kumpan Китай</h3>
+										<h4>250 гр</h4>
+										<span>Арт: 45865</span>
+										<h5>500 ₽</h5>
+									</div>
+									@@include('components/ui/_quantity.html')
+									<h5>500&nbsp;₽</h5>
+									<div class="cart__item-buttons">
+										@@include('components/ui/_favorite.html', {class: 'favorite_border'})
+										@@include('components/ui/_delete.html', {class: 'favorite_border'})
+									</div>
+								</div>
+							</div>
+							<!-- карточка еды с комментом -->
+							<div class="cart__item">
+								<img src="@images/cesar.png" />
+								<div class="cart__item-body">
+									<div class="cart__item-text">
+										<h3>Кыстыбый с креветкой</h3>
+										<h4>200 гр</h4>
+										<span class="cart__item-comment">Заменить свинину на курицу</span>
+										<h5>1000 ₽</h5>
+									</div>
+									@@include('components/ui/_quantity.html')
+									<h5>1000&nbsp;₽</h5>
+									<div class="cart__item-buttons">
+										@@include('components/ui/_favorite.html', {class: 'favorite_border'})
+										@@include('components/ui/_delete.html', {class: 'favorite_border'})
+									</div>
+								</div>
+							</div>
+							<div class="cart__item">
+								<img src="@images/cesar.png" />
+								<div class="cart__item-body">
+									<div class="cart__item-text">
+										<h3>Кыстыбый с креветкой</h3>
+										<h4>200 гр</h4>
+										<span class="cart__item-comment">Заменить свинину на курицу</span>
+										<h5>1000 ₽</h5>
+									</div>
+									@@include('components/ui/_quantity.html')
+									<h5>1000&nbsp;₽</h5>
+									<div class="cart__item-buttons">
+										@@include('components/ui/_favorite.html', {class: 'favorite_border'})
+										@@include('components/ui/_delete.html', {class: 'favorite_border'})
+									</div>
+								</div>
+							</div>
+							<div class="cart__item">
+								<img src="@images/cesar.png" />
+								<div class="cart__item-body">
+									<div class="cart__item-text">
+										<h3>Кыстыбый с креветкой</h3>
+										<h4>200 гр</h4>
+										<span class="cart__item-comment">Заменить свинину на курицу</span>
+										<h5>1000 ₽</h5>
+									</div>
+									@@include('components/ui/_quantity.html')
+									<h5>1000&nbsp;₽</h5>
+									<div class="cart__item-buttons">
+										@@include('components/ui/_favorite.html', {class: 'favorite_border'})
+										@@include('components/ui/_delete.html', {class: 'favorite_border'})
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="cart__item">
-							<img src="@images/coffee-preview-1.png">
-							<div class="cart__item-body">
-								<div class="cart__item-text">
-									<h3>Kumpan Китай</h3>
-									<h4>250 гр</h4>
-									<span>Арт: 45865</span>
-									<h5>500 ₽</h5>
-								</div>
-								@@include('components/ui/_quantity.html')
-								<h5>500&nbsp;₽</h5>
-								<div class="cart__item-buttons">
-									@@include('components/ui/_favorite.html', {class: 'favorite_border'})
-									@@include('components/ui/_delete.html', {class: 'favorite_border'})
-								</div>
+						<div class="total">
+							<h3>Ваш заказ</h3>
+							<div>
+								<span>Сумма:</span>
+								<h3>108 098 ₽</h3>
 							</div>
+							<div>
+								<span>Скидка:</span>
+								<h3>-12 098 ₽</h3>
+							</div>
+							<div>
+								<span>Будет<br />начислено баллов:</span>
+								<h3>20</h3>
+							</div>
+							<div>
+								<h5>Итого</h5>
+								<h5>95 880 ₽</h5>
+							</div>
+							@@include('components/ui/_button-link.html', {children: 'Перейти к оформлению', class: 'btn_black', href:
+							'#'})
 						</div>
-					</div>
-					<div class="total">
-						<h3>Ваш заказ</h3>
-						<div>
-							<span>Сумма:</span>
-							<h3>108 098 ₽</h3>
-						</div>
-						<div>
-							<span>Скидка:</span>
-							<h3>-12 098 ₽</h3>
-						</div>
-						<div>
-							<span>Будет<br>начислено баллов:</span>
-							<h3>20</h3>
-						</div>
-						<div>
-							<h5>Итого</h5>
-							<h5>95 880 ₽</h5>
-						</div>
-						@@include('components/ui/_button-link.html', {children: 'Перейти к оформлению', class: 'btn_black', href: '#'})
 					</div>
 				</div>
-
-			</div>
-		</section>
-	</main>
-	@@include('components/business/_footer.html')
-
-	@@include('meta/_includeScripts.html')
-</body>
-
+			</section>
+		</main>
+		@@include('components/business/_footer.html') @@include('meta/_includeScripts.html')
+	</body>
 </html>

@@ -33,6 +33,7 @@
 		}
 
 		h3 {
+			@include FontFamilyZurichBold;
 			@include bold-26;
 			margin: 0;
 
@@ -42,6 +43,7 @@
 		}
 
 		h5 {
+			@include FontFamilyZurichBold;
 			@include bold-30;
 			margin: 0;
 
@@ -104,7 +106,7 @@
 				}
 				rect {
 					stroke: $green40;
-				}	
+				}
 			}
 		}
 	}
@@ -117,7 +119,7 @@
 		top: -130px;
 		width: 100%;
 		background-color: $white;
-		border: solid 1px #CCC;
+		border: solid 1px #ccc;
 		padding: 10px 10px 20px 10px;
 		display: none !important;
 		flex-direction: column;
@@ -128,7 +130,7 @@
 		}
 
 		span {
-			color: rgba(37, 37, 37, 0.70);
+			color: rgba(37, 37, 37, 0.7);
 		}
 
 		span:nth-child(2) {

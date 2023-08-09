@@ -218,4 +218,3 @@ if (document.querySelector('.total__bonus') !== null) {
 		document.querySelector('.total__info').classList.remove('active')
 	})
 }
-

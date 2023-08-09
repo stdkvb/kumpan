@@ -4,6 +4,7 @@
 
 	@include tablet {
 		flex-direction: column;
+		gap: 40px;
 	}
 
 	&__list {
@@ -27,21 +28,31 @@
 
 		@include tablet_small {
 			padding: 10px;
-			grid-template-columns: minmax(90px, 250px) auto;
+			grid-template-columns: 30% auto;
 			min-height: unset;
 		}
 
-		img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			min-width: 90px;
+		picture {
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				max-height: 257px;
+
+				@include mobile_middle {
+					max-height: 100px;
+				}
+			}
+			@include min_desktop_large {
+				min-width: 257px;
+				min-height: 257px;
+			}
 		}
 	}
 
 	&__item-body {
 		display: grid;
-		grid-template-columns: minmax(auto, 246px) 80px auto minmax(auto, 150px);
+		grid-template-columns: auto 80px minmax(auto, 200px) minmax(auto, 150px);
 		gap: 20px;
 		align-items: center;
 		padding-left: 20px;
@@ -50,26 +61,35 @@
 			grid-template-areas:
 				'title button'
 				'quantity total';
-			grid-template-columns: auto 20%;
-			
+			grid-template-columns: auto auto;
+			gap: 5px;
+			padding-left: 10px;
+
 			.input-wrapper {
 				max-width: 50px;
 				grid-area: quantity;
 			}
 		}
 
-		.input-wrapper input[type="number"] {
+		.input-wrapper input[type='number'] {
+			@include FontFamilyZurichRegular;
 			@include regular-26;
+
+			@include mobile {
+				@include regular-16;
+			}
 		}
 
 		h5 {
+			@include FontFamilyZurichBold;
 			@include bold-26;
 			margin: 0;
 			justify-self: center;
 
 			@include tablet_small {
 				grid-area: total;
-			}			
+				justify-self: end;
+			}
 
 			@include mobile {
 				@include bold-20;
@@ -87,7 +107,11 @@
 		}
 
 		h3 {
-			margin: 0;
+			margin-bottom: 10px;
+			line-height: 100%;
+			@include mobile {
+				@include bold-18;
+			}
 		}
 
 		h4 {
@@ -96,15 +120,22 @@
 
 			@include mobile {
 				@include regular-18;
+				margin-bottom: 0;
 			}
 		}
 
 		span {
+			@include FontFamilyZurichRegular;
 			@include regular-18;
 			margin-bottom: 30px;
 
 			@include tablet_small {
 				display: none;
+				&.cart__item-comment {
+					display: block;
+					margin: 10px 0 0 0;
+					@include regular-14;
+				}
 			}
 		}
 
