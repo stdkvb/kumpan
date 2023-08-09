@@ -232,6 +232,7 @@
 		}
 
 		span {
+			@include FontFamilyZurichRegular;
 			margin-left: 22px;
 			@include bold-26;
 

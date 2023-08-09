@@ -132,6 +132,7 @@ input {
 	}
 
 	input[type="number"] {
+		@include FontFamilyZurichRegular;
 		-moz-appearance: textfield;
 		color: $black25;
 		text-align: center;

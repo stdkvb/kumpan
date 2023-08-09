@@ -108,6 +108,7 @@
 			}
 
 			div {
+				@include FontFamilyZurichRegular;
 				padding: 4px 15px;
 				&:hover {
 					background-color: $green22;

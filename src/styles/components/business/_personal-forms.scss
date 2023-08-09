@@ -202,7 +202,7 @@
 		margin-top: 30px;
 		grid-area: cards;
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(520px, auto));
+		grid-template-columns: repeat(auto-fit, minmax(360px, auto));
 		gap: 40px;
 
 		.food__image {
@@ -222,6 +222,8 @@
 		align-items: center;
 		gap: 50px;
 		max-width: 1640px;
+		background-color: $grayFA;
+		margin-bottom: 30px;
 
 		@include mobile {
 			padding: 10px;
