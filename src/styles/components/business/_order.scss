@@ -1,5 +1,5 @@
 .order {
-	display:grid;
+	display: grid;
 	grid-template-columns: calc(70% - 20px) 30%;
 	gap: 20px;
 
@@ -86,6 +86,7 @@
 		}
 
 		span {
+			@include FontFamilyZurichRegular;
 			@include regular-18;
 
 			@include tablet_small {
@@ -127,7 +128,7 @@
 	&__tab {
 		white-space: nowrap;
 		width: fit-content !important;
-		transition: color $transitionDuration ease-in-out;		
+		transition: color $transitionDuration ease-in-out;
 
 		&:hover {
 			cursor: pointer;
@@ -142,7 +143,7 @@
 			@include tablet_small {
 				@include regular-18;
 			}
-		}		
+		}
 
 		&._active,
 		&._active:hover {
@@ -177,7 +178,7 @@
 	&__address {
 		padding: 20px;
 		border: solid 1px $black25;
-		max-width: 375px;		
+		max-width: 375px;
 		width: 100%;
 
 		h3 {
@@ -197,7 +198,7 @@
 				@include bold-18;
 				margin-bottom: 10px;
 			}
-	
+
 			span {
 				@include regular-14;
 			}
@@ -215,7 +216,7 @@
 
 		span {
 			@include regular-18;
-			color: #4D4D4D;
+			color: #4d4d4d;
 		}
 
 		@include tablet_small {
@@ -242,7 +243,7 @@
 
 		span {
 			@include regular-18;
-			color: #4D4D4D;
+			color: #4d4d4d;
 		}
 
 		@include tablet_small {
