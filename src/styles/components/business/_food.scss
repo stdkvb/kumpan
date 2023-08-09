@@ -85,11 +85,13 @@
 
 	
 	&__price {
+		@include FontFamilyZurichRegular;
 		@include bold-26;
 		color: $black25;
 	}
 
 	&__weight {
+		@include FontFamilyZurichRegular;
 		@include regular-20;
 		color: $grayB9;
 	}

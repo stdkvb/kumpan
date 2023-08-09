@@ -169,3 +169,20 @@ input {
 	border: none;
 	flex: 1;
 }
+
+.input__reset {
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	border: none;
+	background-color: transparent;
+	background-image: url('@icons/close-icon.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	right: 20px;
+	top: 45px;
+
+	&:hover {
+		cursor: pointer;
+	}
+}

@@ -1,4 +1,4 @@
-<div id="food-detail" class="popup cake-detail">
+<form id="food-detail" class="popup cake-detail">
 	<div class="popup__body">
 		<div class="popup__content">
 			<span class="popup__close close-popup"></span>
@@ -106,6 +106,10 @@
 									@@include('components/ui/_checkbox.html', {label: 'Без помидоров'})
 								</div>
 							</div>
+							<div>
+								@@include('components/ui/_input-text.html', {label: 'Комментарий', placeholder: 'Комментарий к позиции', reset: ' ', maxlength: '40'})
+								<span class="cake-detail__limit">Не более 40 символов</span>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -114,9 +118,8 @@
 						<span>500 ₽</span>
 						@@include('components/ui/_quantity.html')
 					</div>
-					
 					<div class="cake-detail__btns">
-						@@include('components/ui/_button-link.html', {children: 'В корзину', class: 'btn_black', href: '#'})
+						@@include('components/ui/_button.html', {children: 'В корзину', class: 'btn_black', type: 'submit'})
 						@@include('components/ui/_favorite.html', {class: 'favorite_border'})
 					</div>
 				</div>
@@ -145,4 +148,4 @@
 			</div>
 		</div>
 	</div>
-</div>
+</form>

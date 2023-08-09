@@ -71,6 +71,7 @@
 	}
 
 	&__article {
+		@include FontFamilyZurichRegular;
 		display: inline-block;
 		@include regular-18;
 		margin-bottom: 30px;
@@ -94,6 +95,7 @@
 		}
 
 		input[type=number] {
+			@include FontFamilyZurichRegular;
 			@include regular-26;
 
 			@include tablet_small {
@@ -112,6 +114,7 @@
 		}
 
 		span {
+			@include FontFamilyZurichRegular;
 			@include bold-26;
 
 			@include tablet_small {
@@ -196,7 +199,12 @@
 	&__content {
 		@include min_tablet_small {
 			display: none;
-		}		
+		}
+
+		p {
+			@include FontFamilyZurichRegular;
+			color: rgba(37, 37, 37, 0.70);
+		}
 
 		&._active {
 			display: block;
@@ -334,7 +342,7 @@
 		}
 	}
 
-	&__ingredients-card-text {
+	&__ingredients-card-text {		
 		margin: 0 20px 20px 20px;
 		display: flex;
 		flex-direction: column;
@@ -344,7 +352,12 @@
 			margin: 0 10px 10px 10px;
 		}
 
+		span {
+			@include FontFamilyZurichRegular;
+		}
+
 		span:first-of-type {
+			@include FontFamilyZurichRegular;
 			@include regular-18;
 
 			@include tablet_small {
@@ -367,5 +380,25 @@
 		.label {
 			color: $black25;
 		}
+	}
+
+	.form-group {
+		max-width: 459px;
+		margin-bottom: 5px;
+
+		input {
+			color: $black25;
+			padding: 15px 50px 15px 15px;
+		}
+	}
+
+	.input__label {
+		@include regular-18;
+		color: $black25;
+	}
+
+	&__limit {
+		@include regular-16;
+		color: rgba(37, 37, 37, 0.70);
 	}
 }
