@@ -50,7 +50,24 @@
 			.btn {
 				width: 100%;
 			}
-		}		
+		}
+
+		&_white {
+			background-color: $white;
+
+			h2, p, .input__label, .textarea__label, .label, .form-control, .link {
+				color: $black25;
+			}
+
+			.link {
+				border-bottom: 1px solid $black25;
+
+				&:hover {
+					color: #228c0e;
+					border-color: #228c0e;
+				}
+			}
+		}
 	}
 	
 }

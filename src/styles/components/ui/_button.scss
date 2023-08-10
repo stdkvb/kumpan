@@ -129,6 +129,17 @@
 		}
 	}
 
+	&_black-border {
+		background-color: $white;
+		color: $black25;
+
+		&:hover {
+			background-color: $green22;
+			color: $white;
+			border-color: $green22;
+		}
+	}
+
 	&._disabled {
 		pointer-events: none;
 		user-select: none;
