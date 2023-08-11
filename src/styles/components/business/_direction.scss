@@ -285,11 +285,26 @@
 		display: flex;
 		align-items: center;
 
+		@include tablet_small {
+			flex-direction: column;
+		}
+
 		.swiper-navigation {
 			background-color: #fff;
 			flex-direction: column;
 			padding-left: 25px;
 			height: 100%;
+
+			@include tablet_small {
+				flex-direction: row;
+				margin-top: 20px;
+				align-self: flex-end;
+
+				&>* {
+					width: 40px;
+					height: 40px;
+				}
+			}
 		}
 	}
 
@@ -301,8 +316,6 @@
 		@include tablet_small {
 			padding: 10px;
 		}
-
-
 
 		p { 
 			@include regular-18;
@@ -354,16 +367,30 @@
 		display: flex;
 		align-items: center;
 
+		@include tablet_small {
+			flex-direction: column;
+		}
+
 		.swiper-navigation {
 			background-color: #fff;
 			flex-direction: column;
 			padding-left: 25px;
 			height: 100%;
+
+			@include tablet_small {
+				flex-direction: row;
+				margin-top: 20px;
+				align-self: flex-end;
+				
+				&>* {
+					width: 40px;
+					height: 40px;
+				}
+			}
 		}
 	}
 
 	&__video-reviews-item {
-		background-color: $grayFA;
 		padding: 30px;
 		max-width: 395px;
 
@@ -384,14 +411,13 @@
 		grid-template-columns: max-content auto;
 		column-gap: 30px;
 		row-gap: 5px;
-		margin-bottom: 30px;
+		margin-top: 20px;
 
 		picture {
 			grid-area: photo;
 		}
 
 		img {
-			border-radius: 110px;
 			object-fit: cover;
 			width: 110px;
 			height: 110px;
@@ -399,7 +425,6 @@
 			@include tablet_small {
 				width: 80px;
 				height: 80px;
-				border-radius: 80px;
 			}
 		}
 
