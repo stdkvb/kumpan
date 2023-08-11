@@ -1,0 +1,18 @@
+<div class="recomended-food__item">
+	<img src="@@image">
+	<div class="food__body">
+		<a href="#" class="link">
+			<h3>@@title</h3>
+		</a>
+		<p>@@description</p>
+		<div class="food__price">
+			500 ₽<span>250 гр.</span>
+		</div>
+		<div class="food__buttons">
+			@@include('components/ui/_button-link.html', {children: 'В корзину', class: 'btn_black', href: '#'})
+			@@include('components/ui/_button-link.html', {children: 'Подробнее', href: '#'})
+			@@include('components/ui/_favorite.html', {class: 'favorite_border'})
+		</div>
+	</div>
+
+</div>
