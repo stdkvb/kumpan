@@ -52,6 +52,12 @@
 		grid-template-areas: 'image description';
 		gap: 20px;
 
+		&:hover {
+			img {
+				scale: 1.05;
+			}
+		}
+
 		@include mobile {
 			grid-template-columns: auto;
 			grid-template-areas:
@@ -87,6 +93,7 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+			transition: scale $transitionDuration ease-in-out;
 		}		
 	}
 

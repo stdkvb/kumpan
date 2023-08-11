@@ -34,12 +34,12 @@
 	&__list {
 		grid-area: cards;
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(533px, auto));
+		grid-template-columns: repeat(auto-fit, minmax(533px, 1fr));
 		gap: 20px;
 
 		@include tablet_small {
 			gap: 30px;
-			grid-template-columns: repeat(auto-fit, minmax(320px, auto));
+			grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 		}
 	}
 
@@ -61,6 +61,12 @@
 			grid-template-columns: 2fr 1fr;
 		}
 
+		&:hover {
+			img {
+				transform: translateY(-20px);
+			}
+		}
+
 		picture {
 			grid-area: img;
 			position: relative;
@@ -70,6 +76,7 @@
 			user-select: none;
 			pointer-events: none;
 			
+			
 			@include tablet_small {
 				left: 0;
 				top: 0;
@@ -78,6 +85,7 @@
 			}
 			
 			img {
+				transition: transform $transitionDuration ease-in-out;
 				width: 100%;
 				user-select: none;
 			}

@@ -3,6 +3,18 @@ import Pristine from './Pristine'
 
 const takeControlForms = () => {
 
+	const workRequestForm = document.querySelector(".work-request__form form");	
+	if (workRequestForm !== null) {
+		const workRequestValidator = new Pristine(workRequestForm);
+		workRequestForm.addEventListener('submit', function (e) {
+			
+
+			if (workRequestValidator.validate() != true) {
+				e.preventDefault();
+			}
+		})
+	}
+
 	const callRequestForm = document.querySelector(".call-request__form form");	
 	if (callRequestForm !== null) {
 		const callRequestValidator = new Pristine(callRequestForm);
@@ -10,9 +22,7 @@ const takeControlForms = () => {
 			e.preventDefault();
 
 			if (callRequestValidator.validate() == true) {
-				setTimeout(function () {
-					// popupOpen(document.querySelector('.successfully'));
-				}, 500)
+				
 			}
 		})
 	}
@@ -25,9 +35,7 @@ const takeControlForms = () => {
 				e.preventDefault();
 
 				if (reviewValidator.validate() == true) {
-					setTimeout(function () {
-						// popupOpen(document.querySelector('.successfully'));
-					}, 500)
+					
 				}
 			})
 		})
@@ -41,9 +49,7 @@ const takeControlForms = () => {
 				e.preventDefault();
 
 				if (commentReviewValidator.validate() == true) {
-					setTimeout(function () {
-						// popupOpen(document.querySelector('.successfully'));
-					}, 500)
+					
 				}
 			})
 		})

@@ -121,11 +121,11 @@
 
 		&__list {
 			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(533px, auto));
+			grid-template-columns: repeat(auto-fit, minmax(533px, 1fr));
 			gap: 20px;
 
 			@include tablet_small {
-				grid-template-columns: repeat(auto-fit, minmax(320px, auto));
+				grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 				gap: 30px;
 			}
 		}

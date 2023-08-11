@@ -20,6 +20,11 @@
 			grid-template-columns: repeat(2, 1fr);
 			gap: 80px;
 
+			@include tablet {
+				grid-template-columns: auto;
+				gap: 20px;
+			}
+
 			& > *:not(:last-child) {
 				margin-bottom: 0;
 			}
@@ -42,6 +47,10 @@
 
 		&_offset {
 			margin-top: 50px;
+
+			@include tablet {
+				margin-top: 20px;
+			}
 		}
 	}
 }
