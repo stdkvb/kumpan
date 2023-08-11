@@ -7,11 +7,11 @@
 				<div class="review__form">
 					<form novalidate>
 						@@include('components/ui/_input-text.html', {label: 'Ваше имя', placeholder: 'Введите имя', errorMessage: 'Введите ваше имя', name: 'name', required: true})
-						@@include('components/ui/_select.html', {label: 'Выберите название курса', class: 'custom-select_input custom-select_input_black', placeholder: 'Выберите курс', selectItems: [ { text: 'Первый', value: 'Первый' }, { text: 'Второй', value: 'Второй' }, { text: 'Третий', value: 'Третий' }, { text: 'Первый', value: 'Первый' }, { text: 'Второй', value: 'Второй' }, { text: 'Третий', value: 'Третий' }], required: 'true' })
+						@@include('components/ui/_select.html', {label: 'Выберите название курса', class: 'custom-select_input', placeholder: 'Выберите курс', selectItems: [ { text: 'Первый', value: 'Первый' }, { text: 'Второй', value: 'Второй' }, { text: 'Третий', value: 'Третий' }, { text: 'Первый', value: 'Первый' }, { text: 'Второй', value: 'Второй' }, { text: 'Третий', value: 'Третий' }], required: 'true' })
 						@@include('components/ui/_input-phone.html', {label: 'Ваш телефон', placeholder: '+7 (000) 000-00-00', name: 'phone', required: true})
 						@@include('components/ui/_input-email.html', {label: 'Электронная почта', placeholder: 'Введите электронную почту', name: 'email', required: true})
 						@@include('components/ui/_checkbox.html', {class: 'checkbox_white', label: 'Нажимая на кнопку “Отправить”, я даю согласие на <a href="#" target="_blank" class="link">обработку персональных данных</a> и соглашаюсь с <a href="#" target="_blank" class="link">политикой конфиденциальности</a>', id: 'agreement', name: 'agreement', required: true})
-						@@include('components/ui/_button.html', {children: 'Отправить', class: 'btn_white', type: 'submit'})
+						@@include('components/ui/_button.html', {children: 'Отправить', class: 'btn_black', type: 'submit'})
 					</form>
 				</div>
 			</div>

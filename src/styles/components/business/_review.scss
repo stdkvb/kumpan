@@ -1,8 +1,7 @@
 .review {
 	.popup__content,
 	&_block {		
-		background-color: $black25;
-		color: $white;
+		background-color: $white;
 		max-width: 750px;
 		padding: 50px;
 
@@ -24,27 +23,12 @@
 	}
 
 	.popup__close {
-		background-image: url('@icons/close-icon_white.svg');
-	}
-
-	
+		background-image: url('@icons/close-icon.svg');
+	}	
 
 	&__form {
-		input,
-		textarea {
-			color: $white;
-		}
-		
 		.btn {
 			width: 100%;
-		}
-
-		.link {
-			color: $white;
-
-			&:hover {
-				color: $green22;
-			}
 		}
 	}
 }

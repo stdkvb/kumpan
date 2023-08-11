@@ -102,6 +102,9 @@
 			height: auto;
 			visibility: visible;
 			border: solid 1px $grayB9;
+			max-height: 190px;
+			overflow-y: scroll;
+			scrollbar-color: $black25 transparent;
 
 			&.select-hide {
 				opacity: 0;
