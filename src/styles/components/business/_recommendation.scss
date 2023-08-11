@@ -213,6 +213,69 @@
 		.coffee__buttons {
 			max-width: 433px;
 		}
+
+		.recomended-food__item {
+			display: grid;
+			grid-template-columns: 280px auto;
+			position: relative;
+
+			@include desktop_huge {
+				grid-template-columns: 1fr;
+				gap: 8px;
+			}
+
+			picture {
+				left: 0;
+    		top: 10%;
+				max-width: 250px;
+
+				@include desktop_huge {
+					max-width: 300px;
+				}
+
+				@include tablet_small {
+					padding: 0;
+					top: 15%;
+				}
+			}
+
+			img {
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+
+		.food__body {
+			p {
+				max-width: 400px;
+				margin-bottom: 30px;
+				margin-top: 10px;
+
+				@include desktop_huge {
+					max-width: unset;
+				}
+			}
+		}
+
+		.food__price {
+			@include FontFamilyZurichBold;
+			@include bold-26;
+			display:flex;
+			align-items:baseline;
+			gap: 40px;
+		}
+
+		.food__price span {
+			@include regular-20;
+			@include FontFamilyZurichRegular;
+			color: #B8B8B8;
+		}
+
+		.food__buttons {
+			display: flex;
+			margin-top: 60px;
+			gap: 20px;
+		}
 		
 	}
 }
