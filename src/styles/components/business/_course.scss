@@ -218,7 +218,7 @@
 			}
 		}
 
-		p {
+		& > p {
 			max-width: 858px;
 			@include regular-18;
 			color: rgba(37, 37, 37, 0.70);

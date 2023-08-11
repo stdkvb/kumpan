@@ -52,34 +52,19 @@
 					<div id="course-tab-content-2" class="course__content">
 						<div class="course__accordion accordion">
 							<div class="accordion__list">
-								<div class="accordion__item accordion__item_active">
-									<div class="accordion__toggle">
-										<h4>Введение</h4>
-										<div>
-											<button class="accordion-icon"></button>
-										</div>
-									</div>
-									<div class="accordion__content">
-										<p>Что такое "стандарты обслуживания" и зачем они нужны. Что такое "стандарты обслуживания" и зачем они нужны. Что такое "стандарты обслуживания" и зачем они нужны.</p>
-									</div>
-								</div>
-								<div class="accordion__item">
-									<div class="accordion__toggle">
-										<h4>Раздел 1. Стандарты и алгоритм обслуживания.</h4>
-										<div>
-											<button class="accordion-icon"></button>
-										</div>
-									</div>
-									<div class="accordion__content">
-										<ol>
-											<li>Что такое "стандарты обслуживания" и зачем они нужны.</li>
-											<li>Алгоритм процесса обслуживания.</li>
-											<li>Что такое алгоритм.</li>
-											<li>Этапы алгоритма обслуживания.</li>
-											<li>Алгоритм процесса обслуживания. Видео-демонстрация</li>
-										</ol>
-									</div>
-								</div>
+								@@include('components/ui/_accordion__item.html', {
+									accordionItems: [
+									{
+										title: 'Введение',
+										text: '<p>Что такое "стандарты обслуживания" и зачем они нужны. Что такое "стандарты обслуживания" и зачем они нужны. Что такое "стандарты обслуживания" и зачем они нужны.</p>',
+										active: 'true'
+									},
+									{
+										title: 'Раздел 1. Стандарты и алгоритм обслуживания.',
+										text: '<ol><li>Что такое "стандарты обслуживания" и зачем они нужны.</li><li>Алгоритм процесса обслуживания.</li><li>Что такое алгоритм.</li><li>Этапы алгоритма обслуживания.</li><li>Алгоритм процесса обслуживания. Видео-демонстрация</li></ol>'
+									}									
+									]
+								})
 							</div>
 						</div>
 					</div>
