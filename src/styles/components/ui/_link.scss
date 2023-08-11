@@ -25,12 +25,18 @@
 	&_return {
 		display: flex;
 		gap: 10px;
+		align-items: center;
 
 		&::before {
-			content: url('@icons/chevron.svg');
-			transform: rotate(180deg);
-			width: 22px;
-			height: 22px;
+			content: url('@icons/chevron_return.svg');
+			width: 16px;
+			height: 16px;
+		}
+
+		&:hover {
+			&::before {
+				content: url('@icons/chevron_green.svg');
+			}
 		}
 	}
 }

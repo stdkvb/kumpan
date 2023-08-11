@@ -35,7 +35,7 @@
 	&__list {
 		grid-area: cards;
 		display: grid;
-		grid-template-columns: repeat(2, minmax(340px, 810px));
+		grid-template-columns: repeat(2, minmax(340px, 1fr));
 		gap: 20px;
 		justify-content: space-between;
 
@@ -51,6 +51,12 @@
 		background-color: $grayFA;
 		grid-template-areas: 'image description';
 		gap: 20px;
+
+		&:hover {
+			img {
+				scale: 1.05;
+			}
+		}
 
 		@include mobile {
 			grid-template-columns: auto;
@@ -87,6 +93,7 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+			transition: scale $transitionDuration ease-in-out;
 		}		
 	}
 
@@ -103,6 +110,7 @@
 		}
 
 		p {
+			@include FontFamilyZurichRegular;
 			@include regular-16;
 			opacity: 0.7;
 			margin-bottom: 30px;
@@ -128,6 +136,7 @@
 			}
 			
 			&:last-child {
+				@include FontFamilyZurichRegular;
 				@include bold-26;
 				color: $black25;
 

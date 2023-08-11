@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Работа в Kumpan'})
+
+<body>
+	@@include('components/business/_header.html')
+	<main class="work">
+		<section class="work-banner">
+			<div style="background-image:url(@images/work-banner_desktop.webp)" class="work-banner__image work-banner__image_desktop"></div>
+			<div style="background-image:url(@images/work-banner_mobile.webp)" class="work-banner__image work-banner__image_mobile"></div>
+		</section>
+
+		<section class="restaurant-preview">
+			<div class="container">
+				<div class="restaurant-preview__wrapper">
+					<h1>Работа в Kumpan</h1>
+					<div class="restaurant-preview__description">
+						<div class="restaurant-preview__text">
+							<p>
+								Мы не хотим тратить время на скуку и нелюбимое место работы. Поэтому наполняем работу интересными событиями и задачами. Предлагаем зарплату выше среднего и хороших людей в коллективе, оплачиваем спортзал и английский, вместе пьем кофе и изучаем его.
+							</p>
+							<p>
+								Мы убеждены, что можно работать эффективно без бюрократии, штрафов и систем контроля. При этом четко соблюдая законодательство и придерживаясь этики.
+							</p>
+						</div>
+						<div class="restaurant-preview__bts">
+							@@include('components/ui/_button-link.html', {children: 'Подобрать вакансии', class: 'btn_black', href: '#'})
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="work-info">
+			<div class="container">
+				<h2>Что предлагаем</h2>
+				<div class="work-info__text">
+					<p>
+						Мы компания, где каждый — это личность. И благодаря каждому, кто работает с нами, мы смогли создать и сохранить успех Кофемании.
+					</p>
+					<p>
+						Мы ценим качество в каждой детали, следуем самым высоким стандартам сервиса, ежедневно меняемся к лучшему и овладеваем новыми навыками и знаниями, чтобы быть экспертами в своем деле.
+					</p>
+				</div>
+				<div class="work-info__list">
+					<div class="work-info__item">
+						<img src="@images/work-info-1.webp" alt="#">
+						<div class="work-info__description">
+							<h3>Профессионализм и высокие стандарты</h3>
+							<p>
+								Работа в команде единомышленников, в одном из самых успешных ресторанных проектов Москвы
+							</p>
+						</div>						
+					</div>
+					<div class="work-info__item">
+						<img src="@images/work-info-2.webp" alt="#">
+						<div class="work-info__description">
+							<h3>Постоянное развитие и повышение квалификации</h3>
+							<p>
+								Профессиональные тренинги в обучающем центре, Школе Бариста и Поваров
+							</p>
+						</div>						
+					</div>
+					<div class="work-info__item">
+						<img src="@images/work-info-3.webp" alt="#">
+						<div class="work-info__description">
+							<h3>Карьерный рост</h3>
+							<p>
+								Работа в команде единомышленников, в одном из самых успешных ресторанных проектов Москвы
+							</p>
+						</div>						
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="work-company">
+			<div class="container">
+				<h2>О компании</h2>
+				<div class="work-company__wrapper">
+					<div class="work-company__item">
+						<div class="work-company__text">
+							<p>
+								Предлагаем широкое разнообразие десертов с доставкой по Уфе. Шоколадный маффин, тирамису, чизкейк – с нашей удобной службой доставки и умеренными ценами вы можете каждый день пробовать что-то новое.
+							</p>
+							<p>
+								Порадуйте угощениями друзей в свой день рождения, подготовьте сладкий стол для детского праздника, просто поднимите настроение себе в выходной или добавьте вкусных эмоций в напряженный рабочий график. Курьерская служба доставки десертов в Уфе доступна в будние и выходные дни.
+							</p>					 
+						</div>
+						<div class="work-company__numbers numbers">
+							<div class="numbers__item">
+								<span class="value value_plus">10</span>
+								<p>Кафеен в Уфе. Мы развиваемся в России и за ее пределами</p>
+							</div>
+							<div class="numbers__item">
+								<span class="value value_plus">20</span>
+								<p>Лет создаем и сохраняем высокий уровень сервиса</p>
+							</div>
+							<div class="numbers__item">
+								<span class="value value_plus">35</span>
+								<p>Лет создаем и сохраняем высокий уровень сервиса</p>
+							</div>
+						</div>
+					</div>
+					<div class="work-company__item">
+						<img src="@images/work-company.webp" alt="#">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="work-vacancies">
+			<div class="container">
+				<h2>Вакансии</h2>
+			</div>
+		</section>
+
+		<section class="work-form" style="background-image: url(@images/work-form.webp)">
+			<div class="container">
+				@@include('components/business/_work-request.html')
+			</div>
+		</section>
+
+
+	</main>
+	@@include('components/business/_footer.html')
+
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>

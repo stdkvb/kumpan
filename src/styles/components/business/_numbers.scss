@@ -1,0 +1,23 @@
+.numbers {
+	
+	&__item {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.value {
+		@include FontFamilyZurichBold;
+		@include bold-50;
+
+		@include tablet_small {
+			@include bold-40;
+		}
+
+		&_plus {
+			&::after {
+				content: '+';
+			}
+		}
+	}
+}

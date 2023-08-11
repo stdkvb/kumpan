@@ -22,8 +22,7 @@
 		'name rating'
 		'date rating'
 		'text text'
-		'answer .'
-		'comment comment';
+		'answer .';
 		display: none;
 
 		&._active {
@@ -39,8 +38,7 @@
 			'name date'
 			'rating .'
 			'text text'
-			'answer .'
-			'comment comment';
+			'answer .';
 		}
 	}
 
@@ -55,6 +53,7 @@
 	}
 
 	&__date {
+		@include FontFamilyZurichRegular;
 		grid-area: date;
 		margin-top: 5px;
 
@@ -95,6 +94,11 @@
 
 		.coffee-review__item {
 			display: block;
+			padding: 40px 40px 40px 70px;
+
+			@include tablet_small {
+				padding: 20px 20px 20px 35px;
+			}
 
 			.btn {
 				display: inline-block;
@@ -111,6 +115,19 @@
 
 		textarea {
 			color: $black25;
+		}
+
+		&_answer {
+			display: none;
+
+			&._active {
+				display: block;
+				margin-top: 30px;
+
+				@include tablet_small {
+					margin-top: 15px;
+				}
+			}
 		}
 	}
 }

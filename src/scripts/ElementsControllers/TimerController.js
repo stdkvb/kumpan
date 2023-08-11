@@ -9,7 +9,7 @@ const takeControlTimer = () => {
 			timerLink.classList.add('_disabled')
 			timerLink.classList.remove('_active')
 
-			time = 11
+			time = 59
 
 			timer.textContent = " 0:" + time
 

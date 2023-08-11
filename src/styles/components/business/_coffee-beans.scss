@@ -42,15 +42,11 @@
 			}			
 
 			@include tablet_small {
-				min-height: 816px;
-				padding: 0;
+				min-height: 237px;
+				padding: 30px 20px;
 				display: flex;
 				flex-direction: column;
 				align-items: flex-end;
-			}
-
-			@include mobile {
-				min-height: 616px;
 			}
 
 		&__image {
@@ -60,10 +56,10 @@
 			width: 100%;
 			height: 100%;
 			z-index: -1;
+			background-repeat: no-repeat;
 
 			&_desktop {
 				@include min_tablet {
-					background-repeat: no-repeat;
 					background-position: left;
 					background-size: cover;
 				}
@@ -79,7 +75,6 @@
 				}
 	
 				@include tablet {
-					background-repeat: no-repeat;
 					background-size: cover;
 					background-position: top;
 				}
@@ -87,16 +82,7 @@
 		}
 
 		&__text {
-			color: $white;
-
-			@include tablet_small {
-				margin: 600px 20px 40px;
-			}
-
-			@include mobile {
-				margin: 440px 20px 40px;
-			}
-			
+			color: $white;			
 
 			& > * {
 				margin-bottom: 10px;
@@ -135,11 +121,11 @@
 
 		&__list {
 			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(533px, auto));
+			grid-template-columns: repeat(auto-fit, minmax(533px, 1fr));
 			gap: 20px;
 
 			@include tablet_small {
-				grid-template-columns: repeat(auto-fit, minmax(320px, auto));
+				grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 				gap: 30px;
 			}
 		}

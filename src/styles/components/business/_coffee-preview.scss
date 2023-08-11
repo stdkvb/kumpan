@@ -116,6 +116,7 @@
 	}
 
 	&__article {
+		@include FontFamilyZurichRegular;
 		grid-area: article;
 		@include regular-18;
 		margin-bottom: 40px;
@@ -150,7 +151,7 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: flex-start;
-		max-width: 360px;
+		max-width: 550px;
 		padding: 0;
 		margin: 0;
 		margin-bottom: 40px;

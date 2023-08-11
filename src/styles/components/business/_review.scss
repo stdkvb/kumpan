@@ -30,9 +30,20 @@
 	
 
 	&__form {
+		input,
+		textarea {
+			color: $white;
+		}
+		
 		.btn {
-			@include tablet_small {
-				width: 100%;
+			width: 100%;
+		}
+
+		.link {
+			color: $white;
+
+			&:hover {
+				color: $green22;
 			}
 		}
 	}

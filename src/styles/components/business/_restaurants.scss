@@ -37,12 +37,12 @@
 	&__list {
 		grid-area: cards;
 		display: grid;
-		grid-template-columns: repeat(3, minmax(320px, auto));
+		grid-template-columns: repeat(3, minmax(320px, 1fr));
 		gap: 20px;
-		grid-auto-columns: minmax(320px, auto);
+		grid-auto-columns: minmax(320px, 1fr);
 
 		@include desktop_small {
-			grid-template-columns: repeat(auto-fit, minmax(320px, auto));
+			grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 		}
 	}
 
@@ -52,6 +52,17 @@
 		background-color: $grayFA;
 		display: grid;
 		grid-template: max-content auto / auto;
+
+		&:hover {
+			img {
+				scale: 1.05;
+			}
+		}
+
+		img {
+			transition: scale $transitionDuration ease-in-out;
+			overflow: hidden;
+		}
 	}
 
 	&__image {
@@ -70,6 +81,7 @@
 		}
 
 		h3 {
+			@include FontFamilyZurichBold;
 			margin-bottom: 10px;
 		}
 
@@ -78,14 +90,17 @@
 		}
 	}
 
-	&__phone,
-	&__work {
+	&__info {
 		display: block;
 		@include regular-18;
 		opacity: 0.7;
 		
 		@include tablet_small {
 			@include regular-14;
+		}
+
+		span {
+			@include FontFamilyZurichRegular;
 		}
 	}
 

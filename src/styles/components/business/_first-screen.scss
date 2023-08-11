@@ -53,8 +53,8 @@
 			}
 		}
 
-		h1 {
-			max-width: 710px;
+		h1,
+		h2 {
 			margin-bottom: 30px;
 			@include bold-70;
 
