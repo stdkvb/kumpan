@@ -228,6 +228,13 @@ takeControlAccordion('.history__accordion', '.accordion__list', {
 	accordionItemActiveClass: 'accordion__item_active'
 })
 
+takeControlAccordion('.course__accordion', '.accordion__list', {
+	accordionItemSelector: '.accordion__item',
+	accordionItemTogglerSelector: '.accordion__toggle',
+	accordionItemContentSelector: '.accordion__content',
+	accordionItemActiveClass: 'accordion__item_active'
+})
+
 // total bonus info
 if (document.querySelector('.total__bonus') !== null) {
 	document.querySelector('.total__bonus svg').addEventListener('click', () => {	

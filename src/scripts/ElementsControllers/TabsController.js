@@ -29,6 +29,13 @@ const takeControlTabs = () => {
 	const firstPickupTabContent = document.getElementById('pickup-tab-content-1')
 	const secondPickupTabContent = document.getElementById('pickup-tab-content-2')
 
+	const courseTabs = document.querySelectorAll('.course__tab')
+	const firstCourseTab = document.getElementById('course-tab-1')
+	const secondCourseTab = document.getElementById('course-tab-2')
+	const courseTabContents = document.querySelectorAll('.course__content')
+	const firstCourseTabContent = document.getElementById('course-tab-content-1')
+	const secondCourseTabContent = document.getElementById('course-tab-content-2')
+
 	if (firstCoffeeTab !== null) {
 		function resetCooffeeActiveTabs () {
 			coffeeTabs.forEach((elem) => {
@@ -129,6 +136,31 @@ const takeControlTabs = () => {
 		})
 		secondPickupTab.addEventListener('click', () => {
 			secondPickupTabContent.classList.add('_active')
+		})
+	}
+
+	if (firstCourseTab !== null) {
+		function resetCourseActiveTabs () {
+			courseTabs.forEach((elem) => {
+				elem.classList.remove('_active')
+			})
+			courseTabContents.forEach((elem) => {
+				elem.classList.remove('_active')
+			})
+		}
+
+		courseTabs.forEach((elem) => {
+			elem.addEventListener('click', () => {
+				resetCourseActiveTabs()
+				elem.classList.add('_active')
+			})
+		})
+
+		firstCourseTab.addEventListener('click', () => {
+			firstCourseTabContent.classList.add('_active')
+		})
+		secondCourseTab.addEventListener('click', () => {
+			secondCourseTabContent.classList.add('_active')
 		})
 	}
 }

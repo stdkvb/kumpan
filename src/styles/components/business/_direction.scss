@@ -11,6 +11,7 @@
 		}
 
 		h1 {
+			@include FontFamilyZurichBold;
 			margin-bottom: 30px;
 
 			@include mobile {
@@ -20,6 +21,7 @@
 		}
 
 		p {
+			@include FontFamilyZurichRegular;
 			margin-bottom: 50px;
 			@include regular-24;
 
