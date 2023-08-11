@@ -1,0 +1,36 @@
+<div class="work-request">
+	<h2>Заполните анкету и мы свяжемся с вами в ближайшее время</h2>
+	<div class="work-request__form">
+		<form novalidate>
+			<div class="work-request__item">
+				@@include('components/ui/_select.html', {label: 'Вакансия', class: 'custom-select_input', placeholder: 'Выберите вакансию', selectItems: [ { text: 'Первый', value: 'Первый' }, { text: 'Второй', value: 'Второй' }, { text: 'Третий', value: 'Третий' }], required: 'true' })
+
+				@@include('components/ui/_input-text.html', {label: 'Фамилия', placeholder: 'Введите фамилию', errorMessage: 'Введите фамилию', name: 'surname', required: true})
+
+				@@include('components/ui/_input-text.html', {label: 'Имя', placeholder: 'Введите имя', errorMessage: 'Введите ваше имя', name: 'name', required: true})
+
+				@@include('components/ui/_input-date.html', {label: 'Дата рождения', placeholder: 'ДД/ММ/ГГ', errorMessage: 'Введите дату рождения', name: 'date', required: true})
+
+				@@include('components/ui/_input-phone.html', {label: 'Номер телефона', placeholder: '+7 (000) 000-00-00', name: 'phone', required: true})
+
+				@@include('components/ui/_input-email.html', {label: 'Электронная почта', placeholder: 'example@gmail.com', name: 'email'})
+			</div>
+			
+			<div class="work-request__item">
+				@@include('components/ui/_select.html', {label: 'Гражданство', class: 'custom-select_input', placeholder: 'Укажите гражданство', selectItems: [ { text: 'Первый', value: 'Первый' }, { text: 'Второй', value: 'Второй' }, { text: 'Третий', value: 'Третий' }] })
+			
+				@@include('components/ui/_textarea.html', {label: 'Сопроводительное письмо', placeholder: 'Введите текст', errorMessage: 'Введите ваше сообщение', name: 'message'})
+
+				@@include('components/ui/_input-text.html', {label: 'Ссылка на резюме', placeholder: 'Ссылка на резюме/профиль в соц сетях', errorMessage: 'Укажите ссылку', name: 'link'})
+
+				@@include('components/ui/_input-file.html', {button: 'Прикрепить портфолио', errorMessage: 'Прикрепите файл', name: 'portfolio'})				
+
+				@@include('components/ui/_checkbox.html', {class: 'checkbox_white work-request__item_offset', label: 'Нажимая на кнопку “Отправить отклик”, я даю согласие на <a href="#" target="_blank" class="link">обработку персональных данных</a> и соглашаюсь с <a href="#" target="_blank" class="link">политикой конфиденциальности</a>', id: 'agreement', name: 'agreement', required: true})
+
+				@@include('components/ui/_button.html', {children: 'Отправить отклик', class: 'btn_black', type: 'submit'})
+			</div>
+
+			
+		</form>
+	</div>
+</div>

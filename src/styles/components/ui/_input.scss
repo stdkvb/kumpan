@@ -29,8 +29,38 @@ input {
 		}	
 	}
 
-	&[type=tel] {
+	&[type=tel],
+	&[type=date] {
 		@include FontFamilyZurichRegular;
+	}
+
+	&[type=date] {
+		text-transform: uppercase;
+		position: relative;
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		&::-webkit-calendar-picker-indicator {
+			background: url(@icons/calendar.svg) no-repeat;
+			width: 24px;
+			height: 24px;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}		
+	}
+
+	&[type=file] {
+		border: none;
+		padding: 0;
+		opacity: 0;
+
+		&:hover {
+			cursor: pointer;
+		}
 	}
 
 	.has-success & {
@@ -55,7 +85,29 @@ input {
 		@include tablet_small {
 			@include regular-14;
 		}
-	}	
+	}
+	
+	&_file {
+		position: relative;
+
+		.file-button {
+			position: absolute;
+			pointer-events: none;
+			display: flex;
+			align-items: center;
+			gap: 10px;
+
+			&:hover {
+				cursor: pointer;
+			}
+			
+			&::before {
+				content: url(@icons/file.svg);
+				width: 19px;
+				height: 19px;
+			}
+		}
+	}
 
 	&_password {
 		input[type="password"] {

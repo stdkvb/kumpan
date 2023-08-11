@@ -15,6 +15,8 @@ import addPhoneMaskListeners from './listeners/addPhoneMaskListeners'
 import takeControlTimer from './ElementsControllers/TimerController'
 import takeControlAccordion from './ElementsControllers/AccordionController'
 import takeControlComments from './ElementsControllers/CommentsController'
+import CounterItemController from './ElementsControllers/CounterItemController'
+import addFileNameListeners from './listeners/addFileNameListener'
 
 
 preloader();
@@ -32,6 +34,7 @@ takeControlTabs()
 takeControlRaiting()
 takeControlTimer()
 takeControlComments()
+addFileNameListeners()
 
 /* Код ниже для возвращения исходной высоты мобильному меню (100vh) 
 после ресайза экрана */
@@ -230,3 +233,15 @@ if (document.querySelector('.total__bonus') !== null) {
 		document.querySelector('.total__info').classList.remove('active')
 	})
 }
+
+// Counter
+if (document.querySelector('.numbers') != null) {
+	new CounterItemController({
+		countersElementsWrapperSelector: '.numbers',
+		counterElementSelector: '.numbers__item',
+		counterNumElementSelector: '.value',
+		calcAnimationDelay: 2000,
+		clearHoverDelay: 100
+	})
+}
+
