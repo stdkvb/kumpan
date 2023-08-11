@@ -16,6 +16,7 @@
 
 	&_block {
 		align-self: start;
+		background-color: $grayFA;
 
 		@include tablet {
 			max-width: 100%;
