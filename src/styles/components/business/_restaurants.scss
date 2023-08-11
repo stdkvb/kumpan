@@ -70,6 +70,7 @@
 		}
 
 		h3 {
+			@include FontFamilyZurichBold;
 			margin-bottom: 10px;
 		}
 
@@ -78,14 +79,17 @@
 		}
 	}
 
-	&__phone,
-	&__work {
+	&__info {
 		display: block;
 		@include regular-18;
 		opacity: 0.7;
 		
 		@include tablet_small {
 			@include regular-14;
+		}
+
+		span {
+			@include FontFamilyZurichRegular;
 		}
 	}
 

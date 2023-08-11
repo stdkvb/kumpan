@@ -7,7 +7,6 @@ textarea {
 	outline: none;
 	resize: none;
 	@include regular-16;
-	color: $white;
 	background-color: transparent;
 
 	@include tablet_small {
@@ -68,7 +67,6 @@ textarea {
 
 	.textarea__label {
 		@include regular-20;
-		color: $white;
 		
 		@include tablet_small {
 			@include regular-14;

@@ -62,15 +62,21 @@
 		gap: 10px;
 
 		h3 {
+			@include FontFamilyZurichBold;
 			margin-bottom: 10px;
 		}
 
 		span {
+			@include FontFamilyZurichBold;
 			@include bold-24;
 
 			@include tablet_small {
 				@include bold-18;
 			}
+		}
+
+		.link {
+			@include FontFamilyZurichRegular;
 		}
 	}
 
@@ -126,7 +132,7 @@
 		border-top: solid 1px rgba(37, 37, 37, 0.30);;
 		padding-top: 30px;
 		display: flex;
-		column-gap: 155px;
+		column-gap: 100px;
 		row-gap: 20px;
 		justify-content: space-between;
 		align-items: center;
@@ -141,6 +147,7 @@
 		&__item {
 			&_first {
 				display: flex;
+				align-items: baseline;
 				gap: 50px;
 
 				@include tablet_small {
@@ -189,6 +196,10 @@
 			@include tablet_small {
 				@include regular-14;
 			}
+		}
+
+		span {
+			@include FontFamilyZurichRegular;
 		}
 	}
 

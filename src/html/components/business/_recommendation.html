@@ -1,0 +1,19 @@
+<section class="recommendation">
+	<div class="recommendation__images">
+		<img class="recommendation__background" src="@images/cafe.webp" alt="#">
+		<img class="recommendation__photo" src="@images/kumpan-recommendation.png" alt="#">
+	</div>			
+	<div class="recommendation__text">
+		<div class="container">
+			<h2>Михаил Кумпан рекомендует</h2>
+			@@if(context.coffee) {
+				@@include('components/business/_coffee__item_recommendation.html', {
+					image: '@images/pack-4.webp',
+					title: 'Peru',
+					description: 'Kumpan Перу – насыщенный, с теплым шоколадным профилем<br><br>Насыщенный, с теплым шоколадным профилем, сладостью карамели, арахиса, кукурузных хлопьев и глубокой пряностью черного перца и мускатного ореха. Насыщенный, с теплым шоколадным профилем, сладостью карамели, арахиса, кукурузных хлопьев и глубокой пряностью черного перца и мускатного ореха.'
+				})
+			}
+				
+		</div>
+	</div>
+</section>

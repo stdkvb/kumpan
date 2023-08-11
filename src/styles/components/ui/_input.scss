@@ -4,7 +4,6 @@ input {
 	border: 1px solid $grayB9;
 	outline: none;
 	@include regular-16;
-	color: $white;
 	background-color: transparent;
 
 	@include tablet_small {
@@ -12,7 +11,6 @@ input {
 	}
 
 	&:disabled {
-		color: $white;
 		background-color: $grayB9;
 		pointer-events: none;
 		user-select: none;
@@ -29,6 +27,10 @@ input {
 		&:not(:focus) {
 			border: 1px solid $redDB;
 		}	
+	}
+
+	&[type=tel] {
+		@include FontFamilyZurichRegular;
 	}
 
 	.has-success & {
@@ -48,7 +50,6 @@ input {
 	gap: 10px;
 
 	.input__label {
-		color: $white;
 		@include regular-20;
 
 		@include tablet_small {

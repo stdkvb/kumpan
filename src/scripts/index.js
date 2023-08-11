@@ -14,6 +14,7 @@ import takeControlRaiting from './ElementsControllers/RaitingController'
 import addPhoneMaskListeners from './listeners/addPhoneMaskListeners'
 import takeControlTimer from './ElementsControllers/TimerController'
 import takeControlAccordion from './ElementsControllers/AccordionController'
+import takeControlComments from './ElementsControllers/CommentsController'
 
 
 preloader();
@@ -30,6 +31,7 @@ takeControlModal()
 takeControlTabs()
 takeControlRaiting()
 takeControlTimer()
+takeControlComments()
 
 /* Код ниже для возвращения исходной высоты мобильному меню (100vh) 
 после ресайза экрана */
@@ -62,28 +64,38 @@ const firstScreenSwiper = new Swiper ('.first-screen', {
 	autoHeight: true
 })
 
-const RestaurantGallerySwiper = new Swiper ('.restaurant-gallery__slider', {
+const RestaurantSwiper = new Swiper ('.restaurant-photo__slider', {
 	loop: false,
 	watchOverflow: true,
 	slidesPerGroup: 1,
 	navigation: {
-		nextEl: '.swiper-navigation-next',
-		prevEl: '.swiper-navigation-prev'
-	},
-	breakpoints: {
-		360: {
-			spaceBetween: 0,
-		},
-		576: {
-			spaceBetween: 10,
-			slidesPerView: 1.5
-		},
-		992: {
-			spaceBetween: 20,
-			slidesPerView: 2.5
-		}
-	}	
+		nextEl: '.restaurant-photo__slider .swiper-navigation-next',
+		prevEl: '.restaurant-photo__slider .swiper-navigation-prev'
+	},	
 })
+
+// const RestaurantGallerySwiper = new Swiper ('.restaurant-gallery__slider', {
+// 	loop: false,
+// 	watchOverflow: true,
+// 	slidesPerGroup: 1,
+// 	navigation: {
+// 		nextEl: '.swiper-navigation-next',
+// 		prevEl: '.swiper-navigation-prev'
+// 	},
+// 	breakpoints: {
+// 		360: {
+// 			spaceBetween: 0,
+// 		},
+// 		576: {
+// 			spaceBetween: 10,
+// 			slidesPerView: 1.5
+// 		},
+// 		992: {
+// 			spaceBetween: 20,
+// 			slidesPerView: 2.5
+// 		}
+// 	}	
+// })
 
 // Coffee slider
 const CoffeeMainSwiper = new Swiper('.coffee-preview__slider_main', {

@@ -62,6 +62,7 @@
 		}
 
 		div:nth-child(1) {
+			@include FontFamilyZurichBold;
 			width: fit-content;
 			padding: 30px 40px;
 			background-color: $white;

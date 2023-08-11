@@ -6,8 +6,9 @@
 				<a href="#" class="link">
 					<h3>`+restaurantsItems[i].title+`</h3>
 				</a>
-				<span class="restaurants__phone">Телефон: `+restaurantsItems[i].phone+`</span>
-				<span class="restaurants__work">Режим работы: `+restaurantsItems[i].work+`</span>
+				<span class="restaurants__info">Телефон: <span>`+restaurantsItems[i].phone+`</span></span>
+				<span class="restaurants__info">Режим работы: <span>`+restaurantsItems[i].work+`</span></span>
+				<span class="restaurants__info">Время завтраков: <span>`+restaurantsItems[i].breakfast+`</span></span>		
 			</div>			
 			<div class="restaurants__btns">
 				@@include('components/ui/_button-link.html', {children: 'Меню', class: 'btn_black', href: '#'})

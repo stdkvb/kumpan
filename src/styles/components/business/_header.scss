@@ -5,10 +5,15 @@
 	&__row {
 		padding: 14px 130px;
 		display: grid;
-		grid-template-columns: 0.5fr 1.5fr 0.4fr;
-		gap: 20px;
+		grid-template-columns: .3fr 1.3fr .4fr;
+		gap: 100px;
 		align-items: center;
 		justify-content: space-between;
+
+		@include desktop_huge {
+			grid-template-columns: 0.5fr 1.5fr 0.4fr;
+			gap: 20px;
+		}
 
 		@include desktop {
 			padding-left: 50px;

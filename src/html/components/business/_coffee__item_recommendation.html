@@ -1,0 +1,39 @@
+<div class="coffee__item">
+	<img src="@@image">
+	<a href="#" class="link">
+		<h3>@@title</h3>
+	</a>
+	@@include('components/business/_coffee__specs.html')
+	<div class="coffee__body">
+		<div class="coffee__quantity">
+			@@include('components/ui/_select.html', {
+				placeholder: '200 гр',
+				selectItems: [
+					{	text: '200 гр',
+						value: '200 гр'
+					},
+					{	text: '500 гр',
+						value: '500 гр'
+					},
+					{	text: '1000 гр',
+						value: '1000 гр'
+					}
+				]
+			})
+			@@include('components/ui/_quantity.html')				
+		</div>
+		<div class="coffee__price">
+			Цена за 1 уп. <span>500 ₽</span>
+		</div>			
+		<div class="coffee__description">
+			<p>@@description</p>
+		</div>	
+		<div class="coffee__buttons">
+			<div class="coffee__buttons__list">
+				@@include('components/ui/_button-link.html', {children: 'В корзину', class: 'btn_black', href: '#'})
+				@@include('components/ui/_button-link.html', {children: 'Подробнее', href: '#'})
+			</div>
+			@@include('components/ui/_favorite.html', {class: 'favorite_border'})				
+		</div>
+	</div>
+</div>

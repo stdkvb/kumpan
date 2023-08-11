@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang='ru'>
-@@include('meta/_head.html', {title: 'Kumpan Китай'})
+@@include('meta/_head.html', {title: 'Columbia'})
 
 <body>
 	@@include('components/business/_header.html')
 	<main class="_offset">
 		<div class="container">
-			@@include('components/business/_directory.html', {link: 'Кофе в зернах', disabled: 'Кофе Бразилия Парадисо, 250гр'})
+			@@include('components/business/_directory.html', {link: 'Кофе в зернах', disabled: 'Columbia, 200гр'})
 		</div>
 		<section class="coffee-preview">
 			<div class="container">			
@@ -43,8 +43,8 @@
 					</div>
 				</div>
 				<div class="coffee-preview__title">
-					<h1>Kumpan Китай</h1>
-					<span>250 гр</span>
+					<h1>Columbia</h1>
+					<span>200 гр</span>
 				</div>
 				<span class="coffee-preview__article">Арт: 24568</span>
 				<div class="coffee__description">
@@ -54,10 +54,10 @@
 				</div>
 				@@include('components/business/_coffee__specs.html')
 				@@include('components/ui/_select.html', {
-					placeholder: '250 гр',
+					placeholder: '200 гр',
 					selectItems: [
-						{	text: '250 гр',
-							value: '250 гр'
+						{	text: '200 гр',
+							value: '200 гр'
 						},
 						{	text: '500 гр',
 							value: '500 гр'
@@ -150,7 +150,7 @@
 						<div class="coffee-reviews_filled">
 							<div class="coffee-reviews_filled__item coffee-review">
 								<div class="coffee-review__list">
-									@@include('components/business/_coffee-review__item.html', {answer: 'true'})
+									@@include('components/business/_coffee-review__item.html')
 									@@include('components/business/_coffee-review__item.html', {comment: 'true'})
 									@@include('components/business/_coffee-review__item.html')
 									@@include('components/business/_coffee-review__item.html')
@@ -179,8 +179,8 @@
 								coffeeItems: [
 									{
 										image: '@images/pack-1.webp',
-										title: 'Kumpan Китай',
-										description: 'Насыщенный, с теплым шоколадным профилем, сладостью карамели, арахиса, кукурузных хлопьев и глубокой пряностью черного перца и мускатного ореха.'
+										title: 'Columbia',
+										description: 'Комплексный кофе с хорошо выраженной цитрусовой кислотностью и сладостью.<br>Букет: апельсин, красные ягоды, тростниковый сахар.'
 									}
 								]
 							})
@@ -190,8 +190,8 @@
 								coffeeItems: [
 									{
 										image: '@images/pack-2.webp',
-										title: 'Kumpan Бразилия',
-										description: 'Отлично сбалансированный кофе, благодаря низкой кислотности и высокой сладости. Тело округлое, плотное. Букет: молочный шоколад, какао, лесной орех, желтая слива.'
+										title: 'Brazil',
+										description: 'Кофе отлично сбалансирован благодаря низкой кислотности и высокой сладости. Тело округлое, плотное.<br>Букет: молочный шоколад, какао, лесной орех, желтая слива.'
 									}
 								]
 							})
@@ -201,8 +201,8 @@
 								coffeeItems: [
 									{
 										image: '@images/pack-3.webp',
-										title: 'Kumpan Перу',
-										description: 'Мягкий, хорошо сбалансированный кофе с низкой кислотностью и средней сладостью. Тело средней плотности, гладкое. Букет: лесной орех, молочный шоколад, сухофрукты.'
+										title: 'Costa-Rica',
+										description: 'Кофе с богатым букетом, в котором встречаются цветочные ноты, сладость, приятная апельсиновая кислотность и шоколадный оттенок.'
 									}
 								]
 							})
@@ -212,8 +212,8 @@
 								coffeeItems: [
 									{
 										image: '@images/pack-1.webp',
-										title: 'Kumpan Китай',
-										description: 'Насыщенный, с теплым шоколадным профилем, сладостью карамели, арахиса, кукурузных хлопьев и глубокой пряностью черного перца и мускатного ореха.'
+										title: 'Columbia',
+										description: 'Комплексный кофе с хорошо выраженной цитрусовой кислотностью и сладостью.<br>Букет: апельсин, красные ягоды, тростниковый сахар.'
 									}
 								]
 							})
@@ -223,8 +223,19 @@
 								coffeeItems: [
 									{
 										image: '@images/pack-2.webp',
-										title: 'Kumpan Бразилия',
-										description: 'Отлично сбалансированный кофе, благодаря низкой кислотности и высокой сладости. Тело округлое, плотное. Букет: молочный шоколад, какао, лесной орех, желтая слива.'
+										title: 'Brazil',
+										description: 'Кофе отлично сбалансирован благодаря низкой кислотности и высокой сладости. Тело округлое, плотное.<br>Букет: молочный шоколад, какао, лесной орех, желтая слива.'
+									}
+								]
+							})
+						</div>
+						<div class="swiper-slide">
+							@@include('components/business/_coffee__item.html', {
+								coffeeItems: [
+									{
+										image: '@images/pack-3.webp',
+										title: 'Costa-Rica',
+										description: 'Кофе с богатым букетом, в котором встречаются цветочные ноты, сладость, приятная апельсиновая кислотность и шоколадный оттенок.'
 									}
 								]
 							})
@@ -237,6 +248,8 @@
 				</div>
 			</div>
 		</section>
+
+		@@include('components/business/_recommendation.html', {coffee: 'true'})
 		
 		<section class="news coffee-news">
 			<div class="container">

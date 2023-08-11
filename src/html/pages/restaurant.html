@@ -7,7 +7,27 @@
 	<main class="_offset">
 		<section class="restaurant-photo">
 			<div class="container">
-				<img src="@images/restaurant__photo.png" alt="#">
+				<div class="restaurant-photo__slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src="@images/restaurant__photo-1.png" alt="#">
+						</div>
+						<div class="swiper-slide">
+							<img src="@images/restaurant__photo-2.png" alt="#">
+						</div>
+						<div class="swiper-slide">
+							<img src="@images/restaurant__photo-3.png" alt="#">
+						</div>
+						<div class="swiper-slide">
+							<img src="@images/restaurant__photo-4.png" alt="#">
+						</div>
+					</div>
+					<div class="swiper-navigation">
+						<div class="swiper-navigation-prev"></div>
+						<div class="swiper-navigation-next"></div>
+					</div>
+				</div>
+				
 			</div>
 		</section>
 
@@ -41,7 +61,7 @@
 			</div>
 		</section>
 
-		<section class="restaurant-gallery">
+		<!-- <section class="restaurant-gallery">
 			<h2>Галерея</h2>
 			<div class="restaurant-gallery__slider">
 				<div class="swiper-wrapper">
@@ -65,7 +85,7 @@
 					</div>	
 				</div>							
 			</div>
-		</section>
+		</section> -->
 
 		<div class="restaurant-contacts">
 			<div class="restaurant-contacts__info">
@@ -81,10 +101,14 @@
 						<span>Адрес:</span>
 						<span>Мустая Карима, д.2</span>
 					</div>
-					<div class="restaurant-contacts__item">
+					<div class="restaurant-contacts__item restaurant-contacts__item_offset">
 						<img src="@icons/clock.svg" alt="#">
 						<span>График работы:</span>
 						<span>Пн-Пт 08:00 - 23:00<br>Сб-Вс 10:00 - 23:00</span>
+					</div>
+					<div class="restaurant-contacts__item">
+						<span>Время завтраков:</span>
+						<span>08:00 - 11:00</span>
 					</div>
 				</div>
 			</div>
