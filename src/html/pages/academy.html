@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Академия Kumpan'})
+
+<body>
+	@@include('components/business/_header.html')
+	<main class="academy">
+		<section>
+			<div class="container">
+				<h1>Академия Kumpan</h1>
+				<div class="academy__directions-item">
+					<div class="academy__directions-item-text">
+						<h3>Школа сервиса</h3>
+						<p>Для тысяч людей «Кофемания» стала частью повседневной жизни, особенным местом, куда первые гости уже приводят своих детей и скоро будут приводить внуков. В компании с большим вниманием относятся к каждой детали, в том числе к сервису.</p>
+						<p>Уникальность «Кофемании» в том, что она стала эталоном дружелюбного и искреннего сервиса, реализованного в масштабе сетевого проекта. До недавнего времени в корпоративном Учебном центре «Кофемании» сервису обучали только «своих» – менеджеров, официантов, хостес.</p>
+						@@include('components/ui/_button-link.html', {children: 'Выбрать курс', class: 'btn_black', href: '#'})
+					</div>
+					<div class="academy__directions-item-image" style="background-image: url(@images/waiter.webp);"></div>
+				</div>
+				<div class="academy__directions-item">
+					<div class="academy__directions-item-text">
+						<h3>Школа бариста</h3>
+						<p>Для тысяч людей «Кофемания» стала частью повседневной жизни, особенным местом, куда первые гости уже приводят своих детей и скоро будут приводить внуков. В компании с большим вниманием относятся к каждой детали, в том числе к сервису.</p>
+						<p>Уникальность «Кофемании» в том, что она стала эталоном дружелюбного и искреннего сервиса, реализованного в масштабе сетевого проекта. До недавнего времени в корпоративном Учебном центре «Кофемании» сервису обучали только «своих» – менеджеров, официантов, хостес.</p>
+						@@include('components/ui/_button-link.html', {children: 'Выбрать курс', class: 'btn_black', href: '#'})
+					</div>
+					<div class="academy__directions-item-image" style="background-image: url(@images/barista.webp);"></div>
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include('components/business/_footer.html')
+
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>

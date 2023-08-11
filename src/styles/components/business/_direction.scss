@@ -1,0 +1,443 @@
+.direction {
+
+	&__title {
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		padding: 180px 0;
+		color: $white;
+
+		@include tablet_small {
+		}
+
+		h1 {
+			@include FontFamilyZurichBold;
+			margin-bottom: 30px;
+
+			@include mobile {
+				@include bold-30;
+				margin-bottom: 20px;
+			}
+		}
+
+		p {
+			@include FontFamilyZurichRegular;
+			margin-bottom: 50px;
+			@include regular-24;
+
+			@include mobile {
+				@include regular-18;
+				max-width: 288px;
+			}
+		}
+	}
+
+	&__programms-list {
+		margin-top: 30px;
+		display: grid;
+		grid-template-columns: repeat(4, minmax(auto, 395px));
+		gap: 20px;
+
+		@include desktop_large {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		@include desktop_small {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include tablet_small {
+			grid-template-columns: 1fr;
+			gap: 40px;
+		}
+	}
+
+	&__programms-item {
+		background-color: $grayFA;
+		display: grid;
+		grid-template-columns: 1fr;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			max-height: 200px;
+			margin-bottom: 20px;
+
+			@include tablet_small {
+				margin-bottom: 10px;
+			}
+		}
+
+		h3 {
+			margin: 0 20px 15px 20px;
+
+			@include tablet_small {
+				margin: 0 10px 15px 10px;
+			}
+		}
+
+		p {
+			opacity: 0.7;
+			margin: 0 20px 15px 20px;
+			max-width: 329px;
+
+			@include tablet_small {
+				margin: 0 10px 15px 10px;
+			}
+		}
+
+		span {
+			@include FontFamilyZurichRegular;
+			@include bold-30;
+			margin: 0 20px;
+
+			@include tablet_small {
+				@include bold-20
+			}
+		}
+
+		div {
+			margin: 20px;
+			display: flex;
+			gap: 21px;
+			align-self: flex-end;
+
+			.btn {
+				min-width: unset;
+				width: 138px;
+			}
+
+			@include tablet_small {
+				margin: 10px;
+			}
+		}
+	}
+
+	&__for-list {
+		margin-top: 30px;
+		display: grid;
+		grid-template-columns: repeat(3, minmax(auto, 533px));
+		gap: 20px;
+
+		@include tablet_small {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__for-item {
+		background-color: $grayFA;
+		padding: 20px;
+
+		h3 {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__about {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+
+		@include tablet_small {
+			grid-template-columns: 1fr;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__about-text {
+		background-color: #3D1308;
+		padding-top: 80px;
+		padding-bottom: 80px;
+
+		@include tablet_small {
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
+
+		h2, p {
+			color: $white;
+			margin-bottom: 20px;
+		}
+
+		.container {
+			@include tablet_small {
+				margin-left: 40px;
+				margin-right: 70px;
+			}
+		}
+	}
+
+	&__partners-list {
+		margin-top: 30px;
+		display: grid;
+		grid-template-columns: repeat(4, minmax(auto, 395px));
+		gap: 20px;
+
+		@include desktop_large {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		@include desktop_small {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include tablet_small {
+			grid-template-columns: 1fr;
+			gap: 40px;
+		}
+	}
+
+	&__partners-item {
+		display: grid;
+		grid-template-columns: 1fr;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			max-height: 220px;
+			margin-bottom: 20px;
+
+			@include tablet_small {
+				margin-bottom: 10px;
+			}
+		}
+
+		h3 {
+			margin: 0 20px 15px 20px;
+
+			@include tablet_small {
+				margin: 0 10px 15px 10px;
+			}
+		}
+
+		p {
+			margin: 0 20px 15px 20px;
+
+			@include tablet_small {
+				margin: 0 10px 15px 10px;
+			}
+		}
+	}
+
+	&__team-list {
+		margin-top: 30px;
+		display: grid;
+		grid-template-columns: repeat(4, minmax(auto, 395px));
+		gap: 20px;
+
+		@include desktop_large {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		@include desktop_small {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include tablet_small {
+			grid-template-columns: 1fr;
+			gap: 40px;
+		}
+	}
+
+	&__team-item {
+		display: grid;
+		grid-template-columns: 1fr;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			max-height: 400px;
+			margin-bottom: 20px;
+
+			@include tablet_small {
+				margin-bottom: 10px;
+				max-height: 350px;
+			}
+		}
+
+		h3 {
+			margin: 0 20px 15px 20px;
+
+			@include tablet_small {
+				margin: 0 10px 15px 10px;
+			}
+		}
+
+		p {
+			margin: 0 20px 15px 20px;
+
+			@include tablet_small {
+				margin: 0 10px 15px 10px;
+			}
+		}
+	}
+
+
+	&__reviews-list {
+		margin-top: 30px;
+		display: flex;
+		align-items: center;
+
+		@include tablet_small {
+			flex-direction: column;
+		}
+
+		.swiper-navigation {
+			background-color: #fff;
+			flex-direction: column;
+			padding-left: 25px;
+			height: 100%;
+
+			@include tablet_small {
+				flex-direction: row;
+				margin-top: 20px;
+				align-self: flex-end;
+
+				&>* {
+					width: 40px;
+					height: 40px;
+				}
+			}
+		}
+	}
+
+	&__reviews-item {
+		background-color: $grayFA;
+		padding: 30px;
+		max-width: 672px;
+
+		@include tablet_small {
+			padding: 10px;
+		}
+
+		p { 
+			@include regular-18;
+		}
+	}
+
+	&__reviews-content {
+		display: grid;
+		grid-template-areas:
+		'photo name'
+		'photo description';
+		grid-template-columns: max-content auto;
+		column-gap: 30px;
+		row-gap: 5px;
+		margin-bottom: 30px;
+
+		picture {
+			grid-area: photo;
+		}
+
+		img {
+			border-radius: 110px;
+			object-fit: cover;
+			width: 110px;
+			height: 110px;
+
+			@include tablet_small {
+				width: 80px;
+				height: 80px;
+				border-radius: 80px;
+			}
+		}
+
+		h3 {
+			grid-area: name;
+			align-self: flex-end;
+		}
+
+		span {
+			grid-area: description;
+			opacity: 0.7;
+			@include regular-18;
+			@include FontFamilyZurichRegular;
+		}
+	}
+
+	&__video-reviews-list {
+		margin-top: 30px;
+		display: flex;
+		align-items: center;
+
+		@include tablet_small {
+			flex-direction: column;
+		}
+
+		.swiper-navigation {
+			background-color: #fff;
+			flex-direction: column;
+			padding-left: 25px;
+			height: 100%;
+
+			@include tablet_small {
+				flex-direction: row;
+				margin-top: 20px;
+				align-self: flex-end;
+				
+				&>* {
+					width: 40px;
+					height: 40px;
+				}
+			}
+		}
+	}
+
+	&__video-reviews-item {
+		padding: 30px;
+		max-width: 395px;
+
+		@include tablet_small {
+			padding: 10px;
+		}
+
+		p { 
+			@include regular-18;
+		}
+	}
+
+	&__video-reviews-content {
+		display: grid;
+		grid-template-areas:
+		'photo name'
+		'photo description';
+		grid-template-columns: max-content auto;
+		column-gap: 30px;
+		row-gap: 5px;
+		margin-top: 20px;
+
+		picture {
+			grid-area: photo;
+		}
+
+		img {
+			object-fit: cover;
+			width: 110px;
+			height: 110px;
+
+			@include tablet_small {
+				width: 80px;
+				height: 80px;
+			}
+		}
+
+		h3 {
+			grid-area: name;
+			align-self: flex-end;
+		}
+
+		span {
+			grid-area: description;
+			opacity: 0.7;
+			@include regular-18;
+			@include FontFamilyZurichRegular;
+		}
+	}
+}

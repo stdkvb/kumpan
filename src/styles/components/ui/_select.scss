@@ -143,5 +143,26 @@
 				@include regular-14;
 			}
 		}
+
+		&_black {
+			.select-selected__value {
+				color: $white;
+			}
+			.select-items {
+				background-color: $black25;
+				max-height: 190px;
+				overflow-y: scroll;
+				scrollbar-color: $white transparent;
+
+				div {
+					color: white;
+					margin: 0;
+					padding: 10px 15px;
+				}
+			}
+			.arrow {
+				background-image: url(@icons/chevron-down-white.svg);
+			}
+		}
 	}
 }

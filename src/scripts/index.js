@@ -215,8 +215,35 @@ const OrderSwiper = new Swiper ('.order__swiper', {
 	}
 })
 
+// review Slider
+const ReviewSwiper = new Swiper ('.direction__reviews-swiper', {
+	slidesPerView: 'auto',
+	spaceBetween: 20,
+	navigation: {
+		nextEl: '.swiper-navigation-next',
+		prevEl: '.swiper-navigation-prev'
+	}
+})
+
+// video-review Slider
+const VideoReviewSwiper = new Swiper ('.direction__video-reviews-swiper', {
+	slidesPerView: 'auto',
+	spaceBetween: 20,
+	navigation: {
+		nextEl: '.swiper-navigation-next',
+		prevEl: '.swiper-navigation-prev'
+	}
+})
+
 // accordions init
 takeControlAccordion('.history__accordion', '.accordion__list', {
+	accordionItemSelector: '.accordion__item',
+	accordionItemTogglerSelector: '.accordion__toggle',
+	accordionItemContentSelector: '.accordion__content',
+	accordionItemActiveClass: 'accordion__item_active'
+})
+
+takeControlAccordion('.course__accordion', '.accordion__list', {
 	accordionItemSelector: '.accordion__item',
 	accordionItemTogglerSelector: '.accordion__toggle',
 	accordionItemContentSelector: '.accordion__content',
@@ -233,6 +260,22 @@ if (document.querySelector('.total__bonus') !== null) {
 		document.querySelector('.total__info').classList.remove('active')
 	})
 }
+
+// video controller
+const playButtons = document.querySelectorAll('.video-controler')
+playButtons.forEach((elem) => {
+	elem.addEventListener('click', () => {
+		elem.classList.add('active')
+		elem.previousElementSibling.play()
+	})
+
+	elem.previousElementSibling.addEventListener('click', () => {
+		if (elem.classList.contains('active')) {
+			elem.classList.remove('active')
+			elem.previousElementSibling.pause()
+		}
+	})
+})
 
 // Counter
 if (document.querySelector('.numbers') != null) {

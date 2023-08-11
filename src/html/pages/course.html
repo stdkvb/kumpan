@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Академия Kumpan - Детальная курса'})
+
+<body>
+	@@include('components/business/_header.html')
+	<main class="course">
+		<section class="course__title" style="background-image: url('@images/course-bg.webp');">
+			<div class="container">
+				<h1>Стандарты обслуживания</h1>
+				<p>Знания и выполнение стандартов обслуживания — основа работы успешного ресторана.</p>
+				<div class="course__title-description">
+					<div>
+						<span>Срок обучения</span>
+						<span>1 месяц</span>
+					</div>
+					<div>
+						<span>Формат обучения</span>
+						<span>Онлайн-курс</span>
+					</div>
+					<div>
+						<span>Результат</span>
+						<span>Сертификат</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="course__description">
+			<div class="container">
+				<div class="course__text">
+					<div class="course__tabs">
+						<div id="course-tab-1" class="course__tab _active">
+							<h3>Описание</h3>
+						</div>
+						<div id="course-tab-2" class="course__tab">
+							<h3>Программа курса</h3>
+						</div>
+					</div>
+					<div id="course-tab-content-1" class="course__content _active">
+						<p>Сегодня обслуживание гостей превратилось в «поле битвы» за достижение конкурентного преимущества.
+							Сотрудники на всех уровнях должны осознавать важность предоставления гостям сервиса самого высокого качества: обладать конкретными знаниями, умениями и демонстрировать поведение, которое гости будут отмечать и ценить.
+							Команда погрузится в философию гостеприимства, получит базовую квалификацию и знания по обслуживанию гостей — фундамент эффективного сервиса. Выполнение этих стандартов — основа работы успешного ресторана.</p>
+							<p>Сегодня обслуживание гостей превратилось в «поле битвы» за достижение конкурентного преимущества.
+								Сотрудники на всех уровнях должны осознавать важность предоставления гостям сервиса самого высокого качества: обладать конкретными знаниями, умениями и демонстрировать поведение, которое гости будут отмечать и ценить.
+								Команда погрузится в философию гостеприимства, получит базовую квалификацию и знания по обслуживанию гостей — фундамент эффективного сервиса. Выполнение этих стандартов — основа работы успешного ресторана.</p>
+						<ul>
+							<li>Обучим стандартам и лучшим практикам сервиса, чья эффективность доказана успехом Kumpan</li>
+							<li>Проект создан командой тренеров под руководством Михаила Кумпана – ТОП-эксперта по ресторанному сервису в России</li>
+							<li>Поделимся секретами сервиса, накопленными Kumpan за 20 лет</li>
+						</ul>
+					</div>
+					<div id="course-tab-content-2" class="course__content">
+						<div class="course__accordion accordion">
+							<div class="accordion__list">
+								<div class="accordion__item accordion__item_active">
+									<div class="accordion__toggle">
+										<h4>Введение</h4>
+										<div>
+											<button class="accordion-icon"></button>
+										</div>
+									</div>
+									<div class="accordion__content">
+										<p>Что такое "стандарты обслуживания" и зачем они нужны. Что такое "стандарты обслуживания" и зачем они нужны. Что такое "стандарты обслуживания" и зачем они нужны.</p>
+									</div>
+								</div>
+								<div class="accordion__item">
+									<div class="accordion__toggle">
+										<h4>Раздел 1. Стандарты и алгоритм обслуживания.</h4>
+										<div>
+											<button class="accordion-icon"></button>
+										</div>
+									</div>
+									<div class="accordion__content">
+										<ol>
+											<li>Что такое "стандарты обслуживания" и зачем они нужны.</li>
+											<li>Алгоритм процесса обслуживания.</li>
+											<li>Что такое алгоритм.</li>
+											<li>Этапы алгоритма обслуживания.</li>
+											<li>Алгоритм процесса обслуживания. Видео-демонстрация</li>
+										</ol>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="course__entry">
+					<div>
+						<h3>Что входит в курс:</h3>
+						<span>24 лекции</span>
+						<span>4 часа видео</span>
+						<span>15 тестов</span>
+					</div>
+					<div>
+						<h3>12 000 руб</h3>
+						@@include('components/ui/_button-link.html', {children: 'Записаться на курс', class: 'btn_black popup-link', href: '#request'})
+					</div>
+					<div>
+						<a class="link" tel:2727207>Tел: 272-72-07</a>
+						<a class="link" mailto:pochta@mail.ru>Email: pochta@mail.ru</a>
+					</div>
+
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include('components/business/_footer.html')
+	@@include('components/business/_request-popup.html')
+
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>
