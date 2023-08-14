@@ -168,4 +168,20 @@
 			}
 		}
 	}
+
+	.pristine-error {
+		display: none;
+	}
+
+	&.has-danger {
+		.select-selected {
+			border: 1px solid #db1630;
+		}
+	}
+
+	&.has-success {
+		.select-selected {
+			border: 1px solid #228c0e;
+		}
+	}
 }

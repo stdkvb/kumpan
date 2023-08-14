@@ -34,6 +34,7 @@ function takeControlCustomSelect(id) {
 			c.addEventListener('click', function () {
 				/* when an item is clicked, update the original select box,
         and the selected item: */
+				this.parentNode.parentNode.classList.add('has-success')
 				let y
 				let i
 				let k
@@ -60,6 +61,8 @@ function takeControlCustomSelect(id) {
 					}
 				}
 				h.click()
+				
+				
 			})
 			b.appendChild(c)
 		}
