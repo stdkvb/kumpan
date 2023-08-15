@@ -43,6 +43,37 @@
 				'cake_management';
 			gap: 20px;
 		}
+
+		 &_food {
+			display: grid;
+			grid-template-columns: 30% 60%;
+			gap: 50px 30px;
+			grid-template-areas:
+				'cake_image cake_preview'
+				'cake_image cake_ingredients'
+				'cake_image cake_management'
+				'cake_info cake_info';
+	
+			@include tablet {
+				grid-template-columns: 30% 55%;
+				grid-template-areas:
+					'cake_image cake_preview'
+					'cake_management cake_management'
+					'cake_ingredients cake_ingredients'
+					'cake_info cake_info';
+			}
+	
+			@include tablet_small {
+				grid-template-columns: 100%;
+				grid-template-areas:
+					'cake_image'
+					'cake_preview'
+					'cake_info'
+					'cake_ingredients'
+					'cake_management';
+				gap: 20px;
+			}
+		 }
 	}
 
 	&__image {
@@ -51,6 +82,8 @@
 		img {
 			width: 100%;
 			object-fit: cover;
+			height: 100%;
+			max-height: 450px;
 		}
 	}
 
@@ -230,19 +263,22 @@
 		overflow: hidden;
 		margin-top: 15px;
 		flex-direction: column;
-		gap: 30px;
-		display: none;
+		gap: 30px;		
+		display: flex;
+		@include transition;
+		opacity: 0;
 	}
 
 	&__ingredients {
+		grid-area: cake_ingredients;
 		margin-top: 30px;
 
 		@include tablet_small {
-			margin-right: 80px;
+			margin: 0 80px 0 20px;
 		}
 
 		@include mobile {
-			margin-right: 50px;
+			margin: 0 50px 0 20px;
 		}
 
 		.dropdown__button {
@@ -291,7 +327,7 @@
 			right: -72px;
 
 			@include mobile {
-				right: -50px;
+				right: -40px;
 			}
 
 			@include tablet_small {
@@ -304,8 +340,12 @@
 
 		&.active {
 			.cake-detail__ingredients-content {
-				height: auto;
-				display: flex;
+				height: 550px;
+				opacity: 1;
+
+				@include tablet_small {
+					height: 610px;
+				}
 			}
 		}
 	}

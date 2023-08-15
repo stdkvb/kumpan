@@ -10,11 +10,23 @@
 	}
 
 	h3 {
+		@include FontFamilyZurichBold;
 		@include bold-30;
 		margin-bottom: 15px;
 
+		span {
+			@include FontFamilyZurichBold;
+			@include bold-30;
+			font-size: 30px !important;
+		}
+
 		@include mobile {
 			@include bold-26;
+
+			span {
+				@include bold-26;
+				font-size: 26px !important;
+			}
 		}
 	}
 
@@ -47,8 +59,17 @@
 			@include bold-30;
 			margin: 0;
 
+			span {
+				@include FontFamilyZurichBold;
+				@include bold-30;
+			}
+
 			@include mobile {
 				@include bold-26;
+
+				span {
+					@include bold-26;
+				}
 			}
 		}
 

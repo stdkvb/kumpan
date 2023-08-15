@@ -285,3 +285,9 @@ if (document.querySelector('.numbers') != null) {
 	})
 }
 
+//number with spaces
+const numbers = document.querySelectorAll('.number-with-spaces')
+numbers.forEach((elem) => {
+	let numberWithSpace = elem.outerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");	
+	elem.innerHTML = numberWithSpace;
+})
