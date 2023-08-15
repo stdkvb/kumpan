@@ -7,7 +7,7 @@
 		<main class="_offset">
 			<section class="personal-forms">
 				<div class="container">
-					<h1>Профиль</h1>
+					<h1>Адреса</h1>
 					<nav class="personal-nav">
 						<a class="link" href="#">Профиль</a>
 						<a class="link active" href="#">Адреса</a>
@@ -16,19 +16,19 @@
 						<a class="link" href="#">История заказов</a>
 						<a class="link" href="#">Бонусы</a>
 					</nav>
-					<div>
+					<div class="address-adding">
 						<form novalidate>
-							@@include('components/ui/_input-text.html', {label: 'Название адреса', placeholder: 'Например: дом', errorMessage: 'Введите название', name: 'name'})
+							@@include('components/ui/_input-text.html', {label: 'Название адреса', placeholder: 'Например: дом', errorMessage: 'Введите название', name: 'name', required: 'true' })
 							@@include('components/ui/_select.html', {label: 'Регион', class: 'custom-select_input', placeholder: 'Выберите регион', selectItems: [ { text: 'Первый', value: 'Первый' }, { text: 'Второй', value: 'Второй' }, { text: 'Третий', value: 'Третий' }], required: 'true' })
-							@@include('components/ui/_input-text.html', {label: 'Населенный пункт', placeholder: 'Название населенного пункта', errorMessage: 'Введите название населенного пункта', name: 'city'}) 
-							@@include('components/ui/_input-text.html', {label: 'Улица', placeholder: 'Введите название улицы', errorMessage: 'Введите адрес', name: 'address'})
+							@@include('components/ui/_input-text.html', {label: 'Населенный пункт', placeholder: 'Название населенного пункта', errorMessage: 'Введите название населенного пункта', name: 'city', required: 'true'}) 
+							@@include('components/ui/_input-text.html', {label: 'Улица', placeholder: 'Введите название улицы', errorMessage: 'Введите адрес', name: 'address', required: 'true'})
 							<div class="personal-forms__input-group">
-								@@include('components/ui/_input-text.html', {label: 'Дом', placeholder: 'Дом', errorMessage: 'Введите номер', name: 'house'})
+								@@include('components/ui/_input-text.html', {label: 'Дом', placeholder: 'Дом', errorMessage: 'Введите номер', name: 'house', required: 'true'})
 								@@include('components/ui/_input-text.html', {label: 'Кв/офис', placeholder: 'Кв/офис', errorMessage: 'Введите номер', name: 'apt'}) 
 								@@include('components/ui/_input-text.html', {label: 'Подъезд', placeholder: 'Подъезд', errorMessage: 'Введите номер', name: 'entrance'})
 								@@include('components/ui/_input-text.html', {label: 'Этаж', placeholder: 'Этаж', errorMessage: 'Введите номер', name: 'floor'})
 							</div>
-							@@include('components/ui/_input-text.html', {label: 'Индекс', placeholder: 'Почтовый индекс', errorMessage: 'Введите почтовый индекс', name: 'index'})
+							@@include('components/ui/_input-text.html', {label: 'Индекс', placeholder: 'Почтовый индекс', errorMessage: 'Введите почтовый индекс', name: 'index', required: 'true'})
 							<div class="personal-forms__buttons">
 								@@include('components/ui/_button.html', {children: 'Добавить адрес', class: 'btn_black', type: 'submit'})
 								@@include('components/ui/_button-link.html', {children: 'Отмена', href: '#'})

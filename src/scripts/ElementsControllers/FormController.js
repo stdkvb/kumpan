@@ -17,7 +17,7 @@ const takeControlForms = () => {
 	if (callRequestForm !== null) {
 		const callRequestValidator = new Pristine(callRequestForm);
 		callRequestForm.addEventListener('submit', function (e) {
-			if (callRequestValidator.validate() == true) {
+			if (callRequestValidator.validate() !== true) {
 				e.preventDefault();
 			}
 		})
@@ -28,7 +28,7 @@ const takeControlForms = () => {
 		reviewForms.forEach((elem) => {
 			const reviewValidator = new Pristine(elem);
 			elem.addEventListener('submit', function (e) {
-				if (reviewValidator.validate() == true) {
+				if (reviewValidator.validate() !== true) {
 					e.preventDefault();
 				}
 			})
@@ -40,7 +40,7 @@ const takeControlForms = () => {
 		commentReviewForms.forEach((elem) => {
 			const commentReviewValidator = new Pristine(elem);
 			elem.addEventListener('submit', function (e) {
-				if (commentReviewValidator.validate() == true) {
+				if (commentReviewValidator.validate() !== true) {
 					e.preventDefault();
 				}
 			})
@@ -52,7 +52,7 @@ const takeControlForms = () => {
 	if (registrationForm !== null) {
 		const registrationValidator = new Pristine(registrationForm);
 		registrationForm.addEventListener('submit', function (e) {
-			if (registrationValidator.validate() == true) {
+			if (registrationValidator.validate() !== true) {
 				e.preventDefault();
 			}
 		})
@@ -62,7 +62,7 @@ const takeControlForms = () => {
 	if (registrationConfirmForm !== null) {
 		const registrationConfirmValidator = new Pristine(registrationConfirmForm);
 		registrationConfirmForm.addEventListener('submit', function (e) {
-			if (registrationConfirmValidator.validate() == true) {
+			if (registrationConfirmValidator.validate() !== true) {
 				e.preventDefault();
 			}
 		})
@@ -72,7 +72,7 @@ const takeControlForms = () => {
 	if (authorizationForm !== null) {
 		const authorizationValidator = new Pristine(authorizationForm);
 		authorizationForm.addEventListener('submit', function (e) {
-			if (authorizationValidator.validate() == true) {
+			if (authorizationValidator.validate() !== true) {
 				e.preventDefault();
 			}
 		})
@@ -82,7 +82,7 @@ const takeControlForms = () => {
 	if (passwordRecovery !== null) {
 		const passwordRecoveryValidator = new Pristine(passwordRecovery);
 		passwordRecovery.addEventListener('submit', function (e) {
-			if (passwordRecoveryValidator.validate() == true) {
+			if (passwordRecoveryValidator.validate() !== true) {
 				e.preventDefault();
 			}
 		})
@@ -92,7 +92,7 @@ const takeControlForms = () => {
 	if (passwordRecoveryConfirmForm !== null) {
 		const passwordRecoveryConfirmValidator = new Pristine(passwordRecoveryConfirmForm);
 		passwordRecoveryConfirmForm.addEventListener('submit', function (e) {
-			if (passwordRecoveryConfirmValidator.validate() == true) {
+			if (passwordRecoveryConfirmValidator.validate() !== true) {
 				e.preventDefault();
 			}
 		})
@@ -102,7 +102,7 @@ const takeControlForms = () => {
 	if (passwordRecoveryNewForm !== null) {
 		const passwordRecoveryNewValidator = new Pristine(passwordRecoveryNewForm);
 		passwordRecoveryNewForm.addEventListener('submit', function (e) {
-			if (passwordRecoveryNewValidator.validate() == true) {
+			if (passwordRecoveryNewValidator.validate() !== true) {
 				e.preventDefault();
 			}
 		})
@@ -112,7 +112,17 @@ const takeControlForms = () => {
 	if (profileForm !== null) {
 		const profileValidator = new Pristine(profileForm);
 		profileForm.addEventListener('submit', function (e) {
-			if (profileValidator.validate() == true) {
+			if (profileValidator.validate() !== true) {
+				e.preventDefault();
+			}
+		})
+	}
+
+	const addressForm = document.querySelector(".address-adding form");	
+	if (addressForm !== null) {
+		const addressValidator = new Pristine(addressForm);
+		addressForm.addEventListener('submit', function (e) {
+			if (addressValidator.validate() !== true) {
 				e.preventDefault();
 			}
 		})

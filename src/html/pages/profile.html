@@ -19,10 +19,10 @@
 				<div class="profile__form">
 					<h4>Редактировать данные</h4>
 					<form novalidate>
-						@@include('components/ui/_input-text.html', {label: 'Имя', placeholder: 'Ваше имя', errorMessage: 'Введите ваше имя', name: 'name'})
-						@@include('components/ui/_input-text.html', {label: 'Фамилия', placeholder: 'Ваша фамилия', errorMessage: 'Введите вашу фамилию', name: 'surname'})
-						@@include('components/ui/_input-email.html', {label: 'Электронная почта', value: 'mail@email.com', placeholder: 'Введите электронную почту', name: 'email'})
-						@@include('components/ui/_input-phone.html', {label: 'Телефон', placeholder: '+7 (000) 000-00-00', name: 'phone'})
+						@@include('components/ui/_input-text.html', {label: 'Имя', placeholder: 'Ваше имя', errorMessage: 'Введите ваше имя', name: 'name', required: 'true' })
+						@@include('components/ui/_input-text.html', {label: 'Фамилия', placeholder: 'Ваша фамилия', errorMessage: 'Введите вашу фамилию', name: 'surname', required: 'true' })
+						@@include('components/ui/_input-email.html', {label: 'Электронная почта', value: 'mail@email.com', placeholder: 'Введите электронную почту', name: 'email', required: 'true' })
+						@@include('components/ui/_input-phone.html', {label: 'Телефон', placeholder: '+7 (000) 000-00-00', name: 'phone', required: 'true' })
 						@@include('components/ui/_button.html', {children: 'Сохранить изменения', class: 'btn_black', type: 'submit'})
 					</form>
 				</div>
