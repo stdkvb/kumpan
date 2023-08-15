@@ -4,6 +4,7 @@ function preloader(_success) {
 	const img = document.querySelector('.preloader__images_loaded');
 	preloader.classList.remove('_loaded');
 	img.classList.remove('_active');
+	document.body.classList.add('_lock');
 	var w = 0,
 			t = setInterval(function() {
 					w = w + 2;
@@ -11,6 +12,7 @@ function preloader(_success) {
 					if (w === 100){
 						preloader.classList.add('_loaded');
 						img.classList.add('_active');
+						document.body.classList.remove('_lock');
 							clearInterval(t);
 							w = 0;
 							if (_success){

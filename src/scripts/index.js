@@ -1,4 +1,3 @@
-// import takePreloaderOnload from './ElementsControllers/PreloaderController'
 import preloader from './ElementsControllers/Preloader'
 import takeControlMenu from './ElementsControllers/MenuController'
 import takeControlDropdown from "./ElementsControllers/DropdownController"
