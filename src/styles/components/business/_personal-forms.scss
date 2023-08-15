@@ -78,6 +78,10 @@
 			&:hover {
 				border-color: $green22;
 			}
+
+			@include tablet_small {
+				@include regular-14;
+			}
 		}
 
 		@include tablet_small {

@@ -27,13 +27,7 @@
 			transition: all $transitionDuration;
 			overflow: hidden;
 
-			display: flex;
-			flex-direction: column;
-			gap: 20px;
-
-			@include tablet_small {
-				gap: 10px;
-			}
+			
 
 			h4:not(:first-of-type) {
 				margin-top: 20px;
@@ -73,15 +67,18 @@
 				height: unset;
 				max-height: 1000px;
 				border-top: solid 1px rgba(37, 37, 37, 0.30);
-				padding: 20px;
+				padding-top: 25px;
+				
 				@include tablet {
 					a:first-of-type {
 						margin-top: 0.75em;
 					}
 				}
+
 				@include tablet_small {
-					padding: 15px;
+					padding-top: 15px;
 				}
+				
 			}
 
 			.accordion-icon {

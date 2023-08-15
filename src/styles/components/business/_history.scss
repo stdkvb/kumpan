@@ -31,7 +31,7 @@
 		'address order'
 		'amount order';
 		gap: 15px;
-		grid-template-rows: 80px auto;
+		grid-template-rows: minmax(80px, auto) auto;
 
 		@include tablet_small {
 			grid-template-columns: 100%;
@@ -124,6 +124,8 @@
 		grid-area: amount;
 		display: flex;
 		align-items: center;
+		align-self: start;
+
 		h5 {
 			@include bold-20;
 			color: $black25;

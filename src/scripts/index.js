@@ -6,7 +6,6 @@ import takeControlCustomSelect from "./ElementsControllers/CustomSelectControlle
 import takeControlNumberInput from "./ElementsControllers/NumberInputController"
 import takeControlForms from './ElementsControllers/FormController'
 import takeControlFavorite from './ElementsControllers/FavoriteController'
-import takeControlLoadMore from './ElementsControllers/LoadMoreController'
 import CookieController from './ElementsControllers/CookieController'
 import takeControlModal from './ElementsControllers/ModalController'
 import takeControlTabs from './ElementsControllers/TabsController'
@@ -27,7 +26,6 @@ takeControlDropdown()
 takeControlCustomSelect('custom-select')
 takeControlNumberInput()
 takeControlFavorite()
-takeControlLoadMore()
 CookieController('.cookie-container', '.cookie-accept')
 takeControlModal()
 takeControlTabs()

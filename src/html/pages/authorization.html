@@ -10,8 +10,9 @@
 				<h1>Авторизация</h1>
 				<div class="authorization__form">
 					<form novalidate>
-						@@include('components/ui/_input-text.html', {label: 'Введите логин', placeholder: 'Введите логин', errorMessage: 'Введите ваше имя', name: 'name', required: true})
+						@@include('components/ui/_input-email.html', {label: 'Ваш логин', placeholder: 'Введите E-mail', errorMessage: 'Введите ваш E-mail', name: 'email', required: true})
 						@@include('components/ui/_input-password.html', {label: 'Ваш пароль', name: 'password', errorMessage: 'Введите пароль', id: 'password', required: true})
+						<a href="#" class="link">Восстановить пароль</a>
 						@@include('components/ui/_button.html', {children: 'Войти', class: 'btn_black', type: 'submit'})
 					</form>
 				</div>
