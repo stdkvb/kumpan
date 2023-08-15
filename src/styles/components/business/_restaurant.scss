@@ -99,6 +99,10 @@
 			align-items: center;
 			gap: 20px;
 			margin-top: 60px;
+
+			@include tablet_small {
+				margin-top: 40px;
+			}
 		}
 	}
 
@@ -216,6 +220,10 @@
 
 			.link {
 				@include FontFamilyZurichRegular;
+
+				@include tablet_small {
+					@include regular-14;
+				}
 			}
 		}
 	}

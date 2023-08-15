@@ -16,18 +16,18 @@
 	&__item {
 		background-color: $grayFA;
 		padding: 40px;
-		// display: grid;
+		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-areas: 
 		'name rating'
 		'date rating'
 		'text text'
 		'answer .';
-		display: none;
+		// display: none;
 
-		&._active {
-			display: grid;
-		}
+		// &._active {
+		// 	display: grid;
+		// }
 
 		@include tablet_small {
 			padding: 20px;
