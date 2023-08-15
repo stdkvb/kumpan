@@ -4,6 +4,8 @@
 	background-color: $grayFA;
 	height: fit-content;
 	padding: 20px;
+	position: sticky;
+	top: 20px;
 
 	@include tablet_small {
 		padding: 10px;

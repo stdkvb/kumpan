@@ -69,6 +69,28 @@
 		}
 	}
 
+	&__title-row {
+		display: flex;
+		justify-content: space-between;
+
+		.link {
+			align-self: flex-end;
+			@include regular-20;
+			margin-bottom: -26px;
+
+			@include tablet {
+				align-self: unset;
+				margin: 20px 0 0 0;
+			}
+
+			@include tablet_small {
+				align-self: unset;
+				margin: 10px 0 0 0;
+				@include regular-14;
+			}
+		}
+	}
+
 	&__links {
 		min-height: 24px;
 		margin-top: 50px;
