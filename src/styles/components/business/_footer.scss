@@ -77,6 +77,11 @@
 
 		.link {
 			@include FontFamilyZurichRegular;
+			@include tablet_small {
+				@include regular-14;
+
+
+			}
 		}
 	}
 
