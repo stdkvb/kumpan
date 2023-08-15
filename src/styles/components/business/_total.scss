@@ -1,11 +1,18 @@
 .total {
 	width: 100%;
-	max-width: 395px;
 	background-color: $grayFA;
 	height: fit-content;
 	padding: 20px;
 	position: sticky;
 	top: 20px;
+
+	&_limited-width {
+		max-width: 395px;
+	}
+
+	@include tablet {		
+		max-width: 395px;
+	}
 
 	@include tablet_small {
 		padding: 10px;
