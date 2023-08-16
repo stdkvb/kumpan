@@ -89,6 +89,13 @@
 
 		p {
 			margin-bottom: 20px;
+
+			@include min_mobile {
+				-webkit-line-clamp: 3;
+				-webkit-box-orient: vertical;
+				overflow: hidden;
+				display: -webkit-box;
+			}
 		}
 	}
 

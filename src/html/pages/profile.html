@@ -21,7 +21,7 @@
 					<form novalidate>
 						@@include('components/ui/_input-text.html', {label: 'Имя', placeholder: 'Введите имя', errorMessage: 'Введите ваше имя', name: 'name', required: 'true' })
 						@@include('components/ui/_input-text.html', {label: 'Фамилия', placeholder: 'Введите фамилию', errorMessage: 'Введите вашу фамилию', name: 'surname', required: 'true' })
-						@@include('components/ui/_input-email.html', {label: 'Электронная почта', value: 'mail@email.com', placeholder: 'Введите электронную почту', name: 'email', required: 'true' })
+						@@include('components/ui/_input-email.html', {label: 'Электронная почта', value: 'mail@email.com', placeholder: 'Введите E-mail', name: 'email', required: 'true' })
 						@@include('components/ui/_input-phone.html', {label: 'Телефон', placeholder: '+7 (000) 000-00-00', name: 'phone', required: 'true' })
 						@@include('components/ui/_button.html', {children: 'Сохранить изменения', class: 'btn_black', type: 'submit'})
 					</form>

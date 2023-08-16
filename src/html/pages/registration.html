@@ -11,7 +11,7 @@
 				<div class="registration__form">
 					<form novalidate>
 						@@include('components/ui/_input-text.html', {label: 'Ваше имя', placeholder: 'Введите имя', errorMessage: 'Введите ваше имя', name: 'name', required: true})
-						@@include('components/ui/_input-email.html', {label: 'Электронная почта', placeholder: 'example@gmail.com', name: 'email', required: true})
+						@@include('components/ui/_input-email.html', {label: 'Электронная почта', placeholder: 'Введите E-mail', name: 'email', required: true})
 						@@include('components/ui/_input-phone.html', {label: 'Ваш телефон', placeholder: '+7 (000) 000-00-00', name: 'phone', required: true})
 						@@include('components/ui/_input-password.html', {label: 'Ваш пароль', name: 'password', errorMessage: 'Придумайте пароль', id: 'password', required: true})
 						@@include('components/ui/_input-password.html', {label: 'Повторите ваш пароль', name: 'repeatpassword', placeholder: 'Повторите пароль', errorMessage: 'Введенные пароли не совпадают', id: 'repeat-password', required: true, passwordRepeat: 'password'})

@@ -116,6 +116,13 @@
 			color: $black25;
 			opacity: 0.7;
 
+			@include min_mobile {
+				-webkit-line-clamp: 3;
+				-webkit-box-orient: vertical;
+				overflow: hidden;
+				display: -webkit-box;
+			}
+
 			@include tablet_small {
 				display: none;
 			}

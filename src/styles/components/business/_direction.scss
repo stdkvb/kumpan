@@ -89,6 +89,13 @@
 			margin: 0 20px 15px 20px;
 			max-width: 329px;
 
+			@include min_mobile {
+				-webkit-line-clamp: 3;
+				-webkit-box-orient: vertical;
+				overflow: hidden;
+				display: -webkit-box;
+			}
+
 			@include tablet_small {
 				margin: 0 10px 15px 10px;
 			}
