@@ -295,3 +295,13 @@ numbers.forEach((elem) => {
 	let numberWithSpace = elem.outerText.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");	
 	elem.innerHTML = numberWithSpace;
 })
+
+//contact-block close
+const contactCloseButton = document.querySelectorAll('.contact-block__close');
+	if (contactCloseButton.length > 0) {
+		contactCloseButton.forEach((elem) => {
+			elem.addEventListener('click', function (e) {
+				elem.closest('.contact-block__info').classList.remove('active');
+			});
+		})
+	}

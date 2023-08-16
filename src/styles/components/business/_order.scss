@@ -179,6 +179,7 @@
 		border: solid 1px $black25;
 		max-width: 375px;
 		width: 100%;
+		@include transition;
 
 		h3 {
 			@include bold-20;
@@ -202,6 +203,20 @@
 				@include regular-14;
 			}
 		}
+
+		&:hover {
+			color: $green22;
+		}
+
+		&.active {
+			background-color: $black25;
+			color: $white;
+			cursor: unset;
+
+			span {
+				opacity: 0.7;
+			}
+		}
 	}
 
 	&__new-address {
@@ -212,10 +227,10 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		@include transition;
 
 		span {
 			@include regular-18;
-			color: #4d4d4d;
 		}
 
 		@include tablet_small {
@@ -225,6 +240,10 @@
 			span {
 				@include regular-14;
 			}
+		}
+
+		&:hover {
+			color: $green22;
 		}
 	}
 
