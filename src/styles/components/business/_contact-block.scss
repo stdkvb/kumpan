@@ -8,6 +8,11 @@
 		z-index: 99;
 		background-color: $white;
 		padding: 50px 140px 50px 50px;
+		display: none;
+
+		&.active {
+			display: block;
+		}
 
 		@include desktop {
 			left: 50px;
@@ -80,6 +85,61 @@
 
 			@include tablet_small {
 				@include regular-14;
+			}
+		}
+	}
+
+	&__close {
+		position: absolute;
+		top: 40px;
+		right: 40px;
+		z-index: 100;
+		width: 24px;
+		height: 24px;
+		text-decoration: none;
+		background-image: url('@icons/close-icon.svg');
+		background-position: center;
+		background-repeat: no-repeat;
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		@include tablet_small {
+			right: 20px;
+			top: 20px;
+		}
+	}
+
+	&_modal {
+		.contact-block__info {
+			left: 40px;
+			top: 0;
+			bottom: 0;
+			margin: auto 0;
+			height: fit-content;
+			max-height: 373px;
+
+			@include desktop {
+				left: 50px;
+			}
+	
+			@include desktop_base {
+				left: 20px;
+			}
+	
+			@include tablet {
+				left: auto;
+				top: auto;
+				bottom: 0;
+				margin: auto 20px 40px;
+				padding: 20px;
+			}
+		}
+
+		#yandex-map {
+			@include tablet {
+				height: 521px;
 			}
 		}
 	}

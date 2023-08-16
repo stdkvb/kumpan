@@ -1,5 +1,8 @@
-<div class="contact-block">
-	<div class="contact-block__info">
+<div class="contact-block@@if (context.class) { @@class}">
+	<div class="contact-block__info active">
+		@@if (context.closeButton) {
+			<span class="contact-block__close"></span>
+		}
 		<h2>Контакты</h2>
 		<div class="contact-block__list">
 			<div class="contact-block__item">
