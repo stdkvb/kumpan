@@ -5,7 +5,7 @@
 <body>
 	@@include('components/business/_header.html')
 	<main class="_offset">
-		<section class="personal-forms">
+		<section class="bonus">
 			<div class="container container_wide">
 				<h1>Бонусы</h1>
 				<nav class="personal-nav">
@@ -16,21 +16,21 @@
 					<a class="link" href="#">История заказов</a>
 					<a class="link active" href="#">Бонусы</a>
 				</nav>
-				<div class="personal-forms__notification">
+				<div class="bonus__notification">
 					<p>При регистрации ваш бонусный счет был создан автоматически. Стартовые накопления составят <span><span>5%</span> от суммы каждого заказа.</span></p>
-					<a class="personal-forms__notification-close" href="#"></a>
+					<a class="bonus__notification-close" href="#"></a>
 				</div>
-				<div class="personal-forms__bonus">
-					<div class="personal-forms__bonus-card">
-						<img class="personal-forms__bonus-logo" src="@icons/logo_white.svg">
+				<div class="bonus__content">
+					<div class="bonus__card">
+						<img class="bonus__logo" src="@icons/logo_white.svg">
 						<div>
 							<img src="@images/kumpan-family.png">
-							<img class="personal-forms__bonus-qr" src="@images/qr.png">
+							<img class="bonus__qr" src="@images/qr.png">
 						</div>
 						<span>ПОСЛЕДНЕЕ СООБЩЕНИЕ (ПОДРОБНЕЕ НА ОБОРОТЕ)</span>
 						<span>Спасибо за встречу в KumpanCafe&#128154;</span>
 					</div>
-					<div class="personal-forms__bonus-price">
+					<div class="bonus__price">
 						<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
 						<g clip-path="url(#clip0_673_20558)">
 						<path d="M10.9987 20.1666C16.0613 20.1666 20.1654 16.0625 20.1654 10.9999C20.1654 5.93731 16.0613 1.83325 10.9987 1.83325C5.93609 1.83325 1.83203 5.93731 1.83203 10.9999C1.83203 16.0625 5.93609 20.1666 10.9987 20.1666Z" stroke="#252525" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -45,15 +45,15 @@
 						</svg>
 						<span>1 бонус = 1 рубль</span>
 					</div>
-					<div class="personal-forms__bonus-discount">
+					<div class="bonus__discount">
 						<div class="active">
 							<h3>5%</h3>
 							<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
 								<circle cx="6" cy="6" r="6" fill="#EFEFEF"/>
 							</svg>
-							<span>До<br>20 000 руб</span>
+							<span class="active">До<br>20 000 руб</span>
 						</div>
-						<div>
+						<div class="active">
 							<h3>7%</h3>
 							<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
 								<circle cx="6" cy="6" r="6" fill="#EFEFEF"/>
@@ -68,7 +68,7 @@
 							<span>При достижении<br>100 000 руб</span>
 						</div>
 					</div>
-					<div class="personal-forms__bonus-text">
+					<div class="bonus__text">
 						<h3>Как работает бонусная система</h3>
 						<ul>
 							<li><span>1</span>Стать участником бонусной программы легко: достаточно зарегистрироваться на сайте.</li>
