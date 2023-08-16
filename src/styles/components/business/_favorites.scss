@@ -1,0 +1,15 @@
+.favorites {
+	.dropdown {
+		margin-bottom: 30px;
+
+		@include mobile {
+			margin-bottom: 20px;
+		}
+	}
+
+	.dropdown__button {
+		span {
+			border-bottom: 1px dashed $grayB9;
+		}
+	}
+}

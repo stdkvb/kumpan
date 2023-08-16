@@ -1,6 +1,6 @@
 .order {
 	display: grid;
-	grid-template-columns: calc(70% - 20px) 30%;
+	grid-template-columns: calc(73% - 20px) minmax(27%, 1fr);
 	gap: 20px;
 
 	@include tablet {
@@ -12,7 +12,6 @@
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
-		max-width: 1225px;
 	}
 
 	&__items {

@@ -33,11 +33,11 @@
 
 		h3 {
 			@include FontFamilyZurichRegular;
-			@include regular-20;
+			@include bold-20;
 			opacity: 0.7;
 
 			@include tablet_small {
-				@include regular-18;
+				@include bold-18;
 			}
 		}		
 
@@ -90,8 +90,27 @@
 		width: 100%;
 		max-width: 348px;
 		padding-bottom: 5px;
-		border-bottom: solid 1px $grayEF;
 		cursor: pointer;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100%;
+		border-bottom: solid 1px $grayEF;
+
+		&:nth-last-child(-n+2) {
+			border-bottom: none;
+		}
+
+		@include mobile {
+			max-width: unset;
+			&:nth-last-child(-n+2) {
+				border-bottom: solid 1px $grayEF;
+			}
+
+			&:nth-last-child(-n+1) {
+				border-bottom: none;
+			}
+		}
 
 		h3 {
 			@include bold-20;

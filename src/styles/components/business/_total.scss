@@ -1,20 +1,41 @@
 .total {
 	width: 100%;
-	max-width: 395px;
 	background-color: $grayFA;
 	height: fit-content;
 	padding: 20px;
+	position: sticky;
+	top: 20px;
+
+	&_limited-width {
+		max-width: 395px;
+	}
+
+	@include tablet {		
+		max-width: 395px;
+	}
 
 	@include tablet_small {
 		padding: 10px;
 	}
 
 	h3 {
+		@include FontFamilyZurichBold;
 		@include bold-30;
 		margin-bottom: 15px;
 
+		span {
+			@include FontFamilyZurichBold;
+			@include bold-30;
+			font-size: 30px !important;
+		}
+
 		@include mobile {
 			@include bold-26;
+
+			span {
+				@include bold-26;
+				font-size: 26px !important;
+			}
 		}
 	}
 
@@ -47,8 +68,17 @@
 			@include bold-30;
 			margin: 0;
 
+			span {
+				@include FontFamilyZurichBold;
+				@include bold-30;
+			}
+
 			@include mobile {
 				@include bold-26;
+
+				span {
+					@include bold-26;
+				}
 			}
 		}
 

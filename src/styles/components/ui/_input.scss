@@ -78,6 +78,10 @@ input {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
+	
+	input {
+		@include FontFamilyZurichRegular;
+	}
 
 	.input__label {
 		@include regular-20;
@@ -111,6 +115,7 @@ input {
 
 	&_password {
 		input[type="password"] {
+			@include FontFamilyZurichRegular;
 			padding-right: calc(.75rem + 26px);
 		}
 

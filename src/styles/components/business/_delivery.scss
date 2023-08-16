@@ -19,9 +19,10 @@
 		grid-template-columns: repeat(3, 1fr);
 		gap: 20px;
 		flex-wrap: wrap;
-		
-		@include min_desktop_large {
-			display: flex;
+		justify-content: flex-start;
+
+		@include min_desktop_huge {
+			grid-template-columns: repeat(3, 533px);
 		}
 
 		@include tablet {
@@ -36,13 +37,10 @@
 	&__catalog-item {
 		background-color: $grayFA;
 		padding-bottom: 20px;
-		width: 533px;
+		width: 100%;
+		max-width: 533px;
 		color: $black;
 		overflow: hidden;
-
-		@include desktop_large {
-			width: unset;
-		}
 
 		&:hover {
 			img {
@@ -58,13 +56,13 @@
 			object-fit: cover;
 			@include transition;
 
-				@include mobile {
-					max-height: 170px;
-				}
+			@include mobile {
+				max-height: 170px;
 			}
+		}
 
-			h3 {
-				margin: 20px 20px 0 20px;
-			}
+		h3 {
+			margin: 20px 20px 0 20px;
+		}
 	}
 }
