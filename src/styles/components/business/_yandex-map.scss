@@ -2,9 +2,9 @@
 	width: 100%;
 	height: 630px;
 
-	@include mobile {
-		height: 400px;
-	}
+	// @include mobile {
+	// 	height: 400px;
+	// }
 
 	.ymaps-2-1-79-inner-panes canvas {
 		filter: invert(100%) hue-rotate(180deg) brightness(120%);
