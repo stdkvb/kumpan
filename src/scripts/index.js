@@ -183,7 +183,7 @@ const IngredientsSwiper = new Swiper ('.cake-detail__ingredients-swiper', {
 })
 
 // order history Slider
-const HistorySwiper = new Swiper ('.history__order', {
+const HistorySwiper = new Swiper ('.history__order .swiper', {
 	slidesPerView: 'auto',
 	spaceBetween: 10,
 	navigation: {
@@ -262,6 +262,10 @@ if (document.querySelector('.total__bonus') !== null) {
 const playButtons = document.querySelectorAll('.video-controler')
 playButtons.forEach((elem) => {
 	elem.addEventListener('click', () => {
+		playButtons.forEach((elem) => {
+			elem.classList.remove('active')
+			elem.previousElementSibling.pause()
+		})
 		elem.classList.add('active')
 		elem.previousElementSibling.play()
 	})
