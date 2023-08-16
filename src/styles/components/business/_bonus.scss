@@ -1,4 +1,12 @@
 .bonus {
+	h1 {
+		margin-bottom: 30px;
+
+		@include tablet_small {
+			margin-bottom: 20px;
+		}
+	}
+
 	&__notification {
 		display: flex;
 		justify-content: space-between;
@@ -74,6 +82,10 @@
 		flex-direction: column;
 		gap: 10px;
 		margin-bottom: 20px;
+
+		@include min_tablet {
+			max-height: 348px;
+		}
 
 		@include mobile {
 			border-radius: 20px;
