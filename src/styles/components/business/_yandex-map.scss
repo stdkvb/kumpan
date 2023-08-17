@@ -10,3 +10,47 @@
 		filter: invert(100%) hue-rotate(180deg) brightness(120%);
 	}
 }
+
+.customControl {
+	height: fit-content;
+	align-items: center;
+	padding-left: 140px;
+	position: relative;
+	margin-top: 20%;
+
+	@include desktop {
+		padding-left: 50px;
+	}
+
+	@include desktop_base {
+		padding-left: 20px;
+	}
+
+	@include tablet_small {
+		margin-top: 100%;
+		padding-left: 10px;
+	}
+}
+
+.pickup {
+	.customControl {
+		padding-left: 20px;
+	}
+}
+
+.closeButton {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	z-index: 100;
+	width: 24px;
+	height: 24px;
+	text-decoration: none;
+	background-image: url('@icons/close-icon.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+
+	&:hover {
+		cursor: pointer;
+	}
+}

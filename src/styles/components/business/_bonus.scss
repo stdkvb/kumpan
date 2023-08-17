@@ -174,12 +174,23 @@
 				@include regular-16;
 				color: rgba(37, 37, 37, 0.7);
 				margin-top: 10px;
-				border-top: solid 2px $grayEF;
 				padding-top: 10px;
 				margin-top: -7px;
+				position: relative;
 
-				&.active {
-					border-top: solid 2px $green40;
+				&::before {
+					content: '';
+					position: absolute;
+					left: -100%;
+					width: 150px;
+					border-top: solid 2px $grayEF;
+					margin-top: -10px;
+				}
+			}
+
+			&:first-child {
+				span::before {
+					content: none;
 				}
 			}
 
@@ -190,6 +201,10 @@
 
 				circle {
 					fill: $green40;
+				}
+
+				span::before {
+					border-top: solid 2px $green40;
 				}
 			}
 
