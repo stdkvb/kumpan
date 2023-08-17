@@ -21,10 +21,6 @@
 		flex-wrap: wrap;
 		justify-content: flex-start;
 
-		@include min_desktop_huge {
-			grid-template-columns: repeat(3, 533px);
-		}
-
 		@include tablet {
 			grid-template-columns: repeat(2, 1fr);
 		}

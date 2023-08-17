@@ -3,7 +3,7 @@
 	grid-template-columns: calc(73% - 20px) minmax(27%, 1fr);
 	gap: 20px;
 
-	@include tablet {
+	@include desktop_small {
 		grid-template-columns: 100%;
 	}
 
