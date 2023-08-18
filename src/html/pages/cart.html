@@ -26,7 +26,9 @@
 								<img src="@images/coffee-preview-1.png" />
 								<div class="cart__item-body">
 									<div class="cart__item-text">
-										<h3>Kumpan Китай</h3>
+										<a href="#">
+											<h3>Kumpan Китай</h3>
+										</a>
 										<h4>250 гр</h4>
 										<span>Арт: 45865</span>
 										<h5>500 ₽</h5>
@@ -43,7 +45,9 @@
 								<img src="@images/coffee-preview-1.png" />
 								<div class="cart__item-body">
 									<div class="cart__item-text">
-										<h3>Kumpan Китай</h3>
+										<a href="#">
+											<h3>Kumpan Китай</h3>
+										</a>
 										<h4>250 гр</h4>
 										<span>Арт: 45865</span>
 										<h5>500 ₽</h5>
@@ -61,7 +65,9 @@
 								<img src="@images/cesar.png" />
 								<div class="cart__item-body">
 									<div class="cart__item-text">
-										<h3>Кыстыбый с креветкой</h3>
+										<a href="#food-detail" class="link popup-link">
+											<h3>Кыстыбый с креветкой</h3>
+										</a>
 										<h4>200 гр</h4>
 										<span class="cart__item-comment">Заменить свинину на курицу</span>
 										<h5>1000 ₽</h5>
@@ -74,30 +80,15 @@
 									</div>
 								</div>
 							</div>
+							<!-- карточка торта -->
 							<div class="cart__item">
-								<img src="@images/cesar.png" />
+								<img src="@images/cake-1.png" />
 								<div class="cart__item-body">
 									<div class="cart__item-text">
-										<h3>Кыстыбый с креветкой</h3>
+										<a href="#cake-detail" class="link popup-link">
+											<h3>Торт "Нежность"</h3>
+										</a>
 										<h4>200 гр</h4>
-										<span class="cart__item-comment">Заменить свинину на курицу</span>
-										<h5>1000 ₽</h5>
-									</div>
-									@@include('components/ui/_quantity.html')
-									<h5>1000&nbsp;₽</h5>
-									<div class="cart__item-buttons">
-										@@include('components/ui/_favorite.html', {class: 'favorite_border'})
-										@@include('components/ui/_delete.html', {class: 'favorite_border'})
-									</div>
-								</div>
-							</div>
-							<div class="cart__item">
-								<img src="@images/cesar.png" />
-								<div class="cart__item-body">
-									<div class="cart__item-text">
-										<h3>Кыстыбый с креветкой</h3>
-										<h4>200 гр</h4>
-										<span class="cart__item-comment">Заменить свинину на курицу</span>
 										<h5>1000 ₽</h5>
 									</div>
 									@@include('components/ui/_quantity.html')
@@ -134,6 +125,9 @@
 				</div>
 			</section>
 		</main>
-		@@include('components/business/_footer.html') @@include('meta/_includeScripts.html')
+		@@include('components/business/_footer.html')
+		@@include('components/business/_food-popup.html')
+		@@include('components/business/_cake-popup.html')
+		@@include('meta/_includeScripts.html')
 	</body>
 </html>

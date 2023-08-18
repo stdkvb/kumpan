@@ -182,20 +182,31 @@ const IngredientsSwiper = new Swiper ('.cake-detail__ingredients-swiper', {
 	}
 })
 
+
 // order history Slider
-const HistorySwiper = new Swiper ('.history__order .swiper', {
-	slidesPerView: 'auto',
-	spaceBetween: 10,
-	navigation: {
-		nextEl: '.swiper-navigation-next',
-		prevEl: '.swiper-navigation-prev'
-	},
-	breakpoints: {
-		768: {
-			spaceBetween: 20,
+const orderHistorySwipers = document.querySelectorAll('.history__order .swiper');
+const swiperPrev = document.querySelectorAll('.swiper-navigation-prev');
+const swiperNext = document.querySelectorAll('.swiper-navigation-next');
+
+
+for(let i=0; i< orderHistorySwipers.length; i++ ) {
+  orderHistorySwipers[i].classList.add('swiper-' + i);
+  swiperPrev[i].classList.add('swiper-prev-' + i);
+  swiperNext[i].classList.add('swiper-next-' + i);
+  const HistorySwiper = new Swiper('.swiper-' + i, {
+		slidesPerView: 'auto',
+		spaceBetween: 10,
+		navigation: {
+			nextEl: '.swiper-next-' +i,
+			prevEl: '.swiper-prev-' +i,
+		},
+		breakpoints: {
+			768: {
+				spaceBetween: 20,
+			}
 		}
-	}
-})
+	 }); 
+ }
 
 // order Slider
 const OrderSwiper = new Swiper ('.order__swiper', {
