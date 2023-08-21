@@ -146,13 +146,17 @@
 	&__discount {
 		grid-area: discount;
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(3, 130px);
 		max-width: 450px;
 		margin-bottom: 50px;
 
 		@include tablet {
 			margin-top: 30px;
 			margin-bottom: 0;
+		}
+
+		@include mobile {
+			grid-template-columns: repeat(3, 107px);
 		}
 
 		div {
@@ -178,13 +182,21 @@
 				margin-top: -7px;
 				position: relative;
 
+				@include mobile {
+					max-width: 107px;
+				}
+
 				&::before {
 					content: '';
 					position: absolute;
 					left: -100%;
-					width: 150px;
+					width: 130px;
 					border-top: solid 2px $grayEF;
 					margin-top: -10px;
+
+					@include mobile {
+						width: 118px;
+					}
 				}
 			}
 
