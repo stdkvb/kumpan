@@ -1,211 +1,161 @@
 <script type="text/javascript">
+	if (document.getElementById('yandex-map') !== null) {
+		ymaps.modules.define('Panel', ['util.augment', 'collection.Item'], function (provide, augment, item) {
+			var Panel = function (options) {
+				Panel.superclass.constructor.call(this, options)
+			}
 
-	// if (document.getElementById('yandex-map') !== null) {
-	// 	function init() {
-	// 		let map = new ymaps.Map('yandex-map', {
-	// 			center: [54.738435, 55.983600],
-	// 			zoom: 14,
-	// 			type: 'yandex#map',
-	// 			controls: []
-	// 		});
+			augment(Panel, item, {
+				onAddToMap: function (map) {
+					Panel.superclass.onAddToMap.call(this, map)
+					this.getParent().getChildElement(this).then(this._onGetChildElement, this)
+					map.margin.addArea({
+						top: 0,
+						left: 0,
+						width: '250px',
+						height: '100%'
+					})
+				},
 
-	// 		let placemarks = [
-	// 			[54.741301, 55.985946],
-	// 			[54.732033, 55.950642],
-	// 			[54.726725, 55.944911],
-	// 			[54.736150, 55.952933],
-	// 			[54.766080, 56.018968],
-	// 			[54.724833, 55.944174],
-	// 			[54.736982, 55.957802],
-	// 			[54.674918, 55.929056],
-	// 			[54.736701, 55.970585]
-	// 		];
+				onRemoveFromMap: function (oldMap) {
+					if (this._$control) {
+						this._$control.remove()
+					}
+					Panel.superclass.onRemoveFromMap.call(this, oldMap)
+				},
 
-	// 		for (let i = 0; i < placemarks.length; i++) {
-	// 			placemark = new ymaps.Placemark(placemarks[i], {}, {
-	// 				iconLayout: 'default#image',
-	// 				iconImageHref: '@icons/placemark.svg',
-	// 				iconImageSize: [43, 63],
-	// 				iconImageOffset: [-25, -55]
-	// 			});
-	// 			map.geoObjects.add(placemark);
-	// 		};
-	// 	}
-	// 	ymaps.ready(init);
-	// };
+				_onGetChildElement: function (parentDomContainer) {
+					// Создаем HTML-элемент с текстом.
+					// По-умолчанию HTML-элемент скрыт.
+					this._$control = $(
+						'<div class="customControl"><div class="content"></div><div class="closeButton"></div></div>'
+					).appendTo(parentDomContainer)
+					this._$content = $('.content')
+					$('.closeButton').on('click', this._onClose)
+				},
+				_onClose: function () {
+					$('.customControl').css('display', 'none')
+				},
+				setContent: function (text) {
+					this._$control.css('display', 'flex')
+					this._$content.html(text)
+				}
+			})
 
-	// Пример реализации боковой панели на основе наследования от collection.Item.
-// Боковая панель отображает информацию, которую мы ей передали.
-ymaps.modules.define('Panel', [
-    'util.augment',
-    'collection.Item'
-], function (provide, augment, item) {
-    // Создаем собственный класс.
-    var Panel = function (options) {
-        Panel.superclass.constructor.call(this, options);
-    };
+			provide(Panel)
+		})
 
-    // И наследуем его от collection.Item.
-    augment(Panel, item, {
-        onAddToMap: function (map) {
-            Panel.superclass.onAddToMap.call(this, map);
-            this.getParent().getChildElement(this).then(this._onGetChildElement, this);
-            // Добавим отступы на карту.
-            // Отступы могут учитываться при установке текущей видимой области карты,
-            // чтобы добиться наилучшего отображения данных на карте.
-            map.margin.addArea({
-                top: 0,
-                left: 0,
-                width: '250px',
-                height: '100%'
-            })
-        },
-
-        onRemoveFromMap: function (oldMap) {
-            if (this._$control) {
-                this._$control.remove();
-            }
-            Panel.superclass.onRemoveFromMap.call(this, oldMap);
-        },
-
-        _onGetChildElement: function (parentDomContainer) {
-            // Создаем HTML-элемент с текстом.
-            // По-умолчанию HTML-элемент скрыт.
-            this._$control = $('<div class="customControl"><div class="content"></div><div class="closeButton"></div></div>').appendTo(parentDomContainer);
-            this._$content = $('.content');
-            // При клике по крестику будем скрывать панель.
-            $('.closeButton').on('click', this._onClose);
-        },
-        _onClose: function () {
-            $('.customControl').css('display', 'none');
-        },
-        // Метод задания контента панели.
-        setContent: function (text) {
-            // При задании контента будем показывать панель.
-            this._$control.css('display', 'flex');
-            this._$content.html(text);
-        }
-    });
-
-    provide(Panel);
-});
-
-ymaps.ready(['Panel']).then(function () {
-    var map = new ymaps.Map("yandex-map", {
-        center: [54.738435, 55.983600],
-        zoom: 14,
-        controls: []
-    });
-    // Создадим контент для меток.
-    var contact =
-				'asds';
-    // Создадим и добавим панель на карту.
-    var panel = new ymaps.Panel();
-    map.controls.add(panel, {
-        float: 'left'
-    });
-    // Создадим коллекцию геообъектов.
-    var collection = new ymaps.GeoObjectCollection(null, {
-        // Запретим появление балуна.
-        hasBalloon: false,
-        iconLayout: 'default#image',
+		ymaps.ready(['Panel']).then(function () {
+			var map = new ymaps.Map('yandex-map', {
+				center: [54.738435, 55.9836],
+				zoom: 14,
+				controls: []
+			})
+			var panel = new ymaps.Panel()
+			map.controls.add(panel, {
+				float: 'left'
+			})
+			// Создадим коллекцию геообъектов.
+			var collection = new ymaps.GeoObjectCollection(null, {
+				hasBalloon: false,
+				iconLayout: 'default#image',
 				iconImageHref: '@icons/placemark.svg',
 				iconImageSize: [43, 63],
 				iconImageOffset: [-25, -55]
-    });
-    // Добавим геообъекты в коллекцию.
-    collection
-        .add(new ymaps.Placemark([54.741301, 55.985946], {
-            balloonContent: 
+			})
+			// Добавим геообъекты в коллекцию.
+			collection
+				.add(
+					new ymaps.Placemark([54.741301, 55.985946], {
+						balloonContent:
 							'<div class="contact-block__info">' +
-								'<div class="contact-block__list">' +
-									'<h2>Контакты</h2>' +
-									'<div class="contact-block__item">' +
-										'<img src="./files/icons/phone.svg" alt="#">' +
-										'<span>Телефон:</span>' +
-										'<a href="tel:" class="link">+7 (3472) 72-72-07</a>' +
-									'</div>' +
-									'<div class="contact-block__item">' +
-										'<img src="./files/icons/map-pin.svg" alt="#">' +
-										'<span>Адрес:</span>' +
-										'<span>Мустая Карима, д.2</span>' +
-									'</div>' +
-									'<div class="contact-block__item contact-block__item_offset"><img src="./files/icons/clock.svg" alt="#">' +
-										'<span>График работы:</span>' +
-										'<span>Пн-Пт 08:00 - 23:00<br>Сб-Вс 10:00 - 23:00</span>' +
-									'</div>' +
-									'<div class="contact-block__item">' +
-										'<span>Время завтраков:</span>' +
-										'<span>08:00 - 11:00</span>' +
-									'</div>' +
-								'</div>' +
-							'</div>',
-        }))
-        .add(new ymaps.Placemark([54.732033, 55.950642], {
-            balloonContent: 
+							'<div class="contact-block__list">' +
+							'<h2>Контакты</h2>' +
+							'<div class="contact-block__item">' +
+							'<img src="./files/icons/phone.svg" alt="#">' +
+							'<span>Телефон:</span>' +
+							'<a href="tel:" class="link">+7 (3472) 72-72-07</a>' +
+							'</div>' +
+							'<div class="contact-block__item">' +
+							'<img src="./files/icons/map-pin.svg" alt="#">' +
+							'<span>Адрес:</span>' +
+							'<span>Мустая Карима, д.2</span>' +
+							'</div>' +
+							'<div class="contact-block__item contact-block__item_offset"><img src="./files/icons/clock.svg" alt="#">' +
+							'<span>График работы:</span>' +
+							'<span>Пн-Пт 08:00 - 23:00<br>Сб-Вс 10:00 - 23:00</span>' +
+							'</div>' +
+							'<div class="contact-block__item">' +
+							'<span>Время завтраков:</span>' +
+							'<span>08:00 - 11:00</span>' +
+							'</div>' +
+							'</div>' +
+							'</div>'
+					})
+				)
+				.add(
+					new ymaps.Placemark([54.732033, 55.950642], {
+						balloonContent:
 							'<div class="contact-block__info">' +
-								'<div class="contact-block__list">' +
-									'<h2>Контакты</h2>' +
-									'<div class="contact-block__item">' +
-										'<img src="./files/icons/phone.svg" alt="#">' +
-										'<span>Телефон:</span>' +
-										'<a href="tel:" class="link">+7 (3472) 72-72-07</a>' +
-									'</div>' +
-									'<div class="contact-block__item">' +
-										'<img src="./files/icons/map-pin.svg" alt="#">' +
-										'<span>Адрес:</span>' +
-										'<span>Коммунистическая, д.2</span>' +
-									'</div>' +
-									'<div class="contact-block__item contact-block__item_offset"><img src="./files/icons/clock.svg" alt="#">' +
-										'<span>График работы:</span>' +
-										'<span>Пн-Пт 08:00 - 23:00<br>Сб-Вс 10:00 - 23:00</span>' +
-									'</div>' +
-									'<div class="contact-block__item">' +
-										'<span>Время завтраков:</span>' +
-										'<span>08:00 - 11:00</span>' +
-									'</div>' +
-								'</div>' +
-							'</div>',
-        }))
-        .add(new ymaps.Placemark([54.674918, 55.929056], {
-            balloonContent: 
+							'<div class="contact-block__list">' +
+							'<h2>Контакты</h2>' +
+							'<div class="contact-block__item">' +
+							'<img src="./files/icons/phone.svg" alt="#">' +
+							'<span>Телефон:</span>' +
+							'<a href="tel:" class="link">+7 (3472) 72-72-07</a>' +
+							'</div>' +
+							'<div class="contact-block__item">' +
+							'<img src="./files/icons/map-pin.svg" alt="#">' +
+							'<span>Адрес:</span>' +
+							'<span>Коммунистическая, д.2</span>' +
+							'</div>' +
+							'<div class="contact-block__item contact-block__item_offset"><img src="./files/icons/clock.svg" alt="#">' +
+							'<span>График работы:</span>' +
+							'<span>Пн-Пт 08:00 - 23:00<br>Сб-Вс 10:00 - 23:00</span>' +
+							'</div>' +
+							'<div class="contact-block__item">' +
+							'<span>Время завтраков:</span>' +
+							'<span>08:00 - 11:00</span>' +
+							'</div>' +
+							'</div>' +
+							'</div>'
+					})
+				)
+				.add(
+					new ymaps.Placemark([54.674918, 55.929056], {
+						balloonContent:
 							'<div class="contact-block__info">' +
-								'<div class="contact-block__list">' +
-									'<h2>Контакты</h2>' +
-									'<div class="contact-block__item">' +
-										'<img src="./files/icons/phone.svg" alt="#">' +
-										'<span>Телефон:</span>' +
-										'<a href="tel:" class="link">+7 (3472) 72-72-07</a>' +
-									'</div>' +
-									'<div class="contact-block__item">' +
-										'<img src="./files/icons/map-pin.svg" alt="#">' +
-										'<span>Адрес:</span>' +
-										'<span>Пушкина, д.2</span>' +
-									'</div>' +
-									'<div class="contact-block__item contact-block__item_offset"><img src="./files/icons/clock.svg" alt="#">' +
-										'<span>График работы:</span>' +
-										'<span>Пн-Пт 08:00 - 23:00<br>Сб-Вс 10:00 - 23:00</span>' +
-									'</div>' +
-									'<div class="contact-block__item">' +
-										'<span>Время завтраков:</span>' +
-										'<span>08:00 - 11:00</span>' +
-									'</div>' +
-								'</div>' +
-							'</div>',
-        }));
-    // Добавим коллекцию на карту.
-    map.geoObjects.add(collection);
-    // Подпишемся на событие клика по коллекции.
-    collection.events.add('click', function (e) {
-        // Получим ссылку на геообъект, по которому кликнул пользователь.
-        var target = e.get('target');
-        // Зададим контент боковой панели.
-        panel.setContent(target.properties.get('balloonContent'));
-        // Переместим центр карты по координатам метки с учётом заданных отступов.
-        map.panTo(target.geometry.getCoordinates(), {useMapMargin: true});
-    });
-});
+							'<div class="contact-block__list">' +
+							'<h2>Контакты</h2>' +
+							'<div class="contact-block__item">' +
+							'<img src="./files/icons/phone.svg" alt="#">' +
+							'<span>Телефон:</span>' +
+							'<a href="tel:" class="link">+7 (3472) 72-72-07</a>' +
+							'</div>' +
+							'<div class="contact-block__item">' +
+							'<img src="./files/icons/map-pin.svg" alt="#">' +
+							'<span>Адрес:</span>' +
+							'<span>Пушкина, д.2</span>' +
+							'</div>' +
+							'<div class="contact-block__item contact-block__item_offset"><img src="./files/icons/clock.svg" alt="#">' +
+							'<span>График работы:</span>' +
+							'<span>Пн-Пт 08:00 - 23:00<br>Сб-Вс 10:00 - 23:00</span>' +
+							'</div>' +
+							'<div class="contact-block__item">' +
+							'<span>Время завтраков:</span>' +
+							'<span>08:00 - 11:00</span>' +
+							'</div>' +
+							'</div>' +
+							'</div>'
+					})
+				)
 
-
-
+			map.geoObjects.add(collection)
+			collection.events.add('click', function (e) {
+				var target = e.get('target')
+				panel.setContent(target.properties.get('balloonContent'))
+				map.panTo(target.geometry.getCoordinates(), { useMapMargin: true })
+			})
+		})
+	}
 </script>
