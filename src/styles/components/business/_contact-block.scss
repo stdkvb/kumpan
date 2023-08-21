@@ -5,6 +5,7 @@
 		z-index: 99;
 		background-color: $white;
 		padding: 50px 140px 50px 50px;
+		filter: invert(100%) hue-rotate(180deg) brightness(100%);
 
 		@include tablet {
 			padding: 20px;
