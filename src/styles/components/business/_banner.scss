@@ -62,7 +62,6 @@
 		}
 
 		div:nth-child(1) {
-			@include FontFamilyZurichBold;
 			width: fit-content;
 			padding: 30px 40px;
 			background-color: $white;
@@ -75,10 +74,21 @@
 				@include bold-20;
 				padding: 15px 20px;
 				text-align: center;
+				color: $green40;
 			}
 
 			@include mobile {
 				align-self: center;
+			}
+
+			span {
+				@include bold-46;
+				line-height: 36px;
+
+				@include tablet_small {
+					@include bold-30;
+					line-height: 28px;
+				}
 			}
 		}
 

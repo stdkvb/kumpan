@@ -45,6 +45,12 @@
 	text-transform: uppercase;
 }
 
+@mixin bold-46 {
+	font-size: 46px;
+	font-weight: 700;	
+	line-height: 100%;
+}
+
 @mixin bold-40 {
 	font-size: 40px;
 	font-weight: 700;	
