@@ -3,17 +3,17 @@
 		min-height: 398px;
 		height: auto;
 		position: relative;
-		
+
 		@include tablet {
 			min-height: 1048px;
 		}
 
 		@include tablet_small {
-			min-height: 873px;
+			min-height: 700px;
 		}
 
 		@include mobile {
-			min-height: 524px;
+			min-height: 550px;
 		}
 	}
 
@@ -73,12 +73,17 @@
 			margin: auto 0 0;
 			padding: 0 50px 50px;
 			justify-content: flex-end;
-			
 		}
 
 		@include tablet_small {
 			padding: 0 15px 30px;
 			gap: 0;
+		}
+
+		@include mobile_middle {
+			justify-content: center;
+			max-height: 50%;
+			bottom: 0;
 		}
 
 		h2 {
