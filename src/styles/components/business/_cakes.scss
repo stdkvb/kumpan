@@ -3,8 +3,8 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-areas:
-		'title button'
-		'cards cards';
+			'title button'
+			'cards cards';
 		gap: 30px;
 
 		@include tablet_small {
@@ -94,7 +94,7 @@
 			height: 100%;
 			object-fit: cover;
 			transition: scale $transitionDuration ease-in-out;
-		}		
+		}
 	}
 
 	&__description {
@@ -104,7 +104,7 @@
 		@include mobile {
 			padding: 20px 20px 30px;
 		}
-		
+
 		h3 {
 			margin-bottom: 15px;
 		}
@@ -135,7 +135,7 @@
 			@include tablet_small {
 				@include regular-14;
 			}
-			
+
 			&:last-child {
 				@include FontFamilyZurichRegular;
 				@include bold-26;
@@ -143,6 +143,15 @@
 
 				@include tablet_small {
 					@include bold-18;
+				}
+
+				span {
+					@include FontFamilyCorbelBold;
+					@include bold-26;
+					color: $black25;
+					@include tablet_small {
+						@include bold-18;
+					}
 				}
 			}
 		}

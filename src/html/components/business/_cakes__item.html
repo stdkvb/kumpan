@@ -1,27 +1,27 @@
 @@for(let i = 0; i < cakesItems.length; i++) {
-	<div class="cakes__item">
-		<div class="cakes__image">
-			<img class="cakes__image_desktop" src="`+cakesItems[i].image_desktop+`">
-			<img class="cakes__image_mobile" src="`+cakesItems[i].image_mobile+`">
+<div class="cakes__item">
+	<div class="cakes__image">
+		<img class="cakes__image_desktop" src="`+cakesItems[i].image_desktop+`" />
+		<img class="cakes__image_mobile" src="`+cakesItems[i].image_mobile+`" />
+	</div>
+
+	<div class="cakes__description">
+		<a href="#cake-detail" class="link popup-link">
+			<h3>`+cakesItems[i].title+`</h3>
+		</a>
+		<p>`+cakesItems[i].text+`</p>
+		<div class="cakes__tech">
+			<span>Вес</span>
+			<span><span>от </span>2<span> кг</span></span>
 		</div>
-		
-		<div class="cakes__description">
-			<a href="#cake-detail" class="link popup-link">
-				<h3>`+cakesItems[i].title+`</h3>
-			</a>
-			<p>`+cakesItems[i].text+`</p>
-			<div class="cakes__tech">
-				<span>Вес</span>
-				<span>от 2 кг</span>
-			</div>
-			<div class="cakes__tech">
-				<span>Цена</span>
-				<span>от 6 000 ₽</span>
-			</div>
-			<div class="cakes__buttons">
-				@@include('components/ui/_button-link.html', {children: 'В корзину', class: 'btn_black', href: '#'})
-				@@include('components/ui/_favorite.html', {class: 'favorite_border'})
-			</div>
+		<div class="cakes__tech">
+			<span>Цена</span>
+			<span><span>от </span>6 000<span> ₽</span></span>
+		</div>
+		<div class="cakes__buttons">
+			@@include('components/ui/_button-link.html', {children: 'В корзину', class: 'btn_black', href: '#'})
+			@@include('components/ui/_favorite.html', {class: 'favorite_border'})
 		</div>
 	</div>
+</div>
 }

@@ -3,16 +3,16 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-areas:
-		'title button'
-		'cards cards';
+			'title button'
+			'cards cards';
 		gap: 30px;
 
 		@include tablet_small {
 			grid-template-columns: auto;
 			grid-template-areas:
-			'title'
-			'cards'
-			'button';
+				'title'
+				'cards'
+				'button';
 			gap: 0;
 		}
 
@@ -52,7 +52,6 @@
 		overflow: hidden;
 		display: grid;
 		grid-template: max-content 0.5fr 1fr auto / auto;
-		
 
 		&:hover {
 			img {
@@ -120,17 +119,24 @@
 		}
 	}
 
-	
 	&__price {
 		@include FontFamilyZurichRegular;
 		@include bold-26;
 		color: $black25;
+
+		span {
+			@include FontFamilyCorbelBold;
+		}
 	}
 
 	&__weight {
 		@include FontFamilyZurichRegular;
 		@include regular-20;
 		color: $grayB9;
+
+		span {
+			@include FontFamilyCorbelRegular;
+		}
 	}
 
 	&__favorite {
@@ -145,4 +151,3 @@
 		}
 	}
 }
-
