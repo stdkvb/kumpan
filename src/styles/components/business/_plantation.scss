@@ -9,11 +9,11 @@
 		}
 
 		@include tablet_small {
-			min-height: 700px;
+			min-height: 800px;
 		}
 
 		@include mobile {
-			min-height: 550px;
+			min-height: 525px;
 		}
 	}
 
@@ -76,7 +76,7 @@
 		}
 
 		@include tablet_small {
-			padding: 0 15px 30px;
+			padding: 0 25px 60px;
 			gap: 0;
 		}
 

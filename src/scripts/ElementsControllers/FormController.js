@@ -2,7 +2,7 @@ import Pristine from './Pristine'
 // import takeControlModal from './ModalController';
 
 const takeControlForms = () => {
-
+	
 	const workRequestForm = document.querySelector(".work-request__form form");	
 	if (workRequestForm !== null) {
 		const workRequestValidator = new Pristine(workRequestForm);

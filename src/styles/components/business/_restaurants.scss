@@ -59,6 +59,11 @@
 			}
 		}
 
+		& > a:first-of-type {
+			width: auto;
+			height: auto;
+		}
+
 		img {
 			transition: scale $transitionDuration ease-in-out;
 			overflow: hidden;
@@ -103,6 +108,7 @@
 
 			@include mobile {
 				min-height: auto;
+				margin-bottom: 10px;
 			}
 		}
 

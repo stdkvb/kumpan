@@ -15,7 +15,7 @@
 		'slider . .';
 
 		@include tablet {
-			grid-template-columns: 80px auto;
+			grid-template-columns: 100px auto;
 			column-gap: 0;
 			grid-template-areas: 
 			'title title'
@@ -175,7 +175,13 @@
 		margin-bottom: 40px;
 
 		@include tablet_small {
-			margin-bottom: 30px;
+			margin-bottom: 20px;
+		}
+
+		.select-selected {
+			@include min_tablet_small {
+				width: fit-content;
+			}
 		}
 
 		.select-items {
@@ -186,7 +192,7 @@
 	.coffee__price {
 		grid-area: price;
 		justify-content: flex-start;
-		@include bold-16;
+		@include regular-16;
 
 		@include tablet_small {
 			@include regular-14;
@@ -194,7 +200,7 @@
 
 		span {
 			@include tablet {
-				margin-left: 42px;
+				margin-left: 50px;
 			}
 		}		
 	}
@@ -203,14 +209,20 @@
 		grid-area: quantity;
 		justify-self: start;
 		margin-top: 50px;
+		align-items: center;
 
 		@include tablet {
 			margin-top: 0;
-			margin-left: 42px;
+			margin-left: 40px;
+			align-items: baseline;
 		}
 
 		.quantity {
 			@include regular-26;
+
+			@include tablet_small {
+				@include regular-16;
+			}
 		}
 
 		.decrement,

@@ -35,9 +35,11 @@
 				},
 				_onClose: function () {
 					$('.customControl').css('display', 'none')
+					$('.closeButton').css('display', 'none')
 				},
 				setContent: function (text) {
 					this._$control.css('display', 'flex')
+					$('.closeButton').css('display', 'block')
 					this._$content.html(text)
 				}
 			})

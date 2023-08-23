@@ -1,8 +1,10 @@
 @@for(let i = 0; i < cakesItems.length; i++) {
 <div class="cakes__item">
 	<div class="cakes__image">
-		<img class="cakes__image_desktop" src="`+cakesItems[i].image_desktop+`" />
-		<img class="cakes__image_mobile" src="`+cakesItems[i].image_mobile+`" />
+		<a href="#cake-detail" class="popup-link">
+			<img class="cakes__image_desktop" src="`+cakesItems[i].image_desktop+`" />
+			<img class="cakes__image_mobile" src="`+cakesItems[i].image_mobile+`" />
+		</a>
 	</div>
 
 	<div class="cakes__description">

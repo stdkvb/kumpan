@@ -1,5 +1,7 @@
 <div class="coffee__item">
-	<img src="@@image">
+	<a href="#">
+		<img src="@@image">
+	</a>
 	<a href="#" class="link">
 		<h3>@@title</h3>
 	</a>
@@ -7,16 +9,16 @@
 	<div class="coffee__body">
 		<div class="coffee__quantity">
 			@@include('components/ui/_select.html', {
-				placeholder: '200 гр',
+				placeholder: '200 г',
 				selectItems: [
-					{	text: '200 гр',
-						value: '200 гр'
+					{	text: '200 г',
+						value: '200 г'
 					},
-					{	text: '500 гр',
-						value: '500 гр'
+					{	text: '500 г',
+						value: '500 г'
 					},
-					{	text: '1000 гр',
-						value: '1000 гр'
+					{	text: '1000 ',
+						value: '1000 г'
 					}
 				]
 			})

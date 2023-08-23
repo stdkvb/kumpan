@@ -38,6 +38,14 @@
 		margin: 70px 0;
 		width: 50%;
 
+		&:hover {
+			& ~ .academy__directions-item-image {
+				@include min_tablet {
+					scale: 1.05;
+				}
+			} 	
+		}
+
 		@include tablet {
 			margin: 0;
 			width: 100%;
@@ -84,6 +92,8 @@
 		width: 100%;
 		width: 50%;
 		min-height: 400px;
+
+		transition: scale $transitionDuration ease-in-out;
 
 		@include tablet {
 			width: 100%;

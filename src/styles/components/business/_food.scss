@@ -59,6 +59,10 @@
 			}
 		}
 
+		& > a:first-of-type {
+			width: auto;
+		}
+
 		img {
 			transition: scale $transitionDuration ease-in-out;
 		}

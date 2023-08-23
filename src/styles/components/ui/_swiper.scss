@@ -49,6 +49,7 @@
 		justify-content: center;
 		align-items: center;
 		background-color: $white;
+		border: 1px solid $black25;
 		transition: background-color $transitionDuration ease-in-out;
 
 		&:hover {
@@ -68,10 +69,10 @@
 
 		&.swiper-button-disabled {
 			border-color: $grayB9;
+			pointer-events: none;
 
 			&:hover {
 				cursor: auto;
-				background-color: transparent;
 			}
 
 			&::after {

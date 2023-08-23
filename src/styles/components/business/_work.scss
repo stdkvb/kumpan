@@ -61,9 +61,20 @@
 			display: grid;
 			grid-template-columns: auto;
 			gap: 10px;
+			overflow: hidden;
+
+			&:hover {
+				img {
+					@include min_tablet {
+						scale: 1.05;
+					}
+				}
+			}
 
 			img {
 				width: 100%;
+				transition: scale $transitionDuration ease-in-out;
+				
 			}
 
 			h3 {

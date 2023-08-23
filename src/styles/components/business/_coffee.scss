@@ -67,14 +67,12 @@
 			}
 		}
 
-		picture {
+		& > a {
 			grid-area: img;
 			position: relative;
 			left: 10%;
 			top: 25%;
 			z-index: 1;
-			user-select: none;
-			pointer-events: none;
 
 			@include tablet_small {
 				left: 0;
@@ -82,6 +80,9 @@
 				padding-left: 40px;
 				padding-top: 30px;
 			}
+		}
+
+		picture {	
 
 			img {
 				transition: transform $transitionDuration ease-in-out;

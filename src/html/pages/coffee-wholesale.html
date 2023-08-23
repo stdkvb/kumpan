@@ -85,25 +85,25 @@
 				<h2>С нами легко начать работать</h2>
 				<div class="coffee-whosale-start__list">
 					<div class="coffee-whosale-start__item">
-						<h3>Оставьте заявку</h3>
+						<h3>1. Оставьте заявку</h3>
 						<p>
 							Оставляете заявку на сайте и мы отправим предложение
 						</p>
 					</div>
 					<div class="coffee-whosale-start__item">
-						<h3>Подтвердите заказ</h3>
+						<h3>2. Подтвердите заказ</h3>
 						<p>
 							Проверьте все введенные данные и убедитесь, что они верны
 						</p>
 					</div>
 					<div class="coffee-whosale-start__item">
-						<h3>Оплатите заказ</h3>
+						<h3>3. Оплатите заказ</h3>
 						<p>
 							Выберите удобный для вас способ оплаты и следуйте инструкциям
 						</p>				
 					</div>
 					<div class="coffee-whosale-start__item">
-						<h3>Доставляем заказ</h3>
+						<h3>4. Доставляем заказ</h3>
 						<p>
 							Ожидайте доставку на указанный вами адрес	
 						</p>				
@@ -117,12 +117,14 @@
 			<div class="coffee-whosale-price__image coffee-whosale-price__image_mobile" style="background-image: url('@images/coffee-whosale-price_mobile.webp');"></div>
 				<div class="coffee-whosale-price__text">
 					<h2>Получите прайс-лист продукции</h2>
-					@@include('components/ui/_button-link.html', {children: 'Получить оптовый прайс', class: 'btn_brown', href: '#'})
+					@@include('components/ui/_button-link.html', {children: 'Получить оптовый прайс', class: 'btn_brown popup-link', href: '#wholesale-price'})
 				</div>
 		</section>		
 		
 	</main>
 	@@include('components/business/_footer.html')
+	@@include('components/business/_wholesale-price-popup.html')
+
 
 	@@include('meta/_includeScripts.html')
 </body>
