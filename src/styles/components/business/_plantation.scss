@@ -13,7 +13,7 @@
 		}
 
 		@include mobile {
-			min-height: 110vw;
+			min-height: 160vw;
 		}
 	}
 
@@ -76,7 +76,7 @@
 		}
 
 		@include tablet_small {
-			padding: 0 25px 60px;
+			padding: 0 25px 40px;
 			gap: 0;
 		}
 

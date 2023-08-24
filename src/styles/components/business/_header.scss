@@ -309,6 +309,12 @@
 				}
 			}
 		}
+
+		.header__icon {
+			@include desktop_base {
+				@include regular-14;
+			}
+		}
 	}
 
 	.link {
