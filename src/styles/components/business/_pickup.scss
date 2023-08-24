@@ -1,5 +1,17 @@
 .pickup {
 
+	.popup__body {
+		@include mobile {
+			padding: 0;
+		}
+
+		#yandex-map {
+			@include mobile {
+				height: calc(100vh - 136px);
+			}
+		}
+	}
+
 	&__city {
 		padding: 0 40px;
 

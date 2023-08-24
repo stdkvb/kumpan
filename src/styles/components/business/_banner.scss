@@ -47,6 +47,7 @@
 		@include tablet_small {
 			display: block;
 			padding: 0 10px;
+			overflow: hidden;
 		}
 	}
 
@@ -147,7 +148,7 @@
 
 		@include mobile {
 			position: relative;
-			bottom: -5px;
+			bottom: -7px;
 			width: 100%;
 		}
 	}

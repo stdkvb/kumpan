@@ -41,16 +41,23 @@ input {
 		&:hover {
 			cursor: pointer;
 		}
-
+		&::-webkit-inner-spin-button,
 		&::-webkit-calendar-picker-indicator {
-			background: url(@icons/calendar.svg) no-repeat;
-			width: 24px;
-			height: 24px;
+			opacity: 0;			
 
 			&:hover {
 				cursor: pointer;
 			}
-		}		
+		}
+		
+		&::after {
+			content: url(@icons/calendar.svg);
+			position: absolute;
+			right: 20px;
+			width: 24px;
+			height: 24px;
+			pointer-events: none;
+		}
 	}
 
 	&[type=file] {
@@ -93,6 +100,11 @@ input {
 	
 	&_file {
 		position: relative;
+		width: fit-content;
+
+		&:hover {
+			cursor: pointer;
+		}
 
 		.file-button {
 			position: absolute;
@@ -101,9 +113,7 @@ input {
 			align-items: center;
 			gap: 10px;
 
-			&:hover {
-				cursor: pointer;
-			}
+			
 			
 			&::before {
 				content: url(@icons/file.svg);
@@ -126,7 +136,7 @@ input {
 			justify-content: center;
 			width: 18px;
 			height: 18px;
-			bottom: 15px;
+			bottom: 12px;
 			right: 20px;
 			cursor: pointer;
 		}

@@ -238,11 +238,12 @@
 
 		@include tablet_small {
 			margin-top: 30px;
+			justify-content: space-between;
 		}
 
 		.btn {
 			@include tablet_small {
-				width: 90%;
+				width: 80%;
 			}
 		}
 	}	

@@ -20,8 +20,8 @@
 		user-select: none;
 	}
 
-	@include min_tablet_small {
-		&:hover {
+	&:hover {
+		@include min_tablet {
 			svg {
 				stroke: $green22;
 			}
@@ -31,8 +31,8 @@
 	&_border {
 		border: 1px solid $black;
 
-		@include min_tablet_small {
-			&:hover {
+		&:hover {
+			@include min_tablet {
 				border-color: $green22;
 			}
 		}		
@@ -46,7 +46,10 @@
 
 		&:hover {
 			svg {
-				fill: $green22;
+				@include min_tablet {
+					fill: $green22;
+					stroke: $green22;
+				}
 			}
 		}
 	}

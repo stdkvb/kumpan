@@ -50,7 +50,7 @@
 	&__row_bottom {
 		._with_menu {
 			display: flex;
-			align-items: center;
+			align-items: baseline;
 			gap: 10px;
 			line-height: 120%;
 
@@ -70,6 +70,7 @@
 
 			& ~ ul {
 				height: 0;
+				opacity: 0;
 				overflow: hidden;
 				transition: all $transitionDuration ease;
 			}
@@ -121,6 +122,7 @@
 			li:hover ._with_menu {
 				& ~ ul {
 					height: auto;
+					opacity: 1;
 				}
 
 				& {
@@ -163,6 +165,7 @@
 				&._active {
 					& ~ ul {
 						height: auto;
+						opacity: 1;
 					}
 
 					& {
