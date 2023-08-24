@@ -5,15 +5,15 @@
 		position: relative;
 
 		@include tablet {
-			min-height: 1048px;
+			min-height: 120vw;
 		}
 
 		@include tablet_small {
-			min-height: 800px;
+			min-height: 100vw;
 		}
 
 		@include mobile {
-			min-height: 525px;
+			min-height: 110vw;
 		}
 	}
 

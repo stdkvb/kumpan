@@ -87,7 +87,7 @@
 				margin-right: 5px;
 			}
 
-			&:last-of-type {
+			&:last-child {
 				@include FontFamilyZurichRegular;
 			}
 		}
