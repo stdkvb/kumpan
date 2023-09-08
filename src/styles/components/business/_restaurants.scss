@@ -49,9 +49,13 @@
 	&__item {
 		position: relative;
 		overflow: hidden;
-		background-color: $grayFA;
-		display: grid;
-		grid-template: max-content auto / auto;
+		
+		& > div:first-child {
+			background-color: $grayFA;
+			display: grid;
+			grid-template: max-content auto / auto;
+			height: 100%;
+		}
 
 		&:hover {
 			img {

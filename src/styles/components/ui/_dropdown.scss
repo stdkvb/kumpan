@@ -9,7 +9,7 @@
 	&__button {
 		display: flex;
 		align-items: center;
-		gap: 5px;
+		gap: 10px;
 		max-width: fit-content;
 
 		span {
@@ -67,6 +67,7 @@
 		&:hover {
 			cursor: pointer;
 			background-color: $green22;
+			color: $white;
 
 			a {
 				color: $white;

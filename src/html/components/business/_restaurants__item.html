@@ -1,20 +1,22 @@
 @@for(let i = 0; i < restaurantsItems.length; i++) {
 	<div class="restaurants__item">
-		<a class="restaurants__link" href="#">
-			<img class="restaurants__image" src="`+restaurantsItems[i].image+`">
-		</a>
-		<div class="restaurants__description">
-			<div class="restaurants__wrapper">
-				<a href="#" class="link">
-					<h3>`+restaurantsItems[i].title+`</h3>
-				</a>
-				<span class="restaurants__info">Телефон: <span>`+restaurantsItems[i].phone+`</span></span>
-				<span class="restaurants__info">Режим работы: <span>`+restaurantsItems[i].work+`</span></span>
-				<span class="restaurants__info">Время завтраков: <span>`+restaurantsItems[i].breakfast+`</span></span>		
-			</div>			
-			<div class="restaurants__btns">
-				@@include('components/ui/_button-link.html', {children: 'Меню', class: 'btn_black', href: '#'})
-				@@include('components/ui/_button-link.html', {children: 'Подробнее', class: '', href: '#'})
+		<div>
+			<a class="restaurants__link" href="#">
+				<img class="restaurants__image" src="`+restaurantsItems[i].image+`">
+			</a>
+			<div class="restaurants__description">
+				<div class="restaurants__wrapper">
+					<a href="#" class="link">
+						<h3>`+restaurantsItems[i].title+`</h3>
+					</a>
+					<span class="restaurants__info">Телефон: <span>`+restaurantsItems[i].phone+`</span></span>
+					<span class="restaurants__info">Режим работы: <span>`+restaurantsItems[i].work+`</span></span>
+					<span class="restaurants__info">Время завтраков: <span>`+restaurantsItems[i].breakfast+`</span></span>		
+				</div>			
+				<div class="restaurants__btns">
+					@@include('components/ui/_button-link.html', {children: 'Меню', class: 'btn_black', href: '#'})
+					@@include('components/ui/_button-link.html', {children: 'Подробнее', class: '', href: '#'})
+				</div>
 			</div>
 		</div>
 	</div>
