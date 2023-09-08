@@ -82,8 +82,7 @@
 			}
 		}
 
-		picture {	
-
+		picture {
 			img {
 				transition: transform $transitionDuration ease-in-out;
 				width: 100%;
@@ -215,9 +214,14 @@
 		grid-area: quantity;
 		display: flex;
 		margin-bottom: 20px;
+		justify-content: space-between;
 
 		@include tablet_small {
 			width: 70%;
+		}
+
+		.custom-select {
+			max-width: 100px;
 		}
 	}
 

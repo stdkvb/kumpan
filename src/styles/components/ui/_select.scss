@@ -4,14 +4,14 @@
 	height: 100%;
 
 	select {
-    display: none;
-  }
+		display: none;
+	}
 
 	&.open {
-    .arrow {
-      transform: rotate(180deg);
-    }
-  }
+		.arrow {
+			transform: rotate(180deg);
+		}
+	}
 
 	.arrow {
 		height: 16px;
@@ -21,7 +21,7 @@
 		background-position: center;
 	}
 
-	.select-items div,
+	.select-items li,
 	.select-selected {
 		@include FontFamilyZurichRegular;
 		padding: 5px 0;
@@ -54,7 +54,7 @@
 			height: 0;
 		}
 
-		div {
+		li {
 			padding: 4px 15px;
 			&:hover {
 				background-color: $green22;
@@ -75,7 +75,7 @@
 	}
 
 	&_input {
-		.select-items div,
+		.select-items li,
 		.select-selected {
 			padding: 10px 20px;
 			@include regular-16;
@@ -86,7 +86,7 @@
 			display: flex;
 			justify-content: space-between;
 			gap: 15px;
-			align-items: center;			
+			align-items: center;
 			margin-top: 10px;
 		}
 
@@ -112,7 +112,7 @@
 				height: 0;
 			}
 
-			div {
+			li {
 				@include FontFamilyZurichRegular;
 				padding: 4px 15px;
 				&:hover {
@@ -157,7 +157,7 @@
 				overflow-y: scroll;
 				scrollbar-color: $white transparent;
 
-				div {
+				li {
 					color: white;
 					margin: 0;
 					padding: 10px 15px;
@@ -181,7 +181,7 @@ form {
 				border: 1px solid #db1630;
 			}
 		}
-	
+
 		&.has-success {
 			.select-selected {
 				border: 1px solid #228c0e;
