@@ -19,17 +19,21 @@ function takeControlCustomSelect(id) {
 		/* for each element, create a new DIV that will act as the selected item: */
 		a = document.createElement('DIV')
 		a.setAttribute('class', 'select-selected')
-		a.innerHTML = '<div class="select-selected__value select-selected__placeholder ">' + selElmnt.options[selElmnt.selectedIndex].innerHTML + '</div>' + '<div class="arrow"></div>'
+		a.innerHTML =
+			'<div class="select-selected__value select-selected__placeholder ">' +
+			selElmnt.options[selElmnt.selectedIndex].innerHTML +
+			'</div>' +
+			'<div class="arrow"></div>'
 		x[i].appendChild(a)
 
 		/* for each element, create a new DIV that will contain the option list: */
-		b = document.createElement('DIV')
+		b = document.createElement('UL')
 		b.setAttribute('class', 'select-items select-hide')
 
 		for (j = 1; j < ll; j++) {
 			/* for each option in the original select element,
     create a new DIV that will act as an option item: */
-			c = document.createElement('DIV')
+			c = document.createElement('li')
 			c.innerHTML = selElmnt.options[j].innerHTML
 			c.addEventListener('click', function () {
 				/* when an item is clicked, update the original select box,
@@ -49,7 +53,8 @@ function takeControlCustomSelect(id) {
 				for (i = 0; i < sl; i++) {
 					if (s.options[i].innerHTML == this.innerHTML) {
 						s.selectedIndex = i
-						h.innerHTML = '<div class="select-selected__value">' + this.innerHTML + '</div>' + '<div class="arrow"></div>'
+						h.innerHTML =
+							'<div class="select-selected__value">' + this.innerHTML + '</div>' + '<div class="arrow"></div>'
 						y = this.parentNode.getElementsByClassName('selected-item')
 						yl = y.length
 
@@ -61,8 +66,6 @@ function takeControlCustomSelect(id) {
 					}
 				}
 				h.click()
-				
-				
 			})
 			b.appendChild(c)
 		}
@@ -109,4 +112,4 @@ then close all select boxes: */
 	document.addEventListener('click', closeAllSelect)
 }
 
-export default takeControlCustomSelect;
+export default takeControlCustomSelect

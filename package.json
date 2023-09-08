@@ -75,6 +75,7 @@
     "clip-path": "^1.2.0",
     "gulp": "^4.0.2",
     "pristinejs": "^1.1.0",
+    "rollup": "^2.79.1",
     "swiper": "^8.4.7",
     "universal-cookie": "^4.0.4",
     "validator": "^13.7.0",
