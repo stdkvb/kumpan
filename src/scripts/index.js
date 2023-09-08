@@ -52,7 +52,7 @@ const firstScreenSwiper = new Swiper ('.first-screen', {
 		type: 'bullets',
 		clickable: true
 	},
-	loop: true,
+	loop: false,
 	slidesPerView: 1,
 	watchOverflow: true,
 	slidesPerGroup: 1,
