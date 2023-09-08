@@ -1,5 +1,6 @@
 .dropdown {
 	position: relative;
+	min-width: 100px;
 
 	&._disabled {
 		pointer-events: none;
@@ -80,7 +81,7 @@
 	}
 
 	&.active {
-		.dropdown__button {		
+		.dropdown__button {
 			svg {
 				transform: rotate(180deg);
 			}
