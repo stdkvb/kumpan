@@ -68,6 +68,10 @@
 		}
 
 		& > a {
+			display: contents;
+		}
+
+		picture {
 			grid-area: img;
 			position: relative;
 			left: 10%;
@@ -80,15 +84,11 @@
 				padding-left: 15px;
 				padding-top: 15px;
 			}
-		}
 
-		picture {
 			img {
 				transition: transform $transitionDuration ease-in-out;
 				width: 100%;
 				user-select: none;
-				max-width: 219px;
-				min-width: 110px;
 
 				@include mobile {
 					width: 140px;
