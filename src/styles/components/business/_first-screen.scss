@@ -1,4 +1,5 @@
 .first-screen {
+	overflow: hidden;
 	.swiper-wrapper {
 		@include tablet_small {
 			height: 100% !important;
@@ -85,7 +86,6 @@
 		}
 
 		.btn {
-			
 		}
 
 		&_inverse {

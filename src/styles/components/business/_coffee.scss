@@ -63,7 +63,9 @@
 
 		&:hover {
 			img {
-				transform: translateY(-20px);
+				@include min_tablet {
+					transform: translateY(-20px);
+				}
 			}
 		}
 
