@@ -11,10 +11,6 @@ const takeControlDropdown = function () {
 		elem.addEventListener('click', () => {
 			elem.parentElement.parentElement.classList.remove('active')
 			elem.parentElement.previousElementSibling.querySelector('span').innerHTML = elem.innerHTML
-			options.forEach((option) => {
-				option.classList.remove('selected')
-			})
-			elem.classList.add('selected')
 		})
 	})
 }

@@ -1,38 +1,29 @@
-const takeControlPhoneMask = () => {
-	[].forEach.call(document.querySelectorAll('[type="tel"]'), (input) => {
-		let keyCode
-		function mask(event) {
-	event.keyCode && (keyCode = event.keyCode)
-	const pos = this.selectionStart
-	if (pos < 3) event.preventDefault()
-	const matrix = '+7 (___) ___ __-__'
-	let i = 0
-	const def = matrix.replace(/\D/g, '')
-	const val = this.value.replace(/\D/g, '')
-	let new_value = matrix.replace(/[_\d]/g, (a) => {
-		return i < val.length ? val.charAt(i++) || def.charAt(i) : a
-	})
-	i = new_value.indexOf('_')
-	if (i != -1) {
-		i < 5 && (i = 3)
-		new_value = new_value.slice(0, i)
+function handlePhoneMask(event) {
+	const phoneNumberInput = event.target
+	let digits = phoneNumberInput.value.replace(/\D/g, '')
+
+	if (event.keyCode === 8 && digits.length > 0) {
+		digits = digits.slice(0, -1)
 	}
-	let reg = matrix
-		.substr(0, this.value.length)
-		.replace(/_+/g, (a) => {
-			return `\\d{1,${a.length}}`
-		})
-		.replace(/[+()]/g, '\\$&')
-	reg = new RegExp(`^${reg}$`)
-	if (!reg.test(this.value) || this.value.length < 5 || (keyCode > 47 && keyCode < 58)) this.value = new_value
-	if (event.type == 'blur' && this.value.length < 5) this.value = ''
-						}
-	
-						input.addEventListener('input', mask, false)
-						input.addEventListener('focus', mask, false)
-						input.addEventListener('blur', mask, false)
-						input.addEventListener('keydown', mask, false)
-				})
+
+	if (event.keyCode === 46 && digits.length < 11) {
+		digits += phoneNumberInput.value.charAt(digits.length)
+	}
+
+	if (digits.length <= 10) {
+		let maskedNumber = '+7 (' + digits.slice(1, 4)
+
+		if (digits.length > 4) {
+			maskedNumber += ') ' + digits.slice(4, 7)
+		}
+		if (digits.length > 7) {
+			maskedNumber += ' ' + digits.slice(7, 9)
+		}
+		if (digits.length > 9) {
+			maskedNumber += '-' + digits.slice(9)
+		}
+		phoneNumberInput.value = maskedNumber
+	} else event.preventDefault()
 }
 
-export default takeControlPhoneMask
+export default handlePhoneMask
