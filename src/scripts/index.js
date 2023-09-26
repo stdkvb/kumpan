@@ -16,10 +16,12 @@ import CounterItemController from './ElementsControllers/CounterItemController'
 import addFileNameListeners from './listeners/addFileNameListener'
 import addRatingListener from './listeners/addRatingListener'
 import addFormListeners from './listeners/addFormListeners'
+import addModalListener from './listeners/addModalListener'
 
 preloader()
 addPhoneMaskListeners()
 addRatingListener()
+addModalListener()
 takeControlMenu()
 addFormListeners()
 takeControlDropdown()

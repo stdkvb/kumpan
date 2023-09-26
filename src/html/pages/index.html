@@ -7,7 +7,7 @@
 	<main>
 		<section class="first-screen swiper">
 			<div class="swiper-wrapper">
-				<div class="first-screen__slide swiper-slide">
+				<div class="first-screen__slide first-screen__slide_inverse swiper-slide">
 					<video autoplay="" muted="" loop="">
 						<source src="@videos/main-bg.mp4" type="video/mp4">
 					</video>
@@ -15,8 +15,8 @@
 					<h4>Обжариваем и доставляем по всей России</h4>
 					<div class="first-screen__btns">
 						@@include('components/ui/_button-link.html', {children: 'Перейти в каталог', class: 'btn_black', href: '#'})
-						@@include('components/ui/_button-link.html', {children: 'Для оптовиков', href: '#'})
-					</div>					
+						@@include('components/ui/_button-link.html', {children: 'Для оптовиков', class: 'btn_white-border', href: '#'})
+					</div>
 				</div>
 				<div class="first-screen__slide swiper-slide">
 					<img class="first-screen__slide_desktop" src="@images/slide-7.webp">
@@ -26,7 +26,7 @@
 					<div class="first-screen__btns">
 						@@include('components/ui/_button-link.html', {children: 'Перейти в каталог', class: 'btn_black', href: '#'})
 						@@include('components/ui/_button-link.html', {children: 'Для оптовиков', href: '#'})
-					</div>					
+					</div>
 				</div>
 				<div class="first-screen__slide swiper-slide">
 					<img class="first-screen__slide_desktop" src="@images/slide-5.webp">

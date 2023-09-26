@@ -140,6 +140,18 @@
 		}
 	}
 
+	&_white-border {
+		background-color: transparent;
+		color: $white;
+		border: 1px solid $white;
+
+		&:hover {
+			background-color: $green22;
+			color: $white;
+			border-color: $green22;
+		}
+	}
+
 	&._disabled {
 		pointer-events: none;
 		user-select: none;

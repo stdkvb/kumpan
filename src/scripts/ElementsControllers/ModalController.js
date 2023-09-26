@@ -30,6 +30,8 @@ const takeControlModal = () => {
 		body.classList.add('_lock');
 	}
 
+	
+
 	const popupCloseIcon = document.querySelectorAll('.close-popup');
 	if (popupCloseIcon.length > 0) {
 		popupCloseIcon.forEach((elem) => {
@@ -101,10 +103,6 @@ const takeControlModal = () => {
 			unlock = true;
 		}, timeout);
 	}
-
-	
-	
-	
 }
 
 export default takeControlModal
