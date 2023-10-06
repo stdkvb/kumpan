@@ -144,22 +144,26 @@ const CoffeeViewedSwiper = new Swiper('.coffee-viewed__slider', {
 })
 
 // coffee-whosale-partners's Slider
-const CoffeeWhosaleSwiper = new Swiper('.coffee-whosale-partners__slider', {
-	slidesPerView: 1,
-	watchOverflow: true,
-	loop: true,
-	spaceBetween: 90,
-	autoplay: {
-		delay: 3000,
-		stopOnLastSlide: false,
-		disableOnInteraction: false
-	},
-	breakpoints: {
-		576: {
-			slidesPerView: 'auto'
+if (document.querySelectorAll('.coffee-whosale-partners__slider .swiper-slide').length > 1) {
+	const CoffeeWhosaleSwiper = new Swiper('.coffee-whosale-partners__slider', {
+		slidesPerView: 1,
+		// watchOverflow: true,
+		loop: true,
+		spaceBetween: 90,
+		autoplay: {
+			delay: 3000,
+			stopOnLastSlide: false,
+			disableOnInteraction: false
+		},
+		breakpoints: {
+			576: {
+				slidesPerView: 'auto'
+			}
 		}
-	}
-})
+	})
+}
+
+
 
 // catalog tab's Slider
 const CatalogTabsSwiper = new Swiper('.catalog__tabs', {

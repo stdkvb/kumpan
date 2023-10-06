@@ -32,23 +32,39 @@
 	&__slider {
 		grid-area: slider;
 
-		display: flex;
+		display: grid;
+		grid-template-columns: 118px minmax(auto, 672px);
 		gap: 20px;
 
-		@include tablet {
+		@include desktop_base {
 			display: block;
 			margin-bottom: 30px;
 		}
 
 		&_secondary {
+			max-height: 700px;
+			overflow-x: hidden;
 
 			@include desktop_base {
 				display: none;
 			}
 
+			&::-webkit-scrollbar {
+				width: 0;
+			}
+
+			*::-webkit-scrollbar-track {
+				background: transparent;
+			}
+			
+			*::-webkit-scrollbar-thumb {
+				background-color: transparent;
+				border: none;
+			}
+
 			.swiper-slide {
-				width: 118px !important;
-				height: 118px !important;
+				// width: 118px !important;
+				// height: 118px !important;
 
 				&:hover {
 					cursor: pointer;
@@ -62,22 +78,22 @@
 
 		&_main {
 			position: relative;
-			width: 672px;
+			// width: 672px;
 			overflow: hidden;
 
 			@include tablet {
 				width: calc(100vw - 40px);
 			}
 
-			.swiper-slide {
-				max-width: 672px !important;
-				max-height: 672px !important;
+			// .swiper-slide {
+			// 	max-width: 672px !important;
+			// 	max-height: 672px !important;
 				
-				@include tablet {
-					max-width: 100% !important;
-					max-height: 100% !important;
-				}
-			}
+			// 	@include tablet {
+			// 		max-width: 100% !important;
+			// 		max-height: 100% !important;
+			// 	}
+			// }
 
 			.swiper-navigation {
 				position: absolute;
@@ -89,6 +105,7 @@
 
 		img {
 			width: 100%;
+			height: 100%;
 			object-fit: cover;
 		}
 	}

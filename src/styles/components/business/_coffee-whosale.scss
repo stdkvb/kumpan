@@ -74,6 +74,14 @@
 		&__slider {
 			overflow: hidden;
 
+			// .swiper-wrapper._disabled {
+			// 	gap: 90px;
+
+			// 	@include mobile {
+			// 		gap: 0;
+			// 	}
+			// }
+
 			.swiper-slide {
 				max-width: 256px;
 

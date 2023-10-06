@@ -95,7 +95,7 @@
 
 		.coffee__item {
 			grid-template-columns: 180px auto;
-			grid-template-rows: .2fr .8fr auto;
+			grid-template-rows: .2fr .65fr auto;
 			position: relative;
 			grid-auto-rows: 0;
 			grid-template-areas:
@@ -108,13 +108,36 @@
 				column-gap: 15px;
 			}
 
-			& > a {
-				left: 0;
-    			top: 10%;
+			// & > a:first-of-type {
+			// 	position: relative;
+			// 	left: 0;
+    		// 	top: 10%;
 
-				@include tablet_small {
-					padding: 0;
-					top: 15%;
+			// 	@include tablet_small {
+			// 		padding: 0;
+			// 		top: 15%;
+			// 	}
+			// }
+
+			h3 {
+				margin-bottom: 40px;
+			}
+
+			picture {
+				left: 0;
+				top: 0;
+
+				@include mobile {
+					padding-left: 0;
+					padding-top: 0;
+				}
+			}
+
+			img {
+				max-width: 160px;
+
+				@include mobile {
+					max-width: 84px;
 				}
 			}
 		}
@@ -128,6 +151,7 @@
 				"description description"
 				"buttons buttons";
 			padding: 0;
+			column-gap: 20px;
 
 			@include tablet {
 				max-width: 100%;
