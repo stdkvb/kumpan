@@ -197,6 +197,24 @@
 		}
 	}
 
+	&__cart {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		span {
+			white-space: nowrap;
+
+			&:first-child {
+				font-size: 14px;
+				@include FontFamilyZurichBold;
+			}
+
+			&:last-child {
+				font-size: 12px;
+			}
+		}
+	}
+
 	&__icon {
 		display: flex;
 		align-items: center;

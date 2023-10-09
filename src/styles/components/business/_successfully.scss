@@ -7,4 +7,23 @@
 			@include bold-26;
 		}
 	}
+
+	&__buttons {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+		padding-top: 20px;
+
+		@include tablet_small {
+			padding-top: 0;
+		}
+
+		.btn {
+			width: 100%;
+
+			@include tablet_small {
+				height: 40px;
+			}
+		}
+	}
 }

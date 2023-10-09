@@ -1,0 +1,15 @@
+<!-- попап добавления в корзину (для активации добавить класс _open) -->
+<div id="successfully-cart-added" class="popup successfully">
+	<div class="popup__body">
+		<div class="popup__content">
+			<span class="popup__close close-popup"></span>
+			<div class="popup__wrapper">
+				<h2 class="successfully__title">Товар добавлен в корзину</h2>
+				<div class="successfully__buttons">
+					@@include('components/ui/_button-link.html', {children: 'Оформить заказ', class: 'btn_black', href: '#'})
+					@@include('components/ui/_button-link.html', {children: 'Продолжить покупки', href: '#'})
+				</div>
+			</div>					
+		</div>
+	</div>
+</div>
