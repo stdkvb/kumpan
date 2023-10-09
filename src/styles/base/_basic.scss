@@ -38,7 +38,10 @@ body {
 
 main {
 	flex: 1 0 auto;
-	overflow-x: hidden;
+	
+	@include tablet {
+		overflow-x: hidden;
+	}
 
 	&._offset {
 		margin-top: 70px;
