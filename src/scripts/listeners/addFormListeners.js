@@ -5,6 +5,9 @@ function addFormListeners() {
 		if (e.target.hasAttribute('type') && e.target.getAttribute('type') === 'submit') {
 			takeControlForms()
 		}
+		if (e.target.classList.contains('children')) {
+			takeControlForms()
+		}
 	})
 }
 
