@@ -38,6 +38,8 @@ function takeControlCustomSelect(id) {
 			c.addEventListener('click', function () {
 				/* when an item is clicked, update the original select box,
         and the selected item: */
+				document.querySelector('.select-input').value = this.innerHTML
+
 				this.parentNode.parentNode.classList.add('has-success')
 				let y
 				let i
